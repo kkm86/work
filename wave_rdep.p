@@ -22,10 +22,10 @@
       set ylabel
 	 set log x
 	 set xr [0.01:50.00]
-	 set yr [-9000.0:4.0]
+	 set yr [-5000.0:4.0]
 #set yr [-2.0:2.37]
-	 plot "result2.dat" using 2:3 title '1'  with linespoint,  \
-	    "result2.dat" using 2:4 title '2'  with linespoint,  \
-#     "result1.dat" using 2:5 title 'v(1)'  with linespoint,  \
-#	       "result_wave.dat" using 2:7 title 'ny'  with linespoint,  \
+	 plot "result2.dat" using 2:($3*2) title '3/4'  with linespoint,  \
+	    "result3.dat" using 2:($3*2) title '-1/4'  with linespoint,  \
+     "result4.dat" using 2:($3*2) title '+15/4'  with linespoint,  \
+	       "result5.dat" using 2:($3*2) title 'ny'  with linespoint,  \
 

@@ -28,7 +28,7 @@ program efimov
   real(kind(1.d0)) :: V,theta,phi
 
   !.. Parameters for the energy curve
-  integer, parameter :: points = 5000
+  integer, parameter :: points = 100
   real(kind(1.d0))   :: rho_vector(points),rho_vector1(points), energy_curve(7,points)
 
   !.. Parameters for plotting
@@ -55,13 +55,13 @@ program efimov
   angfreq = 1.d0/(mass(1)*osc**2.d0)
   
 
-  d(1) = -6.619d0*10**(-8.d0)
+  d(1) = -3.086d0*10**(-8.d0)
   
   
   tl_min = 0.d0
-  tl_max = Pi/2.d0
+  tl_max = Pi/4.d0
   tm_min = 0
-  tm_max = Pi/3.d0
+  tm_max = Pi/6.d0
 
   ! tld_min = 0.d0
   ! tld_max = Pi/2.d0
@@ -75,7 +75,7 @@ program efimov
   ! call universal_knot(npm,k,N2,tmd_max,tmd_min,tmd)
 
   rho_vector(1) = 1.0d0
-  rho_vector(points) = 100000.d0
+  rho_vector(points) = 1000.d0
   step_size_x = (rho_vector(1)+rho_vector(points))/points
   do i = 2, points-1
      rho_vector(i) = rho_vector(i-1)+step_size_x
@@ -186,9 +186,16 @@ program efimov
 
  
   
-  open(10,file='result2.dat',status='replace')
+  ! open(10,file='result5.dat',status='replace')
+!   do i = 1, points
+!      write(10,10)i, rho_vector(i)/osc, (energy_curve(1,i)+Vtrap(i))/angfreq, (energy_curve(2,i)+Vtrap(i))/angfreq 
+! 10   format(I3,'  ',16f20.8)
+!   end do
+!   close(10)
+
+  open(10,file='result5.dat',status='replace')
   do i = 1, points
-     write(10,10)i, rho_vector(i)/osc, (energy_curve(1,i)+Vtrap(i))/angfreq, (energy_curve(2,i)+Vtrap(i))/angfreq 
+     write(10,10)i, rho_vector(i), (10.d0**8.d0)*energy_curve(1,i), (10.d0**8.d0)*15.d0/(8.d0*my*rho_vector(i)**2.d0),(10.d0**8.d0)*(8.d0+(15.d0/4.d0))/(2.d0*my*rho_vector(i)**2.d0),(10.d0**8.d0)*(32.d0+(15.d0/4.d0))/(2.d0*my*rho_vector(i)**2.d0)
 10   format(I3,'  ',16f20.8)
   end do
   close(10)
