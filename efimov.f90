@@ -6,14 +6,14 @@ program efimov
   
   !.. Input
   !.. Parameters for the B-splines used in the generalized eigenvalue equation
-  integer, parameter :: N1 = 5   !.. Number of mesh-points in coordinate 1
-  integer, parameter :: N2 = 5   !.. Number of mesh-points in coordinate 2
+  integer, parameter :: N1 = 15   !.. Number of mesh-points in coordinate 1
+  integer, parameter :: N2 = 15   !.. Number of mesh-points in coordinate 2
   integer, parameter :: k = 6    !.. B-spline order
-  integer, parameter :: L = 7    !.. Number of B-splines in coordinate 1(N+k-2-cond)
-  integer, parameter :: M = 7    !.. Number of B-splines in coordinate 2
-  integer, parameter :: LM = 49 !.. Matrix dimension
-  integer, parameter :: npl = 15  !.. Number of knot-points  N1+2(k-1)
-  integer, parameter :: npm = 15  !.. Number of knot-points  N2+2(k-1)
+  integer, parameter :: L = 17    !.. Number of B-splines in coordinate 1(N+k-2-cond)
+  integer, parameter :: M = 17    !.. Number of B-splines in coordinate 2
+  integer, parameter :: LM = 289 !.. Matrix dimension
+  integer, parameter :: npl = 25  !.. Number of knot-points  N1+2(k-1)
+  integer, parameter :: npm = 25  !.. Number of knot-points  N2+2(k-1)
  
 
   !.. Parameters for the knot-point grids tl and tm
@@ -74,8 +74,15 @@ program efimov
   ! call universal_knot(npl,k,N1,tld_max,tld_min,tld)
   ! call universal_knot(npm,k,N2,tmd_max,tmd_min,tmd)
 
-  rho_vector(1) = 1.0d0
-  rho_vector(points) = 1000.d0
+  ! rho_vector(1) = 1.0d0
+  ! rho_vector(points) = 1000.d0
+  ! step_size_x = (rho_vector(1)+rho_vector(points))/points
+  ! do i = 2, points-1
+  !    rho_vector(i) = rho_vector(i-1)+step_size_x
+  ! end do
+
+  rho_vector(1) = 1000.d0
+  rho_vector(points) = 100000.d0
   step_size_x = (rho_vector(1)+rho_vector(points))/points
   do i = 2, points-1
      rho_vector(i) = rho_vector(i-1)+step_size_x
@@ -83,7 +90,7 @@ program efimov
 
   !Setting up trapping potential
 
-  !rho_vector = (3.d0**(-0.25d0))*rho_vector1
+ 
   Vtrap = 0.5d0*my*(angfreq**2.d0)*(rho_vector**2.d0)
 
  
@@ -186,21 +193,21 @@ program efimov
 
  
   
-  ! open(10,file='result5.dat',status='replace')
-!   do i = 1, points
-!      write(10,10)i, rho_vector(i)/osc, (energy_curve(1,i)+Vtrap(i))/angfreq, (energy_curve(2,i)+Vtrap(i))/angfreq 
-! 10   format(I3,'  ',16f20.8)
-!   end do
-!   close(10)
-
-  open(10,file='result5.dat',status='replace')
+  open(10,file='result6.dat',status='replace')
   do i = 1, points
-     write(10,10)i, rho_vector(i), (10.d0**8.d0)*energy_curve(1,i), (10.d0**8.d0)*15.d0/(8.d0*my*rho_vector(i)**2.d0),(10.d0**8.d0)*(8.d0+(15.d0/4.d0))/(2.d0*my*rho_vector(i)**2.d0),(10.d0**8.d0)*(32.d0+(15.d0/4.d0))/(2.d0*my*rho_vector(i)**2.d0)
+     write(10,10)i, rho_vector(i)/osc, (energy_curve(1,i)+Vtrap(i))/angfreq, (energy_curve(2,i)+Vtrap(i))/angfreq 
 10   format(I3,'  ',16f20.8)
   end do
   close(10)
 
- !energy_curve(1,i)*10**(8.d0), energy_curve(2,i)*10**(8.d0)
+  ! open(10,file='result.dat',status='replace')
+!   do i = 1, points
+!      write(10,10)i, rho_vector(i), (10.d0**8.d0)*energy_curve(1,i), (10.d0**8.d0)*15.d0/(8.d0*my*rho_vector(i)**2.d0),(10.d0**8.d0)*(8.d0+(15.d0/4.d0))/(2.d0*my*rho_vector(i)**2.d0),(10.d0**8.d0)*(32.d0+(15.d0/4.d0))/(2.d0*my*rho_vector(i)**2.d0)
+! 10   format(I3,'  ',16f20.8)
+!   end do
+!   close(10)
+
+
 end program efimov
 
    

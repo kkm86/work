@@ -109,6 +109,8 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy2,H,S)
                              term1 = term1 + weig(n)*weig(p)*2.d0*dB_li*B_mi*dB_lj*B_mj/(2.d0*my*rho**2.d0)
                              term2 = term2 + weig(n)*weig(p)*2.d0*B_li*dB_mi*B_lj*dB_mj/((2.d0*cos(2.d0*theta)**2.d0)*my*rho**2.d0)
                              term3 = term3 + weig(n)*weig(p)*15.d0*B_li*B_mi*B_lj*B_mj/(8.d0*my*rho**2.d0)
+                             term4 = term4 + weig(n)*weig(p)*B_li*B_mi*B_lj*B_mj*V
+                             
 
                              ! term1 = term1 + weig(n)*weig(p)*4.d0*dB_li*B_mi*dB_lj*B_mj/(2.d0*my*rho**2.d0)
                              ! term2 = term2 + weig(n)*weig(p)*4.d0*B_li*dB_mi*B_lj*dB_mj/((2.d0*sin(theta)**2.d0)*my*rho**2.d0)
