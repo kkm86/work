@@ -1,0 +1,261 @@
+subroutine direct(np,k,L,M,LM,tl,tm,energy,Hama,Sa,rho,my,d,r0,mass)
+
+  use constants
+
+   implicit none
+
+   !.. Input
+   integer            , intent(in) :: np,k,L,M,LM       !..Number of knot-points etc.
+   real(kind(1.d0))   , intent(in) :: tl(np), tm(np),rho,my,d,r0,mass(3)
+   real(kind(1.d0)), intent(inout) :: energy
+   real(kind(1.d0)), intent(inout) :: Hama(LM,LM), Sa(LM,LM)
+
+   !.. Local
+   real(kind(1.d0))   :: coordl(L+2,k),coordm(M+2,k),theta,phi !..Abscissa-grid
+   real(kind(1.d0))   :: Ham(LM,LM), S(LM,LM)
+   real(kind(1.d0))   :: Sl(L,L), Sm(M,M), V_interact(LM,LM), Tllm(L,L), Tll(L,L), Tmm(M,M), S_pure(L,L)
+   real(kind(1.d0))   :: sum1,sum2,sum3,sum4
+   real(kind(1.d0))   :: term1,term2,term3,term4
+   real(kind(1.d0))   :: lower,upper,lowerl,lowerm,upperl,upperm,xabsc(k),weig(k),B_li,B_lj,B_mi,B_mj,dB_lj,dB_mj,dB_li,dB_mi
+   real(kind(1.d0))   :: nsize
+   integer            :: li, lj, mi, mj, n, i, j, ll, mm, p
+
+   !.. Paramenters for generalized eigensolver
+   integer                             :: ITYPE, LDA, LDB, INFO 
+   integer                 , parameter :: LWORK = 1000000
+   integer                 , parameter :: LIWORK = 5000
+   character*1                         :: JOBZ = 'V', UPLO = 'U'
+   real(kind(1.d0))    , dimension(LM)  :: W
+   real(kind(1.d0)) , dimension(LWORK) :: WORK
+   real(kind(1.d0)), dimension(LIWORK) :: IWORK
+
+ 
+
+   !.. External functions/variables
+   real(kind(1.d0)) :: bget, bder, V
+
+
+   ITYPE = 1
+   LDA = LM
+   LDB = LM
+  
+  
+   call gauleg(k, xabsc, weig)
+
+   Sm = 0.0
+   Tmm = 0.0
+   Sl = 0.0
+   V_interact = 0.0
+   Tllm = 0.0
+   Tll = 0.0
+   Ham = 0.0
+   S = 0.0
+   
+   do lj = 1, L
+      do li = 1, L
+         sum1 = 0.0
+         sum2 = 0.0
+         sum3 = 0.0
+         sum4 = 0.0
+         upper = min(li,lj) + k-1
+         lower = max(li,lj)
+         do ll = lower, upper
+            term1 = 0.0
+            term2 = 0.0
+            term3 = 0.0
+            term4 = 0.0
+            do n = 1, k
+               if(tl(ll+1).gt.tl(ll))then
+                  coordl(ll,n) = 0.5*(tl(ll+1)+tl(ll)) + 0.5*(tl(ll+1)-tl(ll))*xabsc(n)
+                  theta = coordl(ll,n)
+                  B_li = bget(coordl(ll,n),tl,k,np,li)
+                  B_lj = bget(coordl(ll,n),tl,k,np,lj)
+                  dB_li = bder(coordl(ll,n),tl,k,np,li)
+                  dB_lj = bder(coordl(ll,n),tl,k,np,lj)
+                   ! if(li == 1)then
+                   !    B_li = bget(coordl(ll,n),tl,k,np,1)+bget(coordl(ll,n),tl,k,np,2)
+                   !    dB_li = bder(coordl(ll,n),tl,k,np,1)+bder(coordl(ll,n),tl,k,np,2)
+                   ! else if(li == L)then
+                   !    B_li = bget(coordl(ll,n),tl,k,np,L)+bget(coordl(ll,n),tl,k,np,L+1)
+                   !    dB_li = bder(coordl(ll,n),tl,k,np,L)+bder(coordl(ll,n),tl,k,np,L+1)
+                   ! else
+                   !    B_li = bget(coordl(ll,n),tl,k,np,li+1) 
+                   !    dB_li = bder(coordl(ll,n),tl,k,np,li+1)
+                   ! end if
+                  
+                   ! if(lj == 1)then
+                   !    B_lj = bget(coordl(ll,n),tl,k,np,1)+bget(coordl(ll,n),tl,k,np,2)
+                   !    dB_lj = bder(coordl(ll,n),tl,k,np,1)+bder(coordl(ll,n),tl,k,np,2)
+                   ! else if(lj == L)then
+                   !    B_lj = bget(coordl(ll,n),tl,k,np,L)+bget(coordl(ll,n),tl,k,np,L+1)
+                   !    dB_lj = bder(coordl(ll,n),tl,k,np,L)+bder(coordl(ll,n),tl,k,np,L+1)
+                   ! else
+                   !    B_lj = bget(coordl(ll,n),tl,k,np,lj+1) 
+                   !    dB_lj = bder(coordl(ll,n),tl,k,np,lj+1)
+                   ! end if
+                  
+               
+                  term1 = term1 + weig(n)*B_li*B_lj/(my*(rho*sin(2.d0*theta))**2.d0)
+                  term2 = term2 + weig(n)*2.d0*dB_li*dB_lj/(my*(rho**2.d0))
+                  term3 = term3 + weig(n)*15.d0*B_li*B_lj/(my*8.d0*(rho**2.d0))
+                  term4 = term4 + weig(n)*B_li*B_lj
+               end if
+            end do
+            sum1 = sum1 + 0.5d0*(tl(ll+1)-tl(ll))*term1
+            sum2 = sum2 + 0.5d0*(tl(ll+1)-tl(ll))*term2
+            sum3 = sum3 + 0.5d0*(tl(ll+1)-tl(ll))*term3
+            sum4 = sum4 + 0.5d0*(tl(ll+1)-tl(ll))*term4
+         end do
+         Tllm(li,lj) = sum1
+         Tll(li,lj) = sum2
+         S_pure(li,lj) = sum3
+         Sl(li,lj) = sum4
+      end do
+   end do
+
+   do mj = 1, M
+       do mi = 1, M
+          sum1 = 0.0
+          sum2 = 0.0
+          sum3 = 0.0
+          upper = min(mi+1,mj+1) + k-1
+          lower = max(mi,mj)
+          do mm = lower, upper
+             term1 = 0.0
+             term2 = 0.0
+             term3 = 0.0
+             do p = 1, k
+                if(tm(mm+1).gt.tm(mm)) then
+                   coordm(mm,p) = 0.5*(tm(mm+1)+tm(mm)) + 0.5*(tm(mm+1)-tm(mm))*xabsc(p)
+                 
+                   
+                   ! B_mi = bget(coordm(mm,n),tm,k,np,mi+1)
+                   ! dB_mi = bder(coordm(mm,n),tm,k,np,mi+1)
+                   ! B_mj = bget(coordm(mm,n),tm,k,np,mj+1)
+                   ! dB_mj = bder(coordm(mm,n),tm,k,np,mj+1)
+                   if(mj == M)then
+                      B_mj = bget(coordm(mm,p),tm,k,np,M+1)+bget(coordm(mm,p),tm,k,np,M+2)
+                      dB_mj = bder(coordm(mm,p),tm,k,np,M+1)+bder(coordm(mm,p),tm,k,np,M+2)
+                   else
+                      B_mj = bget(coordm(mm,p),tm,k,np,mj+1)
+                      dB_mj = bder(coordm(mm,p),tm,k,np,mj+1)
+                   end if
+                             
+                   if(mi == M) then
+                      B_mi = bget(coordm(mm,p),tm,k,np,M+1)+bget(coordm(mm,p),tm,k,np,M+2)
+                      dB_mi = bder(coordm(mm,p),tm,k,np,M+1)+bder(coordm(mm,p),tm,k,np,M+2)
+                   else
+                      B_mi = bget(coordm(mm,p),tm,k,np,mi+1)
+                      dB_mi = bder(coordm(mm,p),tm,k,np,mi+1)
+                   end if
+                             
+              
+                   term1 = term1 + weig(p)*B_mi*B_mj
+                   term2 = term2 + weig(p)*dB_mi*dB_mj
+                end if
+             end do
+             sum1 = sum1 + 0.5d0*(tm(mm+1)-tm(mm))*term1
+             sum2 = sum2 + 0.5d0*(tm(mm+1)-tm(mm))*term2
+          end do
+          Sm(mi,mj) = sum1
+          Tmm(mi,mj) = sum2
+       end do
+    end do
+
+    do lj = 1, L
+     do li = 1, L
+        do mj = 1, M
+           do mi = 1, M
+              i = (li-1)*M+mi
+              j = (lj-1)*M+mj
+              sum3 = 0.0
+              upperl = min(li,lj) + k-1
+              lowerl = max(li,lj)
+              upperm = min(mi+1,mj+1) + k-1
+              lowerm = max(mi,mj)
+              do ll = lowerl, upperl
+                 sum2 = 0.0
+                 do mm = lowerm, upperm
+                    sum1 = 0.0
+                    if((tl(ll+1).gt.tl(ll)) .and. (tm(mm+1).gt.tm(mm)))then
+                       do n = 1, k
+                          term1 = 0.0
+                          do p = 1, k
+                             coordl(ll,n) = 0.5*(tl(ll+1)+tl(ll)) + 0.5*(tl(ll+1)-tl(ll))*xabsc(n)
+                             coordm(mm,p) = 0.5*(tm(mm+1)+tm(mm)) + 0.5*(tm(mm+1)-tm(mm))*xabsc(p)
+                             theta = coordl(ll,n)
+                             phi = coordm(mm,p)
+                             B_li = bget(coordl(ll,n),tl,k,np,li)
+                             B_lj = bget(coordl(ll,n),tl,k,np,lj)
+                             dB_li = bder(coordl(ll,n),tl,k,np,li)
+                             dB_lj = bder(coordl(ll,n),tl,k,np,lj)
+
+                             if(mj == M)then
+                                B_mj = bget(coordm(mm,p),tm,k,np,M+1)+bget(coordm(mm,p),tm,k,np,M+2)
+                                dB_mj = bder(coordm(mm,p),tm,k,np,M+1)+bder(coordm(mm,p),tm,k,np,M+2)
+                             else
+                                B_mj = bget(coordm(mm,p),tm,k,np,mj+1)
+                                dB_mj = bder(coordm(mm,p),tm,k,np,mj+1)
+                             end if
+                             
+                             if(mi == M) then
+                                B_mi = bget(coordm(mm,p),tm,k,np,M+1)+bget(coordm(mm,p),tm,k,np,M+2)
+                                dB_mi = bder(coordm(mm,p),tm,k,np,M+1)+bder(coordm(mm,p),tm,k,np,M+2)
+                             else
+                                B_mi = bget(coordm(mm,p),tm,k,np,mi+1)
+                                dB_mi = bder(coordm(mm,p),tm,k,np,mi+1)
+                             end if
+
+                             call twobody_potential(d,r0,mass,rho,theta,phi,V)
+                            
+                             term1 = term1 + weig(n)*weig(p)*B_li*B_mi*B_lj*B_mj*V
+                          end do
+                          sum1 = sum1 + 0.5d0*(tm(mm+1)-tm(mm))*term1
+                       end do
+                       sum2 = sum2 + 0.5d0*(tl(ll+1)-tl(ll))*sum1
+                    end if
+                 end do
+                 sum3 = sum3 + sum2
+              end do
+              V_interact(i,j) = sum3
+           end do
+        end do
+     end do
+  end do
+
+    do lj = 1, L
+       do li = 1, L
+          do mj = 1, M
+             do mi = 1, M
+                i = (li-1)*M+mi
+                j = (lj-1)*M+mj
+                Ham(i,j) = Tllm(li,lj)*Tmm(mi,mj) + Tll(li,lj)*Sm(mi,mj) + Sm(mi,mj)*S_pure(li,lj)
+                Ham(i,j) = Ham(i,j)+V_interact(i,j)
+                S(i,j) = Sl(li,lj)*Sm(mi,mj)
+             end do
+          end do
+       end do
+    end do
+
+    ! do i = 1, LM
+    !    print*, i, Ham(i,i), S(i,i)
+    ! end do
+    ! stop
+
+    Hama = Ham
+    Sa = S
+
+    call dsygvd( ITYPE, JOBZ, UPLO, LM, Ham, LDA, S, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO )
+
+    energy = W(1)
+    !print *, W(1), W(2), W(3)
+    
+    !print *, 'Good boy!'
+  
+    
+    return
+  end subroutine direct
+  
+  
+  
+  

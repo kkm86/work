@@ -1,0 +1,101 @@
+#!/bin/bash
+
+
+###################################################################
+
+#.. For debugging
+DEBUG=0
+
+#.. User specific objects
+COMPILER="ifort"
+
+#.. LIB
+#LIB="mkl"
+#LIBVER="static"
+
+LIBNAME="Kajsa-My"
+
+
+#.. Set program name
+PROGRAM="ani.ex"
+
+#.. Name of Install dir
+#Install_dir="PWD"
+
+#.. Directory for fortran codes
+dir=$PWD
+main_file="ani.f90"
+
+#.. optimization level
+OPT=" -O2 "
+
+
+###################################################################
+
+
+#.. Set compiler flags
+COMP_FLAGS=" -c ${COMP_BASE}"
+COMP_FLAGS_MAIN=${COMP_BASE}
+LIBRARIES=" -L./ -l${LIBNAME} -lblas -llapack "
+
+touch ${PROGRAM}
+rm ${PROGRAM}
+
+############################################################
+echo
+echo "start compilation"
+echo
+############################################################
+# Remove old library if it exists
+if [ -e "lib${LIBNAME}.a" ]; then
+    rm lib${LIBNAME}.a
+fi
+
+#.. Place the names of codes to include here
+Mods=(  constants  )
+
+Codes=( gauleg universal_knot anisotrop bget bder bder2 bsplvb ) 
+
+
+echo 'Compiling modules'
+echo '-----------------'
+for name in "${Mods[@]}"
+    do
+        echo 'Creating object file for: ' ${name}.f90
+        $COMPILER $COMP_FLAGS ${dir}/${name}.f90
+    done
+
+echo
+echo 'Compiling object files'
+echo '----------------------'
+for name in "${Codes[@]}"
+    do
+        echo 'Creating object file for: ' ${name}.f90
+        $COMPILER $COMP_FLAGS ${dir}/${name}.f90
+    done
+
+
+#.. Put all object files into the library libDirac.a
+ar rsv lib${LIBNAME}.a *.o 
+
+
+${COMPILER} ${COMP_FLAGS_MAIN} $main_file $LIBRARIES -o $PROGRAM
+
+#.. Remove object files and modules
+rm *.o *.mod *.a
+
+#
+############################################################
+echo
+echo "End compilation"
+echo "HOST         :" $HOSTNAME
+echo "COMPILER     :" $COMPILER
+echo "COMP_FLAGS   :" $COMP_FLAGS
+echo "LINK_FLAGS   :" $LINK_FLAGS
+echo "Libraries    :" $LIBRARIES
+############################################################
+#
+
+echo 
+echo "Size and name of this program:"
+du -h $PROGRAM

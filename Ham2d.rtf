@@ -1,0 +1,173 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 subroutine Hamiltonian2D(np,k,L,M,LM,tl,tm,energy)\
+\
+  use constants\
+\
+   implicit none\
+\
+   !.. Input\
+   integer            , intent(in) :: np,k,L,M,LM       !..Number of knot-points etc.\
+   real(kind(1.d0))   , intent(in) :: tl(np), tm(np)\
+   real(kind(1.d0)), intent(inout) :: energy\
+\
+   !.. Local\
+   real(kind(1.d0)) :: coordl(L,k),coordm(M,k),Ham(LM,LM),Bs(LM,LM) !..Abscissa-grid\
+   real(kind(1.d0)) :: sum1,sum2,sum3,term1,term2,term3,term4,term5,lowerl,upperl,lowerm,upperm,sumbsp,sumbsp2,sumbsp3,bsp,xabsc(k),weig(k),B_li,B_lj,B_mi,B_mj,dB_li,dB_mi,ddB_li,ddB_mi\
+   real(kind(1.d0)) :: nsize\
+   integer          :: li, lj, mi, mj, n, p, i, j, ll, mm, gl\
+\
+   \
+   !.. Paramenters for generalized eigensolver\
+  ! integer                             :: ITYPE, LDA, LDB, INFO \
+  ! integer                 , parameter :: LWORK = 1000000\
+  ! integer                 , parameter :: LIWORK = 5000\
+  ! character*1                         :: JOBZ = 'V', UPLO = 'U'\
+  ! real(kind(1.d0))    , dimension(LM) :: W,W2\
+  ! real(kind(1.d0)) , dimension(LWORK) :: WORK\
+  ! real(kind(1.d0)), dimension(LIWORK) :: IWORK\
+\
+   !.. Paramenters for generalized eigensolver\
+   integer                             :: LDA, LDB, INFO \
+   character*1                         :: JOBVL = 'N', JOBVR = 'N'\
+   integer                 , parameter :: LDVL = 100\
+   integer                 , parameter :: LDVR = 100\
+   integer                 , parameter :: LWORK = 2808\
+   real(kind(1.d0))    , dimension(LM) :: ALPHAR, ALPHAI, BETA\
+   real(kind(1.d0)) , dimension(LDVL,LM) :: VL\
+   real(kind(1.d0)) , dimension(LDVR,LM) :: VR\
+   real(kind(1.d0)) , dimension(max(1,LWORK)) :: WORK\
+\
+\
+   !.. External functions/variables\
+   real(kind(1.d0)) :: bget, bder, bder2\
+\
+    !.. Initializing parameters for the generalized eigenvalue solver\
+   ! ITYPE = 1\
+    LDA = LM\
+    LDB = LM\
+    gl = 5\
+  \
+    call gauleg(gl, xabsc, weig)\
+\
+    Ham = 0.d0\
+    Bs = 0.d0 \
+    \
+    do lj = 1, L\
+       do li = 1, L\
+          do mj = 1, M\
+             do mi = 1, M\
+                sum1 = 0.0\
+                sum2 = 0.0\
+                sumbsp = 0.0\
+                sumbsp2 = 0.0\
+                bsp = 0.0\
+                term1 = 0.0\
+                term2 = 0.0\
+                term3 = 0.0\
+                term4 = 0.0\
+                term5 = 0.0\
+                upperl = min(li,lj) + k-1\
+                lowerl = max(li,lj)\
+                upperm = min(mi,mj) + k-1\
+                lowerm = max(mi,mj)\
+                do ll = lowerl, upperl\
+                   term1 = 0.0\
+                   term2 = 0.0\
+                   term3 = 0.0\
+                   term4 = 0.0\
+                   term5 = 0.0\
+                   bsp = 0.0\
+                   do n = 1, gl\
+                      do mm = lowerm, upperm\
+                         do p = 1, gl\
+                            if((tl(ll+1).gt.tl(ll)) .and. (tm(mm+1).gt.tm(mm))) then\
+                               coordl(ll,n) = 0.5*(tl(ll+1)+tl(ll)) + 0.5*(tl(ll+1)-tl(ll))*xabsc(n)\
+                               coordm(mm,p) = 0.5*(tm(mm+1)+tm(mm)) + 0.5*(tm(mm+1)-tm(mm))*xabsc(p)\
+\
+                               B_li = bget(coordl(ll,n),tl,k,np,li)\
+                               B_lj = bget(coordl(ll,n),tl,k,np,lj)\
+                               dB_li = bder(coordl(ll,n),tl,k,np,li)\
+                               ddB_li = bder2(coordl(ll,n),tl,k,np,li)\
+                     \
+                               if(mi < 3) then\
+                                  B_mi = bget(coordm(mm,p),tm,k,np,1)+bget(coordm(mm,p),tm,k,np,2)\
+                                  ddB_mi = bder2(coordm(mm,p),tm,k,np,1)+bder2(coordm(mm,p),tm,k,np,2)\
+                               else\
+                                  B_mi = bget(coordm(mm,p),tm,k,np,mi)\
+                                  ddB_mi = bder2(coordm(mm,p),tm,k,np,mi)\
+                               end if\
+\
+                               if(mj < 3) then\
+                                  B_mj = bget(coordm(mm,p),tm,k,np,1)+bget(coordm(mm,p),tm,k,np,2)\
+                               else\
+                                  B_mj = bget(coordm(mm,p),tm,k,np,mj)\
+                               end if\
+                               \
+                               term1 = term1 - weig(n)*weig(p)*B_lj*B_mj*dB_li*B_mi/(2.d0*coordl(ll,n))\
+                               term2 = term2 - weig(n)*weig(p)*B_lj*B_mj*ddB_li*B_mi/2.d0\
+                               term3 = term3 - weig(n)*weig(p)*B_lj*B_mj*B_li*ddB_mi/2.d0\
+                               term4 = term4 + weig(n)*weig(p)*B_lj*B_mj*B_li*B_mi*(coordl(ll,n)**2.d0)/2.d0\
+                               term5 = term5 + weig(n)*weig(p)*B_lj*B_mj*B_li*B_mi*2.d0*(coordm(ll,n)**2.d0)\
+\
+                               bsp = bsp + weig(n)*weig(p)*B_lj*B_mj*B_li*B_mi\
+                            end if\
+                         end do\
+                      end do\
+                   end do\
+                   sum1 = sum1 + 0.5*0.5*(tl(ll+1)-tl(ll))*(tm(mm+1)-tm(mm))*(term1+term2+term3+term4+term5)\
+                   sumbsp = sumbsp + 0.25*(tl(ll+1)-tl(ll))*(tm(mm+1)-tm(mm))*bsp\
+                end do\
+                sum2 = sum2 + sum1\
+                sumbsp2 = sumbsp2 + sumbsp\
+                i = (li-1)*M+mi\
+                j = (lj-1)*M+mj\
+                Ham(i,j) = sum2\
+                Bs(i,j) = sumbsp2\
+             end do\
+          end do\
+       end do\
+    end do\
+\
+   ! open(10,file='wave.dat',status='replace')\
+   ! do i = 1, LM\
+   !    write(10,*) i\
+   !    write(10,*) (Ham(i,j), j=1, 20)\
+!10   format(I18,'  ',16f20.8)\
+!  end do\
+ \
+!  close(10)\
+\
+  \
+             \
+  !  call dsygvd( ITYPE, JOBZ, UPLO, LM, Ham, LDA, Bs, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO )\
+    \
+    call DGGEV( JOBVL, JOBVR, LM, Ham, LDA, Bs, LDB, ALPHAR, ALPHAI, BETA, VL, LDVL, VR, LDVR, WORK, LWORK, INFO )\
+\
+    open(10,file='eig.dat',status='replace')\
+    do i = 1, 5\
+       write(10,*) i\
+       write(10,*) ((ALPHAR(j) + ALPHAI(j)*i)/BETA(j),j=1,5)\
+       write(10,*) BETA(j)\
+    end do\
+    close(10)\
+\
+    \
+\
+  \
+    !energy = W(1)\
+   \
+    ! wfn=Ham(:,2)\
+   \
+    print *, 'Good job!',INFO,WORK(1)\
+    \
+    return\
+  end subroutine Hamiltonian2D\
+  \
+  \
+}
