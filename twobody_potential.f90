@@ -22,15 +22,12 @@ subroutine twobody_potential(S,r0,mass,rho,theta,phi,V)
   channelangle(1) = -2.d0*atan(mass(2)/redmass)
   channelangle(2) = 2.d0*atan(mass(1)/redmass)
   
-  r = rho*(((3.d0)**(-0.25d0)))*(1.d0+cos(2.d0*theta)*cos(2.d0*phi+channelangle))**0.5d0
-
-  !r = d*rho*(((2.d0)**(-0.5d0)))*(1.d0+sin(theta)*sin(phi+channelangle))**0.5d0
- 
-  
+  r = d*rho*(((2.d0)**(-0.5d0)))*(1.d0+sin(theta)*cos(phi+channelangle))**0.5d0
 
   call model_potential(S,r0,r,potential)
   
   V = sum(potential)
+ 
   
   return
 
