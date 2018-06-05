@@ -1,4 +1,4 @@
-program efimov
+program efimovold
 
   use constants
   
@@ -6,29 +6,30 @@ program efimov
   
   !.. Input
   !.. Parameters for the B-splines used in the generalized eigenvalue equation
-  integer, parameter :: N1 = 15   !.. Number of mesh-points in coordinate 1
-  integer, parameter :: N2 = 15   !.. Number of mesh-points in coordinate 2
+  integer, parameter :: N1 = 5   !.. Number of mesh-points in coordinate 1
+  integer, parameter :: N2 = 5   !.. Number of mesh-points in coordinate 2
   integer, parameter :: k = 6    !.. B-spline order
-  integer, parameter :: L = 17    !.. Number of B-splines in coordinate 1(N+k-2-cond)
-  integer, parameter :: M = 17    !.. Number of B-splines in coordinate 2
-  integer, parameter :: LM = 289 !.. Matrix dimension
-  integer, parameter :: npl = 25  !.. Number of knot-points  N1+2(k-1)
-  integer, parameter :: npm = 25  !.. Number of knot-points  N2+2(k-1)
+  integer, parameter :: L = 7    !.. Number of B-splines in coordinate 1(N+k-2-cond)
+  integer, parameter :: M = 7    !.. Number of B-splines in coordinate 2
+  integer, parameter :: LM = 49 !.. Matrix dimension
+  integer, parameter :: npl = 15  !.. Number of knot-points  N1+2(k-1)
+  integer, parameter :: npm = 15  !.. Number of knot-points  N2+2(k-1)
  
 
   !.. Parameters for the knot-point grids tl and tm
   real(kind(1.d0)) :: tl(npl), tm(npm), tl_max, tm_max, tl_min, tm_min
   real(kind(1.d0)) :: tld(npl), tmd(npm), tld_max, tmd_max, tld_min, tmd_min 
+  real(kind(1.d0)) :: energy(6)
 
   !.. Parameters for the 2-body potential
   real(kind(1.d0)) :: d(7)
   real(kind(1.d0)) :: r0,r(3), potential(3)
   real(kind(1.d0)) :: mass(3)
-  real(kind(1.d0)) :: theta,phi
+  real(kind(1.d0)) :: V,theta,phi
 
   !.. Parameters for the energy curve
-  integer, parameter :: points = 300
-  real(kind(1.d0))   :: rho_vector(points),energy(6,points), V(points)
+  integer, parameter :: points = 30
+  real(kind(1.d0))   :: rho_vector(points), energy_curve(7,points)
 
   !.. Parameters for plotting
   integer, parameter :: pp = 100
@@ -41,7 +42,7 @@ program efimov
 
 
   !.. Other parameters
-  real(kind(1.d0)) :: rho, my, H(LM,LM,points), S(LM,LM,points),t1,t2, Vtrap(points), angfreq, osc
+  real(kind(1.d0)) :: rho, my, H(LM,LM), S(LM,LM),t1,t2, Vtrap(points), angfreq, osc
   integer :: i,j,ii, ll, mm, n
 
   
@@ -141,23 +142,33 @@ program efimov
   
   call CPU_TIME( t1 )
   write(6,*) 'hej5', points
+  do i = 1, points
+     rho = rho_vector(i)
      WRITE(6,*) "A",I
-     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,r0,d(1),mass,energy,H,S,points)
+     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d(1),mass,energy,H,S)
+     WRITE(6,*) "B",I
+     energy_curve(1,i) = energy(1)
+     energy_curve(2,i) = energy(2)
+     energy_curve(3,i) = energy(3)
+     energy_curve(4,i) = energy(4)
+     energy_curve(5,i) = energy(5)
+     energy_curve(6,i) = energy(6)
+  end do
+  write(6,*) 'hej6'
   call CPU_TIME( t2 )
   print*, t2-t1
   write(6,*) 'hej7'
 
-  open(10,file='result7.dat',status='replace')
+  open(10,file='result8.dat',status='replace')
   do i = 1, points
-     write(10,10)i, rho_vector(i)/osc, (energy(1,i)+Vtrap(i))/angfreq, (energy(2,i)+Vtrap(i))/angfreq ,(energy(3,i)+Vtrap(i))/angfreq,(energy(4,i)+Vtrap(i))/angfreq,(energy(5,i)+Vtrap(i))/angfreq,(energy(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
+     write(10,10)i, rho_vector(i)/osc, (energy_curve(1,i)+Vtrap(i))/angfreq, (energy_curve(2,i)+Vtrap(i))/angfreq ,(energy_curve(3,i)+Vtrap(i))/angfreq,(energy_curve(4,i)+Vtrap(i))/angfreq,(energy_curve(5,i)+Vtrap(i))/angfreq,(energy_curve(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
 10   format(I3,'  ',16f20.8)
   end do
   close(10)
 
   
 
-end program efimov
-
+end program efimovold
 
 
    

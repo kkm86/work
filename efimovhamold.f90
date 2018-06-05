@@ -1,4 +1,4 @@
-subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
+subroutine efimovhamold(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S)
           
 
   use constants
@@ -6,18 +6,17 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
   implicit none
 
   !.. Input
-  integer            , intent(in) :: npl,npm,k,L,M,LM,points
-  real(kind(1.d0))   , intent(in) :: tl(npl),tm(npm),rho(points),my,d,r0,mass(3)
-  real(kind(1.d0)), intent(inout) :: energy(6,points)
-  real(kind(1.d0)), intent(inout) :: H(LM,LM,points), S(LM,LM,points)
+  integer            , intent(in) :: npl,npm,k,L,M,LM
+  real(kind(1.d0))   , intent(in) :: tl(npl),tm(npm),rho,my,d,r0,mass(3)
+  real(kind(1.d0)), intent(inout) :: energy(6)
+  real(kind(1.d0)), intent(inout) :: H(LM,LM), S(LM,LM)
   
   !.. Local
   real(kind(1.d0))   :: coordl(L+2,k),coordm(M+2,k),xabsc(k),weig(k),theta,phi
-  real(kind(1.d0))   :: term1(points),term2(points),term3(points),term4(points),lowerl,upperl,lowerm,upperm,t1,t2
-  real(kind(1.d0))   :: sum1(points), sum2(points), sum3(points), sumbsp1(points), sumbsp2(points), sumbsp3(points), bsp(points)
+  real(kind(1.d0))   :: term1,term2,term3,term4,lowerl,upperl,lowerm,upperm,t1,t2
+  real(kind(1.d0))   :: sum1, sum2, sum3, sumbsp1, sumbsp2, sumbsp3, bsp
   real(kind(1.d0))   :: B_li, B_lj, B_mi, B_mj, dB_lj, dB_mj, dB_li, dB_mi
   real(kind(1.d0))   :: nsize
-  real(kind(1.d0))   :: Hrez(LM,LM),Srez(LM,LM)
   integer            :: li, lj, mi, mj, n, p, i, j, ll, mm
 
   !.. Paramenters for generalized eigensolver
@@ -33,7 +32,7 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
   real(kind(1.d0)), dimension(LIWORK) :: IWORK
 
   !.. External functions/variables
-  real(kind(1.d0)) :: bget, bder, V(points)
+  real(kind(1.d0)) :: bget, bder, V
 
   ITYPE = 1
   LDA = LM
@@ -129,7 +128,7 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
                                 dB_mi = bder(coordm(mm,p),tm,k,npm,mi+1)
                              end if
                              
-                             call twobody_potential(d,r0,mass,rho,theta,phi,V,points)
+                             call twobody_potential(d,r0,mass,rho,theta,phi,V)
 
                              bsp = bsp + weig(n)*weig(p)*B_li*B_mi*B_lj*B_mj*sin(2.d0*theta)
                              
@@ -148,8 +147,8 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
                  sum3 = sum3 + sum2
                  sumbsp3 = sumbsp3 + sumbsp2
               end do
-              H(i,j,:) = sum3
-              S(i,j,:) = sumbsp3
+              H(i,j) = sum3
+              S(i,j) = sumbsp3
            end do
         end do
      end do
@@ -157,32 +156,24 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
   call CPU_TIME( t2 )
   print*,'making array', t2-t1
 
-  
-
   call CPU_TIME( t1 )
-  do i = 1, points
-     Hrez = H(:,:,i)
-     Srez = S(:,:,i)
-     call dsygvd( ITYPE, JOBZ, UPLO, LM, Hrez, LDA, Srez, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO )
-  
-  
-     energy(1,i) = W(1)
-     energy(2,i) = W(2)
-     energy(3,i) = W(3)
-     energy(4,i) = W(4)
-     energy(5,i) = W(5)
-     energy(6,i) = W(6)
-  end do
-
+  call dsygvd( ITYPE, JOBZ, UPLO, LM, H, LDA, S, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO )
   call CPU_TIME( t2 )
   print*,'time2', t2-t1
+  energy(1) = W(1)
+  energy(2) = W(2)
+  energy(3) = W(3)
+  energy(4) = W(4)
+  energy(5) = W(5)
+  energy(6) = W(6)
+  
 
   !print*, W(1), W(2), W(3), W(4), W(5), W(6), W(7), W(8), W(9), W(10), W(11), W(12), W(13), W(14), W(15), W(16)
   !print*, 'info', INFO
+
+ 
   
   return
 
-end subroutine efimovham
-
-
+end subroutine efimovhamold
 
