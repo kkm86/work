@@ -19,7 +19,7 @@ program efimov
   !.. Parameters for the knot-point grids tl and tm
   real(kind(1.d0)) :: tl(npl), tm(npm), tl_max, tm_max, tl_min, tm_min
   real(kind(1.d0)) :: tld(npl), tmd(npm), tld_max, tmd_max, tld_min, tmd_min 
-  real(kind(1.d0)) :: energy0(6),energy3(6),energy6(6)
+  real(kind(1.d0)) :: energy(6)
 
   !.. Parameters for the 2-body potential
   real(kind(1.d0)) :: d(7)
@@ -42,18 +42,13 @@ program efimov
 
 
   !.. Other parameters
-  real(kind(1.d0)) :: rho, my, H(LM,LM), S(LM,LM),t1,t2, Vtrap(points), angfreq, osc, ny(3)
+  real(kind(1.d0)) :: rho, my, H(LM,LM), S(LM,LM),t1,t2, Vtrap(points), angfreq, osc
   integer :: i,j,ii, ll, mm, n
 
   
   r0 = 55.d0
   mass = 87.d0*1836.15d0
-  !mass = 1.d0
   my = mass(1)/sqrt(3.d0)
-  !my = mass(1)
-  ny(1) = 0.d0
-  ny(2) = 3.d0
-  ny(3) = 6.d0
   osc = 731.d0
   angfreq = 1.d0/(mass(1)*osc**2.d0)
   
@@ -69,16 +64,10 @@ program efimov
   tm_min = 0.d0
   tm_max = Pi/3.d0
 
-  ! tld_min = 0.d0
-  ! tld_max = Pi/2.d0
-  ! tmd_min = 0.d0
-  ! tmd_max = 2.d0*Pi
 
   call universal_knot(npl,k,N1,tl_max,tl_min,tl)
   call universal_knot(npm,k,N2,tm_max,tm_min,tm)
 
-  ! call universal_knot(npl,k,N1,tld_max,tld_min,tld)
-  ! call universal_knot(npm,k,N2,tmd_max,tmd_min,tmd)
 
   rho_vector(1) = 1.d0
   rho_vector(points) = 1000.d0
@@ -90,12 +79,7 @@ program efimov
  
   Vtrap = 0.5d0*my*(angfreq**2.d0)*(rho_vector**2.d0)
 
-
-  !call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector(1),my,r0,d(1),mass,energy,H,S)
-  !call delvesham(npl,npm,k,L,M,LM,tld,tmd,rho_vector(1),my,r0,d(1),mass,energy,H,S)
-
   
-
   !.. Code for plotting eigenfunctions start
 
   ! do n = 1, ss
@@ -161,16 +145,14 @@ program efimov
   do i = 1, points
      rho = rho_vector(i)
      WRITE(6,*) "A",I
-     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d(1),mass,energy0,H,S,ny(1))
-     !call efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d(1),mass,energy3,H,S,ny(2))
-     !call efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d(1),mass,energy6,H,S,ny(3))
+     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d(1),mass,energy,H,S)
      WRITE(6,*) "B",I
-     energy_curve(1,i) = energy0(1)
-     energy_curve(2,i) = energy0(2)
-     energy_curve(3,i) = energy0(3)
-     energy_curve(4,i) = energy0(4)
-     energy_curve(5,i) = energy0(5)
-     energy_curve(6,i) = energy0(6)
+     energy_curve(1,i) = energy(1)
+     energy_curve(2,i) = energy(2)
+     energy_curve(3,i) = energy(3)
+     energy_curve(4,i) = energy(4)
+     energy_curve(5,i) = energy(5)
+     energy_curve(6,i) = energy(6)
   end do
   write(6,*) 'hej6'
   call CPU_TIME( t2 )
@@ -183,20 +165,6 @@ program efimov
 10   format(I3,'  ',16f20.8)
   end do
   close(10)
-
-  open(11,file='result10.dat',status='replace')
-  do i = 1, points
-     write(11,11)i, rho_vector(i) , energy_curve(1,i)*10**(8.d0), energy_curve(2,i)*10**(8.d0), energy_curve(3,i)*10**(8.d0)
-11   format(I3,'  ',16f20.8)
-  end do
-  close(11)
- 
-  ! open(10,file='result7.dat',status='replace')
-!   do i = 1, points
-!      write(10,10)i, rho_vector(i)/osc, (energy_curve(1,i)+Vtrap(i))/angfreq, (energy_curve(2,i)+Vtrap(i))/angfreq, (energy_curve(3,i)+Vtrap(i))/angfreq,((32.d0+(15.d0/4.d0))/(2.d0*my*rho_vector(i)**2.d0)+Vtrap(i))/angfreq, (-3.21081d0*10**(-10.d0)*(2.d0*my)+(0.5d0*my*angfreq**2.d0))/angfreq
-! 10   format(I3,'  ',16f20.8)
-!   end do
-!   close(10)
 
   
 
