@@ -6,14 +6,14 @@ program efimov
   
   !.. Input
   !.. Parameters for the B-splines used in the generalized eigenvalue equation
-  integer, parameter :: N1 = 15   !.. Number of mesh-points in coordinate 1
-  integer, parameter :: N2 = 15   !.. Number of mesh-points in coordinate 2
+  integer, parameter :: N1 = 5   !.. Number of mesh-points in coordinate 1
+  integer, parameter :: N2 = 5   !.. Number of mesh-points in coordinate 2
   integer, parameter :: k = 6    !.. B-spline order
-  integer, parameter :: L = 17    !.. Number of B-splines in coordinate 1(N+k-2-cond)
-  integer, parameter :: M = 17    !.. Number of B-splines in coordinate 2
-  integer, parameter :: LM = 289 !.. Matrix dimension
-  integer, parameter :: npl = 25  !.. Number of knot-points  N1+2(k-1)
-  integer, parameter :: npm = 25  !.. Number of knot-points  N2+2(k-1)
+  integer, parameter :: L = 7    !.. Number of B-splines in coordinate 1(N+k-2-cond)
+  integer, parameter :: M = 7    !.. Number of B-splines in coordinate 2
+  integer, parameter :: LM = 49 !.. Matrix dimension
+  integer, parameter :: npl = 15  !.. Number of knot-points  N1+2(k-1)
+  integer, parameter :: npm = 15  !.. Number of knot-points  N2+2(k-1)
  
 
   !.. Parameters for the knot-point grids tl and tm
@@ -22,26 +22,26 @@ program efimov
 
   !.. Parameters for the 2-body potential
   real(kind(1.d0)) :: d(7)
-  real(kind(1.d0)) :: r0,r(3), potential(3)
+  real(kind(1.d0)) :: r0 !,r(3), potential(3)
   real(kind(1.d0)) :: mass(3)
-  real(kind(1.d0)) :: theta,phi
+  !real(kind(1.d0)) :: theta,phi
 
   !.. Parameters for the energy curve
-  integer, parameter :: points = 300
-  real(kind(1.d0))   :: rho_vector(points),energy(6,points), V(points)
+  integer, parameter :: points = 50
+  real(kind(1.d0))   :: rho_vector(3,points),energy(LM,points,3),V(3,points)
 
   !.. Parameters for plotting
   integer, parameter :: pp = 100
   integer, parameter :: ss = 4
-  real(kind(1.d0)) :: x(pp), y(pp), step_size_x, step_size_y, alpha
+  real(kind(1.d0)) :: x(pp), y(pp),step_size,delta_rho,rho_min,rho_max,step_size_x,step_size_y
   real(kind(1.d0)) :: base(pp,LM)
 
   !.. Parameters for the wave function
-  real(kind(1.d0))   :: wfn(pp,pp,ss), f(LM,ss), c(L,M,ss), term(ss), base_L(pp,L), base_M(pp,M)
+  real(kind(1.d0))   :: wfn(pp,pp,ss), f(LM,ss), c(L,M,points), term(ss), base_L(pp,L), base_M(pp,M)
 
 
   !.. Other parameters
-  real(kind(1.d0)) :: rho, my, H(LM,LM,points), S(LM,LM,points),t1,t2, Vtrap(points), angfreq, osc
+  real(kind(1.d0)) :: rho, my, H(LM,LM,points,3), S(LM,LM,points,3),t1,t2, Vtrap(3,points), angfreq, osc, U(points)
   integer :: i,j,ii, ll, mm, n
 
   
@@ -53,11 +53,7 @@ program efimov
   
 
   d(1) = -3.086d0*10**(-8.d0)
-  !d(1) = -7.299d0*10**(-8.d0)
-  !d(1) = 0.d0*10**(-8.d0)
-  
-  
-  
+ 
   tl_min = 0.d0
   tl_max = Pi/2.d0
   tm_min = 0.d0
@@ -68,15 +64,26 @@ program efimov
   call universal_knot(npm,k,N2,tm_max,tm_min,tm)
 
 
-  rho_vector(1) = 1.d0
-  rho_vector(points) = 1000.d0
-  step_size_x = (rho_vector(1)+rho_vector(points))/points
-  do i = 2, points-1
-     rho_vector(i) = rho_vector(i-1)+step_size_x
+  !.. Setting up hyperradial vector
+  rho_min = 1.d0
+  rho_max = 1000.d0
+  step_size = (rho_max-rho_min)/(points-1)
+  delta_rho = 0.001d0
+  rho_vector(1,1) = rho_min-delta_rho
+  rho_vector(2,1) = rho_min
+  rho_vector(3,1) = rho_min+delta_rho
+  print*, rho_vector(1,1), rho_vector(2,1), rho_vector(3,1)
+  do i = 2, points
+     rho_vector(1,i) = rho_vector(1,i-1)+step_size
+     rho_vector(2,i) = rho_vector(2,i-1)+step_size
+     rho_vector(3,i) = rho_vector(3,i-1)+step_size
+     !print*, rho_vector(1,i), rho_vector(2,i), rho_vector(3,i)
   end do
-  
+
  
   Vtrap = 0.5d0*my*(angfreq**2.d0)*(rho_vector**2.d0)
+
+ 
 
   
   !.. Code for plotting eigenfunctions start
@@ -147,12 +154,46 @@ program efimov
   print*, t2-t1
   write(6,*) 'hej7'
 
-  open(10,file='result7.dat',status='replace')
+
+  open(10,file='threebodypot.dat',status='replace')
   do i = 1, points
-     write(10,10)i, rho_vector(i)/osc, (energy(1,i)+Vtrap(i))/angfreq, (energy(2,i)+Vtrap(i))/angfreq ,(energy(3,i)+Vtrap(i))/angfreq,(energy(4,i)+Vtrap(i))/angfreq,(energy(5,i)+Vtrap(i))/angfreq,(energy(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
+     write(10,10)i, rho_vector(2,i)/osc, (energy(1,i,2)+Vtrap(2,i))/angfreq, (energy(2,i,2)+Vtrap(2,i))/angfreq ,(energy(3,i,2)+Vtrap(2,i))/angfreq,(energy(4,i,2)+Vtrap(2,i))/angfreq,(energy(5,i,2)+Vtrap(2,i))/angfreq,(energy(6,i,2)+Vtrap(2,i))/angfreq, Vtrap(2,i)/angfreq
 10   format(I3,'  ',16f20.8)
   end do
   close(10)
+
+  do j = 1, points
+     do mm = 1, M
+        do ll = 1, L
+           i = (ll-1)*M+mm
+           c(ll,mm,j) = 0.5d0*(H(i,1,j,3)-H(i,1,j,1))/delta_rho
+        end do
+     end do
+  end do
+
+  call adiabatic(npl,npm,k,L,M,LM,tl,tm,rho,my,c,U,points)
+
+  open(13,file='adia.dat',status='replace')
+  do i = 1, points
+     write(13,10)i, rho_vector(2,i)/osc, (energy(1,i,2)+Vtrap(2,i))/angfreq, (energy(1,i,2)+Vtrap(2,i)-U(i)/(2.d0*my))/angfreq
+  end do
+  close(10)
+
+  ! open(11,file='coeffmin.dat',status='replace')
+  ! do i = 1, points
+  !    do j = 1, LM
+  !    write(11,10) H(j,1,i,1)
+  ! end do
+  ! end do
+  ! close(11)
+
+  ! open(12,file='coeffmax.dat',status='replace')
+  ! do i = 1, points
+  !    do j = 1, LM
+  !    write(12,10) H(j,1,i,3)
+  ! end do
+  ! end do
+  ! close(12)
 
   
 

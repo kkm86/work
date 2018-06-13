@@ -34,7 +34,13 @@ subroutine B_spline_base(np,k,L,M,tl,tm,pp,x,y,base_L,base_M)
            else
               B_mj = bget(y(ii),tm,k,np,mj+1)
            end if
-           B_lj = bget(x(ii),tl,k,np,lj+1)
+           if(lj == 1)then
+              B_lj = bget(x(ii),tl,k,np,1)+bget(x(ii),tl,k,np,2)
+           else if(lj == L)then
+              B_lj = bget(x(ii),tl,k,np,L+1)+bget(x(ii),tl,k,np,L+2)
+           else
+              B_lj = bget(x(ii),tl,k,np,lj+1)     
+           end if
            
            base_L(ii,lj)=B_lj
            base_M(ii,mj)=B_mj

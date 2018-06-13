@@ -7,14 +7,14 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
 
   !.. Input
   integer            , intent(in) :: npl,npm,k,L,M,LM,points
-  real(kind(1.d0))   , intent(in) :: tl(npl),tm(npm),rho(points),my,d,r0,mass(3)
-  real(kind(1.d0)), intent(inout) :: energy(6,points)
-  real(kind(1.d0)), intent(inout) :: H(LM,LM,points), S(LM,LM,points)
+  real(kind(1.d0))   , intent(in) :: tl(npl),tm(npm),rho(3,points),my,d,r0,mass(3)
+  real(kind(1.d0)), intent(inout) :: energy(LM,points,3)
+  real(kind(1.d0)), intent(inout) :: H(LM,LM,points,3), S(LM,LM,points,3)
   
   !.. Local
   real(kind(1.d0))   :: coordl(L+2,k),coordm(M+2,k),xabsc(k),weig(k),theta,phi
-  real(kind(1.d0))   :: term1(points),term2(points),term3(points),term4(points),lowerl,upperl,lowerm,upperm,t1,t2
-  real(kind(1.d0))   :: sum1(points), sum2(points), sum3(points), sumbsp1(points), sumbsp2(points), sumbsp3(points), bsp(points)
+  real(kind(1.d0))   :: term1(3,points),term2(3,points),term3(3,points),term4(3,points),lowerl,upperl,lowerm,upperm,t1,t2
+  real(kind(1.d0))   :: sum1(3,points), sum2(3,points), sum3(3,points), sumbsp1(3,points), sumbsp2(3,points), sumbsp3(3,points), bsp(3,points)
   real(kind(1.d0))   :: B_li, B_lj, B_mi, B_mj, dB_lj, dB_mj, dB_li, dB_mi
   real(kind(1.d0))   :: nsize
   real(kind(1.d0))   :: Hrez(LM,LM),Srez(LM,LM)
@@ -22,18 +22,18 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
 
   !.. Paramenters for generalized eigensolver
   integer                             :: ITYPE, LDA, LDB, INFO 
-  !integer                 , parameter :: LWORK = 4000000
-  !integer                 , parameter :: LIWORK = 10000
-  !character*1                         :: JOBZ = 'V', UPLO = 'U'
-  integer                 , parameter :: LWORK = 8000
-  integer                 , parameter :: LIWORK = 100
-  character*1                         :: JOBZ = 'N', UPLO = 'U'
+  integer                 , parameter :: LWORK = 168777
+  integer                 , parameter :: LIWORK = 1448
+  character*1                         :: JOBZ = 'V', UPLO = 'U'
+  ! integer                 , parameter :: LWORK = 8000
+  ! integer                 , parameter :: LIWORK = 100
+  ! character*1                         :: JOBZ = 'N', UPLO = 'U'
   real(kind(1.d0))    , dimension(LM) :: W
   real(kind(1.d0)) , dimension(LWORK) :: WORK
-  real(kind(1.d0)), dimension(LIWORK) :: IWORK
+  integer         , dimension(LIWORK) :: IWORK
 
   !.. External functions/variables
-  real(kind(1.d0)) :: bget, bder, V(points)
+  real(kind(1.d0)) :: bget, bder, V(3,points)
 
   ITYPE = 1
   LDA = LM
@@ -75,15 +75,7 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
                              coordm(mm,p) = 0.5*(tm(mm+1)+tm(mm)) + 0.5*(tm(mm+1)-tm(mm))*xabsc(p)
                              theta = coordl(ll,n)
                              phi = coordm(mm,p)
-                             ! B_li = bget(coordl(ll,n),tl,k,npl,li+1)
-                             ! B_lj = bget(coordl(ll,n),tl,k,npl,lj+1)
-                             ! dB_li = bder(coordl(ll,n),tl,k,npl,li+1)
-                             ! dB_lj = bder(coordl(ll,n),tl,k,npl,lj+1)
-                             ! B_mi = bget(coordm(mm,p),tm,k,npm,mi+1)
-                             ! B_mj = bget(coordm(mm,p),tm,k,npm,mj+1)
-                             ! dB_mi = bder(coordm(mm,p),tm,k,npm,mi+1)
-                             ! dB_mj = bder(coordm(mm,p),tm,k,npm,mj+1)
-
+                           
                              if(lj == 1)then
                                 B_lj = bget(coordl(ll,n),tl,k,npl,1)+bget(coordl(ll,n),tl,k,npl,2)
                                 dB_lj = bder(coordl(ll,n),tl,k,npl,1)+bder(coordl(ll,n),tl,k,npl,2)
@@ -148,8 +140,12 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
                  sum3 = sum3 + sum2
                  sumbsp3 = sumbsp3 + sumbsp2
               end do
-              H(i,j,:) = sum3
-              S(i,j,:) = sumbsp3
+              H(i,j,:,1) = sum3(1,:)
+              S(i,j,:,1) = sumbsp3(1,:)
+              H(i,j,:,2) = sum3(2,:)
+              S(i,j,:,2) = sumbsp3(2,:)
+              H(i,j,:,3) = sum3(3,:)
+              S(i,j,:,3) = sumbsp3(3,:)
            end do
         end do
      end do
@@ -160,25 +156,21 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,S,points)
   
 
   call CPU_TIME( t1 )
-  do i = 1, points
-     Hrez = H(:,:,i)
-     Srez = S(:,:,i)
-     call dsygvd( ITYPE, JOBZ, UPLO, LM, Hrez, LDA, Srez, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO )
-  
-  
-     energy(1,i) = W(1)
-     energy(2,i) = W(2)
-     energy(3,i) = W(3)
-     energy(4,i) = W(4)
-     energy(5,i) = W(5)
-     energy(6,i) = W(6)
+  do j = 1, 3
+     do i = 1, points
+        Hrez = H(:,:,i,j)
+        Srez = S(:,:,i,j)
+        call dsygvd( ITYPE, JOBZ, UPLO, LM, Hrez, LDA, Srez, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO )
+        energy(:,i,j) = W
+        H(:,:,i,j) = Hrez
+     end do
   end do
 
   call CPU_TIME( t2 )
   print*,'time2', t2-t1
 
   !print*, W(1), W(2), W(3), W(4), W(5), W(6), W(7), W(8), W(9), W(10), W(11), W(12), W(13), W(14), W(15), W(16)
-  !print*, 'info', INFO
+  print*, 'info', INFO, 'LWORK', WORK(1), 'LIWORK', IWORK(1)
   
   return
 
