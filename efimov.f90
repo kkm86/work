@@ -27,22 +27,22 @@ program efimov
   !real(kind(1.d0)) :: theta,phi
 
   !.. Parameters for the energy curve
-  integer, parameter :: points = 50
+  integer, parameter :: points = 100
   real(kind(1.d0))   :: rho_vector(3,points),energy(LM,points,3),V(3,points)
 
   !.. Parameters for plotting
   integer, parameter :: pp = 100
   integer, parameter :: ss = 4
-  real(kind(1.d0)) :: x(pp), y(pp),step_size,delta_rho,rho_min,rho_max,step_size_x,step_size_y
-  real(kind(1.d0)) :: base(pp,LM)
+  real(kind(1.d0)) :: x(pp),y(pp),step_size,delta_rho,rho_min,rho_max
+  real(kind(1.d0)) :: base(pp,LM),aa,bb,cc,dd,hh,kk
 
   !.. Parameters for the wave function
-  real(kind(1.d0))   :: wfn(pp,pp,ss), f(LM,ss), c(L,M,points), term(ss), base_L(pp,L), base_M(pp,M)
+  real(kind(1.d0))   :: wfn(pp,pp,ss),angwfn(pp,pp),f(LM,ss), c(L,M,points),cv(L,M,points),term(ss), base_L(pp,L), base_M(pp,M)
 
 
   !.. Other parameters
-  real(kind(1.d0)) :: rho, my, H(LM,LM,points,3), S(LM,LM,points,3),t1,t2, Vtrap(3,points), angfreq, osc, U(points)
-  integer :: i,j,ii, ll, mm, n
+  real(kind(1.d0)) :: rho(points), my, H(LM,LM,points,3), S(LM,LM,points,3),t1,t2, Vtrap(3,points), angfreq, osc, U(points), integ
+  integer :: i,j,jj,ii,ll,mm,n
 
   
   r0 = 55.d0
@@ -77,10 +77,9 @@ program efimov
      rho_vector(1,i) = rho_vector(1,i-1)+step_size
      rho_vector(2,i) = rho_vector(2,i-1)+step_size
      rho_vector(3,i) = rho_vector(3,i-1)+step_size
-     !print*, rho_vector(1,i), rho_vector(2,i), rho_vector(3,i)
   end do
 
- 
+  rho = rho_vector(2,:)
   Vtrap = 0.5d0*my*(angfreq**2.d0)*(rho_vector**2.d0)
 
  
@@ -109,12 +108,12 @@ program efimov
 !   y(1) = tm(k)
 !   y(pp) = tm(np)
 
-!   step_size_x = (x(pp)-x(1))/pp
-!   step_size_y = (y(pp)-y(1))/pp
+!   hh = (x(pp)-x(1))/pp
+!   kk = (y(pp)-y(1))/pp
 
 !   do ii = 2, pp-1
-!      x(ii) = x(ii-1)+step_size_x
-!      y(ii) = y(ii-1)+step_size_y
+!      x(ii) = x(ii-1)+hh
+!      y(ii) = y(ii-1)+kk
 !   end do
 
 !   call B_spline_base(np,k,L,M,tl,tm,pp,x,y,base_L,base_M)
@@ -166,18 +165,72 @@ program efimov
      do mm = 1, M
         do ll = 1, L
            i = (ll-1)*M+mm
-           c(ll,mm,j) = 0.5d0*(H(i,1,j,3)-H(i,1,j,1))/delta_rho
+           c(ll,mm,j) = H(i,1,j,2)
+           cv(ll,mm,j) = H(i,1,j,2)
         end do
      end do
   end do
 
-  call adiabatic(npl,npm,k,L,M,LM,tl,tm,rho,my,c,U,points)
+  !.. Setting up vector for plotting
+  aa = tl(k)
+  bb = tl(npl)
+  cc = tm(k)
+  dd = tm(npm)
 
-  open(13,file='adia.dat',status='replace')
-  do i = 1, points
-     write(13,10)i, rho_vector(2,i)/osc, (energy(1,i,2)+Vtrap(2,i))/angfreq, (energy(1,i,2)+Vtrap(2,i)-U(i)/(2.d0*my))/angfreq
+  print*,'aabbccdd'
+  print*,aa,bb,cc,dd
+ 
+  hh = (bb-aa)/(pp-1)
+  kk = (dd-cc)/(pp-1)
+
+  x(1) = aa
+  x(pp) = bb
+  y(1) = cc
+  y(pp) = dd
+  
+  do ii = 2, pp-1
+     x(ii) = x(ii-1)+hh
+     y(ii) = y(ii-1)+kk
   end do
-  close(10)
+
+  print*, 'y(n)'
+  print*, y(1),y(pp),hh,kk
+
+  call B_spline_base(npl,npm,k,L,M,tl,tm,pp,x,y,base_L,base_M)
+
+
+  do j = 1, pp
+     do i = 1, pp
+        term = 0.0
+        do ll = 1, L
+           do mm = 1, M
+              term(1) = term(1) + 2.d0*Pi*sin(2.d0*x(i))*c(ll,mm,1)*cv(ll,mm,1)*(base_L(i,ll)*base_M(j,mm))**2.d0
+           end do
+        end do
+        angwfn(i,j) = term(1)
+     end do
+  end do
+
+ 
+  call T2D(pp,hh,kk,angwfn,integ)
+
+  stop
+  ! do j = 1, 1
+  !    do mm = 1, M
+  !       do ll = 1, L
+  !          i = (ll-1)*M+mm
+  !          cv(ll,mm,j) = 0.5d0*(H(i,1,j,3)-H(i,1,j,1))/delta_rho
+  !       end do
+  !    end do
+  ! end do
+
+  call adiabatic(npl,npm,k,L,M,LM,tl,tm,rho,my,c,cv,U,points)
+
+  ! open(13,file='adia.dat',status='replace')
+  ! do i = 1, points
+  !    write(13,10)i, rho_vector(2,i)/osc, (energy(1,i,2)+Vtrap(2,i))/angfreq, (energy(1,i,2)+Vtrap(2,i)-U(i)/(2.d0*my))/angfreq, U(i)!/(2.d0*my*angfreq) 
+  ! end do
+  ! close(10)
 
   ! open(11,file='coeffmin.dat',status='replace')
   ! do i = 1, points

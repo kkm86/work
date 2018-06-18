@@ -1,10 +1,10 @@
-subroutine B_spline_base(np,k,L,M,tl,tm,pp,x,y,base_L,base_M)
+subroutine B_spline_base(npl,npm,k,L,M,tl,tm,pp,x,y,base_L,base_M)
 
   implicit none
 
   !.. Input
-  integer, intent(in) :: np,k,L,M,pp
-  real(kind(1.d0)), intent(in) :: tl(np),tm(np),x(pp),y(pp)
+  integer, intent(in) :: npl,npm,k,L,M,pp
+  real(kind(1.d0)), intent(in) :: tl(npl),tm(npm),x(pp),y(pp)
   !.. Output
   real(kind(1.d0)), intent(inout) :: base_L(pp,L), base_M(pp,M)
 
@@ -28,18 +28,18 @@ subroutine B_spline_base(np,k,L,M,tl,tm,pp,x,y,base_L,base_M)
      do mj = 1, M
         do ii = 1, pp
            if(mj == 1)then
-              B_mj = bget(y(ii),tm,k,np,1)+bget(y(ii),tm,k,np,2)
+              B_mj = bget(y(ii),tm,k,npm,1)+bget(y(ii),tm,k,npm,2)
            else if(mj == M)then
-              B_mj = bget(y(ii),tm,k,np,M+1)+bget(y(ii),tm,k,np,M+2)
+              B_mj = bget(y(ii),tm,k,npm,M+1)+bget(y(ii),tm,k,npm,M+2)
            else
-              B_mj = bget(y(ii),tm,k,np,mj+1)
+              B_mj = bget(y(ii),tm,k,npm,mj+1)
            end if
            if(lj == 1)then
-              B_lj = bget(x(ii),tl,k,np,1)+bget(x(ii),tl,k,np,2)
+              B_lj = bget(x(ii),tl,k,npl,1)+bget(x(ii),tl,k,npl,2)
            else if(lj == L)then
-              B_lj = bget(x(ii),tl,k,np,L+1)+bget(x(ii),tl,k,np,L+2)
+              B_lj = bget(x(ii),tl,k,npl,L+1)+bget(x(ii),tl,k,npl,L+2)
            else
-              B_lj = bget(x(ii),tl,k,np,lj+1)     
+              B_lj = bget(x(ii),tl,k,npl,lj+1)     
            end if
            
            base_L(ii,lj)=B_lj

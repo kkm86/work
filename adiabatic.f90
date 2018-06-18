@@ -1,4 +1,4 @@
-subroutine adiabatic(npl,npm,k,L,M,LM,tl,tm,rho,my,c,U,points)
+subroutine adiabatic(npl,npm,k,L,M,LM,tl,tm,rho,my,c,cv,U,points)
           
 
   use constants
@@ -7,7 +7,7 @@ subroutine adiabatic(npl,npm,k,L,M,LM,tl,tm,rho,my,c,U,points)
 
   !.. Input
   integer            , intent(in) :: npl,npm,k,L,M,LM,points
-  real(kind(1.d0))   , intent(in) :: tl(npl),tm(npm),rho(points),c(L,M,points),my
+  real(kind(1.d0))   , intent(in) :: tl(npl),tm(npm),rho(points),c(L,M,points),cv(L,M,points),my
   real(kind(1.d0)), intent(inout) :: U(points)
   
   !.. Local
@@ -83,7 +83,7 @@ subroutine adiabatic(npl,npm,k,L,M,LM,tl,tm,rho,my,c,U,points)
                                 B_mi = bget(coordm(mm,p),tm,k,npm,mi+1)
                              end if
 
-                             term1 = term1 + (c(ll,mm,:)**2.d0)*B_mj*B_mi*B_lj*B_li*sin(2.d0*theta)
+                             term1 = term1 + (cv(lj,mj,:)*cv(li,mi,:))*B_mj*B_mi*B_lj*B_li*sin(2.d0*theta)
                              
                           end do
                           sum1 = sum1 + 0.5d0*(tm(mm+1)-tm(mm))*(term1)
@@ -102,6 +102,10 @@ subroutine adiabatic(npl,npm,k,L,M,LM,tl,tm,rho,my,c,U,points)
   call CPU_TIME( t2 )
   print*,'making array', t2-t1
 
+  do i = 1, points
+     print*, 'integral value',i, U(i)
+  end do
+  
   
 
   
