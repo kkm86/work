@@ -18,11 +18,7 @@ subroutine B_spline_base(npl,npm,k,L,M,tl,tm,pp,x,y,base_L,base_M)
   base_L = 0.d0
   base_M = 0.d0
 
-  ! do jj = 1, NN
-  !    do ii = 1, pp
-  !       base(ii,jj)=bget(x(ii),t,k,np,jj+1)
-  !    end do
-  ! end do
+ 
 
   do lj = 1, L
      do mj = 1, M

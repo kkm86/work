@@ -22,27 +22,27 @@ program efimov
 
   !.. Parameters for the 2-body potential
   real(kind(1.d0)) :: d(7)
-  real(kind(1.d0)) :: r0 !,r(3), potential(3)
+  real(kind(1.d0)) :: r0
   real(kind(1.d0)) :: mass(3)
-  !real(kind(1.d0)) :: theta,phi
+ 
 
   !.. Parameters for the energy curve
   integer, parameter :: points = 100
   real(kind(1.d0))   :: rho_vector(3,points),energy(LM,points,3),V(3,points)
 
   !.. Parameters for plotting
-  integer, parameter :: pp = 100
+  integer, parameter :: pp = 400
   integer, parameter :: ss = 4
   real(kind(1.d0)) :: x(pp),y(pp),step_size,delta_rho,rho_min,rho_max
-  real(kind(1.d0)) :: base(pp,LM),aa,bb,cc,dd,hh,kk
+  real(kind(1.d0)) :: base(pp,LM),hh,kk
 
   !.. Parameters for the wave function
-  real(kind(1.d0))   :: wfn(pp,pp,ss),angwfn(pp,pp),f(LM,ss), c(L,M,points),cv(L,M,points),term(ss), base_L(pp,L), base_M(pp,M)
+  real(kind(1.d0))   :: wfn(pp,pp,ss),angwfn(pp,pp,points),f(LM,ss),c(L,M,points),cv(L,M,points),term(ss),base_L(pp,L),base_M(pp,M),summa(points)
 
 
   !.. Other parameters
-  real(kind(1.d0)) :: rho(points), my, H(LM,LM,points,3), S(LM,LM,points,3),t1,t2, Vtrap(3,points), angfreq, osc, U(points), integ
-  integer :: i,j,jj,ii,ll,mm,n
+  real(kind(1.d0)) :: rho(points),my,H(LM,LM,points,3),S(LM,LM,points,3),t1,t2,Vtrap(3,points),angfreq,osc,U(points),integ(points)
+  integer :: i,j,jj,ii,ll,mm,lj,li,mi,mj,n
 
   
   r0 = 55.d0
@@ -172,49 +172,48 @@ program efimov
   end do
 
   !.. Setting up vector for plotting
-  aa = tl(k)
-  bb = tl(npl)
-  cc = tm(k)
-  dd = tm(npm)
-
-  print*,'aabbccdd'
-  print*,aa,bb,cc,dd
+  x(1) = tl(k)
+  x(pp) = tl(npl)
+  y(1) = tm(k)
+  y(pp) = tm(npm)
  
-  hh = (bb-aa)/(pp-1)
-  kk = (dd-cc)/(pp-1)
-
-  x(1) = aa
-  x(pp) = bb
-  y(1) = cc
-  y(pp) = dd
+  hh = (x(pp)-x(1))/(pp-1)
+  kk = (y(pp)-y(1))/(pp-1)
   
   do ii = 2, pp-1
      x(ii) = x(ii-1)+hh
      y(ii) = y(ii-1)+kk
   end do
 
-  print*, 'y(n)'
-  print*, y(1),y(pp),hh,kk
-
   call B_spline_base(npl,npm,k,L,M,tl,tm,pp,x,y,base_L,base_M)
-
 
   do j = 1, pp
      do i = 1, pp
-        term = 0.0
-        do ll = 1, L
-           do mm = 1, M
-              term(1) = term(1) + 2.d0*Pi*sin(2.d0*x(i))*c(ll,mm,1)*cv(ll,mm,1)*(base_L(i,ll)*base_M(j,mm))**2.d0
+        summa = 0.0
+        do lj = 1, L
+           do li = 1, L
+              do mj = 1, M
+                 do mi = 1, M
+                    summa = summa + sin(2.d0*x(i))*c(li,mi,:)*cv(lj,mj,:)*(base_L(j,lj)*base_L(i,li)*base_M(j,mj)*base_M(i,mi))
+                 end do
+              end do
            end do
         end do
-        angwfn(i,j) = term(1)
+        angwfn(i,j,:) = summa
      end do
   end do
 
  
-  call T2D(pp,hh,kk,angwfn,integ)
+  ! do j = 1, pp
+  !    do i = 1, pp
+  !       angwfn(i,j) = cos(x(i))*sin(y(j))
+  !    end do
+  ! end do
 
-  stop
+ 
+  call T2D(points,pp,hh,kk,angwfn,integ)
+
+ 
   ! do j = 1, 1
   !    do mm = 1, M
   !       do ll = 1, L
@@ -224,7 +223,7 @@ program efimov
   !    end do
   ! end do
 
-  call adiabatic(npl,npm,k,L,M,LM,tl,tm,rho,my,c,cv,U,points)
+  !call adiabatic(npl,npm,k,L,M,LM,tl,tm,rho,my,c,cv,U,points)
 
   ! open(13,file='adia.dat',status='replace')
   ! do i = 1, points
