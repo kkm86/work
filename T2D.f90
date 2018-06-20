@@ -61,11 +61,6 @@ subroutine T2D(points,pp,h,k,func,integ)
 
   integ = h*k*(fsum1+sum4+sum2+sum16+sum8+sum42)/9.d0
 
-  do ii = 1, points
-     print *, ii, integ(ii)
-  end do
-  
- 
   return
 
 end subroutine T2D
