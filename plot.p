@@ -10,14 +10,15 @@ set xlabel  offset character -3, -2, 0 font "" textcolor lt -1 norotate
 set xrange [ 0.0000 : 1.5700 ] noreverse nowriteback
 set ylabel "Y axis" 
 set ylabel  offset character 3, -2, 0 font "" textcolor lt -1 rotate
-set yrange [ 0.0000 : 3.1400 ] noreverse nowriteback
+set yrange [ 0.0000 : 1.04700 ] noreverse nowriteback
 set zlabel "Z axis" 
 set zlabel  offset character -5, 0, 0 font "" textcolor lt -1 norotate
-set zrange [ 0.0 : 3.0900 ] noreverse nowriteback
+set zrange [ 0.5 : 1.70 ] noreverse nowriteback
 DEBUG_TERM_HTIC = 119
 DEBUG_TERM_VTIC = 119
 ## Last datafile plotted: "$grid"
-splot "result_wave.dat" u 3:4:6 with points,  \
-# "result_wave.dat" u 3:4:6 with lines,  \
-#     "result_wave.dat" u 3:4:7 with lines,  \
+splot "wave.dat" u 2:3:4 with lines,  \
+#  splot "wave.dat" u 2:3:4 with points pt 1 ps -1,  \
+#"wave.dat" u 2:3:5 with points,  \
+
    

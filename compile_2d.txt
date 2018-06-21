@@ -35,7 +35,7 @@ OPT=""
 
 
 #.. Set compiler flags
-COMP_FLAGS=" -c  ${COMP_BASE} "
+COMP_FLAGS=" -c ${COMP_BASE} "
 COMP_FLAGS_MAIN=${COMP_BASE}
 LIBRARIES=" -L./ -l${LIBNAME} -lblas -llapack "
 

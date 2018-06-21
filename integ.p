@@ -1,4 +1,4 @@
-# Gnuplot script file for plotting data in file "adia.dat"
+# Gnuplot script file for plotting data in file "wave.dat"
       # This file is called   integ.p
  set termopt enhanced    # turn on enhanced text mode
    
@@ -18,11 +18,10 @@
       set title "U(R)"
 	 set xlabel "R(osc.units)"
 	 set ylabel "Squared norm"
-	 !set log x
-	 set xr [1:1000.0]
-	 set yr [0.1:9.0]
-	 plot "adia.dat" using 2:3 notitle with lines,  \
-	    "adia.dat" using 2:4 notitle with lines,  \
-	  
+	 set log x
+	 set xr [0.01:2.0]
+	 set yr [0.9:1.3]
+	 plot "wave.dat" using 2:3 notitle with lines,  \
+	    
 	       
 
