@@ -15,13 +15,14 @@
       set xtic auto                          # set xtics automatically
       set ytic auto                          # set ytics automatically
       set key font ",12"
-      set title "U(R)"
-	 set xlabel "R(osc.units)"
-	 set ylabel "Squared norm"
+      set title "P_{12} and P_{21}"
+	 set xlabel "log(R/a_{sc}(a.u.))"
+	 set ylabel ""
 	 set log x
-	 set xr [0.01:2.0]
-	 set yr [0.9:1.3]
-	 plot "wave.dat" using 2:3 notitle with lines,  \
+	 set xr [0.0043:43.8]
+	 set yr [-0.03:0.03]
+	 plot "wave.dat" using 2:3 title 'P_{12}' with lines,  \
+	    "wave.dat" using 2:4 title 'P_{21}' with lines,  \
 	    
 	       
 

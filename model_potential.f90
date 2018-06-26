@@ -12,8 +12,7 @@ subroutine model_potential(S,r0,r,potential)
   potential(1,:) = S*(cosh(r(1,:)/r0))**(-2.d0)
   potential(2,:) = S*(cosh(r(2,:)/r0))**(-2.d0)
   potential(3,:) = S*(cosh(r(3,:)/r0))**(-2.d0)
-  !potential = -S*((1.d0-(1.d0+(r/r0)**2.d0)*exp(-(r/r0)**2.d0))**2.d0)/r**6.d0
-  !potential = (exp(-(r/r0)**2.d0)**2.d0)/r**6.d0
+ 
 
   
   return

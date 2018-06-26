@@ -27,8 +27,8 @@ program efimov
  
 
   !.. Parameters for the energy curve
-  integer, parameter :: points = 10
-  real(kind(1.d0))   :: rho_vector(3,points),energy(LM,points,3),V(3,points)
+  integer, parameter :: points = 300
+  real(kind(1.d0))   :: rho_vector(3,points),energy(LM,points,3),V(3,points),Vder(points)
 
   !.. Parameters for plotting
   integer, parameter :: pp = 50
@@ -37,20 +37,21 @@ program efimov
 
   !.. Parameters for the wave function
   real(kind(1.d0))   :: base_L(pp,L),base_M(pp,M),summa(points)
-  real(kind(1.d0)), allocatable, dimension(:,:,:) :: angwfn, Pmat, twobodypot
+  real(kind(1.d0)), allocatable, dimension(:,:,:) :: angwfn, Pmat,P2mat,PmatH, Imat
   real(kind(1.d0)), allocatable, dimension(:,:,:,:) :: coef,angder
-  real(kind(1.d0)), allocatable, dimension(:,:,:,:,:) :: Pint, Pint2 
+  real(kind(1.d0)), allocatable, dimension(:,:,:,:,:) :: Pint
 
 
   !.. Other parameters
-  real(kind(1.d0)) :: rho(points),my,H(LM,LM,points,3),S(LM,LM,points,3),t1,t2,Vtrap(3,points),angfreq,osc,U(points),integ(points)
-  integer :: i,j,ll,mm,lj,li,mi,mj,mu,nu,n
+  real(kind(1.d0)) :: rho(points),my,H(LM,LM,points,3),S(LM,LM,points,3),Hder(LM,LM,points),Hamcoef(LM,LM,points),t1,t2,Vtrap(3,points),angfreq,osc,scatl,U(points),integ(points)
+  integer :: i,j,ll,mm,lj,li,mi,mj,mu,nu,n,test
 
-  allocate(Pint2(pp,pp,LM,LM,points), Pint(pp,pp,LM,LM,points), angwfn(pp,pp,points),Pmat(pp,pp,points),twobodypot(pp,pp,points),coef(L,M,points,LM),angder(L,M,points,LM))
+  allocate(Pint(pp,pp,LM,LM,points),angwfn(pp,pp,points),Pmat(LM,LM,points),P2mat(LM,LM,points),PmatH(pp,pp,points),Imat(LM,LM,points),coef(L,M,points,LM),angder(L,M,points,LM))
 
   !.. Declairing constants for model potential, trapping potential, and model atom 
   r0 = 55.d0
   d = -3.086d0*10**(-8.d0)
+  scatl = 228.004
   mass = 87.d0*1836.15d0
   my = mass(1)/sqrt(3.d0)
   osc = 731.d0
@@ -72,7 +73,7 @@ program efimov
   rho_min = 1.d0
   rho_max = 1000.d0
   step_size = (rho_max-rho_min)/(points-1)
-  delta_rho = 0.0001d0
+  delta_rho = 0.001d0
   rho_vector(1,1) = rho_min-delta_rho
   rho_vector(2,1) = rho_min
   rho_vector(3,1) = rho_min+delta_rho
@@ -83,6 +84,7 @@ program efimov
      rho_vector(3,i) = rho_vector(3,i-1)+step_size
   end do
 
+  
   !.. Declairing rho for later use and creating the harmonic trapping potential "Vtrap"
   rho = rho_vector(2,:)
   Vtrap = 0.5d0*my*(angfreq**2.d0)*(rho_vector**2.d0)
@@ -91,7 +93,7 @@ program efimov
   call CPU_TIME( t1 )
   write(6,*) 'hej5', points
      WRITE(6,*) "A",I
-     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,r0,d,mass,energy,H,S,points)
+     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho,rho_vector,my,r0,d,mass,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
   call CPU_TIME( t2 )
   print*, t2-t1
   write(6,*) 'hej7'
@@ -99,11 +101,26 @@ program efimov
   !.. Writes adiabatic potential curves+trapping potential to file
   open(10,file='threebodypot.dat',status='replace')
   do i = 1, points
-     write(10,10)i, rho_vector(2,i)/osc, (energy(1,i,2)+Vtrap(2,i))/angfreq, (energy(2,i,2)+Vtrap(2,i))/angfreq ,(energy(3,i,2)+Vtrap(2,i))/angfreq,(energy(4,i,2)+Vtrap(2,i))/angfreq,(energy(5,i,2)+Vtrap(2,i))/angfreq,(energy(6,i,2)+Vtrap(2,i))/angfreq, Vtrap(2,i)/angfreq
+     write(10,10)i, rho_vector(2,i)/osc, (energy(1,i,2)+Vtrap(2,i))/angfreq,(energy(1,i,2)-(P2mat(1,1,i)/(2.d0*my))+Vtrap(2,i))/angfreq, (energy(2,i,2)+Vtrap(2,i))/angfreq,(energy(2,i,2)-(P2mat(2,2,i)/(2.d0*my))+Vtrap(2,i))/angfreq
+
+     !, (energy(2,i,2)+Vtrap(2,i))/angfreq ,(energy(3,i,2)+Vtrap(2,i))/angfreq,(energy(4,i,2)+Vtrap(2,i))/angfreq,(energy(5,i,2)+Vtrap(2,i))/angfreq,(energy(6,i,2)+Vtrap(2,i))/angfreq, Vtrap(2,i)/angfreq
 10   format(I3,'  ',16f20.8)
   end do
   close(10)
 
+  !Jumping code
+  test = 0
+  test = 2
+
+1 continue
+  write(*,*)
+  test=test+1
+
+  if(test .gt. 2)goto 95
+  if(test .eq. 1)goto 100
+
+100 continue
+  
   !.. Unwinds eigenvector coefficients 
   do n = 1, LM
      do mm = 1, M
@@ -130,6 +147,7 @@ program efimov
   end do
 
   call B_spline_base(npl,npm,k,L,M,tl,tm,pp,x,y,base_L,base_M)
+  
 
   call CPU_TIME( t1 )
   !.. Setting up P-matrix
@@ -142,12 +160,11 @@ program efimov
                  do li = 1, L
                     do mj = 1, M
                        do mi = 1, M
-                          summa = summa + sin(2.d0*x(i))*coef(lj,mj,:,nu)*base_L(i,lj)*base_M(j,mj)*angder(li,mi,:,mu)*base_L(i,li)*base_M(j,mi)
+                          summa = summa+sin(2.d0*x(i))*coef(lj,mj,:,mu)*base_L(i,lj)*base_M(j,mj)*angder(li,mi,:,nu)*base_L(i,li)*base_M(j,mi)
                        end do
                     end do
                  end do
               end do
-              !angwfn(i,j,:) = summa
               Pint(i,j,mu,nu,:) = summa
            end do
         end do
@@ -162,24 +179,19 @@ program efimov
            end do
         end do
         call T2D(points,pp,hh,kk,angwfn,integ)
-        Pmat(mu,nu,:) = integ
+        PmatH(mu,nu,:) = integ
      end do
   end do
   call CPU_TIME( t2 )
   print*, t2-t1, 'P-mat'
 
-  print *, Pmat(1,1,1),Pmat(2,2,1), 'ok'
-  print *, Pmat(1,2,1),Pmat(2,3,1), 'ok'
-  print *, Pmat(2,1,1),Pmat(3,2,1), 'ok'
-  
+95 continue
+  write(*,*) 'test = ',test,'Got to 95'
 
-  stop
-
- 
 
   open(14,file='wave.dat',status='replace')
   do i = 1, points
-     write(14,10)i,rho_vector(2,i)/osc,integ(i)
+     write(14,10)i,rho_vector(2,i)/scatl, Pmat(1,2,i), Pmat(2,1,i), P2mat(1,2,i), P2mat(1,1,i)
   end do
   close(14)
 
@@ -189,7 +201,7 @@ program efimov
   ! end do
   ! close(13)
 
-  deallocate(Pint2, Pint, angwfn, Pmat, twobodypot, coef, angder)
+  deallocate(Pint,angwfn,Pmat,P2mat,PmatH,Imat,coef,angder)
 
 end program efimov
 

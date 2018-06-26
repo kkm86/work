@@ -55,7 +55,7 @@ fi
 #.. Place the names of codes to include here
 Mods=(  constants  )
 
-Codes=( gauleg universal_knot efimovham twobody_potential model_potential bget bder bsplvb B_spline_base adiabatic T2D ) 
+Codes=( gauleg universal_knot efimovham twobody_potential twobody_pot_der model_potential model_pot_der bget bder bsplvb B_spline_base T2D ) 
 
 
 echo 'Compiling modules'
