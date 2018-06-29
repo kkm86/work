@@ -1,4 +1,4 @@
-subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,rho_vector,my,r0,d,mass,energy,H,Hder,S,Integ,points,Pmat,P2mat,Imat)
+subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,Hder,S,Integ,points,Pmat,P2mat,Imat)
           
 
   use constants
@@ -7,14 +7,14 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,rho_vector,my,r0,d,mass,energy,H
 
   !.. Input
   integer            , intent(in) :: npl,npm,k,L,M,LM,points
-  real(kind(1.d0))   , intent(in) :: tl(npl),tm(npm),rho(points),rho_vector(3,points),my,d,r0,mass(3)
-  real(kind(1.d0)), intent(inout) :: energy(LM,points,3)
-  real(kind(1.d0)), intent(inout) :: H(LM,LM,points,3),Hder(LM,LM,points), S(LM,LM,points,3),Integ(LM,LM,points),Pmat(LM,LM,points),P2mat(LM,LM,points),Imat(LM,LM,points)
+  real(kind(1.d0))   , intent(in) :: tl(npl),tm(npm),rho(points),my,d,r0,mass(3)
+  real(kind(1.d0)), intent(inout) :: energy(LM,points)
+  real(kind(1.d0)), intent(inout) :: H(LM,LM,points),Hder(LM,LM,points), S(LM,LM,points),Integ(LM,LM,points),Pmat(LM,LM,points),P2mat(LM,LM,points),Imat(LM,LM,points)
   
   !.. Local
   real(kind(1.d0))   :: coordl(L+2,k),coordm(M+2,k),xabsc(k),weig(k),theta,phi
-  real(kind(1.d0))   :: term1(3,points),term2(3,points),term3(3,points),term4(3,points),term5(points),term6(points),term7(points),term8(points),term9(points),lowerl,upperl,lowerm,upperm,t1,t2
-  real(kind(1.d0))   :: sum1(3,points), sum2(3,points), sum3(3,points), sumbsp1(3,points), sumbsp2(3,points), sumbsp3(3,points), bsp(3,points),sumder1(points),sumder2(points),sumder3(points),sumint1(points),sumint2(points),sumint3(points)
+  real(kind(1.d0))   :: term1(points),term2(points),term3(points),term4(points),term5(points),term6(points),term7(points),term8(points),term9(points),lowerl,upperl,lowerm,upperm,t1,t2
+  real(kind(1.d0))   :: sum1(points), sum2(points), sum3(points), sumbsp1(points), sumbsp2(points), sumbsp3(points), bsp(points),sumder1(points),sumder2(points),sumder3(points),sumint1(points),sumint2(points),sumint3(points)
   real(kind(1.d0))   :: B_li, B_lj, B_mi, B_mj, dB_lj, dB_mj, dB_li, dB_mi
   real(kind(1.d0))   :: nsize
   real(kind(1.d0))   :: Hrez(LM,LM),Srez(LM,LM)
@@ -33,7 +33,7 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,rho_vector,my,r0,d,mass,energy,H
   integer         , dimension(LIWORK) :: IWORK
 
   !.. External functions/variables
-  real(kind(1.d0)) :: bget, bder, V(3,points), Vder(points)
+  real(kind(1.d0)) :: bget, bder, V(points), Vder(points)
 
   ITYPE = 1
   LDA = LM
@@ -123,13 +123,13 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,rho_vector,my,r0,d,mass,energy,H
                                 dB_mi = bder(coordm(mm,p),tm,k,npm,mi+1)
                              end if
                              
-                             call twobody_potential(d,r0,mass,rho_vector,theta,phi,V,points)
+                             call twobody_potential(d,r0,mass,rho,theta,phi,V,points)
                              
                              bsp = bsp + weig(n)*weig(p)*B_li*B_mi*B_lj*B_mj*sin(2.d0*theta)
                              
-                             term1 = term1 + weig(n)*weig(p)*4.d0*dB_li*B_mi*dB_lj*B_mj*sin(2.d0*theta)/(2.d0*my*rho_vector**2.d0)
-                             term2 = term2 + weig(n)*weig(p)*8.d0*B_li*dB_mi*B_lj*dB_mj*cos(theta)/(2.d0*sin(theta)*my*rho_vector**2.d0)
-                             term3 = term3 + weig(n)*weig(p)*15.d0*B_li*B_mi*B_lj*B_mj*sin(2.d0*theta)/(8.d0*my*rho_vector**2.d0)
+                             term1 = term1 + weig(n)*weig(p)*4.d0*dB_li*B_mi*dB_lj*B_mj*sin(2.d0*theta)/(2.d0*my*rho**2.d0)
+                             term2 = term2 + weig(n)*weig(p)*8.d0*B_li*dB_mi*B_lj*dB_mj*cos(theta)/(2.d0*sin(theta)*my*rho**2.d0)
+                             term3 = term3 + weig(n)*weig(p)*15.d0*B_li*B_mi*B_lj*B_mj*sin(2.d0*theta)/(8.d0*my*rho**2.d0)
                              term4 = term4 + weig(n)*weig(p)*B_li*B_mi*B_lj*B_mj*V*sin(2.d0*theta)
                           end do
                           sum1 = sum1 + 0.5d0*(tm(mm+1)-tm(mm))*(term1+term2+term3+term4)
@@ -142,12 +142,8 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,rho_vector,my,r0,d,mass,energy,H
                  sum3 = sum3 + sum2
                  sumbsp3 = sumbsp3 + sumbsp2
               end do
-              H(i,j,:,1) = sum3(1,:)
-              S(i,j,:,1) = sumbsp3(1,:)
-              H(i,j,:,2) = sum3(2,:)
-              S(i,j,:,2) = sumbsp3(2,:)
-              H(i,j,:,3) = sum3(3,:)
-              S(i,j,:,3) = sumbsp3(3,:)
+              H(i,j,:) = sum3
+              S(i,j,:) = sumbsp3
            end do
         end do
      end do
@@ -158,14 +154,12 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,rho_vector,my,r0,d,mass,energy,H
   
   !.. Calculating Effective potentials and eigenvector coefficients
   call CPU_TIME( t1 )
-  do j = 1, 3
-     do i = 1, points
-        Hrez = H(:,:,i,j)
-        Srez = S(:,:,i,j)
-        call dsygvd( ITYPE, JOBZ, UPLO, LM, Hrez, LDA, Srez, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO )
-        energy(:,i,j) = W
-        H(:,:,i,j) = Hrez
-     end do
+  do i = 1, points
+     Hrez = H(:,:,i)
+     Srez = S(:,:,i)
+     call dsygvd( ITYPE, JOBZ, UPLO, LM, Hrez, LDA, Srez, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO )
+     energy(:,i) = W
+     H(:,:,i) = Hrez
   end do
   call CPU_TIME( t2 )
   print*,'time2', t2-t1
@@ -286,12 +280,12 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,rho_vector,my,r0,d,mass,energy,H
         sumint1 = 0.0d0
         do j = 1, LM
            do i = 1, LM
-              sumder1 = sumder1 + H(i,n,:,2)*H(j,p,:,2)*Hder(i,j,:)
-              sumint1 = sumint1 + H(i,n,:,2)*H(j,p,:,2)*Integ(i,j,:)
+              sumder1 = sumder1 + H(i,n,:)*H(j,p,:)*Hder(i,j,:)
+              sumint1 = sumint1 + H(i,n,:)*H(j,p,:)*Integ(i,j,:)
            end do
         end do
         if(n .ne. p)then
-           Pmat(n,p,:) = sumder1/(energy(n,:,2)-energy(p,:,2))
+           Pmat(n,p,:) = sumder1/(energy(n,:)-energy(p,:))
         else
            Pmat(n,p,:) = 0.d0
         end if

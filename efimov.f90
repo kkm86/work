@@ -28,7 +28,8 @@ program efimov
 
   !.. Parameters for the energy curve
   integer, parameter :: points = 300
-  real(kind(1.d0))   :: rho_vector(3,points),energy(LM,points,3),V(3,points),Vder(points)
+  integer, parameter :: pder = 100
+  real(kind(1.d0))   :: rho_vector(points),energy(LM,points),V(points),Vder(points)
 
   !.. Parameters for plotting
   integer, parameter :: pp = 50
@@ -36,17 +37,17 @@ program efimov
   real(kind(1.d0)) :: base(pp,LM),hh,kk
 
   !.. Parameters for the wave function
-  real(kind(1.d0))   :: base_L(pp,L),base_M(pp,M),summa(points)
-  real(kind(1.d0)), allocatable, dimension(:,:,:) :: angwfn, Pmat,P2mat,PmatH, Imat
+  real(kind(1.d0))   :: base_L(pp,L),base_M(pp,M),summa(pder)
+  real(kind(1.d0)), allocatable, dimension(:,:,:) :: angwfn, Pmat,P2mat,PmatH, Imat, deriv_coef,normal_coef
   real(kind(1.d0)), allocatable, dimension(:,:,:,:) :: coef,angder
   real(kind(1.d0)), allocatable, dimension(:,:,:,:,:) :: Pint
 
 
   !.. Other parameters
-  real(kind(1.d0)) :: rho(points),my,H(LM,LM,points,3),S(LM,LM,points,3),Hder(LM,LM,points),Hamcoef(LM,LM,points),t1,t2,Vtrap(3,points),angfreq,osc,scatl,U(points),integ(points)
+  real(kind(1.d0)) :: rho(points),my,H(LM,LM,points),S(LM,LM,points),Hder(LM,LM,points),Hamcoef(LM,LM,points),t1,t2,Vtrap(points),angfreq,osc,scatl,U(points),integ(pder)
   integer :: i,j,ll,mm,lj,li,mi,mj,mu,nu,n,test
 
-  allocate(Pint(pp,pp,LM,LM,points),angwfn(pp,pp,points),Pmat(LM,LM,points),P2mat(LM,LM,points),PmatH(pp,pp,points),Imat(LM,LM,points),coef(L,M,points,LM),angder(L,M,points,LM))
+  allocate(Pint(pp,pp,LM,LM,pder),angwfn(pp,pp,pder),Pmat(LM,LM,points),P2mat(LM,LM,points),PmatH(pp,pp,pder),Imat(LM,LM,points),deriv_coef(LM,LM,pder),normal_coef(LM,LM,pder),coef(L,M,pder,LM),angder(L,M,pder,LM))
 
   !.. Declairing constants for model potential, trapping potential, and model atom 
   r0 = 55.d0
@@ -74,26 +75,26 @@ program efimov
   rho_max = 1000.d0
   step_size = (rho_max-rho_min)/(points-1)
   delta_rho = 0.001d0
-  rho_vector(1,1) = rho_min-delta_rho
-  rho_vector(2,1) = rho_min
-  rho_vector(3,1) = rho_min+delta_rho
-  print*, rho_vector(1,1), rho_vector(2,1), rho_vector(3,1)
-  do i = 2, points
-     rho_vector(1,i) = rho_vector(1,i-1)+step_size
-     rho_vector(2,i) = rho_vector(2,i-1)+step_size
-     rho_vector(3,i) = rho_vector(3,i-1)+step_size
+  rho_vector(1) = rho_min-delta_rho
+  rho_vector(2) = rho_min
+  rho_vector(3) = rho_min+delta_rho
+  print*, rho_vector(1), rho_vector(2), rho_vector(3)
+  do i = 4,points,3
+     rho_vector(i) = rho_vector(i-3)+step_size
+     rho_vector(i+1) = rho_vector(i-2)+step_size
+     rho_vector(i+2) = rho_vector(i-1)+step_size
+     print*, rho_vector(i), rho_vector(i+1), rho_vector(i+2)
   end do
 
-  
   !.. Declairing rho for later use and creating the harmonic trapping potential "Vtrap"
-  rho = rho_vector(2,:)
+  rho = rho_vector(:)
   Vtrap = 0.5d0*my*(angfreq**2.d0)*(rho_vector**2.d0)
 
   !.. Calculating adiabatic potential curves and coefficients for the angular channel functions
   call CPU_TIME( t1 )
   write(6,*) 'hej5', points
      WRITE(6,*) "A",I
-     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho,rho_vector,my,r0,d,mass,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
+     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,r0,d,mass,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
   call CPU_TIME( t2 )
   print*, t2-t1
   write(6,*) 'hej7'
@@ -101,16 +102,16 @@ program efimov
   !.. Writes adiabatic potential curves+trapping potential to file
   open(10,file='threebodypot.dat',status='replace')
   do i = 1, points
-     write(10,10)i, rho_vector(2,i)/osc, (energy(1,i,2)+Vtrap(2,i))/angfreq,(energy(1,i,2)-(P2mat(1,1,i)/(2.d0*my))+Vtrap(2,i))/angfreq, (energy(2,i,2)+Vtrap(2,i))/angfreq,(energy(2,i,2)-(P2mat(2,2,i)/(2.d0*my))+Vtrap(2,i))/angfreq
+     write(10,10)i, rho_vector(i)/osc, (energy(1,i)+Vtrap(i))/angfreq,(energy(1,i)-(P2mat(1,1,i)/(2.d0*my))+Vtrap(i))/angfreq, (energy(2,i)+Vtrap(i))/angfreq,(energy(2,i)-(P2mat(2,2,i)/(2.d0*my))+Vtrap(i))/angfreq
 
-     !, (energy(2,i,2)+Vtrap(2,i))/angfreq ,(energy(3,i,2)+Vtrap(2,i))/angfreq,(energy(4,i,2)+Vtrap(2,i))/angfreq,(energy(5,i,2)+Vtrap(2,i))/angfreq,(energy(6,i,2)+Vtrap(2,i))/angfreq, Vtrap(2,i)/angfreq
+     !, (energy(2,i)+Vtrap(i))/angfreq ,(energy(3,i)+Vtrap(i))/angfreq,(energy(4,i)+Vtrap(i))/angfreq,(energy(5,i)+Vtrap(i))/angfreq,(energy(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
 10   format(I3,'  ',16f20.8)
   end do
   close(10)
 
   !Jumping code
   test = 0
-  test = 2
+  test = 0
 
 1 continue
   write(*,*)
@@ -121,13 +122,19 @@ program efimov
 
 100 continue
   
-  !.. Unwinds eigenvector coefficients 
+  !.. Unwinds eigenvector coefficients for calculating derivative using finite element method
+
+  do i = 1, 3, points
+     deriv_coef(:,:,i) = 0.5d0*(H(:,:,i)-H(:,:,i+2))/delta_rho
+     normal_coef(:,:,i) = H(:,:,i+1)
+  end do
+  
   do n = 1, LM
      do mm = 1, M
         do ll = 1, L
            i = (ll-1)*M+mm
-           angder(ll,mm,:,n) = 0.5d0*(H(i,n,:,3)-H(i,n,:,1))/delta_rho
-           coef(ll,mm,:,n) = H(i,n,:,2)
+           angder(ll,mm,:,n) = deriv_coef(i,n,:)
+           coef(ll,mm,:,n) = normal_coef(i,n,:)
         end do
      end do
   end do
@@ -178,7 +185,7 @@ program efimov
               angwfn(i,j,:) = Pint(i,j,mu,nu,:)
            end do
         end do
-        call T2D(points,pp,hh,kk,angwfn,integ)
+        call T2D(pder,pp,hh,kk,angwfn,integ)
         PmatH(mu,nu,:) = integ
      end do
   end do
@@ -191,17 +198,11 @@ program efimov
 
   open(14,file='wave.dat',status='replace')
   do i = 1, points
-     write(14,10)i,rho_vector(2,i)/scatl, Pmat(1,2,i), Pmat(2,1,i), P2mat(1,2,i), P2mat(1,1,i)
+     write(14,10)i,rho_vector(i)/scatl, Pmat(1,2,i), Pmat(2,1,i), P2mat(1,2,i), P2mat(1,1,i)
   end do
   close(14)
 
-  ! open(13,file='adia.dat',status='replace')
-  ! do i = 1, points
-  !    write(13,10)i, rho_vector(2,i), integ(i) !(energy(1,i,2)+Vtrap(2,i))/angfreq, (energy(1,i,2)+Vtrap(2,i)-U(i)/(2.d0*my))/angfreq, U(i)!/(2.d0*my*angfreq) 
-  ! end do
-  ! close(13)
-
-  deallocate(Pint,angwfn,Pmat,P2mat,PmatH,Imat,coef,angder)
+  deallocate(Pint,angwfn,Pmat,P2mat,PmatH,Imat,coef,angder,deriv_coef,normal_coef)
 
 end program efimov
 
