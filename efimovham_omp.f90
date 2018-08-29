@@ -1,6 +1,5 @@
-subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,Pmat,P2mat,Imat)
+subroutine efimovham_omp(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,Pmat,P2mat,Imat)
           
-
   use constants
   
   implicit none
@@ -12,16 +11,16 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
   real(kind(1.d0)), intent(inout) :: H(LM,LM,points),Hder(LM,LM,points), S(LM,LM,points),Integ(LM,LM,points),Pmat(LM,LM,points),P2mat(LM,LM,points),Imat(LM,LM,points)
   
   !.. Local
-  real(kind(1.d0))   :: coordl(L+2,k),coordm(M+2,k),xabsc(k),weig(k),theta,phi
+  real(kind(1.d0))   :: coordl(L+2,k),coordm(M+2,k),xabsc(k),weig(k),theta,phi(k)
   real(kind(1.d0))   :: term(8,points)
   real(kind(1.d0))   :: lowerl,upperl,lowerm,upperm,t1,t2
-  real(kind(1.d0))   :: sumter(3,points), sumbsp(3,points), bsp(points), sumder(3,points), sumint(3,points), volume_element, arctan
-  real(kind(1.d0))   :: B_li, B_lj, B_mi, B_mj, dB_lj, dB_mj, dB_li, dB_mi
+  real(kind(1.d0))   :: sumter(3,points), sumbsp(3,points), bsp(points), sumder(3,points), sumint(3,points)
+  real(kind(1.d0))   :: B_li, B_lj, B_mi(k), B_mj(k), dB_lj, dB_mj(k), dB_li, dB_mi(k), potent(k,points), potentder(k,points), multi(k), multider(k), firstsum(points), volume_element, arctan, multivec(points), multidervec(points)
   real(kind(1.d0))   :: nsize
   real(kind(1.d0))   :: Hrez(LM,LM),Srez(LM,LM)
   integer            :: li, lj, mi, mj, n, p, i, j, ll, mm
 
-  !.. Paramenters for generalized eigensolver
+  !.. Parameters for generalized eigensolver
   integer                             :: ITYPE, LDA, LDB, INFO 
   integer                 , parameter :: LWORK = 168777
   integer                 , parameter :: LIWORK = 1448
@@ -32,9 +31,10 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
 
   !.. External functions/variables
   real(kind(1.d0)) :: bget, bder
-  real(kind(1.d0)), allocatable, dimension(:) :: V, Vder
+  !real(kind(1.d0)), external :: potent_omp
+  !real(kind(1.d0)), allocatable, dimension(:) :: V, Vder
 
-  allocate(V(points),Vder(points))
+  !allocate(V(points),Vder(points))
 
   ITYPE = 1
   LDA = LM
@@ -46,6 +46,7 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
   Hder = 0.0d0
   S = 0.0d0
 
+  print*, 'ok1', points
 
   call CPU_TIME( t1 )
   do lj = 1, L
@@ -73,13 +74,14 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
                        do n = 1, k
                           term = 0.0d0
                           bsp = 0.0d0
+                        
                           coordl(ll,n) = 0.5*(tl(ll+1)+tl(ll)) + 0.5*(tl(ll+1)-tl(ll))*xabsc(n)
+                          coordm(mm,:) = 0.5*(tm(mm+1)+tm(mm)) + 0.5*(tm(mm+1)-tm(mm))*xabsc(:)
                           theta = coordl(ll,n)
+                          phi(:) = coordm(mm,:)
                           volume_element = sin(2.d0*theta)
                           arctan = cos(theta)/sin(theta)
-
-                          print*, theta
-
+                           
                           if(lj == 1)then
                              B_lj = bget(coordl(ll,n),tl,k,npl,1)+bget(coordl(ll,n),tl,k,npl,2)
                              dB_lj = bder(coordl(ll,n),tl,k,npl,1)+bder(coordl(ll,n),tl,k,npl,2)
@@ -102,51 +104,54 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
                              dB_li = bder(coordl(ll,n),tl,k,npl,li+1)
                           end if
 
-                          do p = 1, k
-                             coordm(mm,p) = 0.5*(tm(mm+1)+tm(mm)) + 0.5*(tm(mm+1)-tm(mm))*xabsc(p)
-                             phi = coordm(mm,p)
+                             
+                          if(mj == 1 .and. mj /= M)then
+                             B_mj(:) = bget(coordm(mm,:),tm,k,npm,1)+bget(coordm(mm,:),tm,k,npm,2)
+                             dB_mj(:) = bder(coordm(mm,:),tm,k,npm,1)+bder(coordm(mm,:),tm,k,npm,2)
+                          else if(mj == M)then
+                             B_mj(:) = bget(coordm(mm,:),tm,k,npm,M+1)+bget(coordm(mm,:),tm,k,npm,M+2)
+                             dB_mj(:) = bder(coordm(mm,:),tm,k,npm,M+1)+bder(coordm(mm,:),tm,k,npm,M+2)
+                          else
+                             B_mj(:) = bget(coordm(mm,:),tm,k,npm,mj+1)
+                             dB_mj(:) = bder(coordm(mm,:),tm,k,npm,mj+1)
+                          end if
+                             
+                          if(mi == 1 .and. mi /= M)then
+                             B_mi(:) = bget(coordm(mm,:),tm,k,npm,1)+bget(coordm(mm,:),tm,k,npm,2)
+                             dB_mi(:) = bder(coordm(mm,:),tm,k,npm,1)+bder(coordm(mm,:),tm,k,npm,2)
+                          else if(mi == M)then
+                             B_mi(:) = bget(coordm(mm,:),tm,k,npm,M+1)+bget(coordm(mm,:),tm,k,npm,M+2)
+                             dB_mi(:) = bder(coordm(mm,:),tm,k,npm,M+1)+bder(coordm(mm,:),tm,k,npm,M+2)
+                          else
+                             B_mi(:) = bget(coordm(mm,:),tm,k,npm,mi+1)
+                             dB_mi(:) = bder(coordm(mm,:),tm,k,npm,mi+1)
+                          end if
+                             
+                          potent = potent_omp(rho,theta,phi,points,k)
+                          potentder = potentder_omp(rho,theta,phi,points,k)
+
+                          multi = weig*B_mi*B_mj
+                          multider = weig*dB_mi*dB_mj
+
+                          multivec = matmul(potent,multi)
+                          multidervec = matmul(potentder,multi)
+                         
+                          bsp = weig(n)*B_li*B_lj*multi
+                             
+                          term(1,:) = 2.d0*dB_li*dB_lj*multi
+                          term(2,:) = 4.d0*B_li*B_lj*multider*arctan/volume_element
+                          term(3,:) = 15.d0*B_li*B_lj*multi/8.d0
+                          term(4,:) = B_li*B_lj*multivec*my*rho*rho
+
+
+                          term(5,:) = 8.d0*dB_li*dB_lj*multi
+                          term(6,:) = 8.d0*B_li*B_lj*multider*arctan/volume_element
+                          term(7,:) = 15.d0*B_li*B_lj*multi/4.d0
+                          term(8,:) = B_li*B_lj*multidervec*my*rho*rho*rho
+
                         
-                             if(mj == 1 .and. mj /= M)then
-                                B_mj = bget(coordm(mm,p),tm,k,npm,1)+bget(coordm(mm,p),tm,k,npm,2)
-                                dB_mj = bder(coordm(mm,p),tm,k,npm,1)+bder(coordm(mm,p),tm,k,npm,2)
-                             else if(mj == M)then
-                                B_mj = bget(coordm(mm,p),tm,k,npm,M+1)+bget(coordm(mm,p),tm,k,npm,M+2)
-                                dB_mj = bder(coordm(mm,p),tm,k,npm,M+1)+bder(coordm(mm,p),tm,k,npm,M+2)
-                             else
-                                B_mj = bget(coordm(mm,p),tm,k,npm,mj+1)
-                                dB_mj = bder(coordm(mm,p),tm,k,npm,mj+1)
-                             end if
-                             
-                             if(mi == 1 .and. mi /= M)then
-                                B_mi = bget(coordm(mm,p),tm,k,npm,1)+bget(coordm(mm,p),tm,k,npm,2)
-                                dB_mi = bder(coordm(mm,p),tm,k,npm,1)+bder(coordm(mm,p),tm,k,npm,2)
-                             else if(mi == M)then
-                                B_mi = bget(coordm(mm,p),tm,k,npm,M+1)+bget(coordm(mm,p),tm,k,npm,M+2)
-                                dB_mi = bder(coordm(mm,p),tm,k,npm,M+1)+bder(coordm(mm,p),tm,k,npm,M+2)
-                             else
-                                B_mi = bget(coordm(mm,p),tm,k,npm,mi+1)
-                                dB_mi = bder(coordm(mm,p),tm,k,npm,mi+1)
-                             end if
-                             
-                             call twobody_potential(rho,theta,phi,V,Vder,points)
-
-                             
-                             bsp = bsp + weig(p)*B_li*B_mi*B_lj*B_mj
-                             
-                             term(1,:) = term(1,:) + weig(p)*2.d0*dB_li*B_mi*dB_lj*B_mj
-                             term(2,:) = term(2,:) + weig(p)*4.d0*B_li*dB_mi*B_lj*dB_mj*arctan/volume_element
-                             term(3,:) = term(3,:) + weig(p)*15.d0*B_li*B_mi*B_lj*B_mj/8.d0
-                             term(4,:) = term(4,:) + weig(p)*B_li*B_mi*B_lj*B_mj*V
-
-
-                             term(5,:) = term(5,:) + weig(p)*8.d0*dB_li*B_mi*dB_lj*B_mj
-                             term(6,:) = term(6,:) + weig(p)*8.d0*B_li*dB_mi*B_lj*dB_mj*arctan/volume_element
-                             term(7,:) = term(7,:) + weig(p)*15.d0*B_li*B_mi*B_lj*B_mj/4.d0
-                             term(8,:) = term(8,:) - weig(p)*B_li*B_mi*B_lj*B_mj*Vder
-
-                          end do
-                          sumter(1,:) = sumter(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*(term(1,:)+term(2,:)+term(3,:)+term(4,:)*my*rho**2.d0)/(my*rho**2.d0)
-                          sumder(1,:) = sumder(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*(term(5,:)+term(6,:)+term(7,:)+term(8,:)*my*rho**3.d0)/(my*rho**3.d0)
+                          sumter(1,:) = sumter(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*(term(1,:)+term(2,:)+term(3,:)+term(4,:))/(my*rho*rho)
+                          sumder(1,:) = sumder(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*(term(5,:)+term(6,:)+term(7,:)+term(8,:))/(my*rho*rho*rho)
                           sumbsp(1,:) = sumbsp(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*bsp
                        end do
                        sumter(2,:) = sumter(2,:) + 0.5d0*(tl(ll+1)-tl(ll))*sumter(1,:)
@@ -227,10 +232,11 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
   print*,'creating coupling matrices P and P²', t2-t1
 
   
-  deallocate(V,Vder)
+!  deallocate(V,Vder)
   return
 
-end subroutine efimovham
+end subroutine efimovham_omp
+
 
 
 

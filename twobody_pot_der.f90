@@ -1,4 +1,4 @@
-subroutine twobody_pot_der(S,r0,mass,rho,theta,phi,Vder,points)
+subroutine twobody_pot_der(rho,theta,phi,Vder,points)
 
   use constants
   
@@ -6,7 +6,7 @@ subroutine twobody_pot_der(S,r0,mass,rho,theta,phi,Vder,points)
 
   !.. Input
   integer         , intent(in)    :: points
-  real(kind(1.d0)), intent(in)    :: S,r0,mass(3),rho(points),theta,phi
+  real(kind(1.d0)), intent(in)    :: rho(points),theta,phi
   real(kind(1.d0)), intent(inout) :: Vder(points)
 
   !.. Local
@@ -29,7 +29,7 @@ subroutine twobody_pot_der(S,r0,mass,rho,theta,phi,Vder,points)
 
   do ii = 1, points
      r = d*rho(ii)*(((2.d0)**(-0.5d0)))*(1.d0+sin(theta)*cos(phi+channelangle))**0.5d0
-     call model_pot_der(S,r0,r,angconst,potential)
+     call model_pot_der(r,angconst,potential)
      Vder(ii) = sum(potential)
   end do
 

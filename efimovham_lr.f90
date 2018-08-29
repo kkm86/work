@@ -1,4 +1,4 @@
-subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,Pmat,P2mat,Imat)
+subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,Pmat,P2mat,Imat)
           
 
   use constants
@@ -230,7 +230,7 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
   deallocate(V,Vder)
   return
 
-end subroutine efimovham
+end subroutine efimovham_lr
 
 
 

@@ -21,17 +21,15 @@ program efimov
   real(kind(1.d0)) :: tld(npl), tmd(npm), tld_max, tmd_max, tld_min, tmd_min 
 
   !.. Parameters for the 3-body system
-  real(kind(1.d0)) :: my, mass(3)
+  real(kind(1.d0)) :: my!, mass(3)
 
 
-  !.. Parameters for the 2-body potential, harmonic trapping potential, and scattering lengths
-  real(kind(1.d0)) :: d, r0
-  real(kind(1.d0)) :: angfreq, osc
-  real(kind(1.d0)) :: scatl
+  !.. Parameters for the harmonic trapping potential
+   real(kind(1.d0)) :: angfreq
  
   !.. Parameters for effective potentials and coupling matrices
-  integer, parameter :: points = 500
-  real(kind(1.d0)), allocatable, dimension(:) :: rho_vector,V,Vder
+  integer, parameter :: points = 100
+  real(kind(1.d0)), allocatable, dimension(:) :: rho_vector!,V,Vder
   real(kind(1.d0)), allocatable, dimension(:,:) :: energy
   real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,S,Hder,Hamcoef,Pmat,P2mat, Imat
 
@@ -51,13 +49,9 @@ program efimov
   allocate(H(LM,LM,points),S(LM,LM,points),Hder(LM,LM,points),Hamcoef(LM,LM,points),Pmat(LM,LM,points),P2mat(LM,LM,points),Imat(LM,LM,points))
 
   !.. Declairing constants for model potential, trapping potential, and model atom 
-  r0 = 55.d0
-  d = -3.086d0*10**(-8.d0)
-  scatl = 228.004
-  mass = 87.d0*1836.15d0
-  my = mass(1)/sqrt(3.d0)
-  osc = 731.d0
-  angfreq = 1.d0/(mass(1)*osc**2.d0)
+   !mass = 87.d0*1836.15d0
+   my = mass(1)/sqrt(3.d0)
+   angfreq = 1.d0/(mass(1)*osc**2.d0)
   
 
   !.. Setting up knot-vectors
@@ -89,7 +83,7 @@ program efimov
   call CPU_TIME( t1 )
   write(6,*) 'hej5', points
      WRITE(6,*) "A",I
-     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,r0,d,mass,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
+     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
   call CPU_TIME( t2 )
   print*, t2-t1
   write(6,*) 'hej7'
