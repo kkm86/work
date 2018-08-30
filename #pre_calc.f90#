@@ -1,0 +1,24 @@
+subroutine pre_calc(L,M,k,tm,tl,npm,npl,)
+
+  implicit none
+
+  !.. Input
+  integer, intent(in) :: L,M,k,npm,npl
+  real(kind(1.d0))   , intent(in) :: tl(npl),tm(npm)
+
+  !.. Local
+  real(kind(1.d0))   :: coordl(L+2,k),coordm(M+2,k),xabsc(k),weig(k)
+  real(kind(1.d0))   :: lower,upper,t1,t2
+  integer            :: i,j,n,p,ll,mm
+
+  call gauleg(k, xabsc, weig)
+
+  call CPU_TIME( t1 )
+  do j = 1, L
+     do i = 1, L
+        upper = min(i+1,j+1) + k-1
+        lower = max(i,j)
+        do ll = lower, upper
+       
+
+end subroutine pre_calc

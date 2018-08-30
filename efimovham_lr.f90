@@ -6,8 +6,8 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
   implicit none
 
   !.. Input
-  integer            , intent(in) :: npl,npm,k,L,M,LM,points
-  real(kind(1.d0))   , intent(in) :: tl(npl),tm(npm),rho(points),my
+  integer,             intent(in) :: npl,npm,k,L,M,LM,points
+  real(kind(1.d0)),    intent(in) :: tl(npl),tm(npm),rho(points),my
   real(kind(1.d0)), intent(inout) :: energy(LM,points)
   real(kind(1.d0)), intent(inout) :: H(LM,LM,points),Hder(LM,LM,points), S(LM,LM,points),Integ(LM,LM,points),Pmat(LM,LM,points),P2mat(LM,LM,points),Imat(LM,LM,points)
   
@@ -15,11 +15,11 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
   real(kind(1.d0))   :: coordl(L+2,k),coordm(M+2,k),xabsc(k),weig(k),theta,phi
   real(kind(1.d0))   :: term(8,points)
   real(kind(1.d0))   :: lowerl,upperl,lowerm,upperm,t1,t2
-  real(kind(1.d0))   :: sumter(3,points), sumbsp(3,points), bsp(points), sumder(3,points), sumint(3,points), volume_element, arctan
+  real(kind(1.d0))   :: sumter(3,points), sumbsp(3,points), bsp(points), sumder(3,points), sumint(3,points)!, volume_element, arctan
   real(kind(1.d0))   :: B_li, B_lj, B_mi, B_mj, dB_lj, dB_mj, dB_li, dB_mi
   real(kind(1.d0))   :: nsize
   real(kind(1.d0))   :: Hrez(LM,LM),Srez(LM,LM)
-  integer            :: li, lj, mi, mj, n, p, i, j, ll, mm
+  integer            :: li, lj, mi, mj, n, p, i, j, ll, mm, ii, jj, map
 
   !.. Paramenters for generalized eigensolver
   integer                             :: ITYPE, LDA, LDB, INFO 
@@ -32,8 +32,18 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
 
   !.. External functions/variables
   real(kind(1.d0)) :: bget, bder
-  real(kind(1.d0)), allocatable, dimension(:) :: V, Vder
+  real(kind(1.d0)), allocatable, dimension(:) :: V, Vder, coordl_1, coordm_1, volume_element, arctan
+  real(kind(1.d0)), allocatable, dimension(:,:) :: BL,dBL,BM,dBM
 
+  integer :: c1,c2,cr,cm
+  real(kind(1.d0)) :: rate
+
+  !.. Initialize the system clock
+  call system_clock(count_rate=cr)
+  call system_clock(count_max=cm)
+  rate = real(cr)
+  write(*,*) 'system_clock rate', rate
+  
   allocate(V(points),Vder(points))
 
   ITYPE = 1
@@ -46,8 +56,66 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
   Hder = 0.0d0
   S = 0.0d0
 
+  map = (L+k)*k
+  allocate(coordl_1(map),coordm_1(map),volume_element(map),arctan(map),BL(map,L),dBL(map,L),BM(map,M),dBM(map,M))
 
   call CPU_TIME( t1 )
+  call system_clock( c1 )
+  do n = 1, k
+     do ll = 1, L+k
+        i = (ll-1)*k+n
+        coordl(ll,n) = 0.5*(tl(ll+1)+tl(ll)) + 0.5*(tl(ll+1)-tl(ll))*xabsc(n)
+        coordl_1(i) = 0.5*(tl(ll+1)+tl(ll)) + 0.5*(tl(ll+1)-tl(ll))*xabsc(n)
+        volume_element(i) = sin(2.d0*coordl_1(i))
+        arctan(i) = cos(coordl_1(i))/sin(coordl_1(i))
+     end do
+  end do
+
+
+  do n = 1, k
+     do mm = 1, M+k
+        i = (mm-1)*k+n
+        coordm(mm,n) = 0.5*(tm(mm+1)+tm(mm)) + 0.5*(tm(mm+1)-tm(mm))*xabsc(n)
+        coordm_1(i) = coordm(mm,n)
+     end do
+  end do
+
+  do lj = 1, L
+     do ii = 1, map
+        if(lj == 1)then
+           BL(ii,lj) = bget(coordl_1(ii),tl,k,npl,1)+bget(coordl_1(ii),tl,k,npl,2)
+           dBL(ii,lj) = bder(coordl_1(ii),tl,k,npl,1)+bder(coordl_1(ii),tl,k,npl,2)
+        else if(lj == L)then
+           BL(ii,lj) = bget(coordl_1(ii),tl,k,npl,L+1)+bget(coordl_1(ii),tl,k,npl,L+2)
+           dBL(ii,lj) = bder(coordl_1(ii),tl,k,npl,L+1)+bder(coordl_1(ii),tl,k,npl,L+2)
+        else
+           BL(ii,lj) = bget(coordl_1(ii),tl,k,npl,lj+1)
+           dBL(ii,lj) = bder(coordl_1(ii),tl,k,npl,lj+1)
+        end if
+     end do
+  end do
+
+  do mj = 1, M
+     do ii = 1, map
+        if(mj == 1 .and. mj /= M)then
+           BM(ii,mj) = bget(coordm_1(ii),tm,k,npm,1)+bget(coordm_1(ii),tm,k,npm,2)
+           dBM(ii,mj) = bder(coordm_1(ii),tm,k,npm,1)+bder(coordm_1(ii),tm,k,npm,2)
+        else if(mj == M)then
+           BM(ii,mj) = bget(coordm_1(ii),tm,k,npm,M+1)+bget(coordm_1(ii),tm,k,npm,M+2)
+           dBM(ii,mj) = bder(coordm_1(ii),tm,k,npm,M+1)+bder(coordm_1(ii),tm,k,npm,M+2)
+        else
+           BM(ii,mj) = bget(coordm_1(ii),tm,k,npm,mj+1)
+           dBM(ii,mj) = bder(coordm_1(ii),tm,k,npm,mj+1)
+        end if
+     end do
+  end do
+  call CPU_TIME( t2 )
+  call system_clock( c2 )
+  print*,'initial cpu_time: ', (t2-t1)
+  print*,'initial system_clock: ', (c2-c1)/rate
+
+  call CPU_TIME( t1 )
+  call system_clock( c1 )
   do lj = 1, L
      do li = 1, L
         do mj = 1, M
@@ -71,83 +139,30 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
                     sumbsp(1,:) = 0.0d0
                     if((tl(ll+1).gt.tl(ll)) .and. (tm(mm+1).gt.tm(mm)))then
                        do n = 1, k
+                          jj = (ll-1)*k+n
                           term = 0.0d0
                           bsp = 0.0d0
-                          coordl(ll,n) = 0.5*(tl(ll+1)+tl(ll)) + 0.5*(tl(ll+1)-tl(ll))*xabsc(n)
-                          theta = coordl(ll,n)
-                          volume_element = sin(2.d0*theta)
-                          arctan = cos(theta)/sin(theta)
-
-                          print*, theta
-
-                          if(lj == 1)then
-                             B_lj = bget(coordl(ll,n),tl,k,npl,1)+bget(coordl(ll,n),tl,k,npl,2)
-                             dB_lj = bder(coordl(ll,n),tl,k,npl,1)+bder(coordl(ll,n),tl,k,npl,2)
-                          else if(lj == L)then
-                             B_lj = bget(coordl(ll,n),tl,k,npl,L+1)+bget(coordl(ll,n),tl,k,npl,L+2)
-                             dB_lj = bder(coordl(ll,n),tl,k,npl,L+1)+bder(coordl(ll,n),tl,k,npl,L+2)
-                          else
-                             B_lj = bget(coordl(ll,n),tl,k,npl,lj+1)
-                             dB_lj = bder(coordl(ll,n),tl,k,npl,lj+1)
-                          end if
-
-                          if(li == 1)then
-                             B_li = bget(coordl(ll,n),tl,k,npl,1)+bget(coordl(ll,n),tl,k,npl,2)
-                             dB_li = bder(coordl(ll,n),tl,k,npl,1)+bder(coordl(ll,n),tl,k,npl,2)
-                          else if(li == L)then
-                             B_li = bget(coordl(ll,n),tl,k,npl,L+1)+bget(coordl(ll,n),tl,k,npl,L+2)
-                             dB_li = bder(coordl(ll,n),tl,k,npl,L+1)+bder(coordl(ll,n),tl,k,npl,L+2)
-                          else
-                             B_li = bget(coordl(ll,n),tl,k,npl,li+1)
-                             dB_li = bder(coordl(ll,n),tl,k,npl,li+1)
-                          end if
-
                           do p = 1, k
-                             coordm(mm,p) = 0.5*(tm(mm+1)+tm(mm)) + 0.5*(tm(mm+1)-tm(mm))*xabsc(p)
-                             phi = coordm(mm,p)
-                        
-                             if(mj == 1 .and. mj /= M)then
-                                B_mj = bget(coordm(mm,p),tm,k,npm,1)+bget(coordm(mm,p),tm,k,npm,2)
-                                dB_mj = bder(coordm(mm,p),tm,k,npm,1)+bder(coordm(mm,p),tm,k,npm,2)
-                             else if(mj == M)then
-                                B_mj = bget(coordm(mm,p),tm,k,npm,M+1)+bget(coordm(mm,p),tm,k,npm,M+2)
-                                dB_mj = bder(coordm(mm,p),tm,k,npm,M+1)+bder(coordm(mm,p),tm,k,npm,M+2)
-                             else
-                                B_mj = bget(coordm(mm,p),tm,k,npm,mj+1)
-                                dB_mj = bder(coordm(mm,p),tm,k,npm,mj+1)
-                             end if
-                             
-                             if(mi == 1 .and. mi /= M)then
-                                B_mi = bget(coordm(mm,p),tm,k,npm,1)+bget(coordm(mm,p),tm,k,npm,2)
-                                dB_mi = bder(coordm(mm,p),tm,k,npm,1)+bder(coordm(mm,p),tm,k,npm,2)
-                             else if(mi == M)then
-                                B_mi = bget(coordm(mm,p),tm,k,npm,M+1)+bget(coordm(mm,p),tm,k,npm,M+2)
-                                dB_mi = bder(coordm(mm,p),tm,k,npm,M+1)+bder(coordm(mm,p),tm,k,npm,M+2)
-                             else
-                                B_mi = bget(coordm(mm,p),tm,k,npm,mi+1)
-                                dB_mi = bder(coordm(mm,p),tm,k,npm,mi+1)
-                             end if
-                             
-                             call twobody_potential(rho,theta,phi,V,Vder,points)
+                             ii = (mm-1)*k+p
+                             call twobody_potential(rho,coordl_1(jj),coordm_1(ii),V,Vder,points)
 
+                             bsp = bsp + weig(p)*BL(jj,li)*BM(ii,mi)*BL(jj,lj)*BM(ii,mj)
                              
-                             bsp = bsp + weig(p)*B_li*B_mi*B_lj*B_mj
-                             
-                             term(1,:) = term(1,:) + weig(p)*2.d0*dB_li*B_mi*dB_lj*B_mj
-                             term(2,:) = term(2,:) + weig(p)*4.d0*B_li*dB_mi*B_lj*dB_mj*arctan/volume_element
-                             term(3,:) = term(3,:) + weig(p)*15.d0*B_li*B_mi*B_lj*B_mj/8.d0
-                             term(4,:) = term(4,:) + weig(p)*B_li*B_mi*B_lj*B_mj*V
+                             term(1,:) = term(1,:) + weig(p)*2.d0*dBL(jj,li)*BM(ii,mi)*dBL(jj,lj)*BM(ii,mj)
+                             term(2,:) = term(2,:) + weig(p)*4.d0*BL(jj,li)*dBM(ii,mi)*BL(jj,lj)*dBM(ii,mj)*arctan(jj)/volume_element(jj)
+                             term(3,:) = term(3,:) + weig(p)*15.d0*BL(jj,li)*BM(ii,mi)*BL(jj,lj)*BM(ii,mj)/8.d0
+                             term(4,:) = term(4,:) + weig(p)*BL(jj,li)*BM(ii,mi)*BL(jj,lj)*BM(ii,mj)*V
 
 
-                             term(5,:) = term(5,:) + weig(p)*8.d0*dB_li*B_mi*dB_lj*B_mj
-                             term(6,:) = term(6,:) + weig(p)*8.d0*B_li*dB_mi*B_lj*dB_mj*arctan/volume_element
-                             term(7,:) = term(7,:) + weig(p)*15.d0*B_li*B_mi*B_lj*B_mj/4.d0
-                             term(8,:) = term(8,:) - weig(p)*B_li*B_mi*B_lj*B_mj*Vder
+                             term(5,:) = term(5,:) + weig(p)*8.d0*dBL(jj,li)*BM(ii,mi)*dBL(jj,lj)*BM(ii,mj)
+                             term(6,:) = term(6,:) + weig(p)*8.d0*BL(jj,li)*dBM(ii,mi)*BL(jj,lj)*dBM(ii,mj)*arctan(jj)/volume_element(jj)
+                             term(7,:) = term(7,:) + weig(p)*15.d0*BL(jj,li)*BM(ii,mi)*BL(jj,lj)*BM(ii,mj)/4.d0
+                             term(8,:) = term(8,:) - weig(p)*BL(jj,li)*BM(ii,mi)*BL(jj,lj)*BM(ii,mj)*Vder
 
                           end do
-                          sumter(1,:) = sumter(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*(term(1,:)+term(2,:)+term(3,:)+term(4,:)*my*rho**2.d0)/(my*rho**2.d0)
-                          sumder(1,:) = sumder(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*(term(5,:)+term(6,:)+term(7,:)+term(8,:)*my*rho**3.d0)/(my*rho**3.d0)
-                          sumbsp(1,:) = sumbsp(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*bsp
+                          sumter(1,:) = sumter(1,:) + 0.5d0*volume_element(jj)*weig(n)*(tm(mm+1)-tm(mm))*(term(1,:)+term(2,:)+term(3,:)+term(4,:)*my*rho**2.d0)/(my*rho**2.d0)
+                          sumder(1,:) = sumder(1,:) + 0.5d0*volume_element(jj)*weig(n)*(tm(mm+1)-tm(mm))*(term(5,:)+term(6,:)+term(7,:)+term(8,:)*my*rho**3.d0)/(my*rho**3.d0)
+                          sumbsp(1,:) = sumbsp(1,:) + 0.5d0*volume_element(jj)*weig(n)*(tm(mm+1)-tm(mm))*bsp
                        end do
                        sumter(2,:) = sumter(2,:) + 0.5d0*(tl(ll+1)-tl(ll))*sumter(1,:)
                        sumder(2,:) = sumder(2,:) + 0.5d0*(tl(ll+1)-tl(ll))*sumder(1,:)
@@ -167,7 +182,9 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
      end do
   end do
   call CPU_TIME( t2 )
-  print*,'making array', t2-t1
+  call system_clock( c2 )
+  print*,'cpu_time: ', (t2-t1)
+  print*,'system_clock: ', (c2-c1)/rate
 
   
   !.. Calculating Effective potentials and eigenvector coefficients

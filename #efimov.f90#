@@ -83,7 +83,7 @@ program efimov
   call CPU_TIME( t1 )
   write(6,*) 'hej5', points
      WRITE(6,*) "A",I
-     !call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
+     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
      call efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
   call CPU_TIME( t2 )
   print*, t2-t1

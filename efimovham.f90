@@ -34,6 +34,15 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
   real(kind(1.d0)) :: bget, bder
   real(kind(1.d0)), allocatable, dimension(:) :: V, Vder
 
+  integer :: c1,c2,cr,cm
+  real(kind(1.d0)) :: rate
+
+  !.. Initialize the system clock
+  call system_clock(count_rate=cr)
+  call system_clock(count_max=cm)
+  rate = real(cr)
+  write(*,*) 'system_clock rate', rate
+
   allocate(V(points),Vder(points))
 
   ITYPE = 1
@@ -48,6 +57,7 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
 
 
   call CPU_TIME( t1 )
+  call system_clock( c1 )
   do lj = 1, L
      do li = 1, L
         do mj = 1, M
@@ -77,8 +87,6 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
                           theta = coordl(ll,n)
                           volume_element = sin(2.d0*theta)
                           arctan = cos(theta)/sin(theta)
-
-                          print*, theta
 
                           if(lj == 1)then
                              B_lj = bget(coordl(ll,n),tl,k,npl,1)+bget(coordl(ll,n),tl,k,npl,2)
@@ -167,7 +175,9 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
      end do
   end do
   call CPU_TIME( t2 )
+  call system_clock( c2 )
   print*,'making array', t2-t1
+  print*,'system_clock: ', (c2-c1)/rate
 
   
   !.. Calculating Effective potentials and eigenvector coefficients
