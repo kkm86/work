@@ -206,7 +206,19 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
   Imat = 0.0d0
 
   map = LM*LM
-  allocate(H_ii(map,points),I_ii(map, points))
+  allocate(n_i(map),p_i(map),Hder_i(map,points),Integ_i(map,points),H_i(map,map,points),I_i(map,map,points),H_ii(map,points),I_ii(map, points))
+
+  ! n_i = (/(mod((i-1),LM) + 1, i=1,map)/)
+  ! p_i = (/((i-1)/LM + 1, i=1,map)/)
+
+
+  ! do j = 1, LM
+  !    do i = 1, LM
+  !       ii = (j-1)*LM+i
+  !       Hder_i(ii,:) = Hder(i,j,:)
+  !       Integ_i(ii,:) = Integ(i,j,:)
+  !    end do
+  ! end do
 
  do p = 1, LM
     do n = 1, LM
@@ -224,6 +236,21 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
     end do
  end do
   
+  
+  ! do mm = 1, map
+  !    n = mod((mm-1),LM) + 1
+  !    p = (mm-1)/LM + 1
+  !    sumder(1,:) = 0.0d0
+  !    sumint(1,:) = 0.0d0
+  !    do ii = 1, map
+  !       i = mod((ii-1),LM) + 1
+  !       j = (ii-1)/LM + 1
+  !       sumder(1,:) = sumder(1,:) + H(i,n,:)*H(j,p,:)*Hder(i,j,:)
+  !       sumint(1,:) = sumint(1,:) + H(i,n,:)*H(j,p,:)*Integ(i,j,:)
+  !    end do
+  !    Pmat(n,p,:) = sumder(1,:)/(energy(n,:)-energy(p,:))
+  !    Imat(n,p,:) = sumint(1,:)
+  ! end do
 
   do mm = 1, map
      n = mod((mm-1),LM) + 1
@@ -232,6 +259,17 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
      Imat(n,p,:) = I_ii(mm,:)
   end do
 
+  ! do mm = 1, map
+  !    sumder(1,:) = 0.0d0
+  !    sumint(1,:) = 0.0d0
+  !    do ii = 1, map
+  !       sumder(1,:) = sumder(1,:) + H(n_i(ii),n_i(mm),:)*H(p_i(ii),p_i(mm),:)*Hder_i(ii,:)
+  !       sumint(1,:) = sumint(1,:) + H(n_i(ii),n_i(mm),:)*H(p_i(ii),p_i(mm),:)*Integ_i(ii,:)
+  !    end do
+  !    Pmat(n_i(mm),p_i(mm),:) = sumder(1,:)/(energy(n_i(mm),:)-energy(p_i(mm),:))
+  !    Imat(n_i(mm),p_i(mm),:) = sumint(1,:)
+  ! end do
+  
   do i = 1, LM
      Pmat(i,i,:) = 0.d0
   end do
