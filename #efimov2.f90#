@@ -1,4 +1,4 @@
-program efimov
+program efimov2
 
   use constants
   
@@ -103,7 +103,8 @@ program efimov
 
   deallocate(Pmat,P2mat,Imat)
 
-end program efimov
+end program efimov2
+
 
 
 
