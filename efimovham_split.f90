@@ -1,4 +1,4 @@
-subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,Pmat,P2mat,Imat)
+subroutine efimovham_split(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points)
           
 
   use constants
@@ -9,7 +9,7 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
   integer,             intent(in) :: npl,npm,k,L,M,LM,points
   real(kind(1.d0)),    intent(in) :: tl(npl),tm(npm),rho(points),my
   real(kind(1.d0)), intent(inout) :: energy(LM,points)
-  real(kind(1.d0)), intent(inout) :: H(LM,LM,points),Hder(LM,LM,points), S(LM,LM,points),Integ(LM,LM,points),Pmat(LM,LM,points),P2mat(LM,LM,points),Imat(LM,LM,points)
+  real(kind(1.d0)), intent(inout) :: H(LM,LM,points),Hder(LM,LM,points), S(LM,LM,points),Integ(LM,LM,points)
   
   !.. Local
   real(kind(1.d0))   :: coordl(L+k,k),coordm(M+k,k),xabsc(k),weig(k),theta,phi
@@ -18,9 +18,9 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
   real(kind(1.d0))   :: sumter(3,points), sumbsp(3,points), bsp(points), sumder(3,points), sumint(3,points)
   real(kind(1.d0))   :: B_li, B_lj, B_mi, B_mj, dB_lj, dB_mj, dB_li, dB_mi
   real(kind(1.d0))   :: nsize
-  real(kind(1.d0))   :: Hrez(LM,LM),Srez(LM,LM), Trans(LM,LM,points)
+  real(kind(1.d0))   :: Hrez(LM,LM),Srez(LM,LM)
   integer            :: li, lj, mi, mj, n, p, i, j, ll, mm, ii, jj, map
-  integer, allocatable, dimension(:) :: n_i, p_i
+  
 
   !.. Paramenters for generalized eigensolver
   integer                             :: ITYPE, LDA, LDB, INFO 
@@ -34,9 +34,9 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
   !.. External functions/variables
   real(kind(1.d0)) :: bget, bder
   real(kind(1.d0)), allocatable, dimension(:) :: V, Vder, coordl_1, coordm_1, volume_element, arctan
-  real(kind(1.d0)), allocatable, dimension(:,:) :: BL,dBL,BM,dBM, Hder_i,Integ_i, H_ii, I_ii
+  real(kind(1.d0)), allocatable, dimension(:,:) :: BL,dBL,BM,dBM
   real(kind(1.d0)), allocatable, dimension(:,:,:) :: V_1, Vder_1
-  real(kind(1.d0)), allocatable, dimension(:,:,:) :: H_i, I_i
+  
 
   
   allocate(V(points),Vder(points))
@@ -190,7 +190,6 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
      call dsygvd( ITYPE, JOBZ, UPLO, LM, Hrez, LDA, Srez, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO )
      energy(:,i) = W
      H(:,:,i) = Hrez
-     Trans(:,:,i) = transpose(Hrez)
   end do
   call CPU_TIME( t2 )
   print*,'DSYGVD', t2-t1
@@ -202,98 +201,13 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
   !.. Setting up coupling matrices
   call CPU_TIME( t1 )
   
-  Pmat = 0.0d0
-  Imat = 0.0d0
-
-  map = LM*LM
-  allocate(n_i(map),p_i(map),Hder_i(map,points),Integ_i(map,points),H_i(map,map,points),I_i(map,map,points),H_ii(map,points),I_ii(map, points))
-
-  ! n_i = (/(mod((i-1),LM) + 1, i=1,map)/)
-  ! p_i = (/((i-1)/LM + 1, i=1,map)/)
-
-
-  ! do j = 1, LM
-  !    do i = 1, LM
-  !       ii = (j-1)*LM+i
-  !       Hder_i(ii,:) = Hder(i,j,:)
-  !       Integ_i(ii,:) = Integ(i,j,:)
-  !    end do
-  ! end do
-
- do p = 1, LM
-    do n = 1, LM
-       mm = (p-1)*LM+n
-       sumter(1,:) = 0.d0
-       sumder(1,:) = 0.d0
-       do j = 1, LM
-          do i = 1, LM
-
-             sumter(1,:) = sumter(1,:)+H(i,n,:)*H(j,p,:)*Hder(i,j,:)
-             sumder(1,:) = sumder(1,:)+H(i,n,:)*H(j,p,:)*Integ(i,j,:)
-          end do
-       end do
-       H_ii(mm,:) = sumter(1,:)
-       I_ii(mm,:) = sumder(1,:)
-    end do
- end do
   
-  
-  ! do mm = 1, map
-  !    n = mod((mm-1),LM) + 1
-  !    p = (mm-1)/LM + 1
-  !    sumder(1,:) = 0.0d0
-  !    sumint(1,:) = 0.0d0
-  !    do ii = 1, map
-  !       i = mod((ii-1),LM) + 1
-  !       j = (ii-1)/LM + 1
-  !       sumder(1,:) = sumder(1,:) + H(i,n,:)*H(j,p,:)*Hder(i,j,:)
-  !       sumint(1,:) = sumint(1,:) + H(i,n,:)*H(j,p,:)*Integ(i,j,:)
-  !    end do
-  !    Pmat(n,p,:) = sumder(1,:)/(energy(n,:)-energy(p,:))
-  !    Imat(n,p,:) = sumint(1,:)
-  ! end do
-
-  do mm = 1, map
-     n = mod((mm-1),LM) + 1
-     p = (mm-1)/LM + 1
-     Pmat(n,p,:) = H_ii(mm,:)/(energy(n,:)-energy(p,:))
-     Imat(n,p,:) = I_ii(mm,:)
-  end do
-
-  ! do mm = 1, map
-  !    sumder(1,:) = 0.0d0
-  !    sumint(1,:) = 0.0d0
-  !    do ii = 1, map
-  !       sumder(1,:) = sumder(1,:) + H(n_i(ii),n_i(mm),:)*H(p_i(ii),p_i(mm),:)*Hder_i(ii,:)
-  !       sumint(1,:) = sumint(1,:) + H(n_i(ii),n_i(mm),:)*H(p_i(ii),p_i(mm),:)*Integ_i(ii,:)
-  !    end do
-  !    Pmat(n_i(mm),p_i(mm),:) = sumder(1,:)/(energy(n_i(mm),:)-energy(p_i(mm),:))
-  !    Imat(n_i(mm),p_i(mm),:) = sumint(1,:)
-  ! end do
-  
-  do i = 1, LM
-     Pmat(i,i,:) = 0.d0
-  end do
-  
-
-  do p = 1, LM
-     do n = 1, LM
-        sumter(1,:) = 0.0d0
-        do i = 1, LM
-           sumter(1,:) = sumter(1,:) + Pmat(n,i,:)*Pmat(i,p,:)
-        end do
-        P2mat(n,p,:) = sumter(1,:)
-     end do
-  end do
-
-  call CPU_TIME( t2 )
-  print*,'creating coupling matrices P and P²', t2-t1
-
   
   deallocate(V,Vder)
   return
 
-end subroutine efimovham_lr
+end subroutine efimovham_split
+
 
 
 

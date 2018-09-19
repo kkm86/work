@@ -14,6 +14,7 @@ program efimov2
   integer, parameter :: LM = 49 !.. Matrix dimension
   integer, parameter :: npl = 15  !.. Number of knot-points  N1+2(k-1)
   integer, parameter :: npm = 15  !.. Number of knot-points  N2+2(k-1)
+  integer, parameter :: cc = 3    !.. Number of couplings to be calculated, for full coupling matrices cc = LM 
  
 
   !.. Parameters for the knot-point grids tl and tm
@@ -29,7 +30,7 @@ program efimov2
   integer, parameter :: points = 10
   real(kind(1.d0)), allocatable, dimension(:) :: rho_vector
   real(kind(1.d0)), allocatable, dimension(:,:) :: energy
-  real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,S,Hder,Hamcoef,Pmat,P2mat, Imat
+  real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,S,Hder,Hamcoef,Pmat,P2mat,Imat
 
   !.. Parameters for plotting
   integer, parameter :: pp = 10
@@ -42,7 +43,7 @@ program efimov2
 
   allocate(rho_vector(points))
   allocate(energy(LM,points))
-  allocate(H(LM,LM,points),S(LM,LM,points),Hder(LM,LM,points),Hamcoef(LM,LM,points),Pmat(LM,LM,points),P2mat(LM,LM,points),Imat(LM,LM,points))
+  allocate(H(LM,LM,points),S(LM,LM,points),Hder(LM,LM,points),Hamcoef(LM,LM,points),Pmat(cc,cc,points),P2mat(cc,cc,points),Imat(cc,cc,points))
 
   !.. Declairing constants for model potential, trapping potential, and model atom
   
@@ -79,8 +80,8 @@ program efimov2
   call CPU_TIME( t1 )
   write(6,*) 'hej5', points
      WRITE(6,*) "A",I
-     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
-     call efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
+     call efimovham_split(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points)
+     call coupling(H,Hder,Integ,energy,LM,points,cc,Pmat,P2mat,Imat)
   call CPU_TIME( t2 )
   print*, t2-t1
   write(6,*) 'hej7'
@@ -89,17 +90,10 @@ program efimov2
   open(10,file='threebodypot.dat',status='replace')
   do i = 1, points
      write(10,10)i, rho_vector(i)/osc, (energy(1,i)+Vtrap(i))/angfreq,(energy(1,i)-(P2mat(1,1,i)/(2.d0*my))+Vtrap(i))/angfreq, (energy(2,i)+Vtrap(i))/angfreq,(energy(2,i)-(P2mat(2,2,i)/(2.d0*my))+Vtrap(i))/angfreq
-
-     !, (energy(2,i)+Vtrap(i))/angfreq ,(energy(3,i)+Vtrap(i))/angfreq,(energy(4,i)+Vtrap(i))/angfreq,(energy(5,i)+Vtrap(i))/angfreq,(energy(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
+   
 10   format(I3,'  ',16f20.8)
   end do
   close(10)
-
-  open(14,file='wave.dat',status='replace')
-  do i = 1, points
-     write(14,10)i,rho_vector(i)/scatl, Pmat(1,2,i), Pmat(2,1,i), P2mat(1,2,i), P2mat(1,1,i)
-  end do
-  close(14)
 
   deallocate(Pmat,P2mat,Imat)
 
