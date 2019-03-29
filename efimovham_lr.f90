@@ -24,8 +24,8 @@ subroutine efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,poin
 
   !.. Paramenters for generalized eigensolver
   integer                             :: ITYPE, LDA, LDB, INFO 
-  integer                 , parameter :: LWORK = 168777
-  integer                 , parameter :: LIWORK = 1448
+  integer                 , parameter :: LWORK = 503001
+  integer                 , parameter :: LIWORK = 2503
   character*1                         :: JOBZ = 'V', UPLO = 'U'
   real(kind(1.d0))    , dimension(LM) :: W
   real(kind(1.d0)) , dimension(LWORK) :: WORK

@@ -6,14 +6,14 @@ program efimov
   
   !.. Input
   !.. Parameters for the B-splines used in the generalized eigenvalue equation
-  integer, parameter :: N1 = 5   !.. Number of mesh-points in coordinate 1
-  integer, parameter :: N2 = 5   !.. Number of mesh-points in coordinate 2
+  integer, parameter :: N1 = 20   !.. Number of mesh-points in coordinate 1
+  integer, parameter :: N2 = 20   !.. Number of mesh-points in coordinate 2
   integer, parameter :: k = 6    !.. B-spline order
-  integer, parameter :: L = 7    !.. Number of B-splines in coordinate 1(N+k-2-cond)
-  integer, parameter :: M = 7    !.. Number of B-splines in coordinate 2
-  integer, parameter :: LM = 49 !.. Matrix dimension
-  integer, parameter :: npl = 15  !.. Number of knot-points  N1+2(k-1)
-  integer, parameter :: npm = 15  !.. Number of knot-points  N2+2(k-1)
+  integer, parameter :: L = 22    !.. Number of B-splines in coordinate 1(N+k-2-cond)
+  integer, parameter :: M = 22    !.. Number of B-splines in coordinate 2
+  integer, parameter :: LM = 484 !.. Matrix dimension
+  integer, parameter :: npl = 30  !.. Number of knot-points  N1+2(k-1)
+  integer, parameter :: npm = 30  !.. Number of knot-points  N2+2(k-1)
  
 
   !.. Parameters for the knot-point grids tl and tm
@@ -26,7 +26,7 @@ program efimov
    real(kind(1.d0)) :: angfreq, scaling
  
   !.. Parameters for effective potentials and coupling matrices
-  integer, parameter :: points = 1000
+  integer, parameter :: points = 1300
   real(kind(1.d0)), allocatable, dimension(:) :: rho_vector
   real(kind(1.d0)), allocatable, dimension(:,:) :: energy
   real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,S,Hder,Hamcoef,Pmat,P2mat, Imat
@@ -49,7 +49,7 @@ program efimov
   my = mass(1)/sqrt(3.d0)
   !angfreq = 1.d0/(mass(1)*osc**2.d0)
   angfreq = 1.d0
-  scaling = 10**(10.d0)
+  scaling = 10**(8.d0)
   
 
   !.. Setting up knot-vectors
