@@ -205,8 +205,8 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
   Pmat = 0.0d0
   Imat = 0.0d0
 
-  do n = 1, LM
-     do p = 1, LM
+  do n = 1, 3
+     do p = 1, 3
         sumder(1,:) = 0.0d0
         sumint(1,:) = 0.0d0
         do j = 1, LM
@@ -226,8 +226,8 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
   end do
   
 
-  do p = 1, LM
-     do n = 1, LM
+  do p = 1, 3
+     do n = 1, 3
         sumter(1,:) = 0.0d0
         do i = 1, LM
            sumter(1,:) = sumter(1,:) + Pmat(n,i,:)*Pmat(i,p,:)
