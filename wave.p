@@ -11,6 +11,7 @@
       unset xtic
       unset title
       set encoding utf8
+      set xzeroaxis
 #set title font "Times,20"
       set xlabel font "Times,15"
       set ylabel font "Times,15"	 
@@ -19,18 +20,18 @@
       set key font ",12"
 #set title "U({/Symbol r})"
 	 set xlabel "{/Symbol r}/{/Helvetica a}"
-	 set ylabel "U({/Symbol r}) [10^{-10} a.u.]"
+	 set ylabel "U({/Symbol r}) [10^{-8} a.u.]"
 	 set log x
 	 set xr [0.03:17.4]
-	 set yr [-600.0:200.0]
-	 plot "effectivepot.dat" using 2:3 title '{/Symbol n}=0'  with lines,  \
-	    "effectivepot.dat" using 2:4 title '{/Symbol n}=1'  with lines,  \
-	       "effectivepot.dat" using 2:5 notitle '{/Symbol n}=1'  with lines,  \
-		  "effectivepot.dat" using 2:6 notitle '{/Symbol n_a}=1'  with lines,  \
-		     "effectivepot.dat" using 2:7 notitle '{/Symbol n_a}=1'  with lines,  \
-			"effectivepot.dat" using 2:8 notitle '{/Symbol n_a}=1'  with lines,  \
-			   "effectivepot.dat" using 2:9 notitle '{/Symbol n_a}=1'  with lines,  \
-			      "effectivepot.dat" using 2:10 notitle '{/Symbol n_a}=1'  with lines,  \
+	 set yr [-6.0:5.0]
+	 plot "effectivepot.dat" using 2:($3/100) title '{/Symbol n}=0'  with lines,  \
+	    "effectivepot.dat" using 2:($4/100) title '{/Symbol n}=1'  with lines,  \
+	       "effectivepot.dat" using 2:($5/100) notitle '{/Symbol n}=1'  with lines,  \
+		  "effectivepot.dat" using 2:($6/100) notitle '{/Symbol n_a}=1'  with lines,  \
+		     "effectivepot.dat" using 2:($7/100) notitle '{/Symbol n_a}=1'  with lines,  \
+			"effectivepot.dat" using 2:($8/100) notitle '{/Symbol n_a}=1'  with lines,  \
+			   "effectivepot.dat" using 2:($9/100) notitle '{/Symbol n_a}=1'  with lines,  \
+			      "effectivepot.dat" using 2:($10/100) notitle '{/Symbol n_a}=1'  with lines,  \
 	  
 	       
 
