@@ -195,6 +195,9 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
   print*, 'INFO:', INFO
   print*, 'Optimal LWORK:', WORK(1)
   print*, 'Optimal LIWORK:', IWORK(1)
+  print*, rho(points)
+  print*, 2.0*my*energy(1,1), 2.0*my*energy(2,1),2.0*my*energy(3,1),2.0*my*energy(4,1),2.0*my*energy(5,1),2.0*my*energy(6,1),2.0*my*energy(7,1),2.0*my*energy(8,1)
+  stop
 
   !.. Setting up coupling matrices
   call CPU_TIME( t1 )

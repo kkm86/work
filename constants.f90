@@ -6,6 +6,9 @@ module constants
 
   !.. Parameters for the 3-body system
   real(kind(1.d0)) :: mass(3)=87.d0*1836.15d0
+  !real(kind(1.d0)) :: mass(3)=37.1819960861
+  
+  
  
   !.. Parameters for the 2-body potential, harmonic trapping potential, and scattering lengths
   real(kind(1.d0)) :: Potential_depth = -3.086d0*10**(-8.d0)

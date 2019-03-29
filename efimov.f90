@@ -6,14 +6,14 @@ program efimov
   
   !.. Input
   !.. Parameters for the B-splines used in the generalized eigenvalue equation
-  integer, parameter :: N1 = 5   !.. Number of mesh-points in coordinate 1
-  integer, parameter :: N2 = 5   !.. Number of mesh-points in coordinate 2
+  integer, parameter :: N1 = 10   !.. Number of mesh-points in coordinate 1
+  integer, parameter :: N2 = 10   !.. Number of mesh-points in coordinate 2
   integer, parameter :: k = 6    !.. B-spline order
-  integer, parameter :: L = 7    !.. Number of B-splines in coordinate 1(N+k-2-cond)
-  integer, parameter :: M = 7    !.. Number of B-splines in coordinate 2
-  integer, parameter :: LM = 49 !.. Matrix dimension
-  integer, parameter :: npl = 15  !.. Number of knot-points  N1+2(k-1)
-  integer, parameter :: npm = 15  !.. Number of knot-points  N2+2(k-1)
+  integer, parameter :: L = 12    !.. Number of B-splines in coordinate 1(N+k-2-cond)
+  integer, parameter :: M = 12    !.. Number of B-splines in coordinate 2
+  integer, parameter :: LM = 144 !.. Matrix dimension
+  integer, parameter :: npl = 20  !.. Number of knot-points  N1+2(k-1)
+  integer, parameter :: npm = 20  !.. Number of knot-points  N2+2(k-1)
  
 
   !.. Parameters for the knot-point grids tl and tm
@@ -26,13 +26,13 @@ program efimov
    real(kind(1.d0)) :: angfreq
  
   !.. Parameters for effective potentials and coupling matrices
-  integer, parameter :: points = 10
+  integer, parameter :: points = 1
   real(kind(1.d0)), allocatable, dimension(:) :: rho_vector
   real(kind(1.d0)), allocatable, dimension(:,:) :: energy
   real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,S,Hder,Hamcoef,Pmat,P2mat, Imat
 
   !.. Parameters for plotting
-  integer, parameter :: pp = 10
+  integer, parameter :: pp = 1
   real(kind(1.d0)) :: x(pp),y(pp),step_size,rho_min,rho_max
   real(kind(1.d0)) :: base(pp,LM),base_L(pp,L),base_M(pp,M)  
 
@@ -72,7 +72,7 @@ program efimov
   end do
 
   !.. Declairing rho for later use and creating the harmonic trapping potential "Vtrap"
-
+ 
   Vtrap = 0.5d0*my*(angfreq**2.d0)*(rho_vector**2.d0)
 
   !.. Calculating adiabatic potential curves and coefficients for the angular channel functions
@@ -80,7 +80,7 @@ program efimov
   write(6,*) 'hej5', points
      WRITE(6,*) "A",I
      call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
-     call efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
+     !call efimovham_lr(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
   call CPU_TIME( t2 )
   print*, t2-t1
   write(6,*) 'hej7'
