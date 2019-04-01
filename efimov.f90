@@ -26,7 +26,7 @@ program efimov
    real(kind(1.d0)) :: angfreq, scaling
  
   !.. Parameters for effective potentials and coupling matrices
-  integer, parameter :: points = 300
+  integer, parameter :: points = 500
   real(kind(1.d0)), allocatable, dimension(:) :: rho_vector
   real(kind(1.d0)), allocatable, dimension(:,:) :: energy
   real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,S,Hder,Hamcoef,Pmat,P2mat, Imat
@@ -94,15 +94,16 @@ program efimov
 
 !      !, (energy(2,i)+Vtrap(i))/angfreq ,(energy(3,i)+Vtrap(i))/angfreq,(energy(4,i)+Vtrap(i))/angfreq,(energy(5,i)+Vtrap(i))/angfreq,(energy(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
 ! 10   format(I3,'  ',16f20.8)
-!   end do
+!   End do
 !   close(10)
 
   !.. Writes adiabatic potential curves+trapping potential to file
-  open(11,file='effectivepot.dat',status='replace')
+  open(15,file='effectivepotneg2.dat',status='replace')
   do i = 1, points
-     write(11,10)i, rho_vector(i)/scatl, scaling*energy(1,i), scaling*energy(2,i), scaling*energy(3,i)
+     write(15,10)i, rho_vector(i)/scatl, scaling*energy(1,i), scaling*energy(2,i), scaling*energy(3,i)
+     10   format(I3,'  ',16f20.8)
   end do
-  close(11)
+  close(15)
 
   open(14,file='wave.dat',status='replace')
   do i = 1, points
