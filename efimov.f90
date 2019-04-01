@@ -6,14 +6,14 @@ program efimov
   
   !.. Input
   !.. Parameters for the B-splines used in the generalized eigenvalue equation
-  integer, parameter :: N1 = 20   !.. Number of mesh-points in coordinate 1
-  integer, parameter :: N2 = 20   !.. Number of mesh-points in coordinate 2
+  integer, parameter :: N1 = 5   !.. Number of mesh-points in coordinate 1
+  integer, parameter :: N2 = 5   !.. Number of mesh-points in coordinate 2
   integer, parameter :: k = 6    !.. B-spline order
-  integer, parameter :: L = 22    !.. Number of B-splines in coordinate 1(N+k-2-cond)
-  integer, parameter :: M = 22    !.. Number of B-splines in coordinate 2
-  integer, parameter :: LM = 484 !.. Matrix dimension
-  integer, parameter :: npl = 30  !.. Number of knot-points  N1+2(k-1)
-  integer, parameter :: npm = 30  !.. Number of knot-points  N2+2(k-1)
+  integer, parameter :: L = 7    !.. Number of B-splines in coordinate 1(N+k-2-cond)
+  integer, parameter :: M = 7    !.. Number of B-splines in coordinate 2
+  integer, parameter :: LM = 49 !.. Matrix dimension
+  integer, parameter :: npl = 15  !.. Number of knot-points  N1+2(k-1)
+  integer, parameter :: npm = 15  !.. Number of knot-points  N2+2(k-1)
  
 
   !.. Parameters for the knot-point grids tl and tm
@@ -26,7 +26,7 @@ program efimov
    real(kind(1.d0)) :: angfreq, scaling
  
   !.. Parameters for effective potentials and coupling matrices
-  integer, parameter :: points = 1300
+  integer, parameter :: points = 300
   real(kind(1.d0)), allocatable, dimension(:) :: rho_vector
   real(kind(1.d0)), allocatable, dimension(:,:) :: energy
   real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,S,Hder,Hamcoef,Pmat,P2mat, Imat
@@ -88,19 +88,19 @@ program efimov
   write(6,*) 'hej7'
 
   !.. Writes adiabatic potential curves+trapping potential to file
-  open(10,file='threebodypot.dat',status='replace')
-  do i = 1, points
-     write(10,10)i, rho_vector(i)/scatl, scaling*(energy(1,i)+Vtrap(i))/angfreq,scaling*(energy(1,i)-(P2mat(1,1,i)/(2.d0*my))+Vtrap(i))/angfreq, scaling*(energy(2,i)+Vtrap(i))/angfreq,scaling*(energy(2,i)-(P2mat(2,2,i)/(2.d0*my))+Vtrap(i))/angfreq
+  ! open(10,file='threebodypot.dat',status='replace')
+!   do i = 1, points
+!      write(10,10)i, rho_vector(i)/scatl, scaling*(energy(1,i)+Vtrap(i))/angfreq,scaling*(energy(1,i)-(P2mat(1,1,i)/(2.d0*my))+Vtrap(i))/angfreq, scaling*(energy(2,i)+Vtrap(i))/angfreq,scaling*(energy(2,i)-(P2mat(2,2,i)/(2.d0*my))+Vtrap(i))/angfreq
 
-     !, (energy(2,i)+Vtrap(i))/angfreq ,(energy(3,i)+Vtrap(i))/angfreq,(energy(4,i)+Vtrap(i))/angfreq,(energy(5,i)+Vtrap(i))/angfreq,(energy(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
-10   format(I3,'  ',16f20.8)
-  end do
-  close(10)
+!      !, (energy(2,i)+Vtrap(i))/angfreq ,(energy(3,i)+Vtrap(i))/angfreq,(energy(4,i)+Vtrap(i))/angfreq,(energy(5,i)+Vtrap(i))/angfreq,(energy(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
+! 10   format(I3,'  ',16f20.8)
+!   end do
+!   close(10)
 
   !.. Writes adiabatic potential curves+trapping potential to file
   open(11,file='effectivepot.dat',status='replace')
   do i = 1, points
-     write(11,10)i, rho_vector(i)/scatl, scaling*energy(1,i),scaling*energy(2,i),scaling*energy(3,i),scaling*energy(4,i),scaling*energy(5,i),scaling*energy(6,i),scaling*energy(7,i),scaling*energy(8,i)
+     write(11,10)i, rho_vector(i)/scatl, scaling*energy(1,i), scaling*energy(2,i), scaling*energy(3,i)
   end do
   close(11)
 

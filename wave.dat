@@ -1,1300 +1,300 @@
-  1            0.00438589           -Infinity           -Infinity                 NaN            Infinity
-  2            0.01788794           -Infinity           -Infinity                 NaN            Infinity
-  3            0.03138999           -Infinity           -Infinity                 NaN            Infinity
-  4            0.04489204           -Infinity           -Infinity                 NaN            Infinity
-  5            0.05839410           -Infinity           -Infinity                 NaN            Infinity
-  6            0.07189615           -Infinity           -Infinity                 NaN            Infinity
-  7            0.08539820           -Infinity           -Infinity                 NaN            Infinity
-  8            0.09890025           -Infinity           -Infinity                 NaN            Infinity
-  9            0.11240231           -Infinity           -Infinity                 NaN            Infinity
- 10            0.12590436           -Infinity           -Infinity                 NaN            Infinity
- 11            0.13940641           -Infinity           -Infinity                 NaN            Infinity
- 12            0.15290846           -Infinity           -Infinity                 NaN            Infinity
- 13            0.16641052           -Infinity           -Infinity                 NaN            Infinity
- 14            0.17991257           -Infinity           -Infinity                 NaN            Infinity
- 15            0.19341462           -Infinity           -Infinity                 NaN            Infinity
- 16            0.20691667           -Infinity           -Infinity                 NaN            Infinity
- 17            0.22041873           -Infinity           -Infinity                 NaN            Infinity
- 18            0.23392078           -Infinity           -Infinity                 NaN            Infinity
- 19            0.24742283           -Infinity           -Infinity                 NaN            Infinity
- 20            0.26092488           -Infinity           -Infinity                 NaN            Infinity
- 21            0.27442693           -Infinity           -Infinity                 NaN            Infinity
- 22            0.28792899           -Infinity           -Infinity                 NaN            Infinity
- 23            0.30143104           -Infinity           -Infinity                 NaN            Infinity
- 24            0.31493309           -Infinity           -Infinity                 NaN            Infinity
- 25            0.32843514           -Infinity           -Infinity                 NaN            Infinity
- 26            0.34193720           -Infinity           -Infinity                 NaN            Infinity
- 27            0.35543925           -Infinity           -Infinity                 NaN            Infinity
- 28            0.36894130           -Infinity           -Infinity                 NaN            Infinity
- 29            0.38244335           -Infinity           -Infinity                 NaN            Infinity
- 30            0.39594541           -Infinity           -Infinity                 NaN            Infinity
- 31            0.40944746           -Infinity           -Infinity                 NaN            Infinity
- 32            0.42294951           -Infinity           -Infinity                 NaN            Infinity
- 33            0.43645156           -Infinity           -Infinity                 NaN            Infinity
- 34            0.44995361           -Infinity           -Infinity                 NaN            Infinity
- 35            0.46345567           -Infinity           -Infinity                 NaN            Infinity
- 36            0.47695772           -Infinity           -Infinity                 NaN            Infinity
- 37            0.49045977           -Infinity           -Infinity                 NaN            Infinity
- 38            0.50396182           -Infinity           -Infinity                 NaN            Infinity
- 39            0.51746388           -Infinity           -Infinity                 NaN            Infinity
- 40            0.53096593           -Infinity           -Infinity                 NaN            Infinity
- 41            0.54446798           -Infinity           -Infinity                 NaN            Infinity
- 42            0.55797003           -Infinity           -Infinity                 NaN            Infinity
- 43            0.57147209           -Infinity           -Infinity                 NaN            Infinity
- 44            0.58497414           -Infinity           -Infinity                 NaN            Infinity
- 45            0.59847619           -Infinity           -Infinity                 NaN            Infinity
- 46            0.61197824           -Infinity           -Infinity                 NaN            Infinity
- 47            0.62548030           -Infinity           -Infinity                 NaN            Infinity
- 48            0.63898235           -Infinity           -Infinity                 NaN            Infinity
- 49            0.65248440           -Infinity           -Infinity                 NaN            Infinity
- 50            0.66598645           -Infinity           -Infinity                 NaN            Infinity
- 51            0.67948850           -Infinity           -Infinity                 NaN            Infinity
- 52            0.69299056           -Infinity           -Infinity                 NaN            Infinity
- 53            0.70649261           -Infinity           -Infinity                 NaN            Infinity
- 54            0.71999466           -Infinity           -Infinity                 NaN            Infinity
- 55            0.73349671           -Infinity           -Infinity                 NaN            Infinity
- 56            0.74699877           -Infinity           -Infinity                 NaN            Infinity
- 57            0.76050082           -Infinity           -Infinity                 NaN            Infinity
- 58            0.77400287           -Infinity           -Infinity                 NaN            Infinity
- 59            0.78750492           -Infinity           -Infinity                 NaN            Infinity
- 60            0.80100698           -Infinity           -Infinity                 NaN            Infinity
- 61            0.81450903           -Infinity           -Infinity                 NaN            Infinity
- 62            0.82801108           -Infinity           -Infinity                 NaN            Infinity
- 63            0.84151313           -Infinity           -Infinity                 NaN            Infinity
- 64            0.85501518           -Infinity           -Infinity                 NaN            Infinity
- 65            0.86851724           -Infinity           -Infinity                 NaN            Infinity
- 66            0.88201929           -Infinity           -Infinity                 NaN            Infinity
- 67            0.89552134           -Infinity           -Infinity                 NaN            Infinity
- 68            0.90902339           -Infinity           -Infinity                 NaN            Infinity
- 69            0.92252545           -Infinity           -Infinity                 NaN            Infinity
- 70            0.93602750           -Infinity           -Infinity                 NaN            Infinity
- 71            0.94952955           -Infinity           -Infinity                 NaN            Infinity
- 72            0.96303160           -Infinity           -Infinity                 NaN            Infinity
- 73            0.97653366           -Infinity           -Infinity                 NaN            Infinity
- 74            0.99003571           -Infinity           -Infinity                 NaN            Infinity
- 75            1.00353776           -Infinity           -Infinity                 NaN            Infinity
- 76            1.01703981           -Infinity           -Infinity                 NaN            Infinity
- 77            1.03054187           -Infinity           -Infinity                 NaN            Infinity
- 78            1.04404392           -Infinity           -Infinity                 NaN            Infinity
- 79            1.05754597           -Infinity           -Infinity                 NaN            Infinity
- 80            1.07104802           -Infinity           -Infinity                 NaN            Infinity
- 81            1.08455007           -Infinity           -Infinity                 NaN            Infinity
- 82            1.09805213           -Infinity           -Infinity                 NaN            Infinity
- 83            1.11155418           -Infinity           -Infinity                 NaN            Infinity
- 84            1.12505623           -Infinity           -Infinity                 NaN            Infinity
- 85            1.13855828           -Infinity           -Infinity                 NaN            Infinity
- 86            1.15206034           -Infinity           -Infinity                 NaN            Infinity
- 87            1.16556239           -Infinity           -Infinity                 NaN            Infinity
- 88            1.17906444           -Infinity           -Infinity                 NaN            Infinity
- 89            1.19256649           -Infinity           -Infinity                 NaN            Infinity
- 90            1.20606855           -Infinity           -Infinity                 NaN            Infinity
- 91            1.21957060           -Infinity           -Infinity                 NaN            Infinity
- 92            1.23307265           -Infinity           -Infinity                 NaN            Infinity
- 93            1.24657470           -Infinity           -Infinity                 NaN            Infinity
- 94            1.26007675           -Infinity           -Infinity                 NaN            Infinity
- 95            1.27357881           -Infinity           -Infinity                 NaN            Infinity
- 96            1.28708086           -Infinity           -Infinity                 NaN            Infinity
- 97            1.30058291           -Infinity           -Infinity                 NaN            Infinity
- 98            1.31408496           -Infinity           -Infinity                 NaN            Infinity
- 99            1.32758702           -Infinity           -Infinity                 NaN            Infinity
-100            1.34108907           -Infinity           -Infinity                 NaN            Infinity
-101            1.35459112           -Infinity           -Infinity                 NaN            Infinity
-102            1.36809317           -Infinity           -Infinity                 NaN            Infinity
-103            1.38159523           -Infinity           -Infinity                 NaN            Infinity
-104            1.39509728           -Infinity           -Infinity                 NaN            Infinity
-105            1.40859933           -Infinity           -Infinity                 NaN            Infinity
-106            1.42210138           -Infinity           -Infinity                 NaN            Infinity
-107            1.43560344           -Infinity           -Infinity                 NaN            Infinity
-108            1.44910549           -Infinity           -Infinity                 NaN            Infinity
-109            1.46260754           -Infinity           -Infinity                 NaN            Infinity
-110            1.47610959           -Infinity           -Infinity                 NaN            Infinity
-111            1.48961164           -Infinity           -Infinity                 NaN            Infinity
-112            1.50311370           -Infinity           -Infinity                 NaN            Infinity
-113            1.51661575           -Infinity           -Infinity                 NaN            Infinity
-114            1.53011780           -Infinity           -Infinity                 NaN            Infinity
-115            1.54361985           -Infinity           -Infinity                 NaN            Infinity
-116            1.55712191           -Infinity           -Infinity                 NaN            Infinity
-117            1.57062396           -Infinity           -Infinity                 NaN            Infinity
-118            1.58412601           -Infinity           -Infinity                 NaN            Infinity
-119            1.59762806           -Infinity           -Infinity                 NaN            Infinity
-120            1.61113012           -Infinity           -Infinity                 NaN            Infinity
-121            1.62463217           -Infinity           -Infinity                 NaN            Infinity
-122            1.63813422           -Infinity           -Infinity                 NaN            Infinity
-123            1.65163627           -Infinity           -Infinity                 NaN            Infinity
-124            1.66513832           -Infinity           -Infinity                 NaN            Infinity
-125            1.67864038           -Infinity           -Infinity                 NaN            Infinity
-126            1.69214243           -Infinity           -Infinity                 NaN            Infinity
-127            1.70564448           -Infinity           -Infinity                 NaN            Infinity
-128            1.71914653           -Infinity           -Infinity                 NaN            Infinity
-129            1.73264859           -Infinity           -Infinity                 NaN            Infinity
-130            1.74615064           -Infinity           -Infinity                 NaN            Infinity
-131            1.75965269           -Infinity           -Infinity                 NaN            Infinity
-132            1.77315474           -Infinity           -Infinity                 NaN            Infinity
-133            1.78665680           -Infinity           -Infinity                 NaN            Infinity
-134            1.80015885           -Infinity           -Infinity                 NaN            Infinity
-135            1.81366090           -Infinity           -Infinity                 NaN            Infinity
-136            1.82716295           -Infinity           -Infinity                 NaN            Infinity
-137            1.84066501           -Infinity           -Infinity                 NaN            Infinity
-138            1.85416706           -Infinity           -Infinity                 NaN            Infinity
-139            1.86766911           -Infinity           -Infinity                 NaN            Infinity
-140            1.88117116           -Infinity           -Infinity                 NaN            Infinity
-141            1.89467321           -Infinity           -Infinity                 NaN            Infinity
-142            1.90817527           -Infinity           -Infinity                 NaN            Infinity
-143            1.92167732           -Infinity           -Infinity                 NaN            Infinity
-144            1.93517937           -Infinity           -Infinity                 NaN            Infinity
-145            1.94868142           -Infinity           -Infinity                 NaN            Infinity
-146            1.96218348           -Infinity           -Infinity                 NaN            Infinity
-147            1.97568553           -Infinity           -Infinity                 NaN            Infinity
-148            1.98918758           -Infinity           -Infinity                 NaN            Infinity
-149            2.00268963           -Infinity           -Infinity                 NaN            Infinity
-150            2.01619169           -Infinity           -Infinity                 NaN            Infinity
-151            2.02969374           -Infinity           -Infinity                 NaN            Infinity
-152            2.04319579           -Infinity           -Infinity                 NaN            Infinity
-153            2.05669784           -Infinity           -Infinity                 NaN            Infinity
-154            2.07019989           -Infinity           -Infinity                 NaN            Infinity
-155            2.08370195           -Infinity           -Infinity                 NaN            Infinity
-156            2.09720400           -Infinity           -Infinity                 NaN            Infinity
-157            2.11070605           -Infinity           -Infinity                 NaN            Infinity
-158            2.12420810           -Infinity           -Infinity                 NaN            Infinity
-159            2.13771016           -Infinity           -Infinity                 NaN            Infinity
-160            2.15121221           -Infinity           -Infinity                 NaN            Infinity
-161            2.16471426           -Infinity           -Infinity                 NaN            Infinity
-162            2.17821631           -Infinity           -Infinity                 NaN            Infinity
-163            2.19171837           -Infinity           -Infinity                 NaN            Infinity
-164            2.20522042           -Infinity           -Infinity                 NaN            Infinity
-165            2.21872247           -Infinity           -Infinity                 NaN            Infinity
-166            2.23222452           -Infinity           -Infinity                 NaN            Infinity
-167            2.24572658           -Infinity           -Infinity                 NaN            Infinity
-168            2.25922863           -Infinity           -Infinity                 NaN            Infinity
-169            2.27273068           -Infinity           -Infinity                 NaN            Infinity
-170            2.28623273           -Infinity           -Infinity                 NaN            Infinity
-171            2.29973478           -Infinity           -Infinity                 NaN            Infinity
-172            2.31323684           -Infinity           -Infinity                 NaN            Infinity
-173            2.32673889           -Infinity           -Infinity                 NaN            Infinity
-174            2.34024094           -Infinity           -Infinity                 NaN            Infinity
-175            2.35374299           -Infinity           -Infinity                 NaN            Infinity
-176            2.36724505           -Infinity           -Infinity                 NaN            Infinity
-177            2.38074710           -Infinity           -Infinity                 NaN            Infinity
-178            2.39424915           -Infinity           -Infinity                 NaN            Infinity
-179            2.40775120           -Infinity           -Infinity                 NaN            Infinity
-180            2.42125326           -Infinity           -Infinity                 NaN            Infinity
-181            2.43475531           -Infinity           -Infinity                 NaN            Infinity
-182            2.44825736           -Infinity           -Infinity                 NaN            Infinity
-183            2.46175941           -Infinity           -Infinity                 NaN            Infinity
-184            2.47526146           -Infinity           -Infinity                 NaN            Infinity
-185            2.48876352           -Infinity           -Infinity                 NaN            Infinity
-186            2.50226557           -Infinity           -Infinity                 NaN            Infinity
-187            2.51576762           -Infinity           -Infinity                 NaN            Infinity
-188            2.52926967           -Infinity           -Infinity                 NaN            Infinity
-189            2.54277173           -Infinity           -Infinity                 NaN            Infinity
-190            2.55627378           -Infinity           -Infinity                 NaN            Infinity
-191            2.56977583           -Infinity           -Infinity                 NaN            Infinity
-192            2.58327788           -Infinity           -Infinity                 NaN            Infinity
-193            2.59677994           -Infinity           -Infinity                 NaN            Infinity
-194            2.61028199           -Infinity           -Infinity                 NaN            Infinity
-195            2.62378404           -Infinity           -Infinity                 NaN            Infinity
-196            2.63728609           -Infinity           -Infinity                 NaN            Infinity
-197            2.65078815           -Infinity           -Infinity                 NaN            Infinity
-198            2.66429020           -Infinity           -Infinity                 NaN            Infinity
-199            2.67779225           -Infinity           -Infinity                 NaN            Infinity
-200            2.69129430           -Infinity           -Infinity                 NaN            Infinity
-201            2.70479635           -Infinity           -Infinity                 NaN            Infinity
-202            2.71829841           -Infinity           -Infinity                 NaN            Infinity
-203            2.73180046           -Infinity           -Infinity                 NaN            Infinity
-204            2.74530251           -Infinity           -Infinity                 NaN            Infinity
-205            2.75880456           -Infinity           -Infinity                 NaN            Infinity
-206            2.77230662           -Infinity           -Infinity                 NaN            Infinity
-207            2.78580867           -Infinity           -Infinity                 NaN            Infinity
-208            2.79931072           -Infinity           -Infinity                 NaN            Infinity
-209            2.81281277           -Infinity           -Infinity                 NaN            Infinity
-210            2.82631483           -Infinity           -Infinity                 NaN            Infinity
-211            2.83981688           -Infinity           -Infinity                 NaN            Infinity
-212            2.85331893           -Infinity           -Infinity                 NaN            Infinity
-213            2.86682098           -Infinity           -Infinity                 NaN            Infinity
-214            2.88032303           -Infinity           -Infinity                 NaN            Infinity
-215            2.89382509           -Infinity           -Infinity                 NaN            Infinity
-216            2.90732714           -Infinity           -Infinity                 NaN            Infinity
-217            2.92082919           -Infinity           -Infinity                 NaN            Infinity
-218            2.93433124           -Infinity           -Infinity                 NaN            Infinity
-219            2.94783330           -Infinity           -Infinity                 NaN            Infinity
-220            2.96133535           -Infinity           -Infinity                 NaN            Infinity
-221            2.97483740           -Infinity           -Infinity                 NaN            Infinity
-222            2.98833945           -Infinity           -Infinity                 NaN            Infinity
-223            3.00184151           -Infinity           -Infinity                 NaN            Infinity
-224            3.01534356           -Infinity           -Infinity                 NaN            Infinity
-225            3.02884561           -Infinity           -Infinity                 NaN            Infinity
-226            3.04234766           -Infinity           -Infinity                 NaN            Infinity
-227            3.05584972           -Infinity           -Infinity                 NaN            Infinity
-228            3.06935177           -Infinity           -Infinity                 NaN            Infinity
-229            3.08285382           -Infinity           -Infinity                 NaN            Infinity
-230            3.09635587           -Infinity           -Infinity                 NaN            Infinity
-231            3.10985792           -Infinity           -Infinity                 NaN            Infinity
-232            3.12335998           -Infinity           -Infinity                 NaN            Infinity
-233            3.13686203           -Infinity           -Infinity                 NaN            Infinity
-234            3.15036408           -Infinity           -Infinity                 NaN            Infinity
-235            3.16386613           -Infinity           -Infinity                 NaN            Infinity
-236            3.17736819           -Infinity           -Infinity                 NaN            Infinity
-237            3.19087024           -Infinity           -Infinity                 NaN            Infinity
-238            3.20437229           -Infinity           -Infinity                 NaN            Infinity
-239            3.21787434           -Infinity           -Infinity                 NaN            Infinity
-240            3.23137640           -Infinity           -Infinity                 NaN            Infinity
-241            3.24487845           -Infinity           -Infinity                 NaN            Infinity
-242            3.25838050           -Infinity           -Infinity                 NaN            Infinity
-243            3.27188255           -Infinity           -Infinity                 NaN            Infinity
-244            3.28538460           -Infinity           -Infinity                 NaN            Infinity
-245            3.29888666           -Infinity           -Infinity                 NaN            Infinity
-246            3.31238871           -Infinity           -Infinity                 NaN            Infinity
-247            3.32589076           -Infinity           -Infinity                 NaN            Infinity
-248            3.33939281           -Infinity           -Infinity                 NaN            Infinity
-249            3.35289487           -Infinity           -Infinity                 NaN            Infinity
-250            3.36639692           -Infinity           -Infinity                 NaN            Infinity
-251            3.37989897           -Infinity           -Infinity                 NaN            Infinity
-252            3.39340102           -Infinity           -Infinity                 NaN            Infinity
-253            3.40690308           -Infinity           -Infinity                 NaN            Infinity
-254            3.42040513           -Infinity           -Infinity                 NaN            Infinity
-255            3.43390718           -Infinity           -Infinity                 NaN            Infinity
-256            3.44740923           -Infinity           -Infinity                 NaN            Infinity
-257            3.46091129           -Infinity           -Infinity                 NaN            Infinity
-258            3.47441334           -Infinity           -Infinity                 NaN            Infinity
-259            3.48791539           -Infinity           -Infinity                 NaN            Infinity
-260            3.50141744           -Infinity           -Infinity                 NaN            Infinity
-261            3.51491949           -Infinity           -Infinity                 NaN            Infinity
-262            3.52842155           -Infinity           -Infinity                 NaN            Infinity
-263            3.54192360           -Infinity           -Infinity                 NaN            Infinity
-264            3.55542565           -Infinity           -Infinity                 NaN            Infinity
-265            3.56892770           -Infinity           -Infinity                 NaN            Infinity
-266            3.58242976           -Infinity           -Infinity                 NaN            Infinity
-267            3.59593181           -Infinity           -Infinity                 NaN            Infinity
-268            3.60943386           -Infinity           -Infinity                 NaN            Infinity
-269            3.62293591           -Infinity           -Infinity                 NaN            Infinity
-270            3.63643797           -Infinity           -Infinity                 NaN            Infinity
-271            3.64994002           -Infinity           -Infinity                 NaN            Infinity
-272            3.66344207           -Infinity           -Infinity                 NaN            Infinity
-273            3.67694412           -Infinity           -Infinity                 NaN            Infinity
-274            3.69044617           -Infinity           -Infinity                 NaN            Infinity
-275            3.70394823           -Infinity           -Infinity                 NaN            Infinity
-276            3.71745028           -Infinity           -Infinity                 NaN            Infinity
-277            3.73095233           -Infinity           -Infinity                 NaN            Infinity
-278            3.74445438           -Infinity           -Infinity                 NaN            Infinity
-279            3.75795644           -Infinity           -Infinity                 NaN            Infinity
-280            3.77145849           -Infinity           -Infinity                 NaN            Infinity
-281            3.78496054           -Infinity           -Infinity                 NaN            Infinity
-282            3.79846259           -Infinity           -Infinity                 NaN            Infinity
-283            3.81196465           -Infinity           -Infinity                 NaN            Infinity
-284            3.82546670           -Infinity           -Infinity                 NaN            Infinity
-285            3.83896875           -Infinity           -Infinity                 NaN            Infinity
-286            3.85247080           -Infinity           -Infinity                 NaN            Infinity
-287            3.86597285           -Infinity           -Infinity                 NaN            Infinity
-288            3.87947491           -Infinity           -Infinity                 NaN            Infinity
-289            3.89297696           -Infinity           -Infinity                 NaN            Infinity
-290            3.90647901           -Infinity           -Infinity                 NaN            Infinity
-291            3.91998106           -Infinity           -Infinity                 NaN            Infinity
-292            3.93348312           -Infinity           -Infinity                 NaN            Infinity
-293            3.94698517           -Infinity           -Infinity                 NaN            Infinity
-294            3.96048722           -Infinity           -Infinity                 NaN            Infinity
-295            3.97398927           -Infinity           -Infinity                 NaN            Infinity
-296            3.98749133           -Infinity           -Infinity                 NaN            Infinity
-297            4.00099338           -Infinity           -Infinity                 NaN            Infinity
-298            4.01449543           -Infinity           -Infinity                 NaN            Infinity
-299            4.02799748           -Infinity           -Infinity                 NaN            Infinity
-300            4.04149954           -Infinity           -Infinity                 NaN            Infinity
-301            4.05500159           -Infinity           -Infinity                 NaN            Infinity
-302            4.06850364           -Infinity           -Infinity                 NaN            Infinity
-303            4.08200569           -Infinity           -Infinity                 NaN            Infinity
-304            4.09550774           -Infinity           -Infinity                 NaN            Infinity
-305            4.10900980           -Infinity           -Infinity                 NaN            Infinity
-306            4.12251185           -Infinity           -Infinity                 NaN            Infinity
-307            4.13601390           -Infinity           -Infinity                 NaN            Infinity
-308            4.14951595           -Infinity           -Infinity                 NaN            Infinity
-309            4.16301801           -Infinity           -Infinity                 NaN            Infinity
-310            4.17652006           -Infinity           -Infinity                 NaN            Infinity
-311            4.19002211           -Infinity           -Infinity                 NaN            Infinity
-312            4.20352416           -Infinity           -Infinity                 NaN            Infinity
-313            4.21702622           -Infinity           -Infinity                 NaN            Infinity
-314            4.23052827           -Infinity           -Infinity                 NaN            Infinity
-315            4.24403032           -Infinity           -Infinity                 NaN            Infinity
-316            4.25753237           -Infinity           -Infinity                 NaN            Infinity
-317            4.27103442           -Infinity           -Infinity                 NaN            Infinity
-318            4.28453648           -Infinity           -Infinity                 NaN            Infinity
-319            4.29803853           -Infinity           -Infinity                 NaN            Infinity
-320            4.31154058           -Infinity           -Infinity                 NaN            Infinity
-321            4.32504263           -Infinity           -Infinity                 NaN            Infinity
-322            4.33854469           -Infinity           -Infinity                 NaN            Infinity
-323            4.35204674           -Infinity           -Infinity                 NaN            Infinity
-324            4.36554879           -Infinity           -Infinity                 NaN            Infinity
-325            4.37905084           -Infinity           -Infinity                 NaN            Infinity
-326            4.39255290           -Infinity           -Infinity                 NaN            Infinity
-327            4.40605495           -Infinity           -Infinity                 NaN            Infinity
-328            4.41955700           -Infinity           -Infinity                 NaN            Infinity
-329            4.43305905           -Infinity           -Infinity                 NaN            Infinity
-330            4.44656111           -Infinity           -Infinity                 NaN            Infinity
-331            4.46006316           -Infinity           -Infinity                 NaN            Infinity
-332            4.47356521           -Infinity           -Infinity                 NaN            Infinity
-333            4.48706726           -Infinity           -Infinity                 NaN            Infinity
-334            4.50056931           -Infinity           -Infinity                 NaN            Infinity
-335            4.51407137           -Infinity           -Infinity                 NaN            Infinity
-336            4.52757342           -Infinity           -Infinity                 NaN            Infinity
-337            4.54107547           -Infinity           -Infinity                 NaN            Infinity
-338            4.55457752           -Infinity           -Infinity                 NaN            Infinity
-339            4.56807958           -Infinity           -Infinity                 NaN            Infinity
-340            4.58158163           -Infinity           -Infinity                 NaN            Infinity
-341            4.59508368           -Infinity           -Infinity                 NaN            Infinity
-342            4.60858573           -Infinity           -Infinity                 NaN            Infinity
-343            4.62208779           -Infinity           -Infinity                 NaN            Infinity
-344            4.63558984           -Infinity           -Infinity                 NaN            Infinity
-345            4.64909189           -Infinity           -Infinity                 NaN            Infinity
-346            4.66259394           -Infinity           -Infinity                 NaN            Infinity
-347            4.67609599           -Infinity           -Infinity                 NaN            Infinity
-348            4.68959805           -Infinity           -Infinity                 NaN            Infinity
-349            4.70310010           -Infinity           -Infinity                 NaN            Infinity
-350            4.71660215           -Infinity           -Infinity                 NaN            Infinity
-351            4.73010420           -Infinity           -Infinity                 NaN            Infinity
-352            4.74360626           -Infinity           -Infinity                 NaN            Infinity
-353            4.75710831           -Infinity           -Infinity                 NaN            Infinity
-354            4.77061036           -Infinity           -Infinity                 NaN            Infinity
-355            4.78411241           -Infinity           -Infinity                 NaN            Infinity
-356            4.79761447           -Infinity           -Infinity                 NaN            Infinity
-357            4.81111652           -Infinity           -Infinity                 NaN            Infinity
-358            4.82461857           -Infinity           -Infinity                 NaN            Infinity
-359            4.83812062           -Infinity           -Infinity                 NaN            Infinity
-360            4.85162268           -Infinity           -Infinity                 NaN            Infinity
-361            4.86512473           -Infinity           -Infinity                 NaN            Infinity
-362            4.87862678           -Infinity           -Infinity                 NaN            Infinity
-363            4.89212883           -Infinity           -Infinity                 NaN            Infinity
-364            4.90563088           -Infinity           -Infinity                 NaN            Infinity
-365            4.91913294           -Infinity           -Infinity                 NaN            Infinity
-366            4.93263499           -Infinity           -Infinity                 NaN            Infinity
-367            4.94613704           -Infinity           -Infinity                 NaN            Infinity
-368            4.95963909           -Infinity           -Infinity                 NaN            Infinity
-369            4.97314115           -Infinity           -Infinity                 NaN            Infinity
-370            4.98664320           -Infinity           -Infinity                 NaN            Infinity
-371            5.00014525           -Infinity           -Infinity                 NaN            Infinity
-372            5.01364730           -Infinity           -Infinity                 NaN            Infinity
-373            5.02714936           -Infinity           -Infinity                 NaN            Infinity
-374            5.04065141           -Infinity           -Infinity                 NaN            Infinity
-375            5.05415346           -Infinity           -Infinity                 NaN            Infinity
-376            5.06765551           -Infinity           -Infinity                 NaN            Infinity
-377            5.08115756           -Infinity           -Infinity                 NaN            Infinity
-378            5.09465962           -Infinity           -Infinity                 NaN            Infinity
-379            5.10816167           -Infinity           -Infinity                 NaN            Infinity
-380            5.12166372           -Infinity           -Infinity                 NaN            Infinity
-381            5.13516577           -Infinity           -Infinity                 NaN            Infinity
-382            5.14866783           -Infinity           -Infinity                 NaN            Infinity
-383            5.16216988           -Infinity           -Infinity                 NaN            Infinity
-384            5.17567193           -Infinity           -Infinity                 NaN            Infinity
-385            5.18917398           -Infinity           -Infinity                 NaN            Infinity
-386            5.20267604           -Infinity           -Infinity                 NaN            Infinity
-387            5.21617809           -Infinity           -Infinity                 NaN            Infinity
-388            5.22968014           -Infinity           -Infinity                 NaN            Infinity
-389            5.24318219           -Infinity           -Infinity                 NaN            Infinity
-390            5.25668425           -Infinity           -Infinity                 NaN            Infinity
-391            5.27018630           -Infinity           -Infinity                 NaN            Infinity
-392            5.28368835           -Infinity           -Infinity                 NaN            Infinity
-393            5.29719040           -Infinity           -Infinity                 NaN            Infinity
-394            5.31069245           -Infinity           -Infinity                 NaN            Infinity
-395            5.32419451           -Infinity           -Infinity                 NaN            Infinity
-396            5.33769656           -Infinity           -Infinity                 NaN            Infinity
-397            5.35119861           -Infinity           -Infinity                 NaN            Infinity
-398            5.36470066           -Infinity           -Infinity                 NaN            Infinity
-399            5.37820272           -Infinity           -Infinity                 NaN            Infinity
-400            5.39170477           -Infinity           -Infinity                 NaN            Infinity
-401            5.40520682           -Infinity           -Infinity                 NaN            Infinity
-402            5.41870887           -Infinity           -Infinity                 NaN            Infinity
-403            5.43221093           -Infinity           -Infinity                 NaN            Infinity
-404            5.44571298           -Infinity           -Infinity                 NaN            Infinity
-405            5.45921503           -Infinity           -Infinity                 NaN            Infinity
-406            5.47271708           -Infinity           -Infinity                 NaN            Infinity
-407            5.48621913           -Infinity           -Infinity                 NaN            Infinity
-408            5.49972119           -Infinity           -Infinity                 NaN            Infinity
-409            5.51322324           -Infinity           -Infinity                 NaN            Infinity
-410            5.52672529           -Infinity           -Infinity                 NaN            Infinity
-411            5.54022734           -Infinity           -Infinity                 NaN            Infinity
-412            5.55372940           -Infinity           -Infinity                 NaN            Infinity
-413            5.56723145           -Infinity           -Infinity                 NaN            Infinity
-414            5.58073350           -Infinity           -Infinity                 NaN            Infinity
-415            5.59423555           -Infinity           -Infinity                 NaN            Infinity
-416            5.60773761           -Infinity           -Infinity                 NaN            Infinity
-417            5.62123966           -Infinity           -Infinity                 NaN            Infinity
-418            5.63474171           -Infinity           -Infinity                 NaN            Infinity
-419            5.64824376           -Infinity           -Infinity                 NaN            Infinity
-420            5.66174582           -Infinity           -Infinity                 NaN            Infinity
-421            5.67524787           -Infinity           -Infinity                 NaN            Infinity
-422            5.68874992           -Infinity           -Infinity                 NaN            Infinity
-423            5.70225197           -Infinity           -Infinity                 NaN            Infinity
-424            5.71575402           -Infinity           -Infinity                 NaN            Infinity
-425            5.72925608           -Infinity           -Infinity                 NaN            Infinity
-426            5.74275813           -Infinity           -Infinity                 NaN            Infinity
-427            5.75626018           -Infinity           -Infinity                 NaN            Infinity
-428            5.76976223           -Infinity           -Infinity                 NaN            Infinity
-429            5.78326429           -Infinity           -Infinity                 NaN            Infinity
-430            5.79676634           -Infinity           -Infinity                 NaN            Infinity
-431            5.81026839           -Infinity           -Infinity                 NaN            Infinity
-432            5.82377044           -Infinity           -Infinity                 NaN            Infinity
-433            5.83727250           -Infinity           -Infinity                 NaN            Infinity
-434            5.85077455           -Infinity           -Infinity                 NaN            Infinity
-435            5.86427660           -Infinity           -Infinity                 NaN            Infinity
-436            5.87777865           -Infinity           -Infinity                 NaN            Infinity
-437            5.89128070           -Infinity           -Infinity                 NaN            Infinity
-438            5.90478276           -Infinity           -Infinity                 NaN            Infinity
-439            5.91828481           -Infinity           -Infinity                 NaN            Infinity
-440            5.93178686           -Infinity           -Infinity                 NaN            Infinity
-441            5.94528891           -Infinity           -Infinity                 NaN            Infinity
-442            5.95879097           -Infinity           -Infinity                 NaN            Infinity
-443            5.97229302           -Infinity           -Infinity                 NaN            Infinity
-444            5.98579507           -Infinity           -Infinity                 NaN            Infinity
-445            5.99929712           -Infinity           -Infinity                 NaN            Infinity
-446            6.01279918           -Infinity           -Infinity                 NaN            Infinity
-447            6.02630123           -Infinity           -Infinity                 NaN            Infinity
-448            6.03980328           -Infinity           -Infinity                 NaN            Infinity
-449            6.05330533           -Infinity           -Infinity                 NaN            Infinity
-450            6.06680739           -Infinity           -Infinity                 NaN            Infinity
-451            6.08030944           -Infinity           -Infinity                 NaN            Infinity
-452            6.09381149           -Infinity           -Infinity                 NaN            Infinity
-453            6.10731354           -Infinity           -Infinity                 NaN            Infinity
-454            6.12081559           -Infinity           -Infinity                 NaN            Infinity
-455            6.13431765           -Infinity           -Infinity                 NaN            Infinity
-456            6.14781970           -Infinity           -Infinity                 NaN            Infinity
-457            6.16132175           -Infinity           -Infinity                 NaN            Infinity
-458            6.17482380           -Infinity           -Infinity                 NaN            Infinity
-459            6.18832586           -Infinity           -Infinity                 NaN            Infinity
-460            6.20182791           -Infinity           -Infinity                 NaN            Infinity
-461            6.21532996           -Infinity           -Infinity                 NaN            Infinity
-462            6.22883201           -Infinity           -Infinity                 NaN            Infinity
-463            6.24233407           -Infinity           -Infinity                 NaN            Infinity
-464            6.25583612           -Infinity           -Infinity                 NaN            Infinity
-465            6.26933817           -Infinity           -Infinity                 NaN            Infinity
-466            6.28284022           -Infinity           -Infinity                 NaN            Infinity
-467            6.29634227           -Infinity           -Infinity                 NaN            Infinity
-468            6.30984433           -Infinity           -Infinity                 NaN            Infinity
-469            6.32334638           -Infinity           -Infinity                 NaN            Infinity
-470            6.33684843           -Infinity           -Infinity                 NaN            Infinity
-471            6.35035048           -Infinity           -Infinity                 NaN            Infinity
-472            6.36385254           -Infinity           -Infinity                 NaN            Infinity
-473            6.37735459           -Infinity           -Infinity                 NaN            Infinity
-474            6.39085664           -Infinity           -Infinity                 NaN            Infinity
-475            6.40435869           -Infinity           -Infinity                 NaN            Infinity
-476            6.41786075           -Infinity           -Infinity                 NaN            Infinity
-477            6.43136280           -Infinity           -Infinity                 NaN            Infinity
-478            6.44486485           -Infinity           -Infinity                 NaN            Infinity
-479            6.45836690           -Infinity           -Infinity                 NaN            Infinity
-480            6.47186896           -Infinity           -Infinity                 NaN            Infinity
-481            6.48537101           -Infinity           -Infinity                 NaN            Infinity
-482            6.49887306           -Infinity           -Infinity                 NaN            Infinity
-483            6.51237511           -Infinity           -Infinity                 NaN            Infinity
-484            6.52587716           -Infinity           -Infinity                 NaN            Infinity
-485            6.53937922           -Infinity           -Infinity                 NaN            Infinity
-486            6.55288127           -Infinity           -Infinity                 NaN            Infinity
-487            6.56638332           -Infinity           -Infinity                 NaN            Infinity
-488            6.57988537           -Infinity           -Infinity                 NaN            Infinity
-489            6.59338743           -Infinity           -Infinity                 NaN            Infinity
-490            6.60688948           -Infinity           -Infinity                 NaN            Infinity
-491            6.62039153           -Infinity           -Infinity                 NaN            Infinity
-492            6.63389358           -Infinity           -Infinity                 NaN            Infinity
-493            6.64739564           -Infinity           -Infinity                 NaN            Infinity
-494            6.66089769           -Infinity           -Infinity                 NaN            Infinity
-495            6.67439974           -Infinity           -Infinity                 NaN            Infinity
-496            6.68790179           -Infinity           -Infinity                 NaN            Infinity
-497            6.70140384           -Infinity           -Infinity                 NaN            Infinity
-498            6.71490590           -Infinity           -Infinity                 NaN            Infinity
-499            6.72840795           -Infinity           -Infinity                 NaN            Infinity
-500            6.74191000           -Infinity           -Infinity                 NaN            Infinity
-501            6.75541205           -Infinity           -Infinity                 NaN            Infinity
-502            6.76891411           -Infinity           -Infinity                 NaN            Infinity
-503            6.78241616           -Infinity           -Infinity                 NaN            Infinity
-504            6.79591821           -Infinity           -Infinity                 NaN            Infinity
-505            6.80942026           -Infinity           -Infinity                 NaN            Infinity
-506            6.82292232           -Infinity           -Infinity                 NaN            Infinity
-507            6.83642437           -Infinity           -Infinity                 NaN            Infinity
-508            6.84992642           -Infinity           -Infinity                 NaN            Infinity
-509            6.86342847           -Infinity           -Infinity                 NaN            Infinity
-510            6.87693053           -Infinity           -Infinity                 NaN            Infinity
-511            6.89043258           -Infinity           -Infinity                 NaN            Infinity
-512            6.90393463           -Infinity           -Infinity                 NaN            Infinity
-513            6.91743668           -Infinity           -Infinity                 NaN            Infinity
-514            6.93093873           -Infinity           -Infinity                 NaN            Infinity
-515            6.94444079           -Infinity           -Infinity                 NaN            Infinity
-516            6.95794284           -Infinity           -Infinity                 NaN            Infinity
-517            6.97144489           -Infinity           -Infinity                 NaN            Infinity
-518            6.98494694           -Infinity           -Infinity                 NaN            Infinity
-519            6.99844900           -Infinity           -Infinity                 NaN            Infinity
-520            7.01195105           -Infinity           -Infinity                 NaN            Infinity
-521            7.02545310           -Infinity           -Infinity                 NaN            Infinity
-522            7.03895515           -Infinity           -Infinity                 NaN            Infinity
-523            7.05245721           -Infinity           -Infinity                 NaN            Infinity
-524            7.06595926           -Infinity           -Infinity                 NaN            Infinity
-525            7.07946131           -Infinity           -Infinity                 NaN            Infinity
-526            7.09296336           -Infinity           -Infinity                 NaN            Infinity
-527            7.10646541           -Infinity           -Infinity                 NaN            Infinity
-528            7.11996747           -Infinity           -Infinity                 NaN            Infinity
-529            7.13346952           -Infinity           -Infinity                 NaN            Infinity
-530            7.14697157           -Infinity           -Infinity                 NaN            Infinity
-531            7.16047362           -Infinity           -Infinity                 NaN            Infinity
-532            7.17397568           -Infinity           -Infinity                 NaN            Infinity
-533            7.18747773           -Infinity           -Infinity                 NaN            Infinity
-534            7.20097978           -Infinity           -Infinity                 NaN            Infinity
-535            7.21448183           -Infinity           -Infinity                 NaN            Infinity
-536            7.22798389           -Infinity           -Infinity                 NaN            Infinity
-537            7.24148594           -Infinity           -Infinity                 NaN            Infinity
-538            7.25498799           -Infinity           -Infinity                 NaN            Infinity
-539            7.26849004           -Infinity           -Infinity                 NaN            Infinity
-540            7.28199210           -Infinity           -Infinity                 NaN            Infinity
-541            7.29549415           -Infinity           -Infinity                 NaN            Infinity
-542            7.30899620           -Infinity           -Infinity                 NaN            Infinity
-543            7.32249825           -Infinity           -Infinity                 NaN            Infinity
-544            7.33600030           -Infinity           -Infinity                 NaN            Infinity
-545            7.34950236           -Infinity           -Infinity                 NaN            Infinity
-546            7.36300441           -Infinity           -Infinity                 NaN            Infinity
-547            7.37650646           -Infinity           -Infinity                 NaN            Infinity
-548            7.39000851           -Infinity           -Infinity                 NaN            Infinity
-549            7.40351057           -Infinity           -Infinity                 NaN            Infinity
-550            7.41701262           -Infinity           -Infinity                 NaN            Infinity
-551            7.43051467           -Infinity           -Infinity                 NaN            Infinity
-552            7.44401672           -Infinity           -Infinity                 NaN            Infinity
-553            7.45751878           -Infinity           -Infinity                 NaN            Infinity
-554            7.47102083           -Infinity           -Infinity                 NaN            Infinity
-555            7.48452288           -Infinity           -Infinity                 NaN            Infinity
-556            7.49802493           -Infinity           -Infinity                 NaN            Infinity
-557            7.51152698           -Infinity           -Infinity                 NaN            Infinity
-558            7.52502904           -Infinity           -Infinity                 NaN            Infinity
-559            7.53853109           -Infinity           -Infinity                 NaN            Infinity
-560            7.55203314           -Infinity           -Infinity                 NaN            Infinity
-561            7.56553519           -Infinity           -Infinity                 NaN            Infinity
-562            7.57903725           -Infinity           -Infinity                 NaN            Infinity
-563            7.59253930           -Infinity           -Infinity                 NaN            Infinity
-564            7.60604135           -Infinity           -Infinity                 NaN            Infinity
-565            7.61954340           -Infinity           -Infinity                 NaN            Infinity
-566            7.63304546           -Infinity           -Infinity                 NaN            Infinity
-567            7.64654751           -Infinity           -Infinity                 NaN            Infinity
-568            7.66004956           -Infinity           -Infinity                 NaN            Infinity
-569            7.67355161           -Infinity           -Infinity                 NaN            Infinity
-570            7.68705366           -Infinity           -Infinity                 NaN            Infinity
-571            7.70055572           -Infinity           -Infinity                 NaN            Infinity
-572            7.71405777           -Infinity           -Infinity                 NaN            Infinity
-573            7.72755982           -Infinity           -Infinity                 NaN            Infinity
-574            7.74106187           -Infinity           -Infinity                 NaN            Infinity
-575            7.75456393           -Infinity           -Infinity                 NaN            Infinity
-576            7.76806598           -Infinity           -Infinity                 NaN            Infinity
-577            7.78156803           -Infinity           -Infinity                 NaN            Infinity
-578            7.79507008           -Infinity           -Infinity                 NaN            Infinity
-579            7.80857214           -Infinity           -Infinity                 NaN            Infinity
-580            7.82207419           -Infinity           -Infinity                 NaN            Infinity
-581            7.83557624           -Infinity           -Infinity                 NaN            Infinity
-582            7.84907829           -Infinity           -Infinity                 NaN            Infinity
-583            7.86258035           -Infinity           -Infinity                 NaN            Infinity
-584            7.87608240           -Infinity           -Infinity                 NaN            Infinity
-585            7.88958445           -Infinity           -Infinity                 NaN            Infinity
-586            7.90308650           -Infinity           -Infinity                 NaN            Infinity
-587            7.91658855           -Infinity           -Infinity                 NaN            Infinity
-588            7.93009061           -Infinity           -Infinity                 NaN            Infinity
-589            7.94359266           -Infinity           -Infinity                 NaN            Infinity
-590            7.95709471           -Infinity           -Infinity                 NaN            Infinity
-591            7.97059676           -Infinity           -Infinity                 NaN            Infinity
-592            7.98409882           -Infinity           -Infinity                 NaN            Infinity
-593            7.99760087           -Infinity           -Infinity                 NaN            Infinity
-594            8.01110292           -Infinity           -Infinity                 NaN            Infinity
-595            8.02460497           -Infinity           -Infinity                 NaN            Infinity
-596            8.03810703           -Infinity           -Infinity                 NaN            Infinity
-597            8.05160908           -Infinity           -Infinity                 NaN            Infinity
-598            8.06511113           -Infinity           -Infinity                 NaN            Infinity
-599            8.07861318           -Infinity           -Infinity                 NaN            Infinity
-600            8.09211523           -Infinity           -Infinity                 NaN            Infinity
-601            8.10561729           -Infinity           -Infinity                 NaN            Infinity
-602            8.11911934           -Infinity           -Infinity                 NaN            Infinity
-603            8.13262139           -Infinity           -Infinity                 NaN            Infinity
-604            8.14612344           -Infinity           -Infinity                 NaN            Infinity
-605            8.15962550           -Infinity           -Infinity                 NaN            Infinity
-606            8.17312755           -Infinity           -Infinity                 NaN            Infinity
-607            8.18662960           -Infinity           -Infinity                 NaN            Infinity
-608            8.20013165           -Infinity           -Infinity                 NaN            Infinity
-609            8.21363371           -Infinity           -Infinity                 NaN            Infinity
-610            8.22713576           -Infinity           -Infinity                 NaN            Infinity
-611            8.24063781           -Infinity           -Infinity                 NaN            Infinity
-612            8.25413986           -Infinity           -Infinity                 NaN            Infinity
-613            8.26764192           -Infinity           -Infinity                 NaN            Infinity
-614            8.28114397           -Infinity           -Infinity                 NaN            Infinity
-615            8.29464602           -Infinity           -Infinity                 NaN            Infinity
-616            8.30814807           -Infinity           -Infinity                 NaN            Infinity
-617            8.32165012           -Infinity           -Infinity                 NaN            Infinity
-618            8.33515218           -Infinity           -Infinity                 NaN            Infinity
-619            8.34865423           -Infinity           -Infinity                 NaN            Infinity
-620            8.36215628           -Infinity           -Infinity                 NaN            Infinity
-621            8.37565833           -Infinity           -Infinity                 NaN            Infinity
-622            8.38916039           -Infinity           -Infinity                 NaN            Infinity
-623            8.40266244           -Infinity           -Infinity                 NaN            Infinity
-624            8.41616449           -Infinity           -Infinity                 NaN            Infinity
-625            8.42966654           -Infinity           -Infinity                 NaN            Infinity
-626            8.44316860           -Infinity           -Infinity                 NaN            Infinity
-627            8.45667065           -Infinity           -Infinity                 NaN            Infinity
-628            8.47017270           -Infinity           -Infinity                 NaN            Infinity
-629            8.48367475           -Infinity           -Infinity                 NaN            Infinity
-630            8.49717680           -Infinity           -Infinity                 NaN            Infinity
-631            8.51067886           -Infinity           -Infinity                 NaN            Infinity
-632            8.52418091           -Infinity           -Infinity                 NaN            Infinity
-633            8.53768296           -Infinity           -Infinity                 NaN            Infinity
-634            8.55118501           -Infinity           -Infinity                 NaN            Infinity
-635            8.56468707           -Infinity           -Infinity                 NaN            Infinity
-636            8.57818912           -Infinity           -Infinity                 NaN            Infinity
-637            8.59169117           -Infinity           -Infinity                 NaN            Infinity
-638            8.60519322           -Infinity           -Infinity                 NaN            Infinity
-639            8.61869528           -Infinity           -Infinity                 NaN            Infinity
-640            8.63219733           -Infinity           -Infinity                 NaN            Infinity
-641            8.64569938           -Infinity           -Infinity                 NaN            Infinity
-642            8.65920143           -Infinity           -Infinity                 NaN            Infinity
-643            8.67270349           -Infinity           -Infinity                 NaN            Infinity
-644            8.68620554           -Infinity           -Infinity                 NaN            Infinity
-645            8.69970759           -Infinity           -Infinity                 NaN            Infinity
-646            8.71320964           -Infinity           -Infinity                 NaN            Infinity
-647            8.72671169           -Infinity           -Infinity                 NaN            Infinity
-648            8.74021375           -Infinity           -Infinity                 NaN            Infinity
-649            8.75371580           -Infinity           -Infinity                 NaN            Infinity
-650            8.76721785           -Infinity           -Infinity                 NaN            Infinity
-651            8.78071990           -Infinity           -Infinity                 NaN            Infinity
-652            8.79422196           -Infinity           -Infinity                 NaN            Infinity
-653            8.80772401           -Infinity           -Infinity                 NaN            Infinity
-654            8.82122606           -Infinity           -Infinity                 NaN            Infinity
-655            8.83472811           -Infinity           -Infinity                 NaN            Infinity
-656            8.84823017           -Infinity           -Infinity                 NaN            Infinity
-657            8.86173222           -Infinity           -Infinity                 NaN            Infinity
-658            8.87523427           -Infinity           -Infinity                 NaN            Infinity
-659            8.88873632           -Infinity           -Infinity                 NaN            Infinity
-660            8.90223837           -Infinity           -Infinity                 NaN            Infinity
-661            8.91574043           -Infinity           -Infinity                 NaN            Infinity
-662            8.92924248           -Infinity           -Infinity                 NaN            Infinity
-663            8.94274453           -Infinity           -Infinity                 NaN            Infinity
-664            8.95624658           -Infinity           -Infinity                 NaN            Infinity
-665            8.96974864           -Infinity           -Infinity                 NaN            Infinity
-666            8.98325069           -Infinity           -Infinity                 NaN            Infinity
-667            8.99675274           -Infinity           -Infinity                 NaN            Infinity
-668            9.01025479           -Infinity           -Infinity                 NaN            Infinity
-669            9.02375685           -Infinity           -Infinity                 NaN            Infinity
-670            9.03725890           -Infinity           -Infinity                 NaN            Infinity
-671            9.05076095           -Infinity           -Infinity                 NaN            Infinity
-672            9.06426300           -Infinity           -Infinity                 NaN            Infinity
-673            9.07776506           -Infinity           -Infinity                 NaN            Infinity
-674            9.09126711           -Infinity           -Infinity                 NaN            Infinity
-675            9.10476916           -Infinity           -Infinity                 NaN            Infinity
-676            9.11827121           -Infinity           -Infinity                 NaN            Infinity
-677            9.13177326           -Infinity           -Infinity                 NaN            Infinity
-678            9.14527532           -Infinity           -Infinity                 NaN            Infinity
-679            9.15877737           -Infinity           -Infinity                 NaN            Infinity
-680            9.17227942           -Infinity           -Infinity                 NaN            Infinity
-681            9.18578147           -Infinity           -Infinity                 NaN            Infinity
-682            9.19928353           -Infinity           -Infinity                 NaN            Infinity
-683            9.21278558           -Infinity           -Infinity                 NaN            Infinity
-684            9.22628763           -Infinity           -Infinity                 NaN            Infinity
-685            9.23978968           -Infinity           -Infinity                 NaN            Infinity
-686            9.25329174           -Infinity           -Infinity                 NaN            Infinity
-687            9.26679379           -Infinity           -Infinity                 NaN            Infinity
-688            9.28029584           -Infinity           -Infinity                 NaN            Infinity
-689            9.29379789           -Infinity           -Infinity                 NaN            Infinity
-690            9.30729994           -Infinity           -Infinity                 NaN            Infinity
-691            9.32080200           -Infinity           -Infinity                 NaN            Infinity
-692            9.33430405           -Infinity           -Infinity                 NaN            Infinity
-693            9.34780610           -Infinity           -Infinity                 NaN            Infinity
-694            9.36130815           -Infinity           -Infinity                 NaN            Infinity
-695            9.37481021           -Infinity           -Infinity                 NaN            Infinity
-696            9.38831226           -Infinity           -Infinity                 NaN            Infinity
-697            9.40181431           -Infinity           -Infinity                 NaN            Infinity
-698            9.41531636           -Infinity           -Infinity                 NaN            Infinity
-699            9.42881842           -Infinity           -Infinity                 NaN            Infinity
-700            9.44232047           -Infinity           -Infinity                 NaN            Infinity
-701            9.45582252           -Infinity           -Infinity                 NaN            Infinity
-702            9.46932457           -Infinity           -Infinity                 NaN            Infinity
-703            9.48282663           -Infinity           -Infinity                 NaN            Infinity
-704            9.49632868           -Infinity           -Infinity                 NaN            Infinity
-705            9.50983073           -Infinity           -Infinity                 NaN            Infinity
-706            9.52333278           -Infinity           -Infinity                 NaN            Infinity
-707            9.53683483           -Infinity           -Infinity                 NaN            Infinity
-708            9.55033689           -Infinity           -Infinity                 NaN            Infinity
-709            9.56383894           -Infinity           -Infinity                 NaN            Infinity
-710            9.57734099           -Infinity           -Infinity                 NaN            Infinity
-711            9.59084304           -Infinity           -Infinity                 NaN            Infinity
-712            9.60434510           -Infinity           -Infinity                 NaN            Infinity
-713            9.61784715           -Infinity           -Infinity                 NaN            Infinity
-714            9.63134920           -Infinity           -Infinity                 NaN            Infinity
-715            9.64485125           -Infinity           -Infinity                 NaN            Infinity
-716            9.65835331           -Infinity           -Infinity                 NaN            Infinity
-717            9.67185536           -Infinity           -Infinity                 NaN            Infinity
-718            9.68535741           -Infinity           -Infinity                 NaN            Infinity
-719            9.69885946           -Infinity           -Infinity                 NaN            Infinity
-720            9.71236151           -Infinity           -Infinity                 NaN            Infinity
-721            9.72586357           -Infinity           -Infinity                 NaN            Infinity
-722            9.73936562           -Infinity           -Infinity                 NaN            Infinity
-723            9.75286767           -Infinity           -Infinity                 NaN            Infinity
-724            9.76636972           -Infinity           -Infinity                 NaN            Infinity
-725            9.77987178           -Infinity           -Infinity                 NaN            Infinity
-726            9.79337383           -Infinity           -Infinity                 NaN            Infinity
-727            9.80687588           -Infinity           -Infinity                 NaN            Infinity
-728            9.82037793           -Infinity           -Infinity                 NaN            Infinity
-729            9.83387999           -Infinity           -Infinity                 NaN            Infinity
-730            9.84738204           -Infinity           -Infinity                 NaN            Infinity
-731            9.86088409           -Infinity           -Infinity                 NaN            Infinity
-732            9.87438614           -Infinity           -Infinity                 NaN            Infinity
-733            9.88788820           -Infinity           -Infinity                 NaN            Infinity
-734            9.90139025           -Infinity           -Infinity                 NaN            Infinity
-735            9.91489230           -Infinity           -Infinity                 NaN            Infinity
-736            9.92839435           -Infinity           -Infinity                 NaN            Infinity
-737            9.94189640           -Infinity           -Infinity                 NaN            Infinity
-738            9.95539846           -Infinity           -Infinity                 NaN            Infinity
-739            9.96890051           -Infinity           -Infinity                 NaN            Infinity
-740            9.98240256           -Infinity           -Infinity                 NaN            Infinity
-741            9.99590461           -Infinity           -Infinity                 NaN            Infinity
-742           10.00940667           -Infinity           -Infinity                 NaN            Infinity
-743           10.02290872           -Infinity           -Infinity                 NaN            Infinity
-744           10.03641077           -Infinity           -Infinity                 NaN            Infinity
-745           10.04991282           -Infinity           -Infinity                 NaN            Infinity
-746           10.06341488           -Infinity           -Infinity                 NaN            Infinity
-747           10.07691693           -Infinity           -Infinity                 NaN            Infinity
-748           10.09041898           -Infinity           -Infinity                 NaN            Infinity
-749           10.10392103           -Infinity           -Infinity                 NaN            Infinity
-750           10.11742308           -Infinity           -Infinity                 NaN            Infinity
-751           10.13092514           -Infinity           -Infinity                 NaN            Infinity
-752           10.14442719           -Infinity           -Infinity                 NaN            Infinity
-753           10.15792924           -Infinity           -Infinity                 NaN            Infinity
-754           10.17143129           -Infinity           -Infinity                 NaN            Infinity
-755           10.18493335           -Infinity           -Infinity                 NaN            Infinity
-756           10.19843540           -Infinity           -Infinity                 NaN            Infinity
-757           10.21193745           -Infinity           -Infinity                 NaN            Infinity
-758           10.22543950           -Infinity           -Infinity                 NaN            Infinity
-759           10.23894156           -Infinity           -Infinity                 NaN            Infinity
-760           10.25244361           -Infinity           -Infinity                 NaN            Infinity
-761           10.26594566           -Infinity           -Infinity                 NaN            Infinity
-762           10.27944771           -Infinity           -Infinity                 NaN            Infinity
-763           10.29294977           -Infinity           -Infinity                 NaN            Infinity
-764           10.30645182           -Infinity           -Infinity                 NaN            Infinity
-765           10.31995387           -Infinity           -Infinity                 NaN            Infinity
-766           10.33345592           -Infinity           -Infinity                 NaN            Infinity
-767           10.34695797           -Infinity           -Infinity                 NaN            Infinity
-768           10.36046003           -Infinity           -Infinity                 NaN            Infinity
-769           10.37396208           -Infinity           -Infinity                 NaN            Infinity
-770           10.38746413           -Infinity           -Infinity                 NaN            Infinity
-771           10.40096618           -Infinity           -Infinity                 NaN            Infinity
-772           10.41446824           -Infinity           -Infinity                 NaN            Infinity
-773           10.42797029           -Infinity           -Infinity                 NaN            Infinity
-774           10.44147234           -Infinity           -Infinity                 NaN            Infinity
-775           10.45497439           -Infinity           -Infinity                 NaN            Infinity
-776           10.46847645           -Infinity           -Infinity                 NaN            Infinity
-777           10.48197850           -Infinity           -Infinity                 NaN            Infinity
-778           10.49548055           -Infinity           -Infinity                 NaN            Infinity
-779           10.50898260           -Infinity           -Infinity                 NaN            Infinity
-780           10.52248465           -Infinity           -Infinity                 NaN            Infinity
-781           10.53598671           -Infinity           -Infinity                 NaN            Infinity
-782           10.54948876           -Infinity           -Infinity                 NaN            Infinity
-783           10.56299081           -Infinity           -Infinity                 NaN            Infinity
-784           10.57649286           -Infinity           -Infinity                 NaN            Infinity
-785           10.58999492           -Infinity           -Infinity                 NaN            Infinity
-786           10.60349697           -Infinity           -Infinity                 NaN            Infinity
-787           10.61699902           -Infinity           -Infinity                 NaN            Infinity
-788           10.63050107           -Infinity           -Infinity                 NaN            Infinity
-789           10.64400313           -Infinity           -Infinity                 NaN            Infinity
-790           10.65750518           -Infinity           -Infinity                 NaN            Infinity
-791           10.67100723           -Infinity           -Infinity                 NaN            Infinity
-792           10.68450928           -Infinity           -Infinity                 NaN            Infinity
-793           10.69801134           -Infinity           -Infinity                 NaN            Infinity
-794           10.71151339           -Infinity           -Infinity                 NaN            Infinity
-795           10.72501544           -Infinity           -Infinity                 NaN            Infinity
-796           10.73851749           -Infinity           -Infinity                 NaN            Infinity
-797           10.75201954           -Infinity           -Infinity                 NaN            Infinity
-798           10.76552160           -Infinity           -Infinity                 NaN            Infinity
-799           10.77902365           -Infinity           -Infinity                 NaN            Infinity
-800           10.79252570           -Infinity           -Infinity                 NaN            Infinity
-801           10.80602775           -Infinity           -Infinity                 NaN            Infinity
-802           10.81952981           -Infinity           -Infinity                 NaN            Infinity
-803           10.83303186           -Infinity           -Infinity                 NaN            Infinity
-804           10.84653391           -Infinity           -Infinity                 NaN            Infinity
-805           10.86003596           -Infinity           -Infinity                 NaN            Infinity
-806           10.87353802           -Infinity           -Infinity                 NaN            Infinity
-807           10.88704007           -Infinity           -Infinity                 NaN            Infinity
-808           10.90054212           -Infinity           -Infinity                 NaN            Infinity
-809           10.91404417           -Infinity           -Infinity                 NaN            Infinity
-810           10.92754622           -Infinity           -Infinity                 NaN            Infinity
-811           10.94104828           -Infinity           -Infinity                 NaN            Infinity
-812           10.95455033           -Infinity           -Infinity                 NaN            Infinity
-813           10.96805238           -Infinity           -Infinity                 NaN            Infinity
-814           10.98155443           -Infinity           -Infinity                 NaN            Infinity
-815           10.99505649           -Infinity           -Infinity                 NaN            Infinity
-816           11.00855854           -Infinity           -Infinity                 NaN            Infinity
-817           11.02206059           -Infinity           -Infinity                 NaN            Infinity
-818           11.03556264           -Infinity           -Infinity                 NaN            Infinity
-819           11.04906470           -Infinity           -Infinity                 NaN            Infinity
-820           11.06256675           -Infinity           -Infinity                 NaN            Infinity
-821           11.07606880           -Infinity           -Infinity                 NaN            Infinity
-822           11.08957085           -Infinity           -Infinity                 NaN            Infinity
-823           11.10307291           -Infinity           -Infinity                 NaN            Infinity
-824           11.11657496           -Infinity           -Infinity                 NaN            Infinity
-825           11.13007701           -Infinity           -Infinity                 NaN            Infinity
-826           11.14357906           -Infinity           -Infinity                 NaN            Infinity
-827           11.15708111           -Infinity           -Infinity                 NaN            Infinity
-828           11.17058317           -Infinity           -Infinity                 NaN            Infinity
-829           11.18408522           -Infinity           -Infinity                 NaN            Infinity
-830           11.19758727           -Infinity           -Infinity                 NaN            Infinity
-831           11.21108932           -Infinity           -Infinity                 NaN            Infinity
-832           11.22459138           -Infinity           -Infinity                 NaN            Infinity
-833           11.23809343           -Infinity           -Infinity                 NaN            Infinity
-834           11.25159548           -Infinity           -Infinity                 NaN            Infinity
-835           11.26509753           -Infinity           -Infinity                 NaN            Infinity
-836           11.27859959           -Infinity           -Infinity                 NaN            Infinity
-837           11.29210164           -Infinity           -Infinity                 NaN            Infinity
-838           11.30560369           -Infinity           -Infinity                 NaN            Infinity
-839           11.31910574           -Infinity           -Infinity                 NaN            Infinity
-840           11.33260779           -Infinity           -Infinity                 NaN            Infinity
-841           11.34610985           -Infinity           -Infinity                 NaN            Infinity
-842           11.35961190           -Infinity           -Infinity                 NaN            Infinity
-843           11.37311395           -Infinity           -Infinity                 NaN            Infinity
-844           11.38661600           -Infinity           -Infinity                 NaN            Infinity
-845           11.40011806           -Infinity           -Infinity                 NaN            Infinity
-846           11.41362011           -Infinity           -Infinity                 NaN            Infinity
-847           11.42712216           -Infinity           -Infinity                 NaN            Infinity
-848           11.44062421           -Infinity           -Infinity                 NaN            Infinity
-849           11.45412627           -Infinity           -Infinity                 NaN            Infinity
-850           11.46762832           -Infinity           -Infinity                 NaN            Infinity
-851           11.48113037           -Infinity           -Infinity                 NaN            Infinity
-852           11.49463242           -Infinity           -Infinity                 NaN            Infinity
-853           11.50813448           -Infinity           -Infinity                 NaN            Infinity
-854           11.52163653           -Infinity           -Infinity                 NaN            Infinity
-855           11.53513858           -Infinity           -Infinity                 NaN            Infinity
-856           11.54864063           -Infinity           -Infinity                 NaN            Infinity
-857           11.56214268           -Infinity           -Infinity                 NaN            Infinity
-858           11.57564474           -Infinity           -Infinity                 NaN            Infinity
-859           11.58914679           -Infinity           -Infinity                 NaN            Infinity
-860           11.60264884           -Infinity           -Infinity                 NaN            Infinity
-861           11.61615089           -Infinity           -Infinity                 NaN            Infinity
-862           11.62965295           -Infinity           -Infinity                 NaN            Infinity
-863           11.64315500           -Infinity           -Infinity                 NaN            Infinity
-864           11.65665705           -Infinity           -Infinity                 NaN            Infinity
-865           11.67015910           -Infinity           -Infinity                 NaN            Infinity
-866           11.68366116           -Infinity           -Infinity                 NaN            Infinity
-867           11.69716321           -Infinity           -Infinity                 NaN            Infinity
-868           11.71066526           -Infinity           -Infinity                 NaN            Infinity
-869           11.72416731           -Infinity           -Infinity                 NaN            Infinity
-870           11.73766936           -Infinity           -Infinity                 NaN            Infinity
-871           11.75117142           -Infinity           -Infinity                 NaN            Infinity
-872           11.76467347           -Infinity           -Infinity                 NaN            Infinity
-873           11.77817552           -Infinity           -Infinity                 NaN            Infinity
-874           11.79167757           -Infinity           -Infinity                 NaN            Infinity
-875           11.80517963           -Infinity           -Infinity                 NaN            Infinity
-876           11.81868168           -Infinity           -Infinity                 NaN            Infinity
-877           11.83218373           -Infinity           -Infinity                 NaN            Infinity
-878           11.84568578           -Infinity           -Infinity                 NaN            Infinity
-879           11.85918784           -Infinity           -Infinity                 NaN            Infinity
-880           11.87268989           -Infinity           -Infinity                 NaN            Infinity
-881           11.88619194           -Infinity           -Infinity                 NaN            Infinity
-882           11.89969399           -Infinity           -Infinity                 NaN            Infinity
-883           11.91319604           -Infinity           -Infinity                 NaN            Infinity
-884           11.92669810           -Infinity           -Infinity                 NaN            Infinity
-885           11.94020015           -Infinity           -Infinity                 NaN            Infinity
-886           11.95370220           -Infinity           -Infinity                 NaN            Infinity
-887           11.96720425           -Infinity           -Infinity                 NaN            Infinity
-888           11.98070631           -Infinity           -Infinity                 NaN            Infinity
-889           11.99420836           -Infinity           -Infinity                 NaN            Infinity
-890           12.00771041           -Infinity           -Infinity                 NaN            Infinity
-891           12.02121246           -Infinity           -Infinity                 NaN            Infinity
-892           12.03471452           -Infinity           -Infinity                 NaN            Infinity
-893           12.04821657           -Infinity           -Infinity                 NaN            Infinity
-894           12.06171862           -Infinity           -Infinity                 NaN            Infinity
-895           12.07522067           -Infinity           -Infinity                 NaN            Infinity
-896           12.08872273           -Infinity           -Infinity                 NaN            Infinity
-897           12.10222478           -Infinity           -Infinity                 NaN            Infinity
-898           12.11572683           -Infinity           -Infinity                 NaN            Infinity
-899           12.12922888           -Infinity           -Infinity                 NaN            Infinity
-900           12.14273093           -Infinity           -Infinity                 NaN            Infinity
-901           12.15623299           -Infinity           -Infinity                 NaN            Infinity
-902           12.16973504           -Infinity           -Infinity                 NaN            Infinity
-903           12.18323709           -Infinity           -Infinity                 NaN            Infinity
-904           12.19673914           -Infinity           -Infinity                 NaN            Infinity
-905           12.21024120           -Infinity           -Infinity                 NaN            Infinity
-906           12.22374325           -Infinity           -Infinity                 NaN            Infinity
-907           12.23724530           -Infinity           -Infinity                 NaN            Infinity
-908           12.25074735           -Infinity           -Infinity                 NaN            Infinity
-909           12.26424941           -Infinity           -Infinity                 NaN            Infinity
-910           12.27775146           -Infinity           -Infinity                 NaN            Infinity
-911           12.29125351           -Infinity           -Infinity                 NaN            Infinity
-912           12.30475556           -Infinity           -Infinity                 NaN            Infinity
-913           12.31825761           -Infinity           -Infinity                 NaN            Infinity
-914           12.33175967           -Infinity           -Infinity                 NaN            Infinity
-915           12.34526172           -Infinity           -Infinity                 NaN            Infinity
-916           12.35876377           -Infinity           -Infinity                 NaN            Infinity
-917           12.37226582           -Infinity           -Infinity                 NaN            Infinity
-918           12.38576788           -Infinity           -Infinity                 NaN            Infinity
-919           12.39926993           -Infinity           -Infinity                 NaN            Infinity
-920           12.41277198           -Infinity           -Infinity                 NaN            Infinity
-921           12.42627403           -Infinity           -Infinity                 NaN            Infinity
-922           12.43977609           -Infinity           -Infinity                 NaN            Infinity
-923           12.45327814           -Infinity           -Infinity                 NaN            Infinity
-924           12.46678019           -Infinity           -Infinity                 NaN            Infinity
-925           12.48028224           -Infinity           -Infinity                 NaN            Infinity
-926           12.49378430           -Infinity           -Infinity                 NaN            Infinity
-927           12.50728635           -Infinity           -Infinity                 NaN            Infinity
-928           12.52078840           -Infinity           -Infinity                 NaN            Infinity
-929           12.53429045           -Infinity           -Infinity                 NaN            Infinity
-930           12.54779250           -Infinity           -Infinity                 NaN            Infinity
-931           12.56129456           -Infinity           -Infinity                 NaN            Infinity
-932           12.57479661           -Infinity           -Infinity                 NaN            Infinity
-933           12.58829866           -Infinity           -Infinity                 NaN            Infinity
-934           12.60180071           -Infinity           -Infinity                 NaN            Infinity
-935           12.61530277           -Infinity           -Infinity                 NaN            Infinity
-936           12.62880482           -Infinity           -Infinity                 NaN            Infinity
-937           12.64230687           -Infinity           -Infinity                 NaN            Infinity
-938           12.65580892           -Infinity           -Infinity                 NaN            Infinity
-939           12.66931098           -Infinity           -Infinity                 NaN            Infinity
-940           12.68281303           -Infinity           -Infinity                 NaN            Infinity
-941           12.69631508           -Infinity           -Infinity                 NaN            Infinity
-942           12.70981713           -Infinity           -Infinity                 NaN            Infinity
-943           12.72331918           -Infinity           -Infinity                 NaN            Infinity
-944           12.73682124           -Infinity           -Infinity                 NaN            Infinity
-945           12.75032329           -Infinity           -Infinity                 NaN            Infinity
-946           12.76382534           -Infinity           -Infinity                 NaN            Infinity
-947           12.77732739           -Infinity           -Infinity                 NaN            Infinity
-948           12.79082945           -Infinity           -Infinity                 NaN            Infinity
-949           12.80433150           -Infinity           -Infinity                 NaN            Infinity
-950           12.81783355           -Infinity           -Infinity                 NaN            Infinity
-951           12.83133560           -Infinity           -Infinity                 NaN            Infinity
-952           12.84483766           -Infinity           -Infinity                 NaN            Infinity
-953           12.85833971           -Infinity           -Infinity                 NaN            Infinity
-954           12.87184176           -Infinity           -Infinity                 NaN            Infinity
-955           12.88534381           -Infinity           -Infinity                 NaN            Infinity
-956           12.89884587           -Infinity           -Infinity                 NaN            Infinity
-957           12.91234792           -Infinity           -Infinity                 NaN            Infinity
-958           12.92584997           -Infinity           -Infinity                 NaN            Infinity
-959           12.93935202           -Infinity           -Infinity                 NaN            Infinity
-960           12.95285407           -Infinity           -Infinity                 NaN            Infinity
-961           12.96635613           -Infinity           -Infinity                 NaN            Infinity
-962           12.97985818           -Infinity           -Infinity                 NaN            Infinity
-963           12.99336023           -Infinity           -Infinity                 NaN            Infinity
-964           13.00686228           -Infinity           -Infinity                 NaN            Infinity
-965           13.02036434           -Infinity           -Infinity                 NaN            Infinity
-966           13.03386639           -Infinity           -Infinity                 NaN            Infinity
-967           13.04736844           -Infinity           -Infinity                 NaN            Infinity
-968           13.06087049           -Infinity           -Infinity                 NaN            Infinity
-969           13.07437255           -Infinity           -Infinity                 NaN            Infinity
-970           13.08787460           -Infinity           -Infinity                 NaN            Infinity
-971           13.10137665           -Infinity           -Infinity                 NaN            Infinity
-972           13.11487870           -Infinity           -Infinity                 NaN            Infinity
-973           13.12838075           -Infinity           -Infinity                 NaN            Infinity
-974           13.14188281           -Infinity           -Infinity                 NaN            Infinity
-975           13.15538486           -Infinity           -Infinity                 NaN            Infinity
-976           13.16888691           -Infinity           -Infinity                 NaN            Infinity
-977           13.18238896           -Infinity           -Infinity                 NaN            Infinity
-978           13.19589102           -Infinity           -Infinity                 NaN            Infinity
-979           13.20939307           -Infinity           -Infinity                 NaN            Infinity
-980           13.22289512           -Infinity           -Infinity                 NaN            Infinity
-981           13.23639717           -Infinity           -Infinity                 NaN            Infinity
-982           13.24989923           -Infinity           -Infinity                 NaN            Infinity
-983           13.26340128           -Infinity           -Infinity                 NaN            Infinity
-984           13.27690333           -Infinity           -Infinity                 NaN            Infinity
-985           13.29040538           -Infinity           -Infinity                 NaN            Infinity
-986           13.30390744           -Infinity           -Infinity                 NaN            Infinity
-987           13.31740949           -Infinity           -Infinity                 NaN            Infinity
-988           13.33091154           -Infinity           -Infinity                 NaN            Infinity
-989           13.34441359           -Infinity           -Infinity                 NaN            Infinity
-990           13.35791564           -Infinity           -Infinity                 NaN            Infinity
-991           13.37141770           -Infinity           -Infinity                 NaN            Infinity
-992           13.38491975           -Infinity           -Infinity                 NaN            Infinity
-993           13.39842180           -Infinity           -Infinity                 NaN            Infinity
-994           13.41192385           -Infinity           -Infinity                 NaN            Infinity
-995           13.42542591           -Infinity           -Infinity                 NaN            Infinity
-996           13.43892796           -Infinity           -Infinity                 NaN            Infinity
-997           13.45243001           -Infinity           -Infinity                 NaN            Infinity
-998           13.46593206           -Infinity           -Infinity                 NaN            Infinity
-999           13.47943412           -Infinity           -Infinity                 NaN            Infinity
-***           13.49293617           -Infinity           -Infinity                 NaN            Infinity
-***           13.50643822           -Infinity           -Infinity                 NaN            Infinity
-***           13.51994027           -Infinity           -Infinity                 NaN            Infinity
-***           13.53344232           -Infinity           -Infinity                 NaN            Infinity
-***           13.54694438           -Infinity           -Infinity                 NaN            Infinity
-***           13.56044643           -Infinity           -Infinity                 NaN            Infinity
-***           13.57394848           -Infinity           -Infinity                 NaN            Infinity
-***           13.58745053           -Infinity           -Infinity                 NaN            Infinity
-***           13.60095259           -Infinity           -Infinity                 NaN            Infinity
-***           13.61445464           -Infinity           -Infinity                 NaN            Infinity
-***           13.62795669           -Infinity           -Infinity                 NaN            Infinity
-***           13.64145874           -Infinity           -Infinity                 NaN            Infinity
-***           13.65496080           -Infinity           -Infinity                 NaN            Infinity
-***           13.66846285           -Infinity           -Infinity                 NaN            Infinity
-***           13.68196490           -Infinity           -Infinity                 NaN            Infinity
-***           13.69546695           -Infinity           -Infinity                 NaN            Infinity
-***           13.70896901           -Infinity           -Infinity                 NaN            Infinity
-***           13.72247106           -Infinity           -Infinity                 NaN            Infinity
-***           13.73597311           -Infinity           -Infinity                 NaN            Infinity
-***           13.74947516           -Infinity           -Infinity                 NaN            Infinity
-***           13.76297721           -Infinity           -Infinity                 NaN            Infinity
-***           13.77647927           -Infinity           -Infinity                 NaN            Infinity
-***           13.78998132           -Infinity           -Infinity                 NaN            Infinity
-***           13.80348337           -Infinity           -Infinity                 NaN            Infinity
-***           13.81698542           -Infinity           -Infinity                 NaN            Infinity
-***           13.83048748           -Infinity           -Infinity                 NaN            Infinity
-***           13.84398953           -Infinity           -Infinity                 NaN            Infinity
-***           13.85749158           -Infinity           -Infinity                 NaN            Infinity
-***           13.87099363           -Infinity           -Infinity                 NaN            Infinity
-***           13.88449569           -Infinity           -Infinity                 NaN            Infinity
-***           13.89799774           -Infinity           -Infinity                 NaN            Infinity
-***           13.91149979           -Infinity           -Infinity                 NaN            Infinity
-***           13.92500184           -Infinity           -Infinity                 NaN            Infinity
-***           13.93850389           -Infinity           -Infinity                 NaN            Infinity
-***           13.95200595           -Infinity           -Infinity                 NaN            Infinity
-***           13.96550800           -Infinity           -Infinity                 NaN            Infinity
-***           13.97901005           -Infinity           -Infinity                 NaN            Infinity
-***           13.99251210           -Infinity           -Infinity                 NaN            Infinity
-***           14.00601416           -Infinity           -Infinity                 NaN            Infinity
-***           14.01951621           -Infinity           -Infinity                 NaN            Infinity
-***           14.03301826           -Infinity           -Infinity                 NaN            Infinity
-***           14.04652031           -Infinity           -Infinity                 NaN            Infinity
-***           14.06002237           -Infinity           -Infinity                 NaN            Infinity
-***           14.07352442           -Infinity           -Infinity                 NaN            Infinity
-***           14.08702647           -Infinity           -Infinity                 NaN            Infinity
-***           14.10052852           -Infinity           -Infinity                 NaN            Infinity
-***           14.11403058           -Infinity           -Infinity                 NaN            Infinity
-***           14.12753263           -Infinity           -Infinity                 NaN            Infinity
-***           14.14103468           -Infinity           -Infinity                 NaN            Infinity
-***           14.15453673           -Infinity           -Infinity                 NaN            Infinity
-***           14.16803878           -Infinity           -Infinity                 NaN            Infinity
-***           14.18154084           -Infinity           -Infinity                 NaN            Infinity
-***           14.19504289           -Infinity           -Infinity                 NaN            Infinity
-***           14.20854494           -Infinity           -Infinity                 NaN            Infinity
-***           14.22204699           -Infinity           -Infinity                 NaN            Infinity
-***           14.23554905           -Infinity           -Infinity                 NaN            Infinity
-***           14.24905110           -Infinity           -Infinity                 NaN            Infinity
-***           14.26255315           -Infinity           -Infinity                 NaN            Infinity
-***           14.27605520           -Infinity           -Infinity                 NaN            Infinity
-***           14.28955726           -Infinity           -Infinity                 NaN            Infinity
-***           14.30305931           -Infinity           -Infinity                 NaN            Infinity
-***           14.31656136           -Infinity           -Infinity                 NaN            Infinity
-***           14.33006341           -Infinity           -Infinity                 NaN            Infinity
-***           14.34356546           -Infinity           -Infinity                 NaN            Infinity
-***           14.35706752           -Infinity           -Infinity                 NaN            Infinity
-***           14.37056957           -Infinity           -Infinity                 NaN            Infinity
-***           14.38407162           -Infinity           -Infinity                 NaN            Infinity
-***           14.39757367           -Infinity           -Infinity                 NaN            Infinity
-***           14.41107573           -Infinity           -Infinity                 NaN            Infinity
-***           14.42457778           -Infinity           -Infinity                 NaN            Infinity
-***           14.43807983           -Infinity           -Infinity                 NaN            Infinity
-***           14.45158188           -Infinity           -Infinity                 NaN            Infinity
-***           14.46508394           -Infinity           -Infinity                 NaN            Infinity
-***           14.47858599           -Infinity           -Infinity                 NaN            Infinity
-***           14.49208804           -Infinity           -Infinity                 NaN            Infinity
-***           14.50559009           -Infinity           -Infinity                 NaN            Infinity
-***           14.51909215           -Infinity           -Infinity                 NaN            Infinity
-***           14.53259420           -Infinity           -Infinity                 NaN            Infinity
-***           14.54609625           -Infinity           -Infinity                 NaN            Infinity
-***           14.55959830           -Infinity           -Infinity                 NaN            Infinity
-***           14.57310035           -Infinity           -Infinity                 NaN            Infinity
-***           14.58660241           -Infinity           -Infinity                 NaN            Infinity
-***           14.60010446           -Infinity           -Infinity                 NaN            Infinity
-***           14.61360651           -Infinity           -Infinity                 NaN            Infinity
-***           14.62710856           -Infinity           -Infinity                 NaN            Infinity
-***           14.64061062           -Infinity           -Infinity                 NaN            Infinity
-***           14.65411267           -Infinity           -Infinity                 NaN            Infinity
-***           14.66761472           -Infinity           -Infinity                 NaN            Infinity
-***           14.68111677           -Infinity           -Infinity                 NaN            Infinity
-***           14.69461883           -Infinity           -Infinity                 NaN            Infinity
-***           14.70812088           -Infinity           -Infinity                 NaN            Infinity
-***           14.72162293           -Infinity           -Infinity                 NaN            Infinity
-***           14.73512498           -Infinity           -Infinity                 NaN            Infinity
-***           14.74862703           -Infinity           -Infinity                 NaN            Infinity
-***           14.76212909           -Infinity           -Infinity                 NaN            Infinity
-***           14.77563114           -Infinity           -Infinity                 NaN            Infinity
-***           14.78913319           -Infinity           -Infinity                 NaN            Infinity
-***           14.80263524           -Infinity           -Infinity                 NaN            Infinity
-***           14.81613730           -Infinity           -Infinity                 NaN            Infinity
-***           14.82963935           -Infinity           -Infinity                 NaN            Infinity
-***           14.84314140           -Infinity           -Infinity                 NaN            Infinity
-***           14.85664345           -Infinity           -Infinity                 NaN            Infinity
-***           14.87014551           -Infinity           -Infinity                 NaN            Infinity
-***           14.88364756           -Infinity           -Infinity                 NaN            Infinity
-***           14.89714961           -Infinity           -Infinity                 NaN            Infinity
-***           14.91065166           -Infinity           -Infinity                 NaN            Infinity
-***           14.92415372           -Infinity           -Infinity                 NaN            Infinity
-***           14.93765577           -Infinity           -Infinity                 NaN            Infinity
-***           14.95115782           -Infinity           -Infinity                 NaN            Infinity
-***           14.96465987           -Infinity           -Infinity                 NaN            Infinity
-***           14.97816192           -Infinity           -Infinity                 NaN            Infinity
-***           14.99166398           -Infinity           -Infinity                 NaN            Infinity
-***           15.00516603           -Infinity           -Infinity                 NaN            Infinity
-***           15.01866808           -Infinity           -Infinity                 NaN            Infinity
-***           15.03217013           -Infinity           -Infinity                 NaN            Infinity
-***           15.04567219           -Infinity           -Infinity                 NaN            Infinity
-***           15.05917424           -Infinity           -Infinity                 NaN            Infinity
-***           15.07267629           -Infinity           -Infinity                 NaN            Infinity
-***           15.08617834           -Infinity           -Infinity                 NaN            Infinity
-***           15.09968040           -Infinity           -Infinity                 NaN            Infinity
-***           15.11318245           -Infinity           -Infinity                 NaN            Infinity
-***           15.12668450           -Infinity           -Infinity                 NaN            Infinity
-***           15.14018655           -Infinity           -Infinity                 NaN            Infinity
-***           15.15368860           -Infinity           -Infinity                 NaN            Infinity
-***           15.16719066           -Infinity           -Infinity                 NaN            Infinity
-***           15.18069271           -Infinity           -Infinity                 NaN            Infinity
-***           15.19419476           -Infinity           -Infinity                 NaN            Infinity
-***           15.20769681           -Infinity           -Infinity                 NaN            Infinity
-***           15.22119887           -Infinity           -Infinity                 NaN            Infinity
-***           15.23470092           -Infinity           -Infinity                 NaN            Infinity
-***           15.24820297           -Infinity           -Infinity                 NaN            Infinity
-***           15.26170502           -Infinity           -Infinity                 NaN            Infinity
-***           15.27520708           -Infinity           -Infinity                 NaN            Infinity
-***           15.28870913           -Infinity           -Infinity                 NaN            Infinity
-***           15.30221118           -Infinity           -Infinity                 NaN            Infinity
-***           15.31571323           -Infinity           -Infinity                 NaN            Infinity
-***           15.32921529           -Infinity           -Infinity                 NaN            Infinity
-***           15.34271734           -Infinity           -Infinity                 NaN            Infinity
-***           15.35621939           -Infinity           -Infinity                 NaN            Infinity
-***           15.36972144           -Infinity           -Infinity                 NaN            Infinity
-***           15.38322349           -Infinity           -Infinity                 NaN            Infinity
-***           15.39672555           -Infinity           -Infinity                 NaN            Infinity
-***           15.41022760           -Infinity           -Infinity                 NaN            Infinity
-***           15.42372965           -Infinity           -Infinity                 NaN            Infinity
-***           15.43723170           -Infinity           -Infinity                 NaN            Infinity
-***           15.45073376           -Infinity           -Infinity                 NaN            Infinity
-***           15.46423581           -Infinity           -Infinity                 NaN            Infinity
-***           15.47773786           -Infinity           -Infinity                 NaN            Infinity
-***           15.49123991           -Infinity           -Infinity                 NaN            Infinity
-***           15.50474197           -Infinity           -Infinity                 NaN            Infinity
-***           15.51824402           -Infinity           -Infinity                 NaN            Infinity
-***           15.53174607           -Infinity           -Infinity                 NaN            Infinity
-***           15.54524812           -Infinity           -Infinity                 NaN            Infinity
-***           15.55875017           -Infinity           -Infinity                 NaN            Infinity
-***           15.57225223           -Infinity           -Infinity                 NaN            Infinity
-***           15.58575428           -Infinity           -Infinity                 NaN            Infinity
-***           15.59925633           -Infinity           -Infinity                 NaN            Infinity
-***           15.61275838           -Infinity           -Infinity                 NaN            Infinity
-***           15.62626044           -Infinity           -Infinity                 NaN            Infinity
-***           15.63976249           -Infinity           -Infinity                 NaN            Infinity
-***           15.65326454           -Infinity           -Infinity                 NaN            Infinity
-***           15.66676659           -Infinity           -Infinity                 NaN            Infinity
-***           15.68026865           -Infinity           -Infinity                 NaN            Infinity
-***           15.69377070           -Infinity           -Infinity                 NaN            Infinity
-***           15.70727275           -Infinity           -Infinity                 NaN            Infinity
-***           15.72077480           -Infinity           -Infinity                 NaN            Infinity
-***           15.73427685           -Infinity           -Infinity                 NaN            Infinity
-***           15.74777891           -Infinity           -Infinity                 NaN            Infinity
-***           15.76128096           -Infinity           -Infinity                 NaN            Infinity
-***           15.77478301           -Infinity           -Infinity                 NaN            Infinity
-***           15.78828506           -Infinity           -Infinity                 NaN            Infinity
-***           15.80178712           -Infinity           -Infinity                 NaN            Infinity
-***           15.81528917           -Infinity           -Infinity                 NaN            Infinity
-***           15.82879122           -Infinity           -Infinity                 NaN            Infinity
-***           15.84229327           -Infinity           -Infinity                 NaN            Infinity
-***           15.85579533           -Infinity           -Infinity                 NaN            Infinity
-***           15.86929738           -Infinity           -Infinity                 NaN            Infinity
-***           15.88279943           -Infinity           -Infinity                 NaN            Infinity
-***           15.89630148           -Infinity           -Infinity                 NaN            Infinity
-***           15.90980354           -Infinity           -Infinity                 NaN            Infinity
-***           15.92330559           -Infinity           -Infinity                 NaN            Infinity
-***           15.93680764           -Infinity           -Infinity                 NaN            Infinity
-***           15.95030969           -Infinity           -Infinity                 NaN            Infinity
-***           15.96381174           -Infinity           -Infinity                 NaN            Infinity
-***           15.97731380           -Infinity           -Infinity                 NaN            Infinity
-***           15.99081585           -Infinity           -Infinity                 NaN            Infinity
-***           16.00431790           -Infinity           -Infinity                 NaN            Infinity
-***           16.01781995           -Infinity           -Infinity                 NaN            Infinity
-***           16.03132201           -Infinity           -Infinity                 NaN            Infinity
-***           16.04482406           -Infinity           -Infinity                 NaN            Infinity
-***           16.05832611           -Infinity           -Infinity                 NaN            Infinity
-***           16.07182816           -Infinity           -Infinity                 NaN            Infinity
-***           16.08533022           -Infinity           -Infinity                 NaN            Infinity
-***           16.09883227           -Infinity           -Infinity                 NaN            Infinity
-***           16.11233432           -Infinity           -Infinity                 NaN            Infinity
-***           16.12583637           -Infinity           -Infinity                 NaN            Infinity
-***           16.13933842           -Infinity           -Infinity                 NaN            Infinity
-***           16.15284048           -Infinity           -Infinity                 NaN            Infinity
-***           16.16634253           -Infinity           -Infinity                 NaN            Infinity
-***           16.17984458           -Infinity           -Infinity                 NaN            Infinity
-***           16.19334663           -Infinity           -Infinity                 NaN            Infinity
-***           16.20684869           -Infinity           -Infinity                 NaN            Infinity
-***           16.22035074           -Infinity           -Infinity                 NaN            Infinity
-***           16.23385279           -Infinity           -Infinity                 NaN            Infinity
-***           16.24735484           -Infinity           -Infinity                 NaN            Infinity
-***           16.26085690           -Infinity           -Infinity                 NaN            Infinity
-***           16.27435895           -Infinity           -Infinity                 NaN            Infinity
-***           16.28786100           -Infinity           -Infinity                 NaN            Infinity
-***           16.30136305           -Infinity           -Infinity                 NaN            Infinity
-***           16.31486511           -Infinity           -Infinity                 NaN            Infinity
-***           16.32836716           -Infinity           -Infinity                 NaN            Infinity
-***           16.34186921           -Infinity           -Infinity                 NaN            Infinity
-***           16.35537126           -Infinity           -Infinity                 NaN            Infinity
-***           16.36887331           -Infinity           -Infinity                 NaN            Infinity
-***           16.38237537           -Infinity           -Infinity                 NaN            Infinity
-***           16.39587742           -Infinity           -Infinity                 NaN            Infinity
-***           16.40937947           -Infinity           -Infinity                 NaN            Infinity
-***           16.42288152           -Infinity           -Infinity                 NaN            Infinity
-***           16.43638358           -Infinity           -Infinity                 NaN            Infinity
-***           16.44988563           -Infinity           -Infinity                 NaN            Infinity
-***           16.46338768           -Infinity           -Infinity                 NaN            Infinity
-***           16.47688973           -Infinity           -Infinity                 NaN            Infinity
-***           16.49039179           -Infinity           -Infinity                 NaN            Infinity
-***           16.50389384           -Infinity           -Infinity                 NaN            Infinity
-***           16.51739589           -Infinity           -Infinity                 NaN            Infinity
-***           16.53089794           -Infinity           -Infinity                 NaN            Infinity
-***           16.54439999           -Infinity           -Infinity                 NaN            Infinity
-***           16.55790205           -Infinity           -Infinity                 NaN            Infinity
-***           16.57140410           -Infinity           -Infinity                 NaN            Infinity
-***           16.58490615           -Infinity           -Infinity                 NaN            Infinity
-***           16.59840820           -Infinity           -Infinity                 NaN            Infinity
-***           16.61191026           -Infinity           -Infinity                 NaN            Infinity
-***           16.62541231           -Infinity           -Infinity                 NaN            Infinity
-***           16.63891436           -Infinity           -Infinity                 NaN            Infinity
-***           16.65241641           -Infinity           -Infinity                 NaN            Infinity
-***           16.66591847           -Infinity           -Infinity                 NaN            Infinity
-***           16.67942052           -Infinity           -Infinity                 NaN            Infinity
-***           16.69292257           -Infinity           -Infinity                 NaN            Infinity
-***           16.70642462           -Infinity           -Infinity                 NaN            Infinity
-***           16.71992668           -Infinity           -Infinity                 NaN            Infinity
-***           16.73342873           -Infinity           -Infinity                 NaN            Infinity
-***           16.74693078           -Infinity           -Infinity                 NaN            Infinity
-***           16.76043283           -Infinity           -Infinity                 NaN            Infinity
-***           16.77393488           -Infinity           -Infinity                 NaN            Infinity
-***           16.78743694           -Infinity           -Infinity                 NaN            Infinity
-***           16.80093899           -Infinity           -Infinity                 NaN            Infinity
-***           16.81444104           -Infinity           -Infinity                 NaN            Infinity
-***           16.82794309           -Infinity           -Infinity                 NaN            Infinity
-***           16.84144515           -Infinity           -Infinity                 NaN            Infinity
-***           16.85494720           -Infinity           -Infinity                 NaN            Infinity
-***           16.86844925           -Infinity           -Infinity                 NaN            Infinity
-***           16.88195130           -Infinity           -Infinity                 NaN            Infinity
-***           16.89545336           -Infinity           -Infinity                 NaN            Infinity
-***           16.90895541           -Infinity           -Infinity                 NaN            Infinity
-***           16.92245746           -Infinity           -Infinity                 NaN            Infinity
-***           16.93595951           -Infinity           -Infinity                 NaN            Infinity
-***           16.94946156           -Infinity           -Infinity                 NaN            Infinity
-***           16.96296362           -Infinity           -Infinity                 NaN            Infinity
-***           16.97646567           -Infinity           -Infinity                 NaN            Infinity
-***           16.98996772           -Infinity           -Infinity                 NaN            Infinity
-***           17.00346977           -Infinity           -Infinity                 NaN            Infinity
-***           17.01697183           -Infinity           -Infinity                 NaN            Infinity
-***           17.03047388           -Infinity           -Infinity                 NaN            Infinity
-***           17.04397593           -Infinity           -Infinity                 NaN            Infinity
-***           17.05747798           -Infinity           -Infinity                 NaN            Infinity
-***           17.07098004           -Infinity           -Infinity                 NaN            Infinity
-***           17.08448209           -Infinity           -Infinity                 NaN            Infinity
-***           17.09798414           -Infinity           -Infinity                 NaN            Infinity
-***           17.11148619           -Infinity           -Infinity                 NaN            Infinity
-***           17.12498825           -Infinity           -Infinity                 NaN            Infinity
-***           17.13849030           -Infinity           -Infinity                 NaN            Infinity
-***           17.15199235           -Infinity           -Infinity                 NaN            Infinity
-***           17.16549440           -Infinity           -Infinity                 NaN            Infinity
-***           17.17899645           -Infinity           -Infinity                 NaN            Infinity
-***           17.19249851           -Infinity           -Infinity                 NaN            Infinity
-***           17.20600056           -Infinity           -Infinity                 NaN            Infinity
-***           17.21950261           -Infinity           -Infinity                 NaN            Infinity
-***           17.23300466           -Infinity           -Infinity                 NaN            Infinity
-***           17.24650672           -Infinity           -Infinity                 NaN            Infinity
-***           17.26000877           -Infinity           -Infinity                 NaN            Infinity
-***           17.27351082           -Infinity           -Infinity                 NaN            Infinity
-***           17.28701287           -Infinity           -Infinity                 NaN            Infinity
-***           17.30051493           -Infinity           -Infinity                 NaN            Infinity
-***           17.31401698           -Infinity           -Infinity                 NaN            Infinity
-***           17.32751903           -Infinity           -Infinity                 NaN            Infinity
-***           17.34102108           -Infinity           -Infinity                 NaN            Infinity
-***           17.35452313           -Infinity           -Infinity                 NaN            Infinity
-***           17.36802519           -Infinity           -Infinity                 NaN            Infinity
-***           17.38152724           -Infinity           -Infinity                 NaN            Infinity
-***           17.39502929           -Infinity           -Infinity                 NaN            Infinity
-***           17.40853134           -Infinity           -Infinity                 NaN            Infinity
-***           17.42203340           -Infinity           -Infinity                 NaN            Infinity
-***           17.43553545           -Infinity           -Infinity                 NaN            Infinity
-***           17.44903750           -Infinity           -Infinity                 NaN            Infinity
-***           17.46253955           -Infinity           -Infinity                 NaN            Infinity
-***           17.47604161           -Infinity           -Infinity                 NaN            Infinity
-***           17.48954366           -Infinity           -Infinity                 NaN            Infinity
-***           17.50304571           -Infinity           -Infinity                 NaN            Infinity
-***           17.51654776           -Infinity           -Infinity                 NaN            Infinity
-***           17.53004982           -Infinity           -Infinity                 NaN            Infinity
-***           17.54355187           -Infinity           -Infinity                 NaN            Infinity
+  1            0.00438589          0.00000002         -0.00000002         -0.00000000         -0.00000000
+  2            0.06304531          0.00002694         -0.00002694         -0.00000000         -0.00000000
+  3            0.12170472         -0.00018257          0.00018257         -0.00000001         -0.00000004
+  4            0.18036414         -0.00177008          0.00177008         -0.00000009         -0.00000317
+  5            0.23902356         -0.00574481          0.00574481         -0.00000011         -0.00003304
+  6            0.29768298         -0.01173363          0.01173363         -0.00000015         -0.00013781
+  7            0.35634240         -0.01783345          0.01783345         -0.00000756         -0.00032110
+  8            0.41500181         -0.02217855          0.02217855         -0.00004942         -0.00050272
+  9            0.47366123         -0.02468286          0.02468286         -0.00007147         -0.00061451
+ 10            0.53232065         -0.02420359          0.02420359          0.00001633         -0.00058621
+ 11            0.59098007          0.02055828         -0.02055828         -0.00002456         -0.00042662
+ 12            0.64963949          0.01626555         -0.01626555         -0.00000581         -0.00027032
+ 13            0.70829890          0.01292674         -0.01292674          0.00001390         -0.00017350
+ 14            0.76695832          0.01071177         -0.01071177          0.00003114         -0.00012118
+ 15            0.82561774          0.00930330         -0.00930330          0.00004177         -0.00009243
+ 16            0.88427716          0.00837566         -0.00837566          0.00004274         -0.00007502
+ 17            0.94293658          0.00770966         -0.00770966          0.00003649         -0.00006323
+ 18            1.00159599          0.00718723         -0.00718723          0.00002826         -0.00005457
+ 19            1.06025541          0.00675232         -0.00675232          0.00002132         -0.00004788
+ 20            1.11891483          0.00637610         -0.00637610          0.00001638         -0.00004250
+ 21            1.17757425          0.00603909         -0.00603909          0.00001302         -0.00003800
+ 22            1.23623367          0.00572573         -0.00572573          0.00001064         -0.00003408
+ 23            1.29489308          0.00542405         -0.00542405          0.00000879         -0.00003053
+ 24            1.35355250          0.00512639         -0.00512639          0.00000722         -0.00002724
+ 25            1.41221192          0.00482939         -0.00482939          0.00000580         -0.00002416
+ 26            1.47087134          0.00453315         -0.00453315          0.00000447         -0.00002129
+ 27            1.52953076          0.00423990         -0.00423990          0.00000319         -0.00001864
+ 28            1.58819017          0.00395273         -0.00395273          0.00000194         -0.00001624
+ 29            1.64684959          0.00367474         -0.00367474          0.00000067         -0.00001409
+ 30            1.70550901          0.00340847         -0.00340847         -0.00000065         -0.00001218
+ 31            1.76416843          0.00315575         -0.00315575         -0.00000203         -0.00001052
+ 32            1.82282785          0.00291775         -0.00291775         -0.00000347         -0.00000907
+ 33            1.88148726          0.00269513         -0.00269513         -0.00000492         -0.00000783
+ 34            1.94014668          0.00248827         -0.00248827         -0.00000629         -0.00000676
+ 35            1.99880610          0.00229731         -0.00229731         -0.00000746         -0.00000584
+ 36            2.05746552          0.00212223         -0.00212223         -0.00000835         -0.00000506
+ 37            2.11612494          0.00196277         -0.00196277         -0.00000890         -0.00000439
+ 38            2.17478435          0.00181835         -0.00181835         -0.00000910         -0.00000382
+ 39            2.23344377          0.00168812         -0.00168812         -0.00000899         -0.00000332
+ 40            2.29210319          0.00157095         -0.00157095         -0.00000865         -0.00000290
+ 41            2.35076261          0.00146558         -0.00146558         -0.00000815         -0.00000254
+ 42            2.40942203          0.00137070         -0.00137070         -0.00000755         -0.00000223
+ 43            2.46808144          0.00128504         -0.00128504         -0.00000691         -0.00000195
+ 44            2.52674086          0.00120742         -0.00120742         -0.00000626         -0.00000172
+ 45            2.58540028          0.00113680         -0.00113680         -0.00000563         -0.00000152
+ 46            2.64405970          0.00107226         -0.00107226         -0.00000504         -0.00000134
+ 47            2.70271912          0.00101302         -0.00101302         -0.00000448         -0.00000118
+ 48            2.76137853          0.00095839         -0.00095839         -0.00000397         -0.00000105
+ 49            2.82003795          0.00090782         -0.00090782         -0.00000350         -0.00000093
+ 50            2.87869737          0.00086082         -0.00086082         -0.00000306         -0.00000082
+ 51            2.93735679          0.00081697         -0.00081697         -0.00000266         -0.00000073
+ 52            2.99601621          0.00077594         -0.00077594         -0.00000229         -0.00000065
+ 53            3.05467562          0.00073742         -0.00073742         -0.00000195         -0.00000058
+ 54            3.11333504          0.00070115         -0.00070115         -0.00000163         -0.00000052
+ 55            3.17199446          0.00066690         -0.00066690         -0.00000133         -0.00000046
+ 56            3.23065388          0.00063448         -0.00063448         -0.00000104         -0.00000041
+ 57            3.28931330          0.00060372         -0.00060372         -0.00000077         -0.00000037
+ 58            3.34797271          0.00057445         -0.00057445         -0.00000051         -0.00000033
+ 59            3.40663213          0.00054656         -0.00054656         -0.00000026         -0.00000030
+ 60            3.46529155          0.00051991         -0.00051991         -0.00000001         -0.00000027
+ 61            3.52395097          0.00049439         -0.00049439          0.00000023         -0.00000024
+ 62            3.58261039          0.00046990         -0.00046990          0.00000046         -0.00000022
+ 63            3.64126980          0.00044635         -0.00044635          0.00000068         -0.00000020
+ 64            3.69992922          0.00042367         -0.00042367          0.00000089         -0.00000019
+ 65            3.75858864          0.00040176         -0.00040176          0.00000107         -0.00000017
+ 66            3.81724806          0.00038057         -0.00038057          0.00000120         -0.00000016
+ 67            3.87590748          0.00036002         -0.00036002          0.00000126         -0.00000014
+ 68            3.93456689          0.00034006         -0.00034006          0.00000122         -0.00000013
+ 69            3.99322631          0.00032063         -0.00032063          0.00000110         -0.00000012
+ 70            4.05188573          0.00030168         -0.00030168          0.00000094         -0.00000010
+ 71            4.11054515          0.00028315         -0.00028315          0.00000079         -0.00000009
+ 72            4.16920457          0.00026500         -0.00026500          0.00000067         -0.00000008
+ 73            4.22786398          0.00024719         -0.00024719          0.00000057         -0.00000007
+ 74            4.28652340          0.00022967         -0.00022967          0.00000050         -0.00000006
+ 75            4.34518282          0.00021241         -0.00021241          0.00000044         -0.00000005
+ 76            4.40384224          0.00019537         -0.00019537          0.00000040         -0.00000004
+ 77            4.46250166          0.00017851         -0.00017851          0.00000037         -0.00000004
+ 78            4.52116107          0.00016180         -0.00016180          0.00000034         -0.00000003
+ 79            4.57982049          0.00014521         -0.00014521          0.00000031         -0.00000002
+ 80            4.63847991          0.00012871         -0.00012871          0.00000029         -0.00000002
+ 81            4.69713933          0.00011228         -0.00011228          0.00000027         -0.00000002
+ 82            4.75579875          0.00009588         -0.00009588          0.00000025         -0.00000001
+ 83            4.81445816          0.00007949         -0.00007949          0.00000023         -0.00000001
+ 84            4.87311758          0.00006311         -0.00006311          0.00000021         -0.00000001
+ 85            4.93177700          0.00004669         -0.00004669          0.00000019         -0.00000000
+ 86            4.99043642          0.00003025         -0.00003025          0.00000016         -0.00000000
+ 87            5.04909584          0.00001375         -0.00001375          0.00000013         -0.00000000
+ 88            5.10775525         -0.00000280          0.00000280          0.00000009         -0.00000000
+ 89            5.16641467         -0.00001940          0.00001940          0.00000004         -0.00000000
+ 90            5.22507409         -0.00003606          0.00003606         -0.00000002         -0.00000000
+ 91            5.28373351         -0.00005276          0.00005276         -0.00000008         -0.00000000
+ 92            5.34239293         -0.00006948          0.00006948         -0.00000015         -0.00000001
+ 93            5.40105234         -0.00008620          0.00008620         -0.00000022         -0.00000001
+ 94            5.45971176         -0.00010287          0.00010287         -0.00000028         -0.00000001
+ 95            5.51837118         -0.00011945          0.00011945         -0.00000033         -0.00000001
+ 96            5.57703060         -0.00013587          0.00013587         -0.00000033         -0.00000002
+ 97            5.63569002         -0.00015205          0.00015205         -0.00000025         -0.00000002
+ 98            5.69434943         -0.00016787          0.00016787          0.00000001         -0.00000003
+ 99            5.75300885         -0.00018320          0.00018320          0.00000056         -0.00000003
+100            5.81166827         -0.00019785          0.00019785          0.00000160         -0.00000004
+101            5.87032769         -0.00021161          0.00021161          0.00000345         -0.00000005
+102            5.92898711         -0.00022420          0.00022420          0.00000659         -0.00000005
+103            5.98764652         -0.00023528          0.00023528          0.00001163         -0.00000006
+104            6.04630594         -0.00024447          0.00024447          0.00001933         -0.00000006
+105            6.10496536         -0.00025137          0.00025137          0.00003038         -0.00000007
+106            6.16362478         -0.00025565          0.00025565          0.00004503         -0.00000008
+107            6.22228420         -0.00025712          0.00025712          0.00006266         -0.00000008
+108            6.28094361         -0.00025587          0.00025587          0.00008159         -0.00000009
+109            6.33960303         -0.00025228          0.00025228          0.00009943         -0.00000009
+110            6.39826245         -0.00024694          0.00024694          0.00011394         -0.00000010
+111            6.45692187         -0.00024054          0.00024054          0.00012381         -0.00000010
+112            6.51558129         -0.00023367          0.00023367          0.00012888         -0.00000010
+113            6.57424070         -0.00022681          0.00022681          0.00012979         -0.00000010
+114            6.63290012         -0.00022026          0.00022026          0.00012757         -0.00000010
+115            6.69155954         -0.00021419          0.00021419          0.00012322         -0.00000010
+116            6.75021896         -0.00020867          0.00020867          0.00011761         -0.00000010
+117            6.80887838         -0.00020371          0.00020371          0.00011138         -0.00000010
+118            6.86753779         -0.00019930          0.00019930          0.00010498         -0.00000010
+119            6.92619721         -0.00019538          0.00019538          0.00009868         -0.00000010
+120            6.98485663         -0.00019192          0.00019192          0.00009268         -0.00000010
+121            7.04351605         -0.00018886          0.00018886          0.00008706         -0.00000010
+122            7.10217546         -0.00018616          0.00018616          0.00008186         -0.00000010
+123            7.16083488         -0.00018378          0.00018378          0.00007710         -0.00000009
+124            7.21949430         -0.00018168          0.00018168          0.00007277         -0.00000009
+125            7.27815372         -0.00017982          0.00017982          0.00006883         -0.00000009
+126            7.33681314         -0.00017818          0.00017818          0.00006526         -0.00000009
+127            7.39547255         -0.00017672          0.00017672          0.00006202         -0.00000009
+128            7.45413197         -0.00017544          0.00017544          0.00005910         -0.00000009
+129            7.51279139         -0.00017430          0.00017430          0.00005644         -0.00000008
+130            7.57145081         -0.00017329          0.00017329          0.00005403         -0.00000008
+131            7.63011023         -0.00017240          0.00017240          0.00005184         -0.00000008
+132            7.68876964         -0.00017161          0.00017161          0.00004985         -0.00000008
+133            7.74742906         -0.00017091          0.00017091          0.00004803         -0.00000008
+134            7.80608848         -0.00017029          0.00017029          0.00004637         -0.00000008
+135            7.86474790         -0.00016974          0.00016974          0.00004484         -0.00000008
+136            7.92340732         -0.00016925          0.00016925          0.00004345         -0.00000008
+137            7.98206673         -0.00016882          0.00016882          0.00004216         -0.00000008
+138            8.04072615         -0.00016843          0.00016843          0.00004097         -0.00000008
+139            8.09938557         -0.00016809          0.00016809          0.00003988         -0.00000007
+140            8.15804499         -0.00016778          0.00016778          0.00003887         -0.00000007
+141            8.21670441         -0.00016751          0.00016751          0.00003792         -0.00000007
+142            8.27536382         -0.00016727          0.00016727          0.00003705         -0.00000007
+143            8.33402324         -0.00016705          0.00016705          0.00003623         -0.00000007
+144            8.39268266         -0.00016685          0.00016685          0.00003547         -0.00000007
+145            8.45134208         -0.00016667          0.00016667          0.00003476         -0.00000007
+146            8.51000150         -0.00016650          0.00016650          0.00003410         -0.00000007
+147            8.56866091         -0.00016635          0.00016635          0.00003347         -0.00000007
+148            8.62732033         -0.00016620          0.00016620          0.00003288         -0.00000007
+149            8.68597975         -0.00016607          0.00016607          0.00003232         -0.00000007
+150            8.74463917         -0.00016593          0.00016593          0.00003180         -0.00000007
+151            8.80329859         -0.00016580          0.00016580          0.00003130         -0.00000007
+152            8.86195800         -0.00016567          0.00016567          0.00003083         -0.00000007
+153            8.92061742         -0.00016554          0.00016554          0.00003039         -0.00000007
+154            8.97927684         -0.00016541          0.00016541          0.00002996         -0.00000007
+155            9.03793626         -0.00016527          0.00016527          0.00002956         -0.00000007
+156            9.09659568         -0.00016513          0.00016513          0.00002917         -0.00000007
+157            9.15525509         -0.00016498          0.00016498          0.00002880         -0.00000007
+158            9.21391451         -0.00016482          0.00016482          0.00002844         -0.00000007
+159            9.27257393         -0.00016465          0.00016465          0.00002810         -0.00000007
+160            9.33123335         -0.00016448          0.00016448          0.00002778         -0.00000007
+161            9.38989277         -0.00016429          0.00016429          0.00002746         -0.00000007
+162            9.44855218         -0.00016408          0.00016408          0.00002715         -0.00000007
+163            9.50721160         -0.00016387          0.00016387          0.00002686         -0.00000007
+164            9.56587102         -0.00016364          0.00016364          0.00002657         -0.00000007
+165            9.62453044         -0.00016339          0.00016339          0.00002629         -0.00000007
+166            9.68318986         -0.00016313          0.00016313          0.00002602         -0.00000007
+167            9.74184927         -0.00016285          0.00016285          0.00002576         -0.00000007
+168            9.80050869         -0.00016255          0.00016255          0.00002550         -0.00000006
+169            9.85916811         -0.00016223          0.00016223          0.00002525         -0.00000006
+170            9.91782753         -0.00016190          0.00016190          0.00002501         -0.00000006
+171            9.97648695         -0.00016154          0.00016154          0.00002476         -0.00000006
+172           10.03514636         -0.00016116          0.00016116          0.00002453         -0.00000006
+173           10.09380578         -0.00016076          0.00016076          0.00002429         -0.00000006
+174           10.15246520         -0.00016034          0.00016034          0.00002406         -0.00000006
+175           10.21112462         -0.00015989          0.00015989          0.00002384         -0.00000006
+176           10.26978404         -0.00015943          0.00015943          0.00002361         -0.00000006
+177           10.32844345         -0.00015893          0.00015893          0.00002339         -0.00000006
+178           10.38710287         -0.00015841          0.00015841          0.00002317         -0.00000006
+179           10.44576229         -0.00015787          0.00015787          0.00002295         -0.00000006
+180           10.50442171         -0.00015730          0.00015730          0.00002273         -0.00000006
+181           10.56308113         -0.00015671          0.00015671          0.00002251         -0.00000006
+182           10.62174054         -0.00015608          0.00015608          0.00002230         -0.00000006
+183           10.68039996         -0.00015543          0.00015543          0.00002208         -0.00000006
+184           10.73905938         -0.00015475          0.00015475          0.00002186         -0.00000006
+185           10.79771880         -0.00015405          0.00015405          0.00002165         -0.00000006
+186           10.85637822         -0.00015331          0.00015331          0.00002143         -0.00000006
+187           10.91503763         -0.00015255          0.00015255          0.00002122         -0.00000006
+188           10.97369705         -0.00015175          0.00015175          0.00002100         -0.00000006
+189           11.03235647         -0.00015093          0.00015093          0.00002078         -0.00000005
+190           11.09101589         -0.00015007          0.00015007          0.00002056         -0.00000005
+191           11.14967531         -0.00014918          0.00014918          0.00002034         -0.00000005
+192           11.20833472         -0.00014827          0.00014827          0.00002012         -0.00000005
+193           11.26699414         -0.00014732          0.00014732          0.00001990         -0.00000005
+194           11.32565356         -0.00014634          0.00014634          0.00001967         -0.00000005
+195           11.38431298         -0.00014532          0.00014532          0.00001944         -0.00000005
+196           11.44297240         -0.00014427          0.00014427          0.00001922         -0.00000005
+197           11.50163181         -0.00014319          0.00014319          0.00001899         -0.00000005
+198           11.56029123         -0.00014208          0.00014208          0.00001875         -0.00000005
+199           11.61895065         -0.00014093          0.00014093          0.00001852         -0.00000005
+200           11.67761007         -0.00013975          0.00013975          0.00001828         -0.00000005
+201           11.73626949         -0.00013854          0.00013854          0.00001804         -0.00000005
+202           11.79492890         -0.00013729          0.00013729          0.00001780         -0.00000004
+203           11.85358832         -0.00013600          0.00013600          0.00001755         -0.00000004
+204           11.91224774         -0.00013468          0.00013468          0.00001730         -0.00000004
+205           11.97090716         -0.00013333          0.00013333          0.00001705         -0.00000004
+206           12.02956658         -0.00013193          0.00013193          0.00001680         -0.00000004
+207           12.08822599         -0.00013051          0.00013051          0.00001654         -0.00000004
+208           12.14688541         -0.00012904          0.00012904          0.00001628         -0.00000004
+209           12.20554483         -0.00012755          0.00012755          0.00001602         -0.00000004
+210           12.26420425         -0.00012601          0.00012601          0.00001575         -0.00000004
+211           12.32286367         -0.00012444          0.00012444          0.00001548         -0.00000004
+212           12.38152308         -0.00012283          0.00012283          0.00001521         -0.00000003
+213           12.44018250         -0.00012118          0.00012118          0.00001493         -0.00000003
+214           12.49884192         -0.00011950          0.00011950          0.00001465         -0.00000003
+215           12.55750134         -0.00011778          0.00011778          0.00001437         -0.00000003
+216           12.61616076         -0.00011602          0.00011602          0.00001408         -0.00000003
+217           12.67482017         -0.00011423          0.00011423          0.00001379         -0.00000003
+218           12.73347959         -0.00011240          0.00011240          0.00001350         -0.00000003
+219           12.79213901         -0.00011053          0.00011053          0.00001320         -0.00000003
+220           12.85079843         -0.00010862          0.00010862          0.00001290         -0.00000003
+221           12.90945785         -0.00010668          0.00010668          0.00001259         -0.00000003
+222           12.96811726         -0.00010469          0.00010469          0.00001228         -0.00000002
+223           13.02677668         -0.00010267          0.00010267          0.00001197         -0.00000002
+224           13.08543610         -0.00010061          0.00010061          0.00001165         -0.00000002
+225           13.14409552         -0.00009852          0.00009852          0.00001133         -0.00000002
+226           13.20275494         -0.00009638          0.00009638          0.00001100         -0.00000002
+227           13.26141435         -0.00009421          0.00009421          0.00001067         -0.00000002
+228           13.32007377         -0.00009200          0.00009200          0.00001034         -0.00000002
+229           13.37873319         -0.00008975          0.00008975          0.00001000         -0.00000002
+230           13.43739261         -0.00008746          0.00008746          0.00000966         -0.00000002
+231           13.49605203         -0.00008514          0.00008514          0.00000932         -0.00000002
+232           13.55471144         -0.00008277          0.00008277          0.00000897         -0.00000001
+233           13.61337086         -0.00008037          0.00008037          0.00000861         -0.00000001
+234           13.67203028         -0.00007793          0.00007793          0.00000826         -0.00000001
+235           13.73068970         -0.00007546          0.00007546          0.00000790         -0.00000001
+236           13.78934912         -0.00007294          0.00007294          0.00000753         -0.00000001
+237           13.84800853         -0.00007039          0.00007039          0.00000716         -0.00000001
+238           13.90666795         -0.00006780          0.00006780          0.00000679         -0.00000001
+239           13.96532737         -0.00006517          0.00006517          0.00000641         -0.00000001
+240           14.02398679         -0.00006251          0.00006251          0.00000603         -0.00000001
+241           14.08264621         -0.00005981          0.00005981          0.00000564         -0.00000001
+242           14.14130562         -0.00005707          0.00005707          0.00000525         -0.00000001
+243           14.19996504         -0.00005429          0.00005429          0.00000486         -0.00000001
+244           14.25862446         -0.00005148          0.00005148          0.00000446         -0.00000000
+245           14.31728388         -0.00004863          0.00004863          0.00000406         -0.00000000
+246           14.37594330         -0.00004575          0.00004575          0.00000366         -0.00000000
+247           14.43460271         -0.00004282          0.00004282          0.00000325         -0.00000000
+248           14.49326213         -0.00003987          0.00003987          0.00000283         -0.00000000
+249           14.55192155         -0.00003687          0.00003687          0.00000242         -0.00000000
+250           14.61058097         -0.00003384          0.00003384          0.00000200         -0.00000000
+251           14.66924039         -0.00003078          0.00003078          0.00000157         -0.00000000
+252           14.72789980         -0.00002768          0.00002768          0.00000114         -0.00000000
+253           14.78655922         -0.00002454          0.00002454          0.00000071         -0.00000000
+254           14.84521864         -0.00002137          0.00002137          0.00000028         -0.00000000
+255           14.90387806         -0.00001816          0.00001816         -0.00000016         -0.00000000
+256           14.96253748         -0.00001492          0.00001492         -0.00000061         -0.00000000
+257           15.02119689         -0.00001165          0.00001165         -0.00000105         -0.00000000
+258           15.07985631         -0.00000834          0.00000834         -0.00000150         -0.00000000
+259           15.13851573         -0.00000500          0.00000500         -0.00000196         -0.00000000
+260           15.19717515         -0.00000162          0.00000162         -0.00000241         -0.00000000
+261           15.25583457          0.00000179         -0.00000179         -0.00000288         -0.00000000
+262           15.31449398          0.00000523         -0.00000523         -0.00000334         -0.00000000
+263           15.37315340          0.00000871         -0.00000871         -0.00000381         -0.00000000
+264           15.43181282          0.00001221         -0.00001221         -0.00000428         -0.00000000
+265           15.49047224          0.00001575         -0.00001575         -0.00000475         -0.00000000
+266           15.54913166          0.00001932         -0.00001932         -0.00000523         -0.00000000
+267           15.60779107          0.00002293         -0.00002293         -0.00000571         -0.00000000
+268           15.66645049          0.00002656         -0.00002656         -0.00000620         -0.00000000
+269           15.72510991          0.00003022         -0.00003022         -0.00000668         -0.00000001
+270           15.78376933          0.00003392         -0.00003392         -0.00000718         -0.00000001
+271           15.84242875          0.00003765         -0.00003765         -0.00000767         -0.00000001
+272           15.90108816          0.00004140         -0.00004140         -0.00000817         -0.00000001
+273           15.95974758          0.00004519         -0.00004519         -0.00000867         -0.00000001
+274           16.01840700          0.00004900         -0.00004900         -0.00000917         -0.00000001
+275           16.07706642          0.00005285         -0.00005285         -0.00000967         -0.00000001
+276           16.13572584          0.00005672         -0.00005672         -0.00001018         -0.00000001
+277           16.19438525          0.00006062         -0.00006062         -0.00001069         -0.00000002
+278           16.25304467          0.00006455         -0.00006455         -0.00001121         -0.00000002
+279           16.31170409          0.00006850         -0.00006850         -0.00001172         -0.00000002
+280           16.37036351          0.00007249         -0.00007249         -0.00001224         -0.00000002
+281           16.42902293          0.00007650         -0.00007650         -0.00001276         -0.00000002
+282           16.48768234          0.00008053         -0.00008053         -0.00001329         -0.00000003
+283           16.54634176          0.00008460         -0.00008460         -0.00001381         -0.00000003
+284           16.60500118          0.00008869         -0.00008869         -0.00001434         -0.00000003
+285           16.66366060          0.00009280         -0.00009280         -0.00001488         -0.00000003
+286           16.72232002          0.00009694         -0.00009694         -0.00001541         -0.00000004
+287           16.78097943          0.00010111         -0.00010111         -0.00001594         -0.00000004
+288           16.83963885          0.00010530         -0.00010530         -0.00001648         -0.00000004
+289           16.89829827          0.00010951         -0.00010951         -0.00001702         -0.00000004
+290           16.95695769          0.00011375         -0.00011375         -0.00001757         -0.00000005
+291           17.01561711          0.00011801         -0.00011801         -0.00001811         -0.00000005
+292           17.07427652          0.00012229         -0.00012229         -0.00001866         -0.00000005
+293           17.13293594          0.00012660         -0.00012660         -0.00001920         -0.00000006
+294           17.19159536          0.00013093         -0.00013093         -0.00001976         -0.00000006
+295           17.25025478          0.00013528         -0.00013528         -0.00002031         -0.00000006
+296           17.30891420          0.00013965         -0.00013965         -0.00002086         -0.00000007
+297           17.36757361          0.00014404         -0.00014404         -0.00002142         -0.00000007
+298           17.42623303          0.00014845         -0.00014845         -0.00002197         -0.00000008
+299           17.48489245          0.00015289         -0.00015289         -0.00002253         -0.00000008
+300           17.54355187          0.00015734         -0.00015734         -0.00002309         -0.00000009

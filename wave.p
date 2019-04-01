@@ -1,4 +1,4 @@
-# Gnuplot script file for plotting data in file "threebodypot.dat"
+# Gnuplot script file for plotting data in file "effectivepot.dat"
       # This file is called   wave.p
  set termopt enhanced    # turn on enhanced text mode
    
@@ -24,14 +24,10 @@
 	 set log x
 	 set xr [0.03:17.4]
 	 set yr [-6.0:5.0]
-	 plot "effectivepot.dat" using 2:($3/100) title '{/Symbol n}=0'  with lines,  \
-	    "effectivepot.dat" using 2:($4/100) title '{/Symbol n}=1'  with lines,  \
-	       "effectivepot.dat" using 2:($5/100) notitle '{/Symbol n}=1'  with lines,  \
-		  "effectivepot.dat" using 2:($6/100) notitle '{/Symbol n_a}=1'  with lines,  \
-		     "effectivepot.dat" using 2:($7/100) notitle '{/Symbol n_a}=1'  with lines,  \
-			"effectivepot.dat" using 2:($8/100) notitle '{/Symbol n_a}=1'  with lines,  \
-			   "effectivepot.dat" using 2:($9/100) notitle '{/Symbol n_a}=1'  with lines,  \
-			      "effectivepot.dat" using 2:($10/100) notitle '{/Symbol n_a}=1'  with lines,  \
+	 plot "effectivepot.dat" using 2:3 title '{/Symbol n}=0'  with lines,  \
+	    "effectivepot.dat" using 2:4 title '{/Symbol n}=1'  with lines,  \
+	       
+
 	  
 	       
 

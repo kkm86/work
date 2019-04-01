@@ -1,1300 +1,300 @@
-  1            0.00438589          0.00000000           -Infinity          0.00000000           -Infinity
-  2            0.01788794          0.00000000           -Infinity          0.00000000           -Infinity
-  3            0.03138999          0.00000000           -Infinity          0.00000000           -Infinity
-  4            0.04489204          0.00000000           -Infinity          0.00000000           -Infinity
-  5            0.05839410          0.00000000           -Infinity          0.00000000           -Infinity
-  6            0.07189615          0.00000000           -Infinity          0.00000000           -Infinity
-  7            0.08539820          0.00000000           -Infinity          0.00000000           -Infinity
-  8            0.09890025          0.00000000           -Infinity          0.00000000           -Infinity
-  9            0.11240231          0.00000000           -Infinity          0.00000000           -Infinity
- 10            0.12590436          0.00000000           -Infinity          0.00000000           -Infinity
- 11            0.13940641          0.00000000           -Infinity          0.00000000           -Infinity
- 12            0.15290846          0.00000000           -Infinity          0.00000000           -Infinity
- 13            0.16641052          0.00000000           -Infinity          0.00000000           -Infinity
- 14            0.17991257          0.00000000           -Infinity          0.00000000           -Infinity
- 15            0.19341462          0.00000000           -Infinity          0.00000000           -Infinity
- 16            0.20691667          0.00000000           -Infinity          0.00000000           -Infinity
- 17            0.22041873          0.00000000           -Infinity          0.00000000           -Infinity
- 18            0.23392078          0.00000000           -Infinity          0.00000000           -Infinity
- 19            0.24742283          0.00000000           -Infinity          0.00000000           -Infinity
- 20            0.26092488          0.00000000           -Infinity          0.00000000           -Infinity
- 21            0.27442693          0.00000000           -Infinity          0.00000000           -Infinity
- 22            0.28792899          0.00000000           -Infinity          0.00000000           -Infinity
- 23            0.30143104          0.00000000           -Infinity          0.00000000           -Infinity
- 24            0.31493309          0.00000000           -Infinity          0.00000000           -Infinity
- 25            0.32843514          0.00000000           -Infinity          0.00000000           -Infinity
- 26            0.34193720          0.00000000           -Infinity          0.00000000           -Infinity
- 27            0.35543925          0.00000000           -Infinity          0.00000000           -Infinity
- 28            0.36894130          0.00000000           -Infinity          0.00000000           -Infinity
- 29            0.38244335          0.00000000           -Infinity          0.00000000           -Infinity
- 30            0.39594541          0.00000000           -Infinity          0.00000000           -Infinity
- 31            0.40944746          0.00000000           -Infinity          0.00000000           -Infinity
- 32            0.42294951          0.00000000           -Infinity          0.00000000           -Infinity
- 33            0.43645156          0.00000000           -Infinity          0.00000000           -Infinity
- 34            0.44995361          0.00000000           -Infinity          0.00000000           -Infinity
- 35            0.46345567          0.00000000           -Infinity          0.00000000           -Infinity
- 36            0.47695772          0.00000000           -Infinity          0.00000000           -Infinity
- 37            0.49045977          0.00000000           -Infinity          0.00000000           -Infinity
- 38            0.50396182          0.00000000           -Infinity          0.00000000           -Infinity
- 39            0.51746388          0.00000000           -Infinity          0.00000000           -Infinity
- 40            0.53096593          0.00000000           -Infinity          0.00000000           -Infinity
- 41            0.54446798          0.00000000           -Infinity          0.00000000           -Infinity
- 42            0.55797003          0.00000000           -Infinity          0.00000000           -Infinity
- 43            0.57147209          0.00000000           -Infinity          0.00000000           -Infinity
- 44            0.58497414          0.00000000           -Infinity          0.00000000           -Infinity
- 45            0.59847619          0.00000000           -Infinity          0.00000000           -Infinity
- 46            0.61197824          0.00000000           -Infinity          0.00000000           -Infinity
- 47            0.62548030          0.00000000           -Infinity          0.00000000           -Infinity
- 48            0.63898235          0.00000000           -Infinity          0.00000000           -Infinity
- 49            0.65248440          0.00000000           -Infinity          0.00000000           -Infinity
- 50            0.66598645          0.00000000           -Infinity          0.00000000           -Infinity
- 51            0.67948850          0.00000000           -Infinity          0.00000000           -Infinity
- 52            0.69299056          0.00000000           -Infinity          0.00000000           -Infinity
- 53            0.70649261          0.00000000           -Infinity          0.00000000           -Infinity
- 54            0.71999466          0.00000000           -Infinity          0.00000000           -Infinity
- 55            0.73349671          0.00000000           -Infinity          0.00000000           -Infinity
- 56            0.74699877          0.00000000           -Infinity          0.00000000           -Infinity
- 57            0.76050082          0.00000000           -Infinity          0.00000000           -Infinity
- 58            0.77400287          0.00000000           -Infinity          0.00000000           -Infinity
- 59            0.78750492          0.00000000           -Infinity          0.00000000           -Infinity
- 60            0.80100698          0.00000000           -Infinity          0.00000000           -Infinity
- 61            0.81450903          0.00000000           -Infinity          0.00000000           -Infinity
- 62            0.82801108          0.00000000           -Infinity          0.00000000           -Infinity
- 63            0.84151313          0.00000000           -Infinity          0.00000000           -Infinity
- 64            0.85501518          0.00000000           -Infinity          0.00000000           -Infinity
- 65            0.86851724          0.00000000           -Infinity          0.00000000           -Infinity
- 66            0.88201929          0.00000000           -Infinity          0.00000000           -Infinity
- 67            0.89552134          0.00000000           -Infinity          0.00000000           -Infinity
- 68            0.90902339          0.00000000           -Infinity          0.00000000           -Infinity
- 69            0.92252545          0.00000000           -Infinity          0.00000000           -Infinity
- 70            0.93602750          0.00000000           -Infinity          0.00000000           -Infinity
- 71            0.94952955          0.00000000           -Infinity          0.00000000           -Infinity
- 72            0.96303160          0.00000000           -Infinity          0.00000000           -Infinity
- 73            0.97653366          0.00000000           -Infinity          0.00000000           -Infinity
- 74            0.99003571          0.00000000           -Infinity          0.00000000           -Infinity
- 75            1.00353776          0.00000000           -Infinity          0.00000000           -Infinity
- 76            1.01703981          0.00000000           -Infinity          0.00000000           -Infinity
- 77            1.03054187          0.00000000           -Infinity          0.00000000           -Infinity
- 78            1.04404392          0.00000000           -Infinity          0.00000000           -Infinity
- 79            1.05754597          0.00000000           -Infinity          0.00000000           -Infinity
- 80            1.07104802          0.00000000           -Infinity          0.00000000           -Infinity
- 81            1.08455007          0.00000000           -Infinity          0.00000000           -Infinity
- 82            1.09805213          0.00000000           -Infinity          0.00000000           -Infinity
- 83            1.11155418          0.00000000           -Infinity          0.00000000           -Infinity
- 84            1.12505623          0.00000000           -Infinity          0.00000000           -Infinity
- 85            1.13855828          0.00000000           -Infinity          0.00000000           -Infinity
- 86            1.15206034          0.00000000           -Infinity          0.00000000           -Infinity
- 87            1.16556239          0.00000000           -Infinity          0.00000000           -Infinity
- 88            1.17906444          0.00000000           -Infinity          0.00000000           -Infinity
- 89            1.19256649          0.00000000           -Infinity          0.00000000           -Infinity
- 90            1.20606855          0.00000000           -Infinity          0.00000000           -Infinity
- 91            1.21957060          0.00000000           -Infinity          0.00000000           -Infinity
- 92            1.23307265          0.00000000           -Infinity          0.00000000           -Infinity
- 93            1.24657470          0.00000000           -Infinity          0.00000000           -Infinity
- 94            1.26007675          0.00000000           -Infinity          0.00000000           -Infinity
- 95            1.27357881          0.00000000           -Infinity          0.00000000           -Infinity
- 96            1.28708086          0.00000000           -Infinity          0.00000000           -Infinity
- 97            1.30058291          0.00000000           -Infinity          0.00000000           -Infinity
- 98            1.31408496          0.00000000           -Infinity          0.00000000           -Infinity
- 99            1.32758702          0.00000000           -Infinity          0.00000000           -Infinity
-100            1.34108907          0.00000000           -Infinity          0.00000000           -Infinity
-101            1.35459112          0.00000000           -Infinity          0.00000000           -Infinity
-102            1.36809317          0.00000000           -Infinity          0.00000000           -Infinity
-103            1.38159523          0.00000000           -Infinity          0.00000000           -Infinity
-104            1.39509728          0.00000000           -Infinity          0.00000000           -Infinity
-105            1.40859933          0.00000000           -Infinity          0.00000000           -Infinity
-106            1.42210138          0.00000000           -Infinity          0.00000000           -Infinity
-107            1.43560344          0.00000000           -Infinity          0.00000000           -Infinity
-108            1.44910549          0.00000000           -Infinity          0.00000000           -Infinity
-109            1.46260754          0.00000000           -Infinity          0.00000000           -Infinity
-110            1.47610959          0.00000000           -Infinity          0.00000000           -Infinity
-111            1.48961164          0.00000000           -Infinity          0.00000000           -Infinity
-112            1.50311370          0.00000000           -Infinity          0.00000000           -Infinity
-113            1.51661575          0.00000000           -Infinity          0.00000000           -Infinity
-114            1.53011780          0.00000000           -Infinity          0.00000000           -Infinity
-115            1.54361985          0.00000000           -Infinity          0.00000000           -Infinity
-116            1.55712191          0.00000000           -Infinity          0.00000000           -Infinity
-117            1.57062396          0.00000000           -Infinity          0.00000000           -Infinity
-118            1.58412601          0.00000000           -Infinity          0.00000000           -Infinity
-119            1.59762806          0.00000000           -Infinity          0.00000000           -Infinity
-120            1.61113012          0.00000000           -Infinity          0.00000000           -Infinity
-121            1.62463217          0.00000000           -Infinity          0.00000000           -Infinity
-122            1.63813422          0.00000000           -Infinity          0.00000000           -Infinity
-123            1.65163627          0.00000000           -Infinity          0.00000000           -Infinity
-124            1.66513832          0.00000000           -Infinity          0.00000000           -Infinity
-125            1.67864038          0.00000000           -Infinity          0.00000000           -Infinity
-126            1.69214243          0.00000000           -Infinity          0.00000000           -Infinity
-127            1.70564448          0.00000000           -Infinity          0.00000000           -Infinity
-128            1.71914653          0.00000000           -Infinity          0.00000000           -Infinity
-129            1.73264859          0.00000000           -Infinity          0.00000000           -Infinity
-130            1.74615064          0.00000000           -Infinity          0.00000000           -Infinity
-131            1.75965269          0.00000000           -Infinity          0.00000000           -Infinity
-132            1.77315474          0.00000000           -Infinity          0.00000000           -Infinity
-133            1.78665680          0.00000000           -Infinity          0.00000000           -Infinity
-134            1.80015885          0.00000000           -Infinity          0.00000000           -Infinity
-135            1.81366090          0.00000000           -Infinity          0.00000000           -Infinity
-136            1.82716295          0.00000000           -Infinity          0.00000000           -Infinity
-137            1.84066501          0.00000000           -Infinity          0.00000000           -Infinity
-138            1.85416706          0.00000000           -Infinity          0.00000000           -Infinity
-139            1.86766911          0.00000000           -Infinity          0.00000000           -Infinity
-140            1.88117116          0.00000000           -Infinity          0.00000000           -Infinity
-141            1.89467321          0.00000000           -Infinity          0.00000000           -Infinity
-142            1.90817527          0.00000000           -Infinity          0.00000000           -Infinity
-143            1.92167732          0.00000000           -Infinity          0.00000000           -Infinity
-144            1.93517937          0.00000000           -Infinity          0.00000000           -Infinity
-145            1.94868142          0.00000000           -Infinity          0.00000000           -Infinity
-146            1.96218348          0.00000000           -Infinity          0.00000000           -Infinity
-147            1.97568553          0.00000000           -Infinity          0.00000000           -Infinity
-148            1.98918758          0.00000000           -Infinity          0.00000000           -Infinity
-149            2.00268963          0.00000000           -Infinity          0.00000000           -Infinity
-150            2.01619169          0.00000000           -Infinity          0.00000000           -Infinity
-151            2.02969374          0.00000000           -Infinity          0.00000000           -Infinity
-152            2.04319579          0.00000000           -Infinity          0.00000000           -Infinity
-153            2.05669784          0.00000000           -Infinity          0.00000000           -Infinity
-154            2.07019989          0.00000000           -Infinity          0.00000000           -Infinity
-155            2.08370195          0.00000000           -Infinity          0.00000000           -Infinity
-156            2.09720400          0.00000000           -Infinity          0.00000000           -Infinity
-157            2.11070605          0.00000000           -Infinity          0.00000000           -Infinity
-158            2.12420810          0.00000000           -Infinity          0.00000000           -Infinity
-159            2.13771016          0.00000000           -Infinity          0.00000000           -Infinity
-160            2.15121221          0.00000000           -Infinity          0.00000000           -Infinity
-161            2.16471426          0.00000000           -Infinity          0.00000000           -Infinity
-162            2.17821631          0.00000000           -Infinity          0.00000000           -Infinity
-163            2.19171837          0.00000000           -Infinity          0.00000000           -Infinity
-164            2.20522042          0.00000000           -Infinity          0.00000000           -Infinity
-165            2.21872247          0.00000000           -Infinity          0.00000000           -Infinity
-166            2.23222452          0.00000000           -Infinity          0.00000000           -Infinity
-167            2.24572658          0.00000000           -Infinity          0.00000000           -Infinity
-168            2.25922863          0.00000000           -Infinity          0.00000000           -Infinity
-169            2.27273068          0.00000000           -Infinity          0.00000000           -Infinity
-170            2.28623273          0.00000000           -Infinity          0.00000000           -Infinity
-171            2.29973478          0.00000000           -Infinity          0.00000000           -Infinity
-172            2.31323684          0.00000000           -Infinity          0.00000000           -Infinity
-173            2.32673889          0.00000000           -Infinity          0.00000000           -Infinity
-174            2.34024094          0.00000000           -Infinity          0.00000000           -Infinity
-175            2.35374299          0.00000000           -Infinity          0.00000000           -Infinity
-176            2.36724505          0.00000000           -Infinity          0.00000000           -Infinity
-177            2.38074710          0.00000000           -Infinity          0.00000000           -Infinity
-178            2.39424915          0.00000000           -Infinity          0.00000000           -Infinity
-179            2.40775120          0.00000000           -Infinity          0.00000000           -Infinity
-180            2.42125326          0.00000000           -Infinity          0.00000000           -Infinity
-181            2.43475531          0.00000000           -Infinity          0.00000000           -Infinity
-182            2.44825736          0.00000000           -Infinity          0.00000000           -Infinity
-183            2.46175941          0.00000000           -Infinity          0.00000000           -Infinity
-184            2.47526146          0.00000000           -Infinity          0.00000000           -Infinity
-185            2.48876352          0.00000000           -Infinity          0.00000000           -Infinity
-186            2.50226557          0.00000000           -Infinity          0.00000000           -Infinity
-187            2.51576762          0.00000000           -Infinity          0.00000000           -Infinity
-188            2.52926967          0.00000000           -Infinity          0.00000000           -Infinity
-189            2.54277173          0.00000000           -Infinity          0.00000000           -Infinity
-190            2.55627378          0.00000000           -Infinity          0.00000000           -Infinity
-191            2.56977583          0.00000000           -Infinity          0.00000000           -Infinity
-192            2.58327788          0.00000000           -Infinity          0.00000000           -Infinity
-193            2.59677994          0.00000000           -Infinity          0.00000000           -Infinity
-194            2.61028199          0.00000000           -Infinity          0.00000000           -Infinity
-195            2.62378404          0.00000000           -Infinity          0.00000000           -Infinity
-196            2.63728609          0.00000000           -Infinity          0.00000000           -Infinity
-197            2.65078815          0.00000000           -Infinity          0.00000000           -Infinity
-198            2.66429020          0.00000000           -Infinity          0.00000000           -Infinity
-199            2.67779225          0.00000000           -Infinity          0.00000000           -Infinity
-200            2.69129430          0.00000000           -Infinity          0.00000000           -Infinity
-201            2.70479635          0.00000000           -Infinity          0.00000000           -Infinity
-202            2.71829841          0.00000000           -Infinity          0.00000000           -Infinity
-203            2.73180046          0.00000000           -Infinity          0.00000000           -Infinity
-204            2.74530251          0.00000000           -Infinity          0.00000000           -Infinity
-205            2.75880456          0.00000000           -Infinity          0.00000000           -Infinity
-206            2.77230662          0.00000000           -Infinity          0.00000000           -Infinity
-207            2.78580867          0.00000000           -Infinity          0.00000000           -Infinity
-208            2.79931072          0.00000000           -Infinity          0.00000000           -Infinity
-209            2.81281277          0.00000000           -Infinity          0.00000000           -Infinity
-210            2.82631483          0.00000000           -Infinity          0.00000000           -Infinity
-211            2.83981688          0.00000000           -Infinity          0.00000000           -Infinity
-212            2.85331893          0.00000000           -Infinity          0.00000000           -Infinity
-213            2.86682098          0.00000000           -Infinity          0.00000000           -Infinity
-214            2.88032303          0.00000000           -Infinity          0.00000000           -Infinity
-215            2.89382509          0.00000000           -Infinity          0.00000000           -Infinity
-216            2.90732714          0.00000000           -Infinity          0.00000000           -Infinity
-217            2.92082919          0.00000000           -Infinity          0.00000000           -Infinity
-218            2.93433124          0.00000000           -Infinity          0.00000000           -Infinity
-219            2.94783330          0.00000000           -Infinity          0.00000000           -Infinity
-220            2.96133535          0.00000000           -Infinity          0.00000000           -Infinity
-221            2.97483740          0.00000000           -Infinity          0.00000000           -Infinity
-222            2.98833945          0.00000000           -Infinity          0.00000000           -Infinity
-223            3.00184151          0.00000000           -Infinity          0.00000000           -Infinity
-224            3.01534356          0.00000000           -Infinity          0.00000000           -Infinity
-225            3.02884561          0.00000000           -Infinity          0.00000000           -Infinity
-226            3.04234766          0.00000000           -Infinity          0.00000000           -Infinity
-227            3.05584972          0.00000000           -Infinity          0.00000000           -Infinity
-228            3.06935177          0.00000000           -Infinity          0.00000000           -Infinity
-229            3.08285382          0.00000000           -Infinity          0.00000000           -Infinity
-230            3.09635587          0.00000000           -Infinity          0.00000000           -Infinity
-231            3.10985792          0.00000000           -Infinity          0.00000000           -Infinity
-232            3.12335998          0.00000000           -Infinity          0.00000000           -Infinity
-233            3.13686203          0.00000000           -Infinity          0.00000000           -Infinity
-234            3.15036408          0.00000000           -Infinity          0.00000000           -Infinity
-235            3.16386613          0.00000000           -Infinity          0.00000000           -Infinity
-236            3.17736819          0.00000000           -Infinity          0.00000000           -Infinity
-237            3.19087024          0.00000000           -Infinity          0.00000000           -Infinity
-238            3.20437229          0.00000000           -Infinity          0.00000000           -Infinity
-239            3.21787434          0.00000000           -Infinity          0.00000000           -Infinity
-240            3.23137640          0.00000000           -Infinity          0.00000000           -Infinity
-241            3.24487845          0.00000000           -Infinity          0.00000000           -Infinity
-242            3.25838050          0.00000000           -Infinity          0.00000000           -Infinity
-243            3.27188255          0.00000000           -Infinity          0.00000000           -Infinity
-244            3.28538460          0.00000000           -Infinity          0.00000000           -Infinity
-245            3.29888666          0.00000000           -Infinity          0.00000000           -Infinity
-246            3.31238871          0.00000000           -Infinity          0.00000000           -Infinity
-247            3.32589076          0.00000000           -Infinity          0.00000000           -Infinity
-248            3.33939281          0.00000000           -Infinity          0.00000000           -Infinity
-249            3.35289487          0.00000000           -Infinity          0.00000000           -Infinity
-250            3.36639692          0.00000000           -Infinity          0.00000000           -Infinity
-251            3.37989897          0.00000000           -Infinity          0.00000000           -Infinity
-252            3.39340102          0.00000000           -Infinity          0.00000000           -Infinity
-253            3.40690308          0.00000000           -Infinity          0.00000000           -Infinity
-254            3.42040513          0.00000000           -Infinity          0.00000000           -Infinity
-255            3.43390718          0.00000000           -Infinity          0.00000000           -Infinity
-256            3.44740923          0.00000000           -Infinity          0.00000000           -Infinity
-257            3.46091129          0.00000000           -Infinity          0.00000000           -Infinity
-258            3.47441334          0.00000000           -Infinity          0.00000000           -Infinity
-259            3.48791539          0.00000000           -Infinity          0.00000000           -Infinity
-260            3.50141744          0.00000000           -Infinity          0.00000000           -Infinity
-261            3.51491949          0.00000000           -Infinity          0.00000000           -Infinity
-262            3.52842155          0.00000000           -Infinity          0.00000000           -Infinity
-263            3.54192360          0.00000000           -Infinity          0.00000000           -Infinity
-264            3.55542565          0.00000000           -Infinity          0.00000000           -Infinity
-265            3.56892770          0.00000000           -Infinity          0.00000000           -Infinity
-266            3.58242976          0.00000000           -Infinity          0.00000000           -Infinity
-267            3.59593181          0.00000000           -Infinity          0.00000000           -Infinity
-268            3.60943386          0.00000000           -Infinity          0.00000000           -Infinity
-269            3.62293591          0.00000000           -Infinity          0.00000000           -Infinity
-270            3.63643797          0.00000000           -Infinity          0.00000000           -Infinity
-271            3.64994002          0.00000000           -Infinity          0.00000000           -Infinity
-272            3.66344207          0.00000000           -Infinity          0.00000000           -Infinity
-273            3.67694412          0.00000000           -Infinity          0.00000000           -Infinity
-274            3.69044617          0.00000000           -Infinity          0.00000000           -Infinity
-275            3.70394823          0.00000000           -Infinity          0.00000000           -Infinity
-276            3.71745028          0.00000000           -Infinity          0.00000000           -Infinity
-277            3.73095233          0.00000000           -Infinity          0.00000000           -Infinity
-278            3.74445438          0.00000000           -Infinity          0.00000000           -Infinity
-279            3.75795644          0.00000000           -Infinity          0.00000000           -Infinity
-280            3.77145849          0.00000000           -Infinity          0.00000000           -Infinity
-281            3.78496054          0.00000000           -Infinity          0.00000000           -Infinity
-282            3.79846259          0.00000000           -Infinity          0.00000000           -Infinity
-283            3.81196465          0.00000000           -Infinity          0.00000000           -Infinity
-284            3.82546670          0.00000000           -Infinity          0.00000000           -Infinity
-285            3.83896875          0.00000000           -Infinity          0.00000000           -Infinity
-286            3.85247080          0.00000000           -Infinity          0.00000000           -Infinity
-287            3.86597285          0.00000000           -Infinity          0.00000000           -Infinity
-288            3.87947491          0.00000000           -Infinity          0.00000000           -Infinity
-289            3.89297696          0.00000000           -Infinity          0.00000000           -Infinity
-290            3.90647901          0.00000000           -Infinity          0.00000000           -Infinity
-291            3.91998106          0.00000000           -Infinity          0.00000000           -Infinity
-292            3.93348312          0.00000000           -Infinity          0.00000000           -Infinity
-293            3.94698517          0.00000000           -Infinity          0.00000000           -Infinity
-294            3.96048722          0.00000000           -Infinity          0.00000000           -Infinity
-295            3.97398927          0.00000000           -Infinity          0.00000000           -Infinity
-296            3.98749133          0.00000000           -Infinity          0.00000000           -Infinity
-297            4.00099338          0.00000000           -Infinity          0.00000000           -Infinity
-298            4.01449543          0.00000000           -Infinity          0.00000000           -Infinity
-299            4.02799748          0.00000000           -Infinity          0.00000000           -Infinity
-300            4.04149954          0.00000000           -Infinity          0.00000000           -Infinity
-301            4.05500159          0.00000000           -Infinity          0.00000000           -Infinity
-302            4.06850364          0.00000000           -Infinity          0.00000000           -Infinity
-303            4.08200569          0.00000000           -Infinity          0.00000000           -Infinity
-304            4.09550774          0.00000000           -Infinity          0.00000000           -Infinity
-305            4.10900980          0.00000000           -Infinity          0.00000000           -Infinity
-306            4.12251185          0.00000000           -Infinity          0.00000000           -Infinity
-307            4.13601390          0.00000000           -Infinity          0.00000000           -Infinity
-308            4.14951595          0.00000000           -Infinity          0.00000000           -Infinity
-309            4.16301801          0.00000000           -Infinity          0.00000000           -Infinity
-310            4.17652006          0.00000000           -Infinity          0.00000000           -Infinity
-311            4.19002211          0.00000000           -Infinity          0.00000000           -Infinity
-312            4.20352416          0.00000000           -Infinity          0.00000000           -Infinity
-313            4.21702622          0.00000000           -Infinity          0.00000000           -Infinity
-314            4.23052827          0.00000000           -Infinity          0.00000000           -Infinity
-315            4.24403032          0.00000000           -Infinity          0.00000000           -Infinity
-316            4.25753237          0.00000000           -Infinity          0.00000000           -Infinity
-317            4.27103442          0.00000000           -Infinity          0.00000000           -Infinity
-318            4.28453648          0.00000000           -Infinity          0.00000000           -Infinity
-319            4.29803853          0.00000000           -Infinity          0.00000000           -Infinity
-320            4.31154058          0.00000000           -Infinity          0.00000000           -Infinity
-321            4.32504263          0.00000000           -Infinity          0.00000000           -Infinity
-322            4.33854469          0.00000000           -Infinity          0.00000000           -Infinity
-323            4.35204674          0.00000000           -Infinity          0.00000000           -Infinity
-324            4.36554879          0.00000000           -Infinity          0.00000000           -Infinity
-325            4.37905084          0.00000000           -Infinity          0.00000000           -Infinity
-326            4.39255290          0.00000000           -Infinity          0.00000000           -Infinity
-327            4.40605495          0.00000000           -Infinity          0.00000000           -Infinity
-328            4.41955700          0.00000000           -Infinity          0.00000000           -Infinity
-329            4.43305905          0.00000000           -Infinity          0.00000000           -Infinity
-330            4.44656111          0.00000000           -Infinity          0.00000000           -Infinity
-331            4.46006316          0.00000000           -Infinity          0.00000000           -Infinity
-332            4.47356521          0.00000000           -Infinity          0.00000000           -Infinity
-333            4.48706726          0.00000000           -Infinity          0.00000000           -Infinity
-334            4.50056931          0.00000000           -Infinity          0.00000000           -Infinity
-335            4.51407137          0.00000000           -Infinity          0.00000000           -Infinity
-336            4.52757342          0.00000000           -Infinity          0.00000000           -Infinity
-337            4.54107547          0.00000000           -Infinity          0.00000000           -Infinity
-338            4.55457752          0.00000000           -Infinity          0.00000000           -Infinity
-339            4.56807958          0.00000000           -Infinity          0.00000000           -Infinity
-340            4.58158163          0.00000000           -Infinity          0.00000000           -Infinity
-341            4.59508368          0.00000000           -Infinity          0.00000000           -Infinity
-342            4.60858573          0.00000000           -Infinity          0.00000000           -Infinity
-343            4.62208779          0.00000000           -Infinity          0.00000000           -Infinity
-344            4.63558984          0.00000000           -Infinity          0.00000000           -Infinity
-345            4.64909189          0.00000000           -Infinity          0.00000000           -Infinity
-346            4.66259394          0.00000000           -Infinity          0.00000000           -Infinity
-347            4.67609599          0.00000000           -Infinity          0.00000000           -Infinity
-348            4.68959805          0.00000000           -Infinity          0.00000000           -Infinity
-349            4.70310010          0.00000000           -Infinity          0.00000000           -Infinity
-350            4.71660215          0.00000000           -Infinity          0.00000000           -Infinity
-351            4.73010420          0.00000000           -Infinity          0.00000000           -Infinity
-352            4.74360626          0.00000000           -Infinity          0.00000000           -Infinity
-353            4.75710831          0.00000000           -Infinity          0.00000000           -Infinity
-354            4.77061036          0.00000000           -Infinity          0.00000000           -Infinity
-355            4.78411241          0.00000000           -Infinity          0.00000000           -Infinity
-356            4.79761447          0.00000000           -Infinity          0.00000000           -Infinity
-357            4.81111652          0.00000000           -Infinity          0.00000000           -Infinity
-358            4.82461857          0.00000000           -Infinity          0.00000000           -Infinity
-359            4.83812062          0.00000000           -Infinity          0.00000000           -Infinity
-360            4.85162268          0.00000000           -Infinity          0.00000000           -Infinity
-361            4.86512473          0.00000000           -Infinity          0.00000000           -Infinity
-362            4.87862678          0.00000000           -Infinity          0.00000000           -Infinity
-363            4.89212883          0.00000000           -Infinity          0.00000000           -Infinity
-364            4.90563088          0.00000000           -Infinity          0.00000000           -Infinity
-365            4.91913294          0.00000000           -Infinity          0.00000000           -Infinity
-366            4.93263499          0.00000000           -Infinity          0.00000000           -Infinity
-367            4.94613704          0.00000000           -Infinity          0.00000000           -Infinity
-368            4.95963909          0.00000000           -Infinity          0.00000000           -Infinity
-369            4.97314115          0.00000000           -Infinity          0.00000000           -Infinity
-370            4.98664320          0.00000000           -Infinity          0.00000000           -Infinity
-371            5.00014525          0.00000000           -Infinity          0.00000000           -Infinity
-372            5.01364730          0.00000000           -Infinity          0.00000000           -Infinity
-373            5.02714936          0.00000000           -Infinity          0.00000000           -Infinity
-374            5.04065141          0.00000000           -Infinity          0.00000000           -Infinity
-375            5.05415346          0.00000000           -Infinity          0.00000000           -Infinity
-376            5.06765551          0.00000000           -Infinity          0.00000000           -Infinity
-377            5.08115756          0.00000000           -Infinity          0.00000000           -Infinity
-378            5.09465962          0.00000000           -Infinity          0.00000000           -Infinity
-379            5.10816167          0.00000000           -Infinity          0.00000000           -Infinity
-380            5.12166372          0.00000000           -Infinity          0.00000000           -Infinity
-381            5.13516577          0.00000000           -Infinity          0.00000000           -Infinity
-382            5.14866783          0.00000000           -Infinity          0.00000000           -Infinity
-383            5.16216988          0.00000000           -Infinity          0.00000000           -Infinity
-384            5.17567193          0.00000000           -Infinity          0.00000000           -Infinity
-385            5.18917398          0.00000000           -Infinity          0.00000000           -Infinity
-386            5.20267604          0.00000000           -Infinity          0.00000000           -Infinity
-387            5.21617809          0.00000000           -Infinity          0.00000000           -Infinity
-388            5.22968014          0.00000000           -Infinity          0.00000000           -Infinity
-389            5.24318219          0.00000000           -Infinity          0.00000000           -Infinity
-390            5.25668425          0.00000000           -Infinity          0.00000000           -Infinity
-391            5.27018630          0.00000000           -Infinity          0.00000000           -Infinity
-392            5.28368835          0.00000000           -Infinity          0.00000000           -Infinity
-393            5.29719040          0.00000000           -Infinity          0.00000000           -Infinity
-394            5.31069245          0.00000000           -Infinity          0.00000000           -Infinity
-395            5.32419451          0.00000000           -Infinity          0.00000000           -Infinity
-396            5.33769656          0.00000000           -Infinity          0.00000000           -Infinity
-397            5.35119861          0.00000000           -Infinity          0.00000000           -Infinity
-398            5.36470066          0.00000000           -Infinity          0.00000000           -Infinity
-399            5.37820272          0.00000000           -Infinity          0.00000000           -Infinity
-400            5.39170477          0.00000000           -Infinity          0.00000000           -Infinity
-401            5.40520682          0.00000000           -Infinity          0.00000000           -Infinity
-402            5.41870887          0.00000000           -Infinity          0.00000000           -Infinity
-403            5.43221093          0.00000000           -Infinity          0.00000000           -Infinity
-404            5.44571298          0.00000000           -Infinity          0.00000000           -Infinity
-405            5.45921503          0.00000000           -Infinity          0.00000000           -Infinity
-406            5.47271708          0.00000000           -Infinity          0.00000000           -Infinity
-407            5.48621913          0.00000000           -Infinity          0.00000000           -Infinity
-408            5.49972119          0.00000000           -Infinity          0.00000000           -Infinity
-409            5.51322324          0.00000000           -Infinity          0.00000000           -Infinity
-410            5.52672529          0.00000000           -Infinity          0.00000000           -Infinity
-411            5.54022734          0.00000000           -Infinity          0.00000000           -Infinity
-412            5.55372940          0.00000000           -Infinity          0.00000000           -Infinity
-413            5.56723145          0.00000000           -Infinity          0.00000000           -Infinity
-414            5.58073350          0.00000000           -Infinity          0.00000000           -Infinity
-415            5.59423555          0.00000000           -Infinity          0.00000000           -Infinity
-416            5.60773761          0.00000000           -Infinity          0.00000000           -Infinity
-417            5.62123966          0.00000000           -Infinity          0.00000000           -Infinity
-418            5.63474171          0.00000000           -Infinity          0.00000000           -Infinity
-419            5.64824376          0.00000000           -Infinity          0.00000000           -Infinity
-420            5.66174582          0.00000000           -Infinity          0.00000000           -Infinity
-421            5.67524787          0.00000000           -Infinity          0.00000000           -Infinity
-422            5.68874992          0.00000000           -Infinity          0.00000000           -Infinity
-423            5.70225197          0.00000000           -Infinity          0.00000000           -Infinity
-424            5.71575402          0.00000000           -Infinity          0.00000000           -Infinity
-425            5.72925608          0.00000000           -Infinity          0.00000000           -Infinity
-426            5.74275813          0.00000000           -Infinity          0.00000000           -Infinity
-427            5.75626018          0.00000000           -Infinity          0.00000000           -Infinity
-428            5.76976223          0.00000000           -Infinity          0.00000000           -Infinity
-429            5.78326429          0.00000000           -Infinity          0.00000000           -Infinity
-430            5.79676634          0.00000000           -Infinity          0.00000000           -Infinity
-431            5.81026839          0.00000000           -Infinity          0.00000000           -Infinity
-432            5.82377044          0.00000000           -Infinity          0.00000000           -Infinity
-433            5.83727250          0.00000000           -Infinity          0.00000000           -Infinity
-434            5.85077455          0.00000000           -Infinity          0.00000000           -Infinity
-435            5.86427660          0.00000000           -Infinity          0.00000000           -Infinity
-436            5.87777865          0.00000000           -Infinity          0.00000000           -Infinity
-437            5.89128070          0.00000000           -Infinity          0.00000000           -Infinity
-438            5.90478276          0.00000000           -Infinity          0.00000000           -Infinity
-439            5.91828481          0.00000000           -Infinity          0.00000000           -Infinity
-440            5.93178686          0.00000000           -Infinity          0.00000000           -Infinity
-441            5.94528891          0.00000000           -Infinity          0.00000000           -Infinity
-442            5.95879097          0.00000000           -Infinity          0.00000000           -Infinity
-443            5.97229302          0.00000000           -Infinity          0.00000000           -Infinity
-444            5.98579507          0.00000000           -Infinity          0.00000000           -Infinity
-445            5.99929712          0.00000000           -Infinity          0.00000000           -Infinity
-446            6.01279918          0.00000000           -Infinity          0.00000000           -Infinity
-447            6.02630123          0.00000000           -Infinity          0.00000000           -Infinity
-448            6.03980328          0.00000000           -Infinity          0.00000000           -Infinity
-449            6.05330533          0.00000000           -Infinity          0.00000000           -Infinity
-450            6.06680739          0.00000000           -Infinity          0.00000000           -Infinity
-451            6.08030944          0.00000000           -Infinity          0.00000000           -Infinity
-452            6.09381149          0.00000000           -Infinity          0.00000000           -Infinity
-453            6.10731354          0.00000000           -Infinity          0.00000000           -Infinity
-454            6.12081559          0.00000000           -Infinity          0.00000000           -Infinity
-455            6.13431765          0.00000000           -Infinity          0.00000000           -Infinity
-456            6.14781970          0.00000000           -Infinity          0.00000000           -Infinity
-457            6.16132175          0.00000000           -Infinity          0.00000000           -Infinity
-458            6.17482380          0.00000000           -Infinity          0.00000000           -Infinity
-459            6.18832586          0.00000000           -Infinity          0.00000000           -Infinity
-460            6.20182791          0.00000000           -Infinity          0.00000000           -Infinity
-461            6.21532996          0.00000000           -Infinity          0.00000000           -Infinity
-462            6.22883201          0.00000000           -Infinity          0.00000000           -Infinity
-463            6.24233407          0.00000000           -Infinity          0.00000000           -Infinity
-464            6.25583612          0.00000000           -Infinity          0.00000000           -Infinity
-465            6.26933817          0.00000000           -Infinity          0.00000000           -Infinity
-466            6.28284022          0.00000000           -Infinity          0.00000000           -Infinity
-467            6.29634227          0.00000000           -Infinity          0.00000000           -Infinity
-468            6.30984433          0.00000000           -Infinity          0.00000000           -Infinity
-469            6.32334638          0.00000000           -Infinity          0.00000000           -Infinity
-470            6.33684843          0.00000000           -Infinity          0.00000000           -Infinity
-471            6.35035048          0.00000000           -Infinity          0.00000000           -Infinity
-472            6.36385254          0.00000000           -Infinity          0.00000000           -Infinity
-473            6.37735459          0.00000000           -Infinity          0.00000000           -Infinity
-474            6.39085664          0.00000000           -Infinity          0.00000000           -Infinity
-475            6.40435869          0.00000000           -Infinity          0.00000000           -Infinity
-476            6.41786075          0.00000000           -Infinity          0.00000000           -Infinity
-477            6.43136280          0.00000000           -Infinity          0.00000000           -Infinity
-478            6.44486485          0.00000000           -Infinity          0.00000000           -Infinity
-479            6.45836690          0.00000000           -Infinity          0.00000000           -Infinity
-480            6.47186896          0.00000000           -Infinity          0.00000000           -Infinity
-481            6.48537101          0.00000000           -Infinity          0.00000000           -Infinity
-482            6.49887306          0.00000000           -Infinity          0.00000000           -Infinity
-483            6.51237511          0.00000000           -Infinity          0.00000000           -Infinity
-484            6.52587716          0.00000000           -Infinity          0.00000000           -Infinity
-485            6.53937922          0.00000000           -Infinity          0.00000000           -Infinity
-486            6.55288127          0.00000000           -Infinity          0.00000000           -Infinity
-487            6.56638332          0.00000000           -Infinity          0.00000000           -Infinity
-488            6.57988537          0.00000000           -Infinity          0.00000000           -Infinity
-489            6.59338743          0.00000000           -Infinity          0.00000000           -Infinity
-490            6.60688948          0.00000000           -Infinity          0.00000000           -Infinity
-491            6.62039153          0.00000000           -Infinity          0.00000000           -Infinity
-492            6.63389358          0.00000000           -Infinity          0.00000000           -Infinity
-493            6.64739564          0.00000000           -Infinity          0.00000000           -Infinity
-494            6.66089769          0.00000000           -Infinity          0.00000000           -Infinity
-495            6.67439974          0.00000000           -Infinity          0.00000000           -Infinity
-496            6.68790179          0.00000000           -Infinity          0.00000000           -Infinity
-497            6.70140384          0.00000000           -Infinity          0.00000000           -Infinity
-498            6.71490590          0.00000000           -Infinity          0.00000000           -Infinity
-499            6.72840795          0.00000000           -Infinity          0.00000000           -Infinity
-500            6.74191000          0.00000000           -Infinity          0.00000000           -Infinity
-501            6.75541205          0.00000000           -Infinity          0.00000000           -Infinity
-502            6.76891411          0.00000000           -Infinity          0.00000000           -Infinity
-503            6.78241616          0.00000000           -Infinity          0.00000000           -Infinity
-504            6.79591821          0.00000000           -Infinity          0.00000000           -Infinity
-505            6.80942026          0.00000000           -Infinity          0.00000000           -Infinity
-506            6.82292232          0.00000000           -Infinity          0.00000000           -Infinity
-507            6.83642437          0.00000000           -Infinity          0.00000000           -Infinity
-508            6.84992642          0.00000000           -Infinity          0.00000000           -Infinity
-509            6.86342847          0.00000000           -Infinity          0.00000000           -Infinity
-510            6.87693053          0.00000000           -Infinity          0.00000000           -Infinity
-511            6.89043258          0.00000000           -Infinity          0.00000000           -Infinity
-512            6.90393463          0.00000000           -Infinity          0.00000000           -Infinity
-513            6.91743668          0.00000000           -Infinity          0.00000000           -Infinity
-514            6.93093873          0.00000000           -Infinity          0.00000000           -Infinity
-515            6.94444079          0.00000000           -Infinity          0.00000000           -Infinity
-516            6.95794284          0.00000000           -Infinity          0.00000000           -Infinity
-517            6.97144489          0.00000000           -Infinity          0.00000000           -Infinity
-518            6.98494694          0.00000000           -Infinity          0.00000000           -Infinity
-519            6.99844900          0.00000000           -Infinity          0.00000000           -Infinity
-520            7.01195105          0.00000000           -Infinity          0.00000000           -Infinity
-521            7.02545310          0.00000000           -Infinity          0.00000000           -Infinity
-522            7.03895515          0.00000000           -Infinity          0.00000000           -Infinity
-523            7.05245721          0.00000000           -Infinity          0.00000000           -Infinity
-524            7.06595926          0.00000000           -Infinity          0.00000000           -Infinity
-525            7.07946131          0.00000000           -Infinity          0.00000000           -Infinity
-526            7.09296336          0.00000000           -Infinity          0.00000000           -Infinity
-527            7.10646541          0.00000000           -Infinity          0.00000000           -Infinity
-528            7.11996747          0.00000000           -Infinity          0.00000000           -Infinity
-529            7.13346952          0.00000000           -Infinity          0.00000000           -Infinity
-530            7.14697157          0.00000000           -Infinity          0.00000000           -Infinity
-531            7.16047362          0.00000000           -Infinity          0.00000000           -Infinity
-532            7.17397568          0.00000000           -Infinity          0.00000000           -Infinity
-533            7.18747773          0.00000000           -Infinity          0.00000000           -Infinity
-534            7.20097978          0.00000000           -Infinity          0.00000000           -Infinity
-535            7.21448183          0.00000000           -Infinity          0.00000000           -Infinity
-536            7.22798389          0.00000000           -Infinity          0.00000000           -Infinity
-537            7.24148594          0.00000000           -Infinity          0.00000000           -Infinity
-538            7.25498799          0.00000000           -Infinity          0.00000000           -Infinity
-539            7.26849004          0.00000000           -Infinity          0.00000000           -Infinity
-540            7.28199210          0.00000000           -Infinity          0.00000000           -Infinity
-541            7.29549415          0.00000000           -Infinity          0.00000000           -Infinity
-542            7.30899620          0.00000000           -Infinity          0.00000000           -Infinity
-543            7.32249825          0.00000000           -Infinity          0.00000000           -Infinity
-544            7.33600030          0.00000000           -Infinity          0.00000000           -Infinity
-545            7.34950236          0.00000000           -Infinity          0.00000000           -Infinity
-546            7.36300441          0.00000000           -Infinity          0.00000000           -Infinity
-547            7.37650646          0.00000000           -Infinity          0.00000000           -Infinity
-548            7.39000851          0.00000000           -Infinity          0.00000000           -Infinity
-549            7.40351057          0.00000000           -Infinity          0.00000000           -Infinity
-550            7.41701262          0.00000000           -Infinity          0.00000000           -Infinity
-551            7.43051467          0.00000000           -Infinity          0.00000000           -Infinity
-552            7.44401672          0.00000000           -Infinity          0.00000000           -Infinity
-553            7.45751878          0.00000000           -Infinity          0.00000000           -Infinity
-554            7.47102083          0.00000000           -Infinity          0.00000000           -Infinity
-555            7.48452288          0.00000000           -Infinity          0.00000000           -Infinity
-556            7.49802493          0.00000000           -Infinity          0.00000000           -Infinity
-557            7.51152698          0.00000000           -Infinity          0.00000000           -Infinity
-558            7.52502904          0.00000000           -Infinity          0.00000000           -Infinity
-559            7.53853109          0.00000000           -Infinity          0.00000000           -Infinity
-560            7.55203314          0.00000000           -Infinity          0.00000000           -Infinity
-561            7.56553519          0.00000000           -Infinity          0.00000000           -Infinity
-562            7.57903725          0.00000000           -Infinity          0.00000000           -Infinity
-563            7.59253930          0.00000000           -Infinity          0.00000000           -Infinity
-564            7.60604135          0.00000000           -Infinity          0.00000000           -Infinity
-565            7.61954340          0.00000000           -Infinity          0.00000000           -Infinity
-566            7.63304546          0.00000000           -Infinity          0.00000000           -Infinity
-567            7.64654751          0.00000000           -Infinity          0.00000000           -Infinity
-568            7.66004956          0.00000000           -Infinity          0.00000000           -Infinity
-569            7.67355161          0.00000000           -Infinity          0.00000000           -Infinity
-570            7.68705366          0.00000000           -Infinity          0.00000000           -Infinity
-571            7.70055572          0.00000000           -Infinity          0.00000000           -Infinity
-572            7.71405777          0.00000000           -Infinity          0.00000000           -Infinity
-573            7.72755982          0.00000000           -Infinity          0.00000000           -Infinity
-574            7.74106187          0.00000000           -Infinity          0.00000000           -Infinity
-575            7.75456393          0.00000000           -Infinity          0.00000000           -Infinity
-576            7.76806598          0.00000000           -Infinity          0.00000000           -Infinity
-577            7.78156803          0.00000000           -Infinity          0.00000000           -Infinity
-578            7.79507008          0.00000000           -Infinity          0.00000000           -Infinity
-579            7.80857214          0.00000000           -Infinity          0.00000000           -Infinity
-580            7.82207419          0.00000000           -Infinity          0.00000000           -Infinity
-581            7.83557624          0.00000000           -Infinity          0.00000000           -Infinity
-582            7.84907829          0.00000000           -Infinity          0.00000000           -Infinity
-583            7.86258035          0.00000000           -Infinity          0.00000000           -Infinity
-584            7.87608240          0.00000000           -Infinity          0.00000000           -Infinity
-585            7.88958445          0.00000000           -Infinity          0.00000000           -Infinity
-586            7.90308650          0.00000000           -Infinity          0.00000000           -Infinity
-587            7.91658855          0.00000000           -Infinity          0.00000000           -Infinity
-588            7.93009061          0.00000000           -Infinity          0.00000000           -Infinity
-589            7.94359266          0.00000000           -Infinity          0.00000000           -Infinity
-590            7.95709471          0.00000000           -Infinity          0.00000000           -Infinity
-591            7.97059676          0.00000000           -Infinity          0.00000000           -Infinity
-592            7.98409882          0.00000000           -Infinity          0.00000000           -Infinity
-593            7.99760087          0.00000000           -Infinity          0.00000000           -Infinity
-594            8.01110292          0.00000000           -Infinity          0.00000000           -Infinity
-595            8.02460497          0.00000000           -Infinity          0.00000000           -Infinity
-596            8.03810703          0.00000000           -Infinity          0.00000000           -Infinity
-597            8.05160908          0.00000000           -Infinity          0.00000000           -Infinity
-598            8.06511113          0.00000000           -Infinity          0.00000000           -Infinity
-599            8.07861318          0.00000000           -Infinity          0.00000000           -Infinity
-600            8.09211523          0.00000000           -Infinity          0.00000000           -Infinity
-601            8.10561729          0.00000000           -Infinity          0.00000000           -Infinity
-602            8.11911934          0.00000000           -Infinity          0.00000000           -Infinity
-603            8.13262139          0.00000000           -Infinity          0.00000000           -Infinity
-604            8.14612344          0.00000000           -Infinity          0.00000000           -Infinity
-605            8.15962550          0.00000000           -Infinity          0.00000000           -Infinity
-606            8.17312755          0.00000000           -Infinity          0.00000000           -Infinity
-607            8.18662960          0.00000000           -Infinity          0.00000000           -Infinity
-608            8.20013165          0.00000000           -Infinity          0.00000000           -Infinity
-609            8.21363371          0.00000000           -Infinity          0.00000000           -Infinity
-610            8.22713576          0.00000000           -Infinity          0.00000000           -Infinity
-611            8.24063781          0.00000000           -Infinity          0.00000000           -Infinity
-612            8.25413986          0.00000000           -Infinity          0.00000000           -Infinity
-613            8.26764192          0.00000000           -Infinity          0.00000000           -Infinity
-614            8.28114397          0.00000000           -Infinity          0.00000000           -Infinity
-615            8.29464602          0.00000000           -Infinity          0.00000000           -Infinity
-616            8.30814807          0.00000000           -Infinity          0.00000000           -Infinity
-617            8.32165012          0.00000000           -Infinity          0.00000000           -Infinity
-618            8.33515218          0.00000000           -Infinity          0.00000000           -Infinity
-619            8.34865423          0.00000000           -Infinity          0.00000000           -Infinity
-620            8.36215628          0.00000000           -Infinity          0.00000000           -Infinity
-621            8.37565833          0.00000000           -Infinity          0.00000000           -Infinity
-622            8.38916039          0.00000000           -Infinity          0.00000000           -Infinity
-623            8.40266244          0.00000000           -Infinity          0.00000000           -Infinity
-624            8.41616449          0.00000000           -Infinity          0.00000000           -Infinity
-625            8.42966654          0.00000000           -Infinity          0.00000000           -Infinity
-626            8.44316860          0.00000000           -Infinity          0.00000000           -Infinity
-627            8.45667065          0.00000000           -Infinity          0.00000000           -Infinity
-628            8.47017270          0.00000000           -Infinity          0.00000000           -Infinity
-629            8.48367475          0.00000000           -Infinity          0.00000000           -Infinity
-630            8.49717680          0.00000000           -Infinity          0.00000000           -Infinity
-631            8.51067886          0.00000000           -Infinity          0.00000000           -Infinity
-632            8.52418091          0.00000000           -Infinity          0.00000000           -Infinity
-633            8.53768296          0.00000000           -Infinity          0.00000000           -Infinity
-634            8.55118501          0.00000000           -Infinity          0.00000000           -Infinity
-635            8.56468707          0.00000000           -Infinity          0.00000000           -Infinity
-636            8.57818912          0.00000000           -Infinity          0.00000000           -Infinity
-637            8.59169117          0.00000000           -Infinity          0.00000000           -Infinity
-638            8.60519322          0.00000000           -Infinity          0.00000000           -Infinity
-639            8.61869528          0.00000000           -Infinity          0.00000000           -Infinity
-640            8.63219733          0.00000000           -Infinity          0.00000000           -Infinity
-641            8.64569938          0.00000000           -Infinity          0.00000000           -Infinity
-642            8.65920143          0.00000000           -Infinity          0.00000000           -Infinity
-643            8.67270349          0.00000000           -Infinity          0.00000000           -Infinity
-644            8.68620554          0.00000000           -Infinity          0.00000000           -Infinity
-645            8.69970759          0.00000000           -Infinity          0.00000000           -Infinity
-646            8.71320964          0.00000000           -Infinity          0.00000000           -Infinity
-647            8.72671169          0.00000000           -Infinity          0.00000000           -Infinity
-648            8.74021375          0.00000000           -Infinity          0.00000000           -Infinity
-649            8.75371580          0.00000000           -Infinity          0.00000000           -Infinity
-650            8.76721785          0.00000000           -Infinity          0.00000000           -Infinity
-651            8.78071990          0.00000000           -Infinity          0.00000000           -Infinity
-652            8.79422196          0.00000000           -Infinity          0.00000000           -Infinity
-653            8.80772401          0.00000000           -Infinity          0.00000000           -Infinity
-654            8.82122606          0.00000000           -Infinity          0.00000000           -Infinity
-655            8.83472811          0.00000000           -Infinity          0.00000000           -Infinity
-656            8.84823017          0.00000000           -Infinity          0.00000000           -Infinity
-657            8.86173222          0.00000000           -Infinity          0.00000000           -Infinity
-658            8.87523427          0.00000000           -Infinity          0.00000000           -Infinity
-659            8.88873632          0.00000000           -Infinity          0.00000000           -Infinity
-660            8.90223837          0.00000000           -Infinity          0.00000000           -Infinity
-661            8.91574043          0.00000000           -Infinity          0.00000000           -Infinity
-662            8.92924248          0.00000000           -Infinity          0.00000000           -Infinity
-663            8.94274453          0.00000000           -Infinity          0.00000000           -Infinity
-664            8.95624658          0.00000000           -Infinity          0.00000000           -Infinity
-665            8.96974864          0.00000000           -Infinity          0.00000000           -Infinity
-666            8.98325069          0.00000000           -Infinity          0.00000000           -Infinity
-667            8.99675274          0.00000000           -Infinity          0.00000000           -Infinity
-668            9.01025479          0.00000000           -Infinity          0.00000000           -Infinity
-669            9.02375685          0.00000000           -Infinity          0.00000000           -Infinity
-670            9.03725890          0.00000000           -Infinity          0.00000000           -Infinity
-671            9.05076095          0.00000000           -Infinity          0.00000000           -Infinity
-672            9.06426300          0.00000000           -Infinity          0.00000000           -Infinity
-673            9.07776506          0.00000000           -Infinity          0.00000000           -Infinity
-674            9.09126711          0.00000000           -Infinity          0.00000000           -Infinity
-675            9.10476916          0.00000000           -Infinity          0.00000000           -Infinity
-676            9.11827121          0.00000000           -Infinity          0.00000000           -Infinity
-677            9.13177326          0.00000000           -Infinity          0.00000000           -Infinity
-678            9.14527532          0.00000000           -Infinity          0.00000000           -Infinity
-679            9.15877737          0.00000000           -Infinity          0.00000000           -Infinity
-680            9.17227942          0.00000000           -Infinity          0.00000000           -Infinity
-681            9.18578147          0.00000000           -Infinity          0.00000000           -Infinity
-682            9.19928353          0.00000000           -Infinity          0.00000000           -Infinity
-683            9.21278558          0.00000000           -Infinity          0.00000000           -Infinity
-684            9.22628763          0.00000000           -Infinity          0.00000000           -Infinity
-685            9.23978968          0.00000000           -Infinity          0.00000000           -Infinity
-686            9.25329174          0.00000000           -Infinity          0.00000000           -Infinity
-687            9.26679379          0.00000000           -Infinity          0.00000000           -Infinity
-688            9.28029584          0.00000000           -Infinity          0.00000000           -Infinity
-689            9.29379789          0.00000000           -Infinity          0.00000000           -Infinity
-690            9.30729994          0.00000000           -Infinity          0.00000000           -Infinity
-691            9.32080200          0.00000000           -Infinity          0.00000000           -Infinity
-692            9.33430405          0.00000000           -Infinity          0.00000000           -Infinity
-693            9.34780610          0.00000000           -Infinity          0.00000000           -Infinity
-694            9.36130815          0.00000000           -Infinity          0.00000000           -Infinity
-695            9.37481021          0.00000000           -Infinity          0.00000000           -Infinity
-696            9.38831226          0.00000000           -Infinity          0.00000000           -Infinity
-697            9.40181431          0.00000000           -Infinity          0.00000000           -Infinity
-698            9.41531636          0.00000000           -Infinity          0.00000000           -Infinity
-699            9.42881842          0.00000000           -Infinity          0.00000000           -Infinity
-700            9.44232047          0.00000000           -Infinity          0.00000000           -Infinity
-701            9.45582252          0.00000000           -Infinity          0.00000000           -Infinity
-702            9.46932457          0.00000000           -Infinity          0.00000000           -Infinity
-703            9.48282663          0.00000000           -Infinity          0.00000000           -Infinity
-704            9.49632868          0.00000000           -Infinity          0.00000000           -Infinity
-705            9.50983073          0.00000000           -Infinity          0.00000000           -Infinity
-706            9.52333278          0.00000000           -Infinity          0.00000000           -Infinity
-707            9.53683483          0.00000000           -Infinity          0.00000000           -Infinity
-708            9.55033689          0.00000000           -Infinity          0.00000000           -Infinity
-709            9.56383894          0.00000000           -Infinity          0.00000000           -Infinity
-710            9.57734099          0.00000000           -Infinity          0.00000000           -Infinity
-711            9.59084304          0.00000000           -Infinity          0.00000000           -Infinity
-712            9.60434510          0.00000000           -Infinity          0.00000000           -Infinity
-713            9.61784715          0.00000000           -Infinity          0.00000000           -Infinity
-714            9.63134920          0.00000000           -Infinity          0.00000000           -Infinity
-715            9.64485125          0.00000000           -Infinity          0.00000000           -Infinity
-716            9.65835331          0.00000000           -Infinity          0.00000000           -Infinity
-717            9.67185536          0.00000000           -Infinity          0.00000000           -Infinity
-718            9.68535741          0.00000000           -Infinity          0.00000000           -Infinity
-719            9.69885946          0.00000000           -Infinity          0.00000000           -Infinity
-720            9.71236151          0.00000000           -Infinity          0.00000000           -Infinity
-721            9.72586357          0.00000000           -Infinity          0.00000000           -Infinity
-722            9.73936562          0.00000000           -Infinity          0.00000000           -Infinity
-723            9.75286767          0.00000000           -Infinity          0.00000000           -Infinity
-724            9.76636972          0.00000000           -Infinity          0.00000000           -Infinity
-725            9.77987178          0.00000000           -Infinity          0.00000000           -Infinity
-726            9.79337383          0.00000000           -Infinity          0.00000000           -Infinity
-727            9.80687588          0.00000000           -Infinity          0.00000000           -Infinity
-728            9.82037793          0.00000000           -Infinity          0.00000000           -Infinity
-729            9.83387999          0.00000000           -Infinity          0.00000000           -Infinity
-730            9.84738204          0.00000000           -Infinity          0.00000000           -Infinity
-731            9.86088409          0.00000000           -Infinity          0.00000000           -Infinity
-732            9.87438614          0.00000000           -Infinity          0.00000000           -Infinity
-733            9.88788820          0.00000000           -Infinity          0.00000000           -Infinity
-734            9.90139025          0.00000000           -Infinity          0.00000000           -Infinity
-735            9.91489230          0.00000000           -Infinity          0.00000000           -Infinity
-736            9.92839435          0.00000000           -Infinity          0.00000000           -Infinity
-737            9.94189640          0.00000000           -Infinity          0.00000000           -Infinity
-738            9.95539846          0.00000000           -Infinity          0.00000000           -Infinity
-739            9.96890051          0.00000000           -Infinity          0.00000000           -Infinity
-740            9.98240256          0.00000000           -Infinity          0.00000000           -Infinity
-741            9.99590461          0.00000000           -Infinity          0.00000000           -Infinity
-742           10.00940667          0.00000000           -Infinity          0.00000000           -Infinity
-743           10.02290872          0.00000000           -Infinity          0.00000000           -Infinity
-744           10.03641077          0.00000000           -Infinity          0.00000000           -Infinity
-745           10.04991282          0.00000000           -Infinity          0.00000000           -Infinity
-746           10.06341488          0.00000000           -Infinity          0.00000000           -Infinity
-747           10.07691693          0.00000000           -Infinity          0.00000000           -Infinity
-748           10.09041898          0.00000000           -Infinity          0.00000000           -Infinity
-749           10.10392103          0.00000000           -Infinity          0.00000000           -Infinity
-750           10.11742308          0.00000000           -Infinity          0.00000000           -Infinity
-751           10.13092514          0.00000000           -Infinity          0.00000000           -Infinity
-752           10.14442719          0.00000000           -Infinity          0.00000000           -Infinity
-753           10.15792924          0.00000000           -Infinity          0.00000000           -Infinity
-754           10.17143129          0.00000000           -Infinity          0.00000000           -Infinity
-755           10.18493335          0.00000000           -Infinity          0.00000000           -Infinity
-756           10.19843540          0.00000000           -Infinity          0.00000000           -Infinity
-757           10.21193745          0.00000000           -Infinity          0.00000000           -Infinity
-758           10.22543950          0.00000000           -Infinity          0.00000000           -Infinity
-759           10.23894156          0.00000000           -Infinity          0.00000000           -Infinity
-760           10.25244361          0.00000000           -Infinity          0.00000000           -Infinity
-761           10.26594566          0.00000000           -Infinity          0.00000000           -Infinity
-762           10.27944771          0.00000000           -Infinity          0.00000000           -Infinity
-763           10.29294977          0.00000000           -Infinity          0.00000000           -Infinity
-764           10.30645182          0.00000000           -Infinity          0.00000000           -Infinity
-765           10.31995387          0.00000000           -Infinity          0.00000000           -Infinity
-766           10.33345592          0.00000000           -Infinity          0.00000000           -Infinity
-767           10.34695797          0.00000000           -Infinity          0.00000000           -Infinity
-768           10.36046003          0.00000000           -Infinity          0.00000000           -Infinity
-769           10.37396208          0.00000000           -Infinity          0.00000000           -Infinity
-770           10.38746413          0.00000000           -Infinity          0.00000000           -Infinity
-771           10.40096618          0.00000000           -Infinity          0.00000000           -Infinity
-772           10.41446824          0.00000000           -Infinity          0.00000000           -Infinity
-773           10.42797029          0.00000000           -Infinity          0.00000000           -Infinity
-774           10.44147234          0.00000000           -Infinity          0.00000000           -Infinity
-775           10.45497439          0.00000000           -Infinity          0.00000000           -Infinity
-776           10.46847645          0.00000000           -Infinity          0.00000000           -Infinity
-777           10.48197850          0.00000000           -Infinity          0.00000000           -Infinity
-778           10.49548055          0.00000000           -Infinity          0.00000000           -Infinity
-779           10.50898260          0.00000000           -Infinity          0.00000000           -Infinity
-780           10.52248465          0.00000000           -Infinity          0.00000000           -Infinity
-781           10.53598671          0.00000000           -Infinity          0.00000000           -Infinity
-782           10.54948876          0.00000000           -Infinity          0.00000000           -Infinity
-783           10.56299081          0.00000000           -Infinity          0.00000000           -Infinity
-784           10.57649286          0.00000000           -Infinity          0.00000000           -Infinity
-785           10.58999492          0.00000000           -Infinity          0.00000000           -Infinity
-786           10.60349697          0.00000000           -Infinity          0.00000000           -Infinity
-787           10.61699902          0.00000000           -Infinity          0.00000000           -Infinity
-788           10.63050107          0.00000000           -Infinity          0.00000000           -Infinity
-789           10.64400313          0.00000000           -Infinity          0.00000000           -Infinity
-790           10.65750518          0.00000000           -Infinity          0.00000000           -Infinity
-791           10.67100723          0.00000000           -Infinity          0.00000000           -Infinity
-792           10.68450928          0.00000000           -Infinity          0.00000000           -Infinity
-793           10.69801134          0.00000000           -Infinity          0.00000000           -Infinity
-794           10.71151339          0.00000000           -Infinity          0.00000000           -Infinity
-795           10.72501544          0.00000000           -Infinity          0.00000000           -Infinity
-796           10.73851749          0.00000000           -Infinity          0.00000000           -Infinity
-797           10.75201954          0.00000000           -Infinity          0.00000000           -Infinity
-798           10.76552160          0.00000000           -Infinity          0.00000000           -Infinity
-799           10.77902365          0.00000000           -Infinity          0.00000000           -Infinity
-800           10.79252570          0.00000000           -Infinity          0.00000000           -Infinity
-801           10.80602775          0.00000000           -Infinity          0.00000000           -Infinity
-802           10.81952981          0.00000000           -Infinity          0.00000000           -Infinity
-803           10.83303186          0.00000000           -Infinity          0.00000000           -Infinity
-804           10.84653391          0.00000000           -Infinity          0.00000000           -Infinity
-805           10.86003596          0.00000000           -Infinity          0.00000000           -Infinity
-806           10.87353802          0.00000000           -Infinity          0.00000000           -Infinity
-807           10.88704007          0.00000000           -Infinity          0.00000000           -Infinity
-808           10.90054212          0.00000000           -Infinity          0.00000000           -Infinity
-809           10.91404417          0.00000000           -Infinity          0.00000000           -Infinity
-810           10.92754622          0.00000000           -Infinity          0.00000000           -Infinity
-811           10.94104828          0.00000000           -Infinity          0.00000000           -Infinity
-812           10.95455033          0.00000000           -Infinity          0.00000000           -Infinity
-813           10.96805238          0.00000000           -Infinity          0.00000000           -Infinity
-814           10.98155443          0.00000000           -Infinity          0.00000000           -Infinity
-815           10.99505649          0.00000000           -Infinity          0.00000000           -Infinity
-816           11.00855854          0.00000000           -Infinity          0.00000000           -Infinity
-817           11.02206059          0.00000000           -Infinity          0.00000000           -Infinity
-818           11.03556264          0.00000000           -Infinity          0.00000000           -Infinity
-819           11.04906470          0.00000000           -Infinity          0.00000000           -Infinity
-820           11.06256675          0.00000000           -Infinity          0.00000000           -Infinity
-821           11.07606880          0.00000000           -Infinity          0.00000000           -Infinity
-822           11.08957085          0.00000000           -Infinity          0.00000000           -Infinity
-823           11.10307291          0.00000000           -Infinity          0.00000000           -Infinity
-824           11.11657496          0.00000000           -Infinity          0.00000000           -Infinity
-825           11.13007701          0.00000000           -Infinity          0.00000000           -Infinity
-826           11.14357906          0.00000000           -Infinity          0.00000000           -Infinity
-827           11.15708111          0.00000000           -Infinity          0.00000000           -Infinity
-828           11.17058317          0.00000000           -Infinity          0.00000000           -Infinity
-829           11.18408522          0.00000000           -Infinity          0.00000000           -Infinity
-830           11.19758727          0.00000000           -Infinity          0.00000000           -Infinity
-831           11.21108932          0.00000000           -Infinity          0.00000000           -Infinity
-832           11.22459138          0.00000000           -Infinity          0.00000000           -Infinity
-833           11.23809343          0.00000000           -Infinity          0.00000000           -Infinity
-834           11.25159548          0.00000000           -Infinity          0.00000000           -Infinity
-835           11.26509753          0.00000000           -Infinity          0.00000000           -Infinity
-836           11.27859959          0.00000000           -Infinity          0.00000000           -Infinity
-837           11.29210164          0.00000000           -Infinity          0.00000000           -Infinity
-838           11.30560369          0.00000000           -Infinity          0.00000000           -Infinity
-839           11.31910574          0.00000000           -Infinity          0.00000000           -Infinity
-840           11.33260779          0.00000000           -Infinity          0.00000000           -Infinity
-841           11.34610985          0.00000000           -Infinity          0.00000000           -Infinity
-842           11.35961190          0.00000000           -Infinity          0.00000000           -Infinity
-843           11.37311395          0.00000000           -Infinity          0.00000000           -Infinity
-844           11.38661600          0.00000000           -Infinity          0.00000000           -Infinity
-845           11.40011806          0.00000000           -Infinity          0.00000000           -Infinity
-846           11.41362011          0.00000000           -Infinity          0.00000000           -Infinity
-847           11.42712216          0.00000000           -Infinity          0.00000000           -Infinity
-848           11.44062421          0.00000000           -Infinity          0.00000000           -Infinity
-849           11.45412627          0.00000000           -Infinity          0.00000000           -Infinity
-850           11.46762832          0.00000000           -Infinity          0.00000000           -Infinity
-851           11.48113037          0.00000000           -Infinity          0.00000000           -Infinity
-852           11.49463242          0.00000000           -Infinity          0.00000000           -Infinity
-853           11.50813448          0.00000000           -Infinity          0.00000000           -Infinity
-854           11.52163653          0.00000000           -Infinity          0.00000000           -Infinity
-855           11.53513858          0.00000000           -Infinity          0.00000000           -Infinity
-856           11.54864063          0.00000000           -Infinity          0.00000000           -Infinity
-857           11.56214268          0.00000000           -Infinity          0.00000000           -Infinity
-858           11.57564474          0.00000000           -Infinity          0.00000000           -Infinity
-859           11.58914679          0.00000000           -Infinity          0.00000000           -Infinity
-860           11.60264884          0.00000000           -Infinity          0.00000000           -Infinity
-861           11.61615089          0.00000000           -Infinity          0.00000000           -Infinity
-862           11.62965295          0.00000000           -Infinity          0.00000000           -Infinity
-863           11.64315500          0.00000000           -Infinity          0.00000000           -Infinity
-864           11.65665705          0.00000000           -Infinity          0.00000000           -Infinity
-865           11.67015910          0.00000000           -Infinity          0.00000000           -Infinity
-866           11.68366116          0.00000000           -Infinity          0.00000000           -Infinity
-867           11.69716321          0.00000000           -Infinity          0.00000000           -Infinity
-868           11.71066526          0.00000000           -Infinity          0.00000000           -Infinity
-869           11.72416731          0.00000000           -Infinity          0.00000000           -Infinity
-870           11.73766936          0.00000000           -Infinity          0.00000000           -Infinity
-871           11.75117142          0.00000000           -Infinity          0.00000000           -Infinity
-872           11.76467347          0.00000000           -Infinity          0.00000000           -Infinity
-873           11.77817552          0.00000000           -Infinity          0.00000000           -Infinity
-874           11.79167757          0.00000000           -Infinity          0.00000000           -Infinity
-875           11.80517963          0.00000000           -Infinity          0.00000000           -Infinity
-876           11.81868168          0.00000000           -Infinity          0.00000000           -Infinity
-877           11.83218373          0.00000000           -Infinity          0.00000000           -Infinity
-878           11.84568578          0.00000000           -Infinity          0.00000000           -Infinity
-879           11.85918784          0.00000000           -Infinity          0.00000000           -Infinity
-880           11.87268989          0.00000000           -Infinity          0.00000000           -Infinity
-881           11.88619194          0.00000000           -Infinity          0.00000000           -Infinity
-882           11.89969399          0.00000000           -Infinity          0.00000000           -Infinity
-883           11.91319604          0.00000000           -Infinity          0.00000000           -Infinity
-884           11.92669810          0.00000000           -Infinity          0.00000000           -Infinity
-885           11.94020015          0.00000000           -Infinity          0.00000000           -Infinity
-886           11.95370220          0.00000000           -Infinity          0.00000000           -Infinity
-887           11.96720425          0.00000000           -Infinity          0.00000000           -Infinity
-888           11.98070631          0.00000000           -Infinity          0.00000000           -Infinity
-889           11.99420836          0.00000000           -Infinity          0.00000000           -Infinity
-890           12.00771041          0.00000000           -Infinity          0.00000000           -Infinity
-891           12.02121246          0.00000000           -Infinity          0.00000000           -Infinity
-892           12.03471452          0.00000000           -Infinity          0.00000000           -Infinity
-893           12.04821657          0.00000000           -Infinity          0.00000000           -Infinity
-894           12.06171862          0.00000000           -Infinity          0.00000000           -Infinity
-895           12.07522067          0.00000000           -Infinity          0.00000000           -Infinity
-896           12.08872273          0.00000000           -Infinity          0.00000000           -Infinity
-897           12.10222478          0.00000000           -Infinity          0.00000000           -Infinity
-898           12.11572683          0.00000000           -Infinity          0.00000000           -Infinity
-899           12.12922888          0.00000000           -Infinity          0.00000000           -Infinity
-900           12.14273093          0.00000000           -Infinity          0.00000000           -Infinity
-901           12.15623299          0.00000000           -Infinity          0.00000000           -Infinity
-902           12.16973504          0.00000000           -Infinity          0.00000000           -Infinity
-903           12.18323709          0.00000000           -Infinity          0.00000000           -Infinity
-904           12.19673914          0.00000000           -Infinity          0.00000000           -Infinity
-905           12.21024120          0.00000000           -Infinity          0.00000000           -Infinity
-906           12.22374325          0.00000000           -Infinity          0.00000000           -Infinity
-907           12.23724530          0.00000000           -Infinity          0.00000000           -Infinity
-908           12.25074735          0.00000000           -Infinity          0.00000000           -Infinity
-909           12.26424941          0.00000000           -Infinity          0.00000000           -Infinity
-910           12.27775146          0.00000000           -Infinity          0.00000000           -Infinity
-911           12.29125351          0.00000000           -Infinity          0.00000000           -Infinity
-912           12.30475556          0.00000000           -Infinity          0.00000000           -Infinity
-913           12.31825761          0.00000000           -Infinity          0.00000000           -Infinity
-914           12.33175967          0.00000000           -Infinity          0.00000000           -Infinity
-915           12.34526172          0.00000000           -Infinity          0.00000000           -Infinity
-916           12.35876377          0.00000000           -Infinity          0.00000000           -Infinity
-917           12.37226582          0.00000000           -Infinity          0.00000000           -Infinity
-918           12.38576788          0.00000000           -Infinity          0.00000000           -Infinity
-919           12.39926993          0.00000000           -Infinity          0.00000000           -Infinity
-920           12.41277198          0.00000000           -Infinity          0.00000000           -Infinity
-921           12.42627403          0.00000000           -Infinity          0.00000000           -Infinity
-922           12.43977609          0.00000000           -Infinity          0.00000000           -Infinity
-923           12.45327814          0.00000000           -Infinity          0.00000000           -Infinity
-924           12.46678019          0.00000000           -Infinity          0.00000000           -Infinity
-925           12.48028224          0.00000000           -Infinity          0.00000000           -Infinity
-926           12.49378430          0.00000000           -Infinity          0.00000000           -Infinity
-927           12.50728635          0.00000000           -Infinity          0.00000000           -Infinity
-928           12.52078840          0.00000000           -Infinity          0.00000000           -Infinity
-929           12.53429045          0.00000000           -Infinity          0.00000000           -Infinity
-930           12.54779250          0.00000000           -Infinity          0.00000000           -Infinity
-931           12.56129456          0.00000000           -Infinity          0.00000000           -Infinity
-932           12.57479661          0.00000000           -Infinity          0.00000000           -Infinity
-933           12.58829866          0.00000000           -Infinity          0.00000000           -Infinity
-934           12.60180071          0.00000000           -Infinity          0.00000000           -Infinity
-935           12.61530277          0.00000000           -Infinity          0.00000000           -Infinity
-936           12.62880482          0.00000000           -Infinity          0.00000000           -Infinity
-937           12.64230687          0.00000000           -Infinity          0.00000000           -Infinity
-938           12.65580892          0.00000000           -Infinity          0.00000000           -Infinity
-939           12.66931098          0.00000000           -Infinity          0.00000000           -Infinity
-940           12.68281303          0.00000000           -Infinity          0.00000000           -Infinity
-941           12.69631508          0.00000000           -Infinity          0.00000000           -Infinity
-942           12.70981713          0.00000000           -Infinity          0.00000000           -Infinity
-943           12.72331918          0.00000000           -Infinity          0.00000000           -Infinity
-944           12.73682124          0.00000000           -Infinity          0.00000000           -Infinity
-945           12.75032329          0.00000000           -Infinity          0.00000000           -Infinity
-946           12.76382534          0.00000000           -Infinity          0.00000000           -Infinity
-947           12.77732739          0.00000000           -Infinity          0.00000000           -Infinity
-948           12.79082945          0.00000000           -Infinity          0.00000000           -Infinity
-949           12.80433150          0.00000000           -Infinity          0.00000000           -Infinity
-950           12.81783355          0.00000000           -Infinity          0.00000000           -Infinity
-951           12.83133560          0.00000000           -Infinity          0.00000000           -Infinity
-952           12.84483766          0.00000000           -Infinity          0.00000000           -Infinity
-953           12.85833971          0.00000000           -Infinity          0.00000000           -Infinity
-954           12.87184176          0.00000000           -Infinity          0.00000000           -Infinity
-955           12.88534381          0.00000000           -Infinity          0.00000000           -Infinity
-956           12.89884587          0.00000000           -Infinity          0.00000000           -Infinity
-957           12.91234792          0.00000000           -Infinity          0.00000000           -Infinity
-958           12.92584997          0.00000000           -Infinity          0.00000000           -Infinity
-959           12.93935202          0.00000000           -Infinity          0.00000000           -Infinity
-960           12.95285407          0.00000000           -Infinity          0.00000000           -Infinity
-961           12.96635613          0.00000000           -Infinity          0.00000000           -Infinity
-962           12.97985818          0.00000000           -Infinity          0.00000000           -Infinity
-963           12.99336023          0.00000000           -Infinity          0.00000000           -Infinity
-964           13.00686228          0.00000000           -Infinity          0.00000000           -Infinity
-965           13.02036434          0.00000000           -Infinity          0.00000000           -Infinity
-966           13.03386639          0.00000000           -Infinity          0.00000000           -Infinity
-967           13.04736844          0.00000000           -Infinity          0.00000000           -Infinity
-968           13.06087049          0.00000000           -Infinity          0.00000000           -Infinity
-969           13.07437255          0.00000000           -Infinity          0.00000000           -Infinity
-970           13.08787460          0.00000000           -Infinity          0.00000000           -Infinity
-971           13.10137665          0.00000000           -Infinity          0.00000000           -Infinity
-972           13.11487870          0.00000000           -Infinity          0.00000000           -Infinity
-973           13.12838075          0.00000000           -Infinity          0.00000000           -Infinity
-974           13.14188281          0.00000000           -Infinity          0.00000000           -Infinity
-975           13.15538486          0.00000000           -Infinity          0.00000000           -Infinity
-976           13.16888691          0.00000000           -Infinity          0.00000000           -Infinity
-977           13.18238896          0.00000000           -Infinity          0.00000000           -Infinity
-978           13.19589102          0.00000000           -Infinity          0.00000000           -Infinity
-979           13.20939307          0.00000000           -Infinity          0.00000000           -Infinity
-980           13.22289512          0.00000000           -Infinity          0.00000000           -Infinity
-981           13.23639717          0.00000000           -Infinity          0.00000000           -Infinity
-982           13.24989923          0.00000000           -Infinity          0.00000000           -Infinity
-983           13.26340128          0.00000000           -Infinity          0.00000000           -Infinity
-984           13.27690333          0.00000000           -Infinity          0.00000000           -Infinity
-985           13.29040538          0.00000000           -Infinity          0.00000000           -Infinity
-986           13.30390744          0.00000000           -Infinity          0.00000000           -Infinity
-987           13.31740949          0.00000000           -Infinity          0.00000000           -Infinity
-988           13.33091154          0.00000000           -Infinity          0.00000000           -Infinity
-989           13.34441359          0.00000000           -Infinity          0.00000000           -Infinity
-990           13.35791564          0.00000000           -Infinity          0.00000000           -Infinity
-991           13.37141770          0.00000000           -Infinity          0.00000000           -Infinity
-992           13.38491975          0.00000000           -Infinity          0.00000000           -Infinity
-993           13.39842180          0.00000000           -Infinity          0.00000000           -Infinity
-994           13.41192385          0.00000000           -Infinity          0.00000000           -Infinity
-995           13.42542591          0.00000000           -Infinity          0.00000000           -Infinity
-996           13.43892796          0.00000000           -Infinity          0.00000000           -Infinity
-997           13.45243001          0.00000000           -Infinity          0.00000000           -Infinity
-998           13.46593206          0.00000000           -Infinity          0.00000000           -Infinity
-999           13.47943412          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.49293617          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.50643822          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.51994027          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.53344232          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.54694438          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.56044643          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.57394848          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.58745053          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.60095259          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.61445464          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.62795669          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.64145874          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.65496080          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.66846285          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.68196490          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.69546695          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.70896901          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.72247106          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.73597311          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.74947516          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.76297721          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.77647927          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.78998132          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.80348337          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.81698542          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.83048748          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.84398953          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.85749158          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.87099363          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.88449569          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.89799774          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.91149979          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.92500184          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.93850389          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.95200595          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.96550800          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.97901005          0.00000000           -Infinity          0.00000000           -Infinity
-***           13.99251210          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.00601416          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.01951621          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.03301826          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.04652031          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.06002237          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.07352442          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.08702647          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.10052852          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.11403058          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.12753263          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.14103468          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.15453673          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.16803878          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.18154084          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.19504289          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.20854494          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.22204699          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.23554905          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.24905110          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.26255315          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.27605520          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.28955726          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.30305931          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.31656136          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.33006341          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.34356546          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.35706752          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.37056957          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.38407162          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.39757367          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.41107573          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.42457778          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.43807983          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.45158188          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.46508394          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.47858599          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.49208804          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.50559009          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.51909215          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.53259420          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.54609625          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.55959830          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.57310035          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.58660241          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.60010446          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.61360651          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.62710856          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.64061062          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.65411267          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.66761472          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.68111677          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.69461883          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.70812088          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.72162293          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.73512498          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.74862703          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.76212909          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.77563114          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.78913319          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.80263524          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.81613730          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.82963935          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.84314140          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.85664345          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.87014551          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.88364756          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.89714961          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.91065166          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.92415372          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.93765577          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.95115782          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.96465987          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.97816192          0.00000000           -Infinity          0.00000000           -Infinity
-***           14.99166398          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.00516603          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.01866808          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.03217013          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.04567219          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.05917424          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.07267629          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.08617834          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.09968040          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.11318245          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.12668450          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.14018655          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.15368860          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.16719066          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.18069271          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.19419476          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.20769681          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.22119887          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.23470092          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.24820297          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.26170502          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.27520708          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.28870913          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.30221118          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.31571323          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.32921529          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.34271734          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.35621939          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.36972144          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.38322349          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.39672555          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.41022760          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.42372965          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.43723170          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.45073376          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.46423581          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.47773786          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.49123991          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.50474197          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.51824402          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.53174607          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.54524812          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.55875017          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.57225223          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.58575428          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.59925633          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.61275838          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.62626044          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.63976249          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.65326454          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.66676659          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.68026865          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.69377070          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.70727275          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.72077480          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.73427685          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.74777891          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.76128096          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.77478301          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.78828506          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.80178712          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.81528917          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.82879122          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.84229327          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.85579533          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.86929738          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.88279943          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.89630148          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.90980354          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.92330559          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.93680764          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.95030969          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.96381174          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.97731380          0.00000000           -Infinity          0.00000000           -Infinity
-***           15.99081585          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.00431790          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.01781995          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.03132201          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.04482406          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.05832611          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.07182816          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.08533022          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.09883227          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.11233432          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.12583637          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.13933842          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.15284048          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.16634253          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.17984458          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.19334663          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.20684869          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.22035074          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.23385279          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.24735484          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.26085690          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.27435895          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.28786100          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.30136305          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.31486511          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.32836716          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.34186921          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.35537126          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.36887331          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.38237537          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.39587742          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.40937947          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.42288152          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.43638358          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.44988563          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.46338768          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.47688973          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.49039179          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.50389384          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.51739589          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.53089794          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.54439999          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.55790205          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.57140410          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.58490615          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.59840820          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.61191026          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.62541231          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.63891436          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.65241641          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.66591847          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.67942052          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.69292257          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.70642462          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.71992668          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.73342873          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.74693078          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.76043283          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.77393488          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.78743694          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.80093899          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.81444104          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.82794309          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.84144515          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.85494720          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.86844925          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.88195130          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.89545336          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.90895541          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.92245746          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.93595951          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.94946156          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.96296362          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.97646567          0.00000000           -Infinity          0.00000000           -Infinity
-***           16.98996772          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.00346977          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.01697183          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.03047388          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.04397593          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.05747798          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.07098004          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.08448209          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.09798414          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.11148619          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.12498825          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.13849030          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.15199235          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.16549440          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.17899645          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.19249851          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.20600056          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.21950261          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.23300466          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.24650672          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.26000877          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.27351082          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.28701287          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.30051493          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.31401698          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.32751903          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.34102108          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.35452313          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.36802519          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.38152724          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.39502929          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.40853134          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.42203340          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.43553545          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.44903750          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.46253955          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.47604161          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.48954366          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.50304571          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.51654776          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.53004982          0.00000000           -Infinity          0.00000000           -Infinity
-***           17.54355187          0.00000000           -Infinity          0.00000000           -Infinity
+  1            0.00438589       2014.73043294       2014.73043294      19362.88174210      19362.88174210
+  2            0.06304531         -7.72353060         -7.72353019         76.23459908         76.23459957
+  3            0.12170472        -13.23015310        -13.23013278          9.29947635          9.29950648
+  4            0.18036414        -12.42608371        -12.42436469         -2.16651575         -2.16469168
+  5            0.23902356        -10.60151365        -10.58360322         -4.74672079         -4.72862443
+  6            0.29768298         -8.71520147         -8.64048924         -4.88849184         -4.81376110
+  7            0.35634240         -7.08843774         -6.91436176         -4.29431688         -4.11178517
+  8            0.41500181         -5.81742364         -5.54488239         -3.55499834         -3.16611093
+  9            0.47366123         -4.89731042         -4.56416840         -2.91302716         -2.05658956
+ 10            0.53232065         -4.27790426         -3.96009974         -2.43075603         -1.75274205
+ 11            0.59098007         -3.88504133         -3.65375979         -2.04247578         -1.73104665
+ 12            0.64963949         -3.64230025         -3.49575393         -1.71574003         -1.56912173
+ 13            0.70829890         -3.49198506         -3.39792650         -1.45102444         -1.34405227
+ 14            0.76695832         -3.39773034         -3.33203275         -1.24743052         -1.10361108
+ 15            0.82561774         -3.33780364         -3.28769506         -1.09851230         -0.89063051
+ 16            0.88427716         -3.29917657         -3.25850512         -0.99452236         -0.75317669
+ 17            0.94293658         -3.27394957         -3.23966960         -0.92469389         -0.70214611
+ 18            1.00159599         -3.25730348         -3.22771948         -0.87919162         -0.70254172
+ 19            1.06025541         -3.24628232         -3.22032661         -0.85023891         -0.71761614
+ 20            1.11891483         -3.23904174         -3.21600078         -0.83218979         -0.73138565
+ 21            1.17757425         -3.23438059         -3.21377768         -0.82102715         -0.74132744
+ 22            1.23623367         -3.23145607         -3.21298050         -0.81382853         -0.74870661
+ 23            1.29489308         -3.22962041         -3.21307046         -0.80841900         -0.75464416
+ 24            1.35355250         -3.22833637         -3.21357129         -0.80320037         -0.75939563
+ 25            1.41221192         -3.22714016         -3.21404393         -0.79707372         -0.76259193
+ 26            1.47087134         -3.22562969         -3.21408846         -0.78938446         -0.76361254
+ 27            1.52953076         -3.22346338         -3.21335545         -0.77985624         -0.76183773
+ 28            1.58819017         -3.22036112         -3.21155598         -0.76850981         -0.75673491
+ 29            1.64684959         -3.21610353         -3.20846574         -0.75557675         -0.74783801
+ 30            1.70550901         -3.21052844         -3.20392317         -0.74141787         -0.73471869
+ 31            1.76416843         -3.20352501         -3.19782313         -0.72645216         -0.71704386
+ 32            1.82282785         -3.19502663         -3.19010842         -0.71109730         -0.69476973
+ 33            1.88148726         -3.18500335         -3.18076069         -0.69572178         -0.66842774
+ 34            1.94014668         -3.17345474         -3.16979191         -0.68060927         -0.63933076
+ 35            1.99880610         -3.16040342         -3.15723699         -0.66593765         -0.60947586
+ 36            2.05746552         -3.14588961         -3.14314768         -0.65177535         -0.58106769
+ 37            2.11612494         -3.12996657         -3.12758764         -0.63809485         -0.55587333
+ 38            2.17478435         -3.11269695         -3.11062871         -0.62479886         -0.53477206
+ 39            2.23344377         -3.09414991         -3.09234797         -0.61175168         -0.51770942
+ 40            2.29210319         -3.07439879         -3.07282557         -0.59880811         -0.50397692
+ 41            2.35076261         -3.05351941         -3.05214306         -0.58583498         -0.49258920
+ 42            2.40942203         -3.03158859         -3.03038211         -0.57272403         -0.48258001
+ 43            2.46808144         -3.00868319         -3.00762365         -0.55939720         -0.47315952
+ 44            2.52674086         -2.98487918         -2.98394705         -0.54580659         -0.46375889
+ 45            2.58540028         -2.96025108         -2.95942969         -0.53193128         -0.45401094
+ 46            2.64405970         -2.93487142         -2.93414650         -0.51777263         -0.44370676
+ 47            2.70271912         -2.90881037         -2.90816968         -0.50334940         -0.43275031
+ 48            2.76137853         -2.88213552         -2.88156848         -0.48869302         -0.42112054
+ 49            2.82003795         -2.85491160         -2.85440910         -0.47384356         -0.40884298
+ 50            2.87869737         -2.82720041         -2.82675454         -0.45884644         -0.39596989
+ 51            2.93735679         -2.79906069         -2.79866458         -0.44374970         -0.38256694
+ 52            2.99601621         -2.77054814         -2.77019579         -0.42860204         -0.36870462
+ 53            3.05467562         -2.74171536         -2.74140152         -0.41345129         -0.35445292
+ 54            3.11333504         -2.71261190         -2.71233198         -0.39834330         -0.33987826
+ 55            3.17199446         -2.68328431         -2.68303427         -0.38332123         -0.32504191
+ 56            3.23065388         -2.65377621         -2.65355249         -0.36842506         -0.30999959
+ 57            3.28931330         -2.62412838         -2.62392783         -0.35369134         -0.29480197
+ 58            3.34797271         -2.59437886         -2.59419868         -0.33915304         -0.27949618
+ 59            3.40663213         -2.56456301         -2.56440074         -0.32483959         -0.26412878
+ 60            3.46529155         -2.53471369         -2.53456715         -0.31077695         -0.24875077
+ 61            3.52395097         -2.50486134         -2.50472859         -0.29698776         -0.23342665
+ 62            3.58261039         -2.47503409         -2.47491343         -0.28349147         -0.21825035
+ 63            3.64126980         -2.44525791         -2.44514786         -0.27030460         -0.20337379
+ 64            3.69992922         -2.41555671         -2.41545601         -0.25744095         -0.18905651
+ 65            3.75858864         -2.38595243         -2.38586009         -0.24491179         -0.17574243
+ 66            3.81724806         -2.35646521         -2.35638055         -0.23272608         -0.16413726
+ 67            3.87590748         -2.32711348         -2.32703616         -0.22089071         -0.15514108
+ 68            3.93456689         -2.29791404         -2.29784406         -0.20941069         -0.14933357
+ 69            3.99322631         -2.26888220         -2.26881963         -0.19828935         -0.14611454
+ 70            4.05188573         -2.24003186         -2.23997655         -0.18752850         -0.14374306
+ 71            4.11054515         -2.21137562         -2.21132711         -0.17712864         -0.14066777
+ 72            4.16920457         -2.18292485         -2.18288254         -0.16708907         -0.13633516
+ 73            4.22786398         -2.15468981         -2.15465309         -0.15740808         -0.13088160
+ 74            4.28652340         -2.12667968         -2.12664799         -0.14808306         -0.12464852
+ 75            4.34518282         -2.09890269         -2.09887552         -0.13911060         -0.11795444
+ 76            4.40384224         -2.07136617         -2.07134307         -0.13048666         -0.11104251
+ 77            4.46250166         -2.04407659         -2.04405715         -0.12220661         -0.10408898
+ 78            4.52116107         -2.01703969         -2.01702353         -0.11426536         -0.09722288
+ 79            4.57982049         -1.99026046         -1.99024722         -0.10665740         -0.09054330
+ 80            4.63847991         -1.96374326         -1.96373262         -0.09937693         -0.08413193
+ 81            4.69713933         -1.93749184         -1.93748347         -0.09241785         -0.07806152
+ 82            4.75579875         -1.91150941         -1.91150300         -0.08577389         -0.07240117
+ 83            4.81445816         -1.88579864         -1.88579389         -0.07943860         -0.06721824
+ 84            4.87311758         -1.86036177         -1.86035838         -0.07340543         -0.06257610
+ 85            4.93177700         -1.83520057         -1.83519826         -0.06766773         -0.05852531
+ 86            4.99043642         -1.81031646         -1.81031492         -0.06221884         -0.05508329
+ 87            5.04909584         -1.78571046         -1.78570940         -0.05705204         -0.05219382
+ 88            5.10775525         -1.76138328         -1.76138242         -0.05216063         -0.04965054
+ 89            5.16641467         -1.73733534         -1.73733438         -0.04753793         -0.04695650
+ 90            5.22507409         -1.71356677         -1.71356540         -0.04317729         -0.04307011
+ 91            5.28373351         -1.69007744         -1.69007537         -0.03907210         -0.03594981
+ 92            5.34239293         -1.66686702         -1.66686393         -0.03521581         -0.02174189
+ 93            5.40105234         -1.64393493         -1.64393054         -0.03160195          0.00666387
+ 94            5.45971176         -1.62128044         -1.62127444         -0.02822411          0.06219704
+ 95            5.51837118         -1.59890263         -1.59889472         -0.02507598          0.16814118
+ 96            5.57703060         -1.57680041         -1.57679032         -0.02215138          0.36611789
+ 97            5.63569002         -1.55497258         -1.55496002         -0.01944423          0.73001532
+ 98            5.69434943         -1.53341778         -1.53340250         -0.01694865          1.38988158
+ 99            5.75300885         -1.51213454         -1.51211631         -0.01465893          2.57170233
+100            5.81166827         -1.49112130         -1.49109992         -0.01256958          4.66017736
+101            5.87032769         -1.47037639         -1.47035169         -0.01067535          8.28842025
+102            5.92898711         -1.44989804         -1.44986991         -0.00897116         14.44169330
+103            5.98764652         -1.42968444         -1.42965281         -0.00745200         24.51528607
+104            6.04630594         -1.40973368         -1.40969854         -0.00611260         40.17735997
+105            6.10496536         -1.39004379         -1.39000521         -0.00494694         62.80133797
+106            6.16362478         -1.37061275         -1.37057086         -0.00394746         92.34189417
+107            6.22228420         -1.35143849         -1.35139349         -0.00310422        126.09941616
+108            6.28094361         -1.33251889         -1.33247106         -0.00240431        158.59502199
+109            6.33960303         -1.31385179         -1.31380145         -0.00183192        183.50106206
+110            6.39826245         -1.29543501         -1.29538254         -0.00136928        196.62052125
+111            6.45692187         -1.27726631         -1.27721213         -0.00099821        197.52102867
+112            6.51558129         -1.25934344         -1.25928798         -0.00070158        188.79939790
+113            6.57424070         -1.24166414         -1.24160782         -0.00046439        174.17432794
+114            6.63290012         -1.22422609         -1.22416932         -0.00027415        156.96541231
+115            6.69155954         -1.20702699         -1.20697013         -0.00012083        139.48193331
+116            6.75021896         -1.19006451         -1.19000787          0.00000342        123.05089191
+117            6.80887838         -1.17333631         -1.17328014          0.00010470        108.28583431
+118            6.86753779         -1.15684002         -1.15678453          0.00018772         95.36210166
+119            6.92619721         -1.14057330         -1.14051862          0.00025611         84.21939088
+120            6.98485663         -1.12453376         -1.12448000          0.00031268         74.68894625
+121            7.04351605         -1.10871905         -1.10866625          0.00035964         66.56551932
+122            7.10217546         -1.09312678         -1.09307497          0.00039872         59.64449045
+123            7.16083488         -1.07775457         -1.07770375          0.00043130         53.73887099
+124            7.21949430         -1.06260005         -1.06255019          0.00045845         48.68543277
+125            7.27815372         -1.04766084         -1.04761191          0.00048107         44.34534604
+126            7.33681314         -1.03293457         -1.03288653          0.00049988         40.60229974
+127            7.39547255         -1.01841885         -1.01837166          0.00051546         37.35967475
+128            7.45413197         -1.00411134         -1.00406494          0.00052828         34.53755719
+129            7.51279139         -0.99000966         -0.98996400          0.00053876         32.06995413
+130            7.57145081         -0.97611146         -0.97606649          0.00054722         29.90235265
+131            7.63011023         -0.96241439         -0.96237006          0.00055395         27.98965169
+132            7.68876964         -0.94891611         -0.94887237          0.00055917         26.29444519
+133            7.74742906         -0.93561428         -0.93557109          0.00056310         24.78561383
+134            7.80608848         -0.92250659         -0.92246391          0.00056590         23.43717827
+135            7.86474790         -0.90959072         -0.90954851          0.00056772         22.22736891
+136            7.92340732         -0.89686436         -0.89682259          0.00056868         21.13787242
+137            7.98206673         -0.88432523         -0.88428386          0.00056889         20.15322149
+138            8.04072615         -0.87197104         -0.87193004          0.00056845         19.26030007
+139            8.09938557         -0.85979952         -0.85975886          0.00056744         18.44794141
+140            8.15804499         -0.84780841         -0.84776808          0.00056592         17.70660080
+141            8.21670441         -0.83599548         -0.83595544          0.00056397         17.02808823
+142            8.27536382         -0.82435849         -0.82431873          0.00056164         16.40534944
+143            8.33402324         -0.81289522         -0.81285572          0.00055897         15.83228592
+144            8.39268266         -0.80160347         -0.80156421          0.00055600         15.30360644
+145            8.45134208         -0.79048106         -0.79044202          0.00055279         14.81470414
+146            8.51000150         -0.77952580         -0.77948698          0.00054934         14.36155451
+147            8.56866091         -0.76873554         -0.76869692          0.00054571         13.94063023
+148            8.62732033         -0.75810814         -0.75806971          0.00054191         13.54883001
+149            8.68597975         -0.74764146         -0.74760321          0.00053796         13.18341881
+150            8.74463917         -0.73733340         -0.73729532          0.00053389         12.84197747
+151            8.80329859         -0.72718185         -0.72714395          0.00052971         12.52236019
+152            8.86195800         -0.71718475         -0.71714700          0.00052545         12.22265838
+153            8.92061742         -0.70734001         -0.70730243          0.00052111         11.94117001
+154            8.97927684         -0.69764561         -0.69760818          0.00051671         11.67637333
+155            9.03793626         -0.68809951         -0.68806223          0.00051226         11.42690448
+156            9.09659568         -0.67869969         -0.67866257          0.00050777         11.19153817
+157            9.15525509         -0.66944417         -0.66940719          0.00050325         10.96917112
+158            9.21391451         -0.66033096         -0.66029413          0.00049871         10.75880771
+159            9.27257393         -0.65135810         -0.65132142          0.00049415         10.55954754
+160            9.33123335         -0.64252366         -0.64248713          0.00048959         10.37057469
+161            9.38989277         -0.63382570         -0.63378932          0.00048503         10.19114828
+162            9.44855218         -0.62526232         -0.62522610          0.00048047         10.02059431
+163            9.50721160         -0.61683164         -0.61679557          0.00047592          9.85829849
+164            9.56587102         -0.60853178         -0.60849587          0.00047138          9.70369992
+165            9.62453044         -0.60036089         -0.60032515          0.00046686          9.55628560
+166            9.68318986         -0.59231714         -0.59228157          0.00046237          9.41558551
+167            9.74184927         -0.58439871         -0.58436331          0.00045789          9.28116836
+168            9.80050869         -0.57660380         -0.57656859          0.00045344          9.15263774
+169            9.85916811         -0.56893065         -0.56889562          0.00044902          9.02962875
+170            9.91782753         -0.56137749         -0.56134265          0.00044464          8.91180502
+171            9.97648695         -0.55394257         -0.55390794          0.00044028          8.79885604
+172           10.03514636         -0.54662418         -0.54658975          0.00043596          8.69049473
+173           10.09380578         -0.53942061         -0.53938640          0.00043168          8.58645539
+174           10.15246520         -0.53233019         -0.53229619          0.00042743          8.48649171
+175           10.21112462         -0.52535123         -0.52531747          0.00042322          8.39037512
+176           10.26978404         -0.51848210         -0.51844857          0.00041905          8.29789324
+177           10.32844345         -0.51172116         -0.51168788          0.00041492          8.20884850
+178           10.38710287         -0.50506681         -0.50503378          0.00041083          8.12305687
+179           10.44576229         -0.49851745         -0.49848469          0.00040678          8.04034678
+180           10.50442171         -0.49207152         -0.49203903          0.00040278          7.96055807
+181           10.56308113         -0.48572745         -0.48569524          0.00039882          7.88354110
+182           10.62174054         -0.47948370         -0.47945178          0.00039489          7.80915587
+183           10.68039996         -0.47333877         -0.47330715          0.00039102          7.73727132
+184           10.73905938         -0.46729115         -0.46725984          0.00038718          7.66776461
+185           10.79771880         -0.46133937         -0.46130838          0.00038339          7.60052051
+186           10.85637822         -0.45548194         -0.45545128          0.00037964          7.53543080
+187           10.91503763         -0.44971745         -0.44968713          0.00037593          7.47239379
+188           10.97369705         -0.44404444         -0.44401447          0.00037227          7.41131381
+189           11.03235647         -0.43846153         -0.43843191          0.00036865          7.35210079
+190           11.09101589         -0.43296731         -0.43293806          0.00036507          7.29466987
+191           11.14967531         -0.42756041         -0.42753154          0.00036153          7.23894102
+192           11.20833472         -0.42223948         -0.42221100          0.00035804          7.18483871
+193           11.26699414         -0.41700317         -0.41697509          0.00035458          7.13229161
+194           11.32565356         -0.41185017         -0.41182250          0.00035117          7.08123228
+195           11.38431298         -0.40677918         -0.40675193          0.00034780          7.03159694
+196           11.44297240         -0.40178891         -0.40176208          0.00034447          6.98332521
+197           11.50163181         -0.39687808         -0.39685169          0.00034118          6.93635991
+198           11.56029123         -0.39204545         -0.39201951          0.00033793          6.89064682
+199           11.61895065         -0.38728979         -0.38726430          0.00033472          6.84613451
+200           11.67761007         -0.38260986         -0.38258484          0.00033155          6.80277419
+201           11.73626949         -0.37800448         -0.37797993          0.00032842          6.76051949
+202           11.79492890         -0.37347245         -0.37344838          0.00032533          6.71932636
+203           11.85358832         -0.36901261         -0.36898903          0.00032228          6.67915290
+204           11.91224774         -0.36462381         -0.36460072          0.00031926          6.63995926
+205           11.97090716         -0.36030490         -0.36028232          0.00031628          6.60170748
+206           12.02956658         -0.35605477         -0.35603270          0.00031334          6.56436141
+207           12.08822599         -0.35187231         -0.35185076          0.00031043          6.52788659
+208           12.14688541         -0.34775644         -0.34773541          0.00030756          6.49225017
+209           12.20554483         -0.34370607         -0.34368557          0.00030473          6.45742079
+210           12.26420425         -0.33972015         -0.33970019          0.00030193          6.42336852
+211           12.32286367         -0.33579764         -0.33577822          0.00029916          6.39006477
+212           12.38152308         -0.33193751         -0.33191864          0.00029643          6.35748222
+213           12.44018250         -0.32813874         -0.32812042          0.00029374          6.32559475
+214           12.49884192         -0.32440035         -0.32438258          0.00029107          6.29437739
+215           12.55750134         -0.32072133         -0.32070412          0.00028844          6.26380622
+216           12.61616076         -0.31710073         -0.31708408          0.00028585          6.23385835
+217           12.67482017         -0.31353758         -0.31352150          0.00028328          6.20451187
+218           12.73347959         -0.31003095         -0.31001543          0.00028075          6.17574577
+219           12.79213901         -0.30657991         -0.30656496          0.00027824          6.14753990
+220           12.85079843         -0.30318355         -0.30316917          0.00027577          6.11987495
+221           12.90945785         -0.29984097         -0.29982715          0.00027333          6.09273240
+222           12.96811726         -0.29655127         -0.29653802          0.00027092          6.06609446
+223           13.02677668         -0.29331359         -0.29330091          0.00026853          6.03994406
+224           13.08543610         -0.29012708         -0.29011496          0.00026618          6.01426480
+225           13.14409552         -0.28699087         -0.28697931          0.00026386          5.98904091
+226           13.20275494         -0.28390414         -0.28389314          0.00026156          5.96425725
+227           13.26141435         -0.28086608         -0.28085563          0.00025929          5.93989926
+228           13.32007377         -0.27787586         -0.27786596          0.00025705          5.91595292
+229           13.37873319         -0.27493269         -0.27492333          0.00025484          5.89240476
+230           13.43739261         -0.27203580         -0.27202698          0.00025265          5.86924180
+231           13.49605203         -0.26918440         -0.26917611          0.00025049          5.84645156
+232           13.55471144         -0.26637775         -0.26636998          0.00024836          5.82402199
+233           13.61337086         -0.26361508         -0.26360782          0.00024625          5.80194152
+234           13.67203028         -0.26089568         -0.26088892          0.00024416          5.78019898
+235           13.73068970         -0.25821880         -0.25821254          0.00024210          5.75878359
+236           13.78934912         -0.25558375         -0.25557796          0.00024007          5.73768499
+237           13.84800853         -0.25298981         -0.25298449          0.00023806          5.71689316
+238           13.90666795         -0.25043630         -0.25043143          0.00023607          5.69639844
+239           13.96532737         -0.24792254         -0.24791811          0.00023411          5.67619153
+240           14.02398679         -0.24544786         -0.24544385          0.00023217          5.65626342
+241           14.08264621         -0.24301159         -0.24300800          0.00023026          5.63660544
+242           14.14130562         -0.24061310         -0.24060989          0.00022836          5.61720920
+243           14.19996504         -0.23825175         -0.23824891          0.00022649          5.59806661
+244           14.25862446         -0.23592690         -0.23592442          0.00022464          5.57916985
+245           14.31728388         -0.23363795         -0.23363579          0.00022281          5.56051136
+246           14.37594330         -0.23138427         -0.23138243          0.00022101          5.54208384
+247           14.43460271         -0.22916529         -0.22916373          0.00021922          5.52388024
+248           14.49326213         -0.22698040         -0.22697911          0.00021746          5.50589372
+249           14.55192155         -0.22482904         -0.22482799          0.00021571          5.48811770
+250           14.61058097         -0.22271062         -0.22270979          0.00021399          5.47054580
+251           14.66924039         -0.22062460         -0.22062396          0.00021228          5.45317184
+252           14.72789980         -0.21857042         -0.21856994          0.00021060          5.43598986
+253           14.78655922         -0.21654755         -0.21654719          0.00020893          5.41899408
+254           14.84521864         -0.21455544         -0.21455518          0.00020728          5.40217891
+255           14.90387806         -0.21259357         -0.21259339          0.00020565          5.38553895
+256           14.96253748         -0.21066143         -0.21066129          0.00020404          5.36906897
+257           15.02119689         -0.20875852         -0.20875839          0.00020245          5.35276389
+258           15.07985631         -0.20688433         -0.20688417          0.00020088          5.33661882
+259           15.13851573         -0.20503837         -0.20503815          0.00019932          5.32062901
+260           15.19717515         -0.20322017         -0.20321985          0.00019778          5.30478985
+261           15.25583457         -0.20142925         -0.20142878          0.00019626          5.28909691
+262           15.31449398         -0.19966513         -0.19966449          0.00019476          5.27354586
+263           15.37315340         -0.19792737         -0.19792652          0.00019327          5.25813254
+264           15.43181282         -0.19621551         -0.19621440          0.00019180          5.24285289
+265           15.49047224         -0.19452911         -0.19452771          0.00019034          5.22770301
+266           15.54913166         -0.19286774         -0.19286599          0.00018891          5.21267910
+267           15.60779107         -0.19123095         -0.19122882          0.00018748          5.19777749
+268           15.66645049         -0.18961835         -0.18961579          0.00018608          5.18299461
+269           15.72510991         -0.18802950         -0.18802646          0.00018468          5.16832702
+270           15.78376933         -0.18646400         -0.18646044          0.00018331          5.15377138
+271           15.84242875         -0.18492145         -0.18491732          0.00018194          5.13932445
+272           15.90108816         -0.18340146         -0.18339671          0.00018060          5.12498309
+273           15.95974758         -0.18190364         -0.18189822          0.00017927          5.11074428
+274           16.01840700         -0.18042761         -0.18042146          0.00017795          5.09660506
+275           16.07706642         -0.17897300         -0.17896607          0.00017664          5.08256259
+276           16.13572584         -0.17753943         -0.17753167          0.00017535          5.06861410
+277           16.19438525         -0.17612654         -0.17611790          0.00017408          5.05475693
+278           16.25304467         -0.17473399         -0.17472441          0.00017281          5.04098847
+279           16.31170409         -0.17336142         -0.17335084          0.00017156          5.02730623
+280           16.37036351         -0.17200848         -0.17199685          0.00017033          5.01370777
+281           16.42902293         -0.17067485         -0.17066210          0.00016911          5.00019073
+282           16.48768234         -0.16936018         -0.16934626          0.00016789          4.98675284
+283           16.54634176         -0.16806415         -0.16804899          0.00016670          4.97339189
+284           16.60500118         -0.16678644         -0.16676999          0.00016551          4.96010574
+285           16.66366060         -0.16552674         -0.16550893          0.00016434          4.94689232
+286           16.72232002         -0.16428474         -0.16426550          0.00016318          4.93374962
+287           16.78097943         -0.16306012         -0.16303939          0.00016203          4.92067572
+288           16.83963885         -0.16185260         -0.16183031          0.00016089          4.90766872
+289           16.89829827         -0.16066187         -0.16063797          0.00015977          4.89472682
+290           16.95695769         -0.15948765         -0.15946206          0.00015866          4.88184824
+291           17.01561711         -0.15832966         -0.15830231          0.00015756          4.86903131
+292           17.07427652         -0.15718761         -0.15715843          0.00015646          4.85627435
+293           17.13293594         -0.15606123         -0.15603016          0.00015539          4.84357579
+294           17.19159536         -0.15495025         -0.15491721          0.00015432          4.83093408
+295           17.25025478         -0.15385441         -0.15381933          0.00015326          4.81834774
+296           17.30891420         -0.15277344         -0.15273625          0.00015221          4.80581532
+297           17.36757361         -0.15170709         -0.15166772          0.00015118          4.79333543
+298           17.42623303         -0.15065511         -0.15061348          0.00015015          4.78090672
+299           17.48489245         -0.14961725         -0.14957328          0.00014914          4.76852791
+300           17.54355187         -0.14859327         -0.14854689          0.00014813          4.75619772

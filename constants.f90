@@ -11,7 +11,8 @@ module constants
   
  
   !.. Parameters for the 2-body potential, harmonic trapping potential, and scattering lengths
-  real(kind(1.d0)) :: Potential_depth = -3.086d0*10**(-8.d0)
+  !real(kind(1.d0)) :: Potential_depth = -3.086d0*10**(-8.d0)
+  real(kind(1.d0)) :: Potential_depth = -6.0865095d0*10**(-8.d0)
   real(kind(1.d0)) :: r0 = 55.d0
   real(kind(1.d0)) :: osc = 731.d0
   real(kind(1.d0)) :: scatl = 228.004d0
