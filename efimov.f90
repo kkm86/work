@@ -26,7 +26,7 @@ program efimov
    real(kind(1.d0)) :: angfreq, scaling
  
   !.. Parameters for effective potentials and coupling matrices
-  integer, parameter :: points = 800
+  integer, parameter :: points = 10
   real(kind(1.d0)), allocatable, dimension(:) :: rho_vector
   real(kind(1.d0)), allocatable, dimension(:,:) :: energy
   real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,S,Hder,Hamcoef,Pmat,P2mat, Imat
@@ -64,8 +64,8 @@ program efimov
 
 
   !.. Setting up hyperradial vector
-  rho_min = 1.d0
-  rho_max = 7000.d0
+  rho_min = scatl
+  rho_max = 37*scatl
   step_size = (rho_max-rho_min)/(points-1)
   rho_vector(1) = rho_min
   print*, rho_vector(1)
@@ -98,12 +98,12 @@ program efimov
 !   close(10)
 
   !.. Writes adiabatic potential curves+trapping potential to file
-  open(16,file='effective.dat',status='replace')
+  open(10,file='effective5.dat',status='replace')
   do i = 1, points
-     write(16,10)i, rho_vector(i)/scatl, scaling*energy(1,i), scaling*energy(2,i), scaling*energy(3,i),scaling*(15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)), scaling*(4*(4+4.d0)+15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)), scaling*(6*(6+4.d0)+15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0))
+     write(10,10)i, rho_vector(i)/scatl, scaling*energy(1,i), scaling*(15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)), scaling*energy(2,i), scaling*(4*(4+4.d0)+15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)),scaling*energy(3,i), scaling*(6*(6+4.d0)+15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)),scaling*energy(4,i) 
      10   format(I3,'  ',16f20.8)
   end do
-  close(16)
+  close(10)
 
   open(14,file='wave.dat',status='replace')
   do i = 1, points

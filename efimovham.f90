@@ -25,7 +25,7 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
   integer                             :: ITYPE, LDA, LDB, INFO 
   integer                 , parameter :: LWORK = 168777
   integer                 , parameter :: LIWORK = 1448
-  character*1                         :: JOBZ = 'V', UPLO = 'U'
+  character*1                         :: JOBZ = 'N', UPLO = 'U'
   real(kind(1.d0))    , dimension(LM) :: W
   real(kind(1.d0)) , dimension(LWORK) :: WORK
   integer         , dimension(LIWORK) :: IWORK
@@ -144,13 +144,13 @@ subroutine efimovham(npl,npm,k,L,M,LM,tl,tm,rho,my,energy,H,Hder,S,Integ,points,
                              term(1,:) = term(1,:) + weig(p)*2.d0*dB_li*B_mi*dB_lj*B_mj
                              term(2,:) = term(2,:) + weig(p)*4.d0*B_li*dB_mi*B_lj*dB_mj*arctan/volume_element
                              term(3,:) = term(3,:) + weig(p)*15.d0*B_li*B_mi*B_lj*B_mj/8.d0
-                             !term(4,:) = term(4,:) + weig(p)*B_li*B_mi*B_lj*B_mj*V
+                             term(4,:) = term(4,:) + weig(p)*B_li*B_mi*B_lj*B_mj*V
 
 
                              term(5,:) = term(5,:) + weig(p)*8.d0*dB_li*B_mi*dB_lj*B_mj
                              term(6,:) = term(6,:) + weig(p)*8.d0*B_li*dB_mi*B_lj*dB_mj*arctan/volume_element
                              term(7,:) = term(7,:) + weig(p)*15.d0*B_li*B_mi*B_lj*B_mj/4.d0
-                             !term(8,:) = term(8,:) - weig(p)*B_li*B_mi*B_lj*B_mj*Vder
+                             term(8,:) = term(8,:) - weig(p)*B_li*B_mi*B_lj*B_mj*Vder
 
                           end do
                           sumter(1,:) = sumter(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*(term(1,:)+term(2,:)+term(3,:)+term(4,:)*my*rho**2.d0)/(my*rho**2.d0)

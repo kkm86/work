@@ -22,14 +22,14 @@
          set xlabel "{/Symbol r}/{/Helvetica a}"
          set ylabel "U({/Symbol r}) [10^{-8} a.u.]"
          set log x
-         set xr [0.03:100.4]
-         set yr [-6.0:20.0]
-         plot "effective.dat" using 2:3 title '{/Symbol n}=0'  with lines,  \
-	    "effective.dat" using 2:4 title '{/Symbol n}=4'  with lines,  \
-	       "effective.dat" using 2:5 title '{/Symbol n}=6'  with lines,  \
-		  "effective.dat" using 2:6 title '{/Symbol n}=0 gegen'  with lines,  \
-		     "effective.dat" using 2:7 title '{/Symbol n}=4  gegen'  with lines,  \
-			"effective.dat" using 2:8 title '{/Symbol n}=6 gegen'  with lines,  \
+         set xr [0.03:100.0]
+         set yr [-1.0:5.0]
+         plot "effective5.dat" using 2:6 title '{/Symbol n}=0'  with lines,  \
+	    "effective5.dat" using 2:7 title '{/Symbol n}=4'  with lines,  \
+	       "effective10.dat" using 2:6 title '{/Symbol n}=6'  with lines,  \
+		  "effective10.dat" using 2:7 title '{/Symbol n}=0 gegen'  with lines,  \
+		     "effective15.dat" using 2:6 title '{/Symbol n}=4  gegen'  with lines,  \
+			"effective15.dat" using 2:7 title '{/Symbol n}=6 gegen'  with lines,  \
 	       
 
 	  

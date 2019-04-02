@@ -28,14 +28,14 @@ main_file="efimov.f90"
 
 #.. optimization level
 #OPT=" -O2 "
-OPT=""
+OPT="-O2"
 
 
 ###################################################################
 
 
 #.. Set compiler flags
-COMP_FLAGS=" -c -g -traceback ${COMP_BASE} "
+COMP_FLAGS=" -c -g -traceback -check all -fp-stack-check ${COMP_BASE} "
 COMP_FLAGS_MAIN=${COMP_BASE}
 LIBRARIES=" -L./ -l${LIBNAME} -lblas -llapack "
 
