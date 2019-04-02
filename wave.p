@@ -22,12 +22,14 @@
          set xlabel "{/Symbol r}/{/Helvetica a}"
          set ylabel "U({/Symbol r}) [10^{-8} a.u.]"
          set log x
-         set xr [0.0003:100.4]
-         set yr [-16.0:5.0]
-         plot "effectivepot.dat" using 2:3 title '{/Symbol n}=0, neg a'  with lines,  \
-	    "effectivepotpos.dat" using 2:3 title '{/Symbol n}=0 pos a'  with lines,  \
-	       "effectivepotneg.dat" using 2:3 title '{/Symbol n}=0 neg large'  with lines,  \
-		  "effectivepotneg2.dat" using 2:3 title '{/Symbol n}=0 neg largest'  with lines,  \
+         set xr [0.03:100.4]
+         set yr [-6.0:20.0]
+         plot "effective.dat" using 2:3 title '{/Symbol n}=0'  with lines,  \
+	    "effective.dat" using 2:4 title '{/Symbol n}=4'  with lines,  \
+	       "effective.dat" using 2:5 title '{/Symbol n}=6'  with lines,  \
+		  "effective.dat" using 2:6 title '{/Symbol n}=0 gegen'  with lines,  \
+		     "effective.dat" using 2:7 title '{/Symbol n}=4  gegen'  with lines,  \
+			"effective.dat" using 2:8 title '{/Symbol n}=6 gegen'  with lines,  \
 	       
 
 	  
