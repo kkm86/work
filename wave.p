@@ -22,14 +22,21 @@
          set xlabel "{/Symbol r}/{/Helvetica a}"
          set ylabel "U({/Symbol r}) [10^{-8} a.u.]"
          set log x
-         set xr [0.03:100.0]
-         set yr [-1.0:5.0]
-         plot "effective5.dat" using 2:6 title '{/Symbol n}=0'  with lines,  \
-	    "effective5.dat" using 2:7 title '{/Symbol n}=4'  with lines,  \
-	       "effective10.dat" using 2:6 title '{/Symbol n}=6'  with lines,  \
-		  "effective10.dat" using 2:7 title '{/Symbol n}=0 gegen'  with lines,  \
-		     "effective15.dat" using 2:6 title '{/Symbol n}=4  gegen'  with lines,  \
-			"effective15.dat" using 2:7 title '{/Symbol n}=6 gegen'  with lines,  \
+         set xr [1.0:1000000.0]
+         set yr [-8.0:5.0]
+         plot "effectivepot0_45.dat" using 2:3 title '{/Symbol n}=0'  with lines,  \
+	    "effectivepot0_45_2.dat" using 2:3 title '{/Symbol n}=1'  with lines,  \
+	       "effectivepot0_65.dat" using 2:3 title '{/Symbol n}=0'  with lines,  \
+		  "effectivepot0_45.dat" using 2:6 title '{/Symbol n}=1'  with lines,  \
+		     "effectivepot0_4.dat" using 2:3 title '{/Symbol n}=0'  with lines,  \
+		     "effectivepot0_4_2.dat" using 2:3 title '{/Symbol n}=1'  with lines,  \
+			"effectivepot0_65_2.dat" using 2:3 title '{/Symbol n}=0'  with lines,  \
+			"effectivepot0_65_p.dat" using 2:3 title '{/Symbol n}=1'  with points,  \
+			   "effectivepot0_65_p2.dat" using 2:3 title '{/Symbol n}=1'  with points,  \
+			      "effectivepot0_4_p3.dat" using 2:3 title '{/Symbol n}=1'  with points,  \
+				 "effectivepot0_4_p.dat" using 2:3 title '{/Symbol n}=1'  with points,  \
+				    "effectivepot0_4_p0.dat" using 2:3 title '{/Symbol n}=1'  with points,  \
+		
 	       
 
 	  

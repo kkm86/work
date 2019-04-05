@@ -26,13 +26,13 @@ program efimov
    real(kind(1.d0)) :: angfreq, scaling
  
   !.. Parameters for effective potentials and coupling matrices
-  integer, parameter :: points = 30
+  integer, parameter :: points = 10
   real(kind(1.d0)), allocatable, dimension(:) :: rho_vector
   real(kind(1.d0)), allocatable, dimension(:,:) :: energy
-  real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,S,Hder,Hamcoef,Pmat,P2mat, Imat
+  real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,Hder,Pmat,P2mat
 
   !.. Parameters for plotting
-  integer, parameter :: pp = 30
+  integer, parameter :: pp = 200
   real(kind(1.d0)) :: x(pp),y(pp),step_size,rho_min,rho_max
   real(kind(1.d0)) :: base(pp,LM),base_L(pp,L),base_M(pp,M)  
 
@@ -42,7 +42,7 @@ program efimov
 
   allocate(rho_vector(points))
   allocate(energy(LM,points))
-  allocate(H(LM,LM,points),S(LM,LM,points),Hder(LM,LM,points),Hamcoef(LM,LM,points),Pmat(LM,LM,points),P2mat(LM,LM,points),Imat(LM,LM,points))
+  allocate(H(LM,LM,points),Hder(LM,LM,points),Pmat(LM,LM,points),P2mat(LM,LM,points))
 
   !.. Declairing constants for model potential, trapping potential, and model atom
   
@@ -64,8 +64,8 @@ program efimov
 
 
   !.. Setting up hyperradial vector
-  rho_min = 3000
-  rho_max = 10000
+  rho_min = scatl
+  rho_max = 37*scatl
   step_size = (rho_max-rho_min)/(points-1)
   rho_vector(1) = rho_min
   print*, rho_vector(1)
@@ -80,12 +80,9 @@ program efimov
 
   !.. Calculating adiabatic potential curves and coefficients for the angular channel functions
   call CPU_TIME( t1 )
-  write(6,*) 'hej5', points
-     WRITE(6,*) "A",I
-     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,S,Hamcoef,points,Pmat,P2mat,Imat)
+     call efimovham(npl,npm,k,L,M,LM,tl,tm,rho_vector,my,energy,H,Hder,points,Pmat,P2mat)
   call CPU_TIME( t2 )
   print*, t2-t1
-  write(6,*) 'hej7'
 
   !.. Writes adiabatic potential curves+trapping potential to file
   ! open(10,file='threebodypot.dat',status='replace')
@@ -94,33 +91,25 @@ program efimov
 
 !      !, (energy(2,i)+Vtrap(i))/angfreq ,(energy(3,i)+Vtrap(i))/angfreq,(energy(4,i)+Vtrap(i))/angfreq,(energy(5,i)+Vtrap(i))/angfreq,(energy(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
 ! 10   format(I3,'  ',16f20.8)
-!   End do
+!   end do
 !   close(10)
 
+
   !.. Writes adiabatic potential curves+trapping potential to file
-  open(10,file='effectivepot0_413_N20long.dat',status='replace')
+  open(10,file='effectivepot.dat',status='replace')
   do i = 1, points
-     write(10,10)i, rho_vector(i), ((energy(1,i)-(P2mat(1,1,i)/(2.d0*my)))*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), ((energy(2,i)-(P2mat(2,2,i)/(2.d0*my)))*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), ((energy(3,i)-(P2mat(3,3,i)/(2.d0*my)))*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), -(1.00624**2.d0)
+     write(10,10)i, rho_vector(i)/scatl, scaling*energy(1,i), scaling*(15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)), scaling*energy(2,i), scaling*(4*(4+4.d0)+15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)),scaling*energy(3,i), scaling*(6*(6+4.d0)+15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)),scaling*energy(4,i) 
      10   format(I3,'  ',16f20.8)
   end do
   close(10)
 
-  !.. Writes adiabatic potential curves+trapping potential to file
-  ! open(10,file='effective0_4.dat',status='replace')
+  ! open(14,file='wave.dat',status='replace')
   ! do i = 1, points
-  !    write(10,10)i, rho_vector(i)/scatl, scaling*(energy(1,i)-(P2mat(1,1,i)/(2.d0*my))), scaling*(15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)), scaling*(energy(2,i)-(P2mat(2,2,i)/(2.d0*my))), scaling*(4*(4+4.d0)+15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)),scaling*(energy(3,i)-(P2mat(3,3,i)/(2.d0*my))), scaling*(6*(6+4.d0)+15.d0/4.d0)/(2.d0*my*(rho_vector(i)**2.d0)),scaling*(energy(4,i)-(P2mat(4,4,i)/(2.d0*my))) 
-  !    10   format(I3,'  ',16f20.8)
+  !    write(14,10)i,rho_vector(i)/scatl, Pmat(1,2,i), Pmat(2,1,i), P2mat(1,2,i), P2mat(1,1,i)
   ! end do
-  ! close(10)
+  ! close(14)
 
-  
-  open(14,file='wave.dat',status='replace')
-  do i = 1, points
-     write(14,10)i,rho_vector(i)/scatl, P2mat(1,1,i), P2mat(2,2,i), P2mat(3,3,i), P2mat(4,4,i)
-  end do
-  close(14)
-
-  deallocate(Pmat,P2mat,Imat)
+  deallocate(Pmat,P2mat)
 
 end program efimov
 
