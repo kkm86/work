@@ -18,7 +18,7 @@ LIBRARIES = -lblas -llapack
 
 ############################################################
 
-OBJECTS = constants.o gauleg.o universal_knot.o efimov_sj.o efimovham_sj.o twobody_potential.o model_potential.o bder.o bget.o  bsplvb.o
+OBJECTS = constants.o gauleg.o universal_knot.o efimov_sj.o efimovham_sj2.o twobody_potential_sj.o model_potential_sj.o bder.o bget.o  bsplvb.o setup_sj.o
 
 # Linking to executable
 
@@ -27,8 +27,8 @@ $(PROGRAM): $(OBJECTS)
 
 # Module
 
-constants.mod: constants.o constants.f90
-	$(FC) $(FLAGS) -c constants.f90
+constants.mod: constants.o constants_sj.f90
+	$(FC) $(FLAGS) -c constants_sj.f90
 
 
 nrtype.mod: nrtype.o nrtype.f90

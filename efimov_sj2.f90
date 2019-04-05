@@ -19,8 +19,8 @@ program efimov
   
   !.. Input
   !.. Parameters for the B-splines used in the generalized eigenvalue equation
-  integer, parameter :: N1 = 60   !.. Number of mesh-points in coordinate 1
-  integer, parameter :: N2 = 60   !.. Number of mesh-points in coordinate 2
+  integer, parameter :: N1 = 80   !.. Number of mesh-points in coordinate 1
+  integer, parameter :: N2 = 80   !.. Number of mesh-points in coordinate 2
   integer, parameter :: k = 6    !.. B-spline order
   integer, parameter :: L = N1+k-4    !.. Number of B-splines in coordinate 1(N+k-2-cond)
   integer, parameter :: M = N2+k-4    !.. Number of B-splines in coordinate 2
@@ -68,6 +68,8 @@ program efimov
   allocate(IWORK(LIWORK))
 
 
+
+
   allocate(rho_vector(points))
   allocate(energy(LM,points))
   allocate(H(LM,LM,points),Hder(LM,LM,points),Pmat(LM,LM,points),P2mat(LM,LM,points))
@@ -93,8 +95,8 @@ program efimov
 
 
   !.. Setting up hyperradial vector
-  rho_min = 5000.d0
-  rho_max = 10000.d0
+  rho_min = 10000.d0
+  rho_max = 100000.d0
   step_size = (rho_max-rho_min)/(points-1)
   rho_vector(1) = rho_min
   print*, rho_vector(1)
@@ -175,14 +177,14 @@ program efimov
 
 
   !.. Writes adiabatic potential curves+trapping potential to file
-  ! open(10,file='threebodypot.dat',status='replace')
-!   do i = 1, points
-!      write(10,10)i, rho_vector(i)/scatl, scaling*(energy(1,i)+Vtrap(i))/angfreq,scaling*(energy(1,i)-(P2mat(1,1,i)/(2.d0*my))+Vtrap(i))/angfreq, scaling*(energy(2,i)+Vtrap(i))/angfreq,scaling*(energy(2,i)-(P2mat(2,2,i)/(2.d0*my))+Vtrap(i))/angfreq
+  open(10,file='threebodypot.dat',status='replace')
+  do i = 1, points
+     write(10,10)i, rho_vector(i)/scatl, scaling*(energy(1,i)+Vtrap(i))/angfreq,scaling*(energy(1,i)-(P2mat(1,1,i)/(2.d0*my))+Vtrap(i))/angfreq, scaling*(energy(2,i)+Vtrap(i))/angfreq,scaling*(energy(2,i)-(P2mat(2,2,i)/(2.d0*my))+Vtrap(i))/angfreq
 
-!      !, (energy(2,i)+Vtrap(i))/angfreq ,(energy(3,i)+Vtrap(i))/angfreq,(energy(4,i)+Vtrap(i))/angfreq,(energy(5,i)+Vtrap(i))/angfreq,(energy(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
-! 10   format(I4,'  ',16f20.8)
-!   end do
-!   close(10)
+     !, (energy(2,i)+Vtrap(i))/angfreq ,(energy(3,i)+Vtrap(i))/angfreq,(energy(4,i)+Vtrap(i))/angfreq,(energy(5,i)+Vtrap(i))/angfreq,(energy(6,i)+Vtrap(i))/angfreq, Vtrap(i)/angfreq
+10   format(I4,'  ',16f20.8)
+  end do
+  close(10)
 
   !.. Writes adiabatic potential curves+trapping potential to file
   open(11,file='effectivepot.dat',status='replace')
@@ -191,25 +193,24 @@ program efimov
   end do
   close(11)
 
-  !.. Writes the lowest and second lowest lambda  as defined by Braaten & Hammer
-  open(12,file='lambda.dat',status='replace')
-  do i = 1, points
-     write(12,10)i, rho_vector(i)/scatl, 2.d0*my*rho_vector(i)*rho_vector(i)*(energy(1,i)+0.25d0), 2.d0*my*rho_vector(i)*rho_vector(i)*(energy(2,i)+0.25d0)
-  end do
-  close(12)
-
   print*, 'this is working'
 
   !.. Writes adiabatic potential curves+trapping potential to file
-  open(10,file='effectivepot0_413_N60.dat',status='replace')
+  open(10,file='effectivepot0_413_N80.dat',status='replace')
   do i = 1, points
-     write(10,10)i, rho_vector(i), ((energy(1,i)-(P2mat(1,1,i)/(2.d0*my)))*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), ((energy(2,i)-(P2mat(2,2,i)/(2.d0*my)))*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), ((energy(3,i)-(P2mat(3,3,i)/(2.d0*my)))*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), -(1.00624**2.d0)
+     write(10,10)i, rho_vector(i), (energy(1,i)*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), (energy(2,i)*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), (energy(3,i)*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), -(1.00624**2.d0)
      10   format(I3,'  ',16f20.8)
   end do
   close(10)
 
   print*, 'this is working'
 
+  !.. Writes the lowest and second lowest lambda  as defined by Braaten & Hammer
+  open(12,file='lambda.dat',status='replace')
+  do i = 1, points
+     write(12,10)i, rho_vector(i)/scatl, 2.d0*my*rho_vector(i)*rho_vector(i)*(energy(1,i)+0.25d0), 2.d0*my*rho_vector(i)*rho_vector(i)*(energy(2,i)+0.25d0)
+  end do
+  close(12)
 
   open(14,file='wave.dat',status='replace')
   do i = 1, points

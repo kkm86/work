@@ -6,14 +6,14 @@ program efimov
   
   !.. Input
   !.. Parameters for the B-splines used in the generalized eigenvalue equation
-  integer, parameter :: N1 = 20   !.. Number of mesh-points in coordinate 1
-  integer, parameter :: N2 = 20   !.. Number of mesh-points in coordinate 2
+  integer, parameter :: N1 = 5   !.. Number of mesh-points in coordinate 1
+  integer, parameter :: N2 = 5   !.. Number of mesh-points in coordinate 2
   integer, parameter :: k = 6    !.. B-spline order
-  integer, parameter :: L = 22    !.. Number of B-splines in coordinate 1(N+k-2-cond)
-  integer, parameter :: M = 22    !.. Number of B-splines in coordinate 2
-  integer, parameter :: LM = 484 !.. Matrix dimension
-  integer, parameter :: npl = 30  !.. Number of knot-points  N1+2(k-1)
-  integer, parameter :: npm = 30  !.. Number of knot-points  N2+2(k-1)
+  integer, parameter :: L = 7    !.. Number of B-splines in coordinate 1(N+k-2-cond)
+  integer, parameter :: M = 7    !.. Number of B-splines in coordinate 2
+  integer, parameter :: LM = 49 !.. Matrix dimension
+  integer, parameter :: npl = 15  !.. Number of knot-points  N1+2(k-1)
+  integer, parameter :: npm = 15  !.. Number of knot-points  N2+2(k-1)
  
 
   !.. Parameters for the knot-point grids tl and tm
@@ -26,13 +26,13 @@ program efimov
    real(kind(1.d0)) :: angfreq, scaling
  
   !.. Parameters for effective potentials and coupling matrices
-  integer, parameter :: points = 30
+  integer, parameter :: points = 250
   real(kind(1.d0)), allocatable, dimension(:) :: rho_vector
   real(kind(1.d0)), allocatable, dimension(:,:) :: energy
   real(kind(1.d0)), allocatable, dimension(:,:,:) :: H,S,Hder,Hamcoef,Pmat,P2mat, Imat
 
   !.. Parameters for plotting
-  integer, parameter :: pp = 30
+  integer, parameter :: pp = 250
   real(kind(1.d0)) :: x(pp),y(pp),step_size,rho_min,rho_max
   real(kind(1.d0)) :: base(pp,LM),base_L(pp,L),base_M(pp,M)  
 
@@ -64,8 +64,8 @@ program efimov
 
 
   !.. Setting up hyperradial vector
-  rho_min = 3000
-  rho_max = 10000
+  rho_min = 1
+  rho_max = 800
   step_size = (rho_max-rho_min)/(points-1)
   rho_vector(1) = rho_min
   print*, rho_vector(1)
@@ -98,7 +98,7 @@ program efimov
 !   close(10)
 
   !.. Writes adiabatic potential curves+trapping potential to file
-  open(10,file='effectivepot0_413_N20long.dat',status='replace')
+  open(10,file='effectivepot0_413_N5.dat',status='replace')
   do i = 1, points
      write(10,10)i, rho_vector(i), ((energy(1,i)-(P2mat(1,1,i)/(2.d0*my)))*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), ((energy(2,i)-(P2mat(2,2,i)/(2.d0*my)))*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), ((energy(3,i)-(P2mat(3,3,i)/(2.d0*my)))*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), -(1.00624**2.d0)
      10   format(I3,'  ',16f20.8)

@@ -211,28 +211,22 @@ subroutine efimovham(npl,npm,k,l,m,lm,points,tl,tm,rho,energy,S,TK,H,Hder)
                           coordl(ll,n) = 0.5*(tl(ll+1)+tl(ll)) + 0.5*(tl(ll+1)-tl(ll))*xabsc(n)
                           theta = coordl(ll,n)
                           volume_element = sin(2.d0*theta)
-                          arctan = cos(theta)/sin(theta)
+                          arctan = 1./tan(theta)
 
                           if(lj == 1)then
                              B_lj = bget(coordl(ll,n),tl,k,npl,1)+bget(coordl(ll,n),tl,k,npl,2)
-                             dB_lj = bder(coordl(ll,n),tl,k,npl,1)+bder(coordl(ll,n),tl,k,npl,2)
                           else if(lj == L)then
                              B_lj = bget(coordl(ll,n),tl,k,npl,L+1)+bget(coordl(ll,n),tl,k,npl,L+2)
-                             dB_lj = bder(coordl(ll,n),tl,k,npl,L+1)+bder(coordl(ll,n),tl,k,npl,L+2)
                           else
                              B_lj = bget(coordl(ll,n),tl,k,npl,lj+1)
-                             dB_lj = bder(coordl(ll,n),tl,k,npl,lj+1)
                           end if
 
                           if(li == 1)then
                              B_li = bget(coordl(ll,n),tl,k,npl,1)+bget(coordl(ll,n),tl,k,npl,2)
-                             dB_li = bder(coordl(ll,n),tl,k,npl,1)+bder(coordl(ll,n),tl,k,npl,2)
                           else if(li == L)then
                              B_li = bget(coordl(ll,n),tl,k,npl,L+1)+bget(coordl(ll,n),tl,k,npl,L+2)
-                             dB_li = bder(coordl(ll,n),tl,k,npl,L+1)+bder(coordl(ll,n),tl,k,npl,L+2)
                           else
                              B_li = bget(coordl(ll,n),tl,k,npl,li+1)
-                             dB_li = bder(coordl(ll,n),tl,k,npl,li+1)
                           end if
 
                           do p = 1, k
@@ -241,52 +235,34 @@ subroutine efimovham(npl,npm,k,l,m,lm,points,tl,tm,rho,energy,S,TK,H,Hder)
                         
                              if(mj == 1 .and. mj /= M)then
                                 B_mj = bget(coordm(mm,p),tm,k,npm,1)+bget(coordm(mm,p),tm,k,npm,2)
-                                dB_mj = bder(coordm(mm,p),tm,k,npm,1)+bder(coordm(mm,p),tm,k,npm,2)
                              else if(mj == M)then
                                 B_mj = bget(coordm(mm,p),tm,k,npm,M+1)+bget(coordm(mm,p),tm,k,npm,M+2)
-                                dB_mj = bder(coordm(mm,p),tm,k,npm,M+1)+bder(coordm(mm,p),tm,k,npm,M+2)
                              else
                                 B_mj = bget(coordm(mm,p),tm,k,npm,mj+1)
-                                dB_mj = bder(coordm(mm,p),tm,k,npm,mj+1)
                              end if
                              
                              if(mi == 1 .and. mi /= M)then
                                 B_mi = bget(coordm(mm,p),tm,k,npm,1)+bget(coordm(mm,p),tm,k,npm,2)
-                                dB_mi = bder(coordm(mm,p),tm,k,npm,1)+bder(coordm(mm,p),tm,k,npm,2)
                              else if(mi == M)then
                                 B_mi = bget(coordm(mm,p),tm,k,npm,M+1)+bget(coordm(mm,p),tm,k,npm,M+2)
-                                dB_mi = bder(coordm(mm,p),tm,k,npm,M+1)+bder(coordm(mm,p),tm,k,npm,M+2)
                              else
                                 B_mi = bget(coordm(mm,p),tm,k,npm,mi+1)
-                                dB_mi = bder(coordm(mm,p),tm,k,npm,mi+1)
                              end if
                              
-                             call twobody_potential(rho,theta,phi,V,Vder,points)
+                             call twobody_potential(rho,theta,phi,V,points)
                                                           
-                             term(1,:) = term(1,:) + weig(p)*2.d0*dB_li*B_mi*dB_lj*B_mj
-                             term(2,:) = term(2,:) + weig(p)*4.d0*B_li*dB_mi*B_lj*dB_mj*arctan/volume_element
-                             term(3,:) = term(3,:) + weig(p)*15.d0*B_li*B_mi*B_lj*B_mj/8.d0
                              term(4,:) = term(4,:) + weig(p)*B_li*B_mi*B_lj*B_mj*V
 
 
-!                             term(5,:) = term(5,:) + weig(p)*8.d0*dB_li*B_mi*dB_lj*B_mj
-                             term(6,:) = term(6,:) + weig(p)*8.d0*B_li*dB_mi*B_lj*dB_mj*arctan/volume_element
-                             term(7,:) = term(7,:) + weig(p)*15.d0*B_li*B_mi*B_lj*B_mj/4.d0
-                             term(8,:) = term(8,:) - weig(p)*B_li*B_mi*B_lj*B_mj*Vder
 
                           end do
-                          term(5,:)=4.d0*term(1,:)
                           sumter(1,:) = sumter(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*term(4,:)
-                          sumder(1,:) = sumder(1,:) + 0.5d0*volume_element*weig(n)*(tm(mm+1)-tm(mm))*(term(5,:)+term(6,:)+term(7,:)+term(8,:)*my*rho**3.d0)/(my*rho**3.d0)
- 
 
                        end do
                        sumter(2,:) = sumter(2,:) + 0.5d0*(tl(ll+1)-tl(ll))*sumter(1,:)
-                       sumder(2,:) = sumder(2,:) + 0.5d0*(tl(ll+1)-tl(ll))*sumder(1,:)
                     end if
                  end do
                  sumter(3,:) = sumter(3,:) + sumter(2,:)
-                 sumder(3,:) = sumder(3,:) + sumder(2,:)
               end do
               ! each (lj,li,mj,mi) corresponds to 4 (i,j) 
               i1 = (li-1)*M+mi
