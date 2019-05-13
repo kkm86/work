@@ -95,8 +95,8 @@ program efimov
 
 
   !.. Setting up hyperradial vector
-  rho_min = 10000.d0
-  rho_max = 100000.d0
+  rho_min = 100000.d0
+  rho_max = 1000000.d0
   step_size = (rho_max-rho_min)/(points-1)
   rho_vector(1) = rho_min
   print*, rho_vector(1)
@@ -196,7 +196,7 @@ program efimov
   print*, 'this is working'
 
   !.. Writes adiabatic potential curves+trapping potential to file
-  open(10,file='effectivepot0_413_N80.dat',status='replace')
+  open(10,file='effectivepot0_413_N80long.dat',status='replace')
   do i = 1, points
      write(10,10)i, rho_vector(i), (energy(1,i)*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), (energy(2,i)*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), (energy(3,i)*2.d0*my*(rho_vector(i)**2.d0)+0.25d0), -(1.00624**2.d0)
      10   format(I3,'  ',16f20.8)

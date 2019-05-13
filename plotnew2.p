@@ -37,6 +37,7 @@
 			      "effectivepot0_413_N20.dat" using 2:3 notitle  with points ls 3,  \
 				 "effectivepot0_413_N30.dat" using 2:3 notitle   with points ls 3,  \
 				    "effectivepot0_413_N60.dat" using 2:3 title "{/Times:Italic=12 a{/TMR:Normal=10 =-38612}}"  with points ls 3,  \
+				       "effectivepot0_413_N80.dat" using 2:3 title "{/Times:Italic=12 a{/TMR:Normal=10 =-38612}}"  with points,  \
 					  
    
 			   
