@@ -21,8 +21,8 @@
       set style line 5 dt 1 lc rgb '#00CED1' pt 11
       set arrow from 1.0,-1.0125 to 20000.0,-1.0125 nohead lw 1 dt 2 lc 'black'
       #set title font "TMR,20"
-      set xlabel font "Calibri,20"
-      set ylabel font "Calibri,20"         
+      set xlabel font "Calibri,22"
+      set ylabel font "Calibri,22"         
       set xtic auto                          # set xtics automatically
       set ytic auto                          # set ytics automatically
       set key font "Calibri,16"
@@ -31,8 +31,8 @@
       set log x
       set xr [1.0:20000.0]
       set yr [-5.0:4.1]
-      plot"N1tot.dat" using 2:3 title "{/Times-Italic=16 a {/Calibri:Normal=16 = -2386}} a.u." with lines ls 4,  \
-	 "N2tot.dat" using 2:3 title"{/Times-Italic=16 a {/Calibri:Normal=16 = -8721}} a.u." with lines ls 3,  \
-	    "N3tot.dat" using 2:3 title"{/Times-Italic=16 a {/Calibri:Normal=16 = -38612}} a.u." with lines ls 2,  \
-	       "N4tot.dat" using 2:3 title "{/Times-Italic=16 a {/Calibri:Normal=16 = -2702020}} a.u." with lines ls 1,  \
+      plot"N1tot.dat" using 2:3 title "{/Times-Italic=18 a {/Calibri:Normal=16 = -2386}} a.u." with lines ls 4,  \
+	 "N2tot.dat" using 2:3 title"{/Times-Italic=18 a {/Calibri:Normal=16 = -8721}} a.u." with lines ls 3,  \
+	    "N3tot.dat" using 2:3 title"{/Times-Italic=18 a {/Calibri:Normal=16 = -38612}} a.u." with lines ls 2,  \
+	       "N4tot.dat" using 2:3 title "{/Times-Italic=18 a {/Calibri:Normal=16 = -2702020}} a.u." with lines ls 1,  \
 			   

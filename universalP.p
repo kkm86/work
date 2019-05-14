@@ -31,7 +31,7 @@
       set log x
       set xr [1.0:20000.0]
       set yr [-5.0:4.1]
-      plot"P1tot.dat" using 2:3 title "{/Times-Italic=16 a{/Calibri:Normal=16 =1018}} a.u." with lines ls 4,  \
-	 "P2tot.dat" using 2:3 title"{/Times-Italic=16 a{/Calibri:Normal=16 =5655}} a.u." with lines ls 3,  \
-	    "P3tot.dat" using 2:3 title"{/Times-Italic=16 a{/Calibri:Normal=16 =30632}} a.u." with lines ls 2,  \
-	       "P4tot.dat" using 2:3 title "{/Times-Italic=16 a{/Calibri:Normal=16 =1966590}} a.u." with lines ls 1,  \
+      plot"P1tot.dat" using 2:3 title "{/Times-Italic=18 a {/Calibri:Normal=16 = 1018}} a.u." with lines ls 4,  \
+	 "P2tot.dat" using 2:3 title"{/Times-Italic=18 a {/Calibri:Normal=16 = 5655}} a.u." with lines ls 3,  \
+	    "P3tot.dat" using 2:3 title"{/Times-Italic=18 a {/Calibri:Normal=16 = 30632}} a.u." with lines ls 2,  \
+	       "P4tot.dat" using 2:3 title "{/Times-Italic=18 a {/Calibri:Normal=16 = 1966590}} a.u." with lines ls 1,  \
