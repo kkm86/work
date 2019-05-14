@@ -1,6 +1,6 @@
 # Gnuplot script file for plotting data in file "N*tot.dat"
       # This file is called   universal.p
-   set term aqua enhanced font "Calibri, 20" dashed   # turn on enhanced text mode
+   set term aqua enhanced font "Calibri, 18" dashed   # turn on enhanced text mode
    
       
    
@@ -21,8 +21,8 @@
       set style line 5 dt 1 lc rgb '#00CED1' pt 11
       set arrow from 1.0,-1.0125 to 20000.0,-1.0125 nohead lw 1 dt 2 lc 'black'
       #set title font "TMR,20"
-      set xlabel font "Calibri,22"
-      set ylabel font "Calibri,22"         
+      set xlabel font "Calibri,20"
+      set ylabel font "Calibri,20"         
       set xtic auto                          # set xtics automatically
       set ytic auto                          # set ytics automatically
       set key font "Calibri,16"
